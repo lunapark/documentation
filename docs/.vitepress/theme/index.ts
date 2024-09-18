@@ -7,6 +7,8 @@ import InfoCard from './components/InfoCard.vue';
 import TypeTable from './components/TypeTable.vue';
 import Warning from './components/Warning.vue';
 import Highlight from './components/Highlight.vue';
+import SystemRequirements from './components/SystemRequirements.vue';
+import BrowserCompatibility from './components/BrowserCompatibility.vue';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 import './style.css';
@@ -29,6 +31,8 @@ export default {
     app.component('TypeTable', TypeTable);
     app.component('Warning', Warning);
     app.component('Highlight', Highlight);
+    app.component('SystemRequirements', SystemRequirements);
+    app.component('BrowserCompatibility', BrowserCompatibility);
     app.component('font-awesome-icon', FontAwesomeIcon);
   }
 } satisfies Theme;

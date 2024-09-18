@@ -29,6 +29,12 @@ export default defineConfig({
           { text: 'Visual scripting', link: '/guide/visual-scripting' },
           { text: 'Exporter', link: '/guide/exporter' }
         ]
+      },
+      {
+        text: 'Configuration',
+        items: [
+          { text: 'Prerequisites', link: '/configuration/prerequisites' },
+        ]
       }
     ],
     socialLinks: [
