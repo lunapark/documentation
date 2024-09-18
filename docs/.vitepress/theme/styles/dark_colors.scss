@@ -1,0 +1,59 @@
+html.dark {
+    --color-hue: 260deg;
+    --color-chroma: 5%;
+
+    --primary-hue: 260deg;
+    --primary-chroma: 60%;
+
+    --color-content: white;
+    --color-content-lite: color-mix(in oklab, white 80%, transparent);
+    --color-content-liter: color-mix(in oklab, white 50%, transparent);
+    --color-content-litest: color-mix(in oklab, white 20%, transparent);
+
+    --color-primary: oklch(60% 60% 260deg); /* Valeurs fixes */
+    --color-primary-lite: color-mix(in oklab, oklch(60% 60% 260deg) 80%, transparent);
+    --color-primary-liter: color-mix(in oklab, oklch(60% 60% 260deg) 50%, transparent);
+    --color-primary-litest: color-mix(in oklab, oklch(60% 60% 260deg) 25%, transparent);
+
+    --color-background: black;
+    --color-background-dark: oklch(22.5% 5% 260deg);
+    --color-background-0: oklch(25% 5% 260deg);
+    --color-background-1: oklch(27.5% 5% 260deg);
+    --color-background-2: oklch(30% 5% 260deg);
+    --color-background-3: oklch(32.5% 5% 260deg);
+
+    --color-success: hsl(96, 60%, 28%);
+    --color-success-content: hsl(96, 60%, 38%);
+    --color-success-background: hsl(96, 20%, 20%);
+
+    --color-error: hsl(0, 60%, 38%);
+    --color-error-content: hsl(0, 60%, 50%);
+    --color-error-background: hsl(0, 20%, 20%);
+
+    --color-warning: hsl(55, 69%, 47%);
+    --color-warning-content: hsl(55, 69%, 50%);
+    --color-warning-background: hsl(55, 50%, 20%);
+
+    --color-info: hsl(200, 60%, 38%);
+    --color-info-content: hsl(200, 60%, 50%);
+    --color-info-background: hsl(200, 60%, 20%);
+
+    --color-type-boolean: #bb2222;
+    --color-type-number: #16b716;
+    --color-type-object: #0088ff;
+    --color-type-string: #bbbb00;
+    --color-type-void: #5e5e5e;
+    --color-type-array: white;
+    --color-type-interface: #d24bff;
+    --color-type-type: #d24bff;
+    --color-type-exec: white;
+
+    --color-file-text: #bbbb00;
+    --color-file-script: #bbbb00;
+    --color-file-component: #16b716;
+    --color-file-database: #0088ff;
+    --color-file-store: #0088ff;
+    --color-file-config: #0088ff;
+    --color-file-type: #d24bff;
+    --color-file-route: #16b716;
+}

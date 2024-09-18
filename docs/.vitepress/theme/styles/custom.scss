@@ -1,0 +1,27 @@
+/* Exemple de styles personnalisés */
+body {
+    color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-content); /* Change la couleur des titres */
+    position: relative; /* Assure que les éléments enfants se positionnent par rapport à l'en-tête */
+}
+
+
+strong {
+    color: var(--color-primary);
+}
+
+a {
+    color: #42b983;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+}
