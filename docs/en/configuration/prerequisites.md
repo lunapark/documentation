@@ -8,6 +8,6 @@ Please ensure that your system meets the following minimum and recommended speci
 
 ## Browser Compatibility
 
-Luna Park is compatible with the following browsers and versions:
+To ensure optimal performance, make sure you're using an up-to-date version of your browser.
 
 <BrowserCompatibility />

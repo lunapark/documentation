@@ -3,34 +3,30 @@
         <table>
             <thead>
             <tr>
-                <th>Navigateurs</th>
-                <th>Version Minimum</th>
+                <th>Navigators</th>
+                <th>Minimum version</th>
             </tr>
             </thead>
             <tbody>
             <tr>
                 <td>Chrome</td>
-                <td>v109</td>
+                <td>v120</td>
             </tr>
             <tr>
                 <td>Edge</td>
-                <td>v109</td>
+                <td>v120</td>
             </tr>
             <tr>
                 <td>Safari</td>
-                <td>v16.5</td>
+                <td>v17.2</td>
             </tr>
             <tr>
                 <td>Firefox</td>
-                <td>v102</td>
+                <td>v117</td>
             </tr>
             <tr>
                 <td>Opera</td>
-                <td>v95</td>
-            </tr>
-            <tr>
-                <td>IE</td>
-                <td>Non supporté</td>
+                <td>v106</td>
             </tr>
             </tbody>
         </table>
