@@ -34,11 +34,9 @@ Enfin, la vue est la partie principale de l'éditeur. Elle affiche une visualisa
 
 ![Capture d'écran de l'éditeur Luna Park](../../assets/layout-editor/luna-park-editor-assets/screen6.png)
 
-<br/>
-
 # Mises en page de page
 
-Les mises en page de page sont un type spécial de composants. Elles sont utilisées pour définir la structure d'une page et seront accessibles depuis votre application.
+Les mises en page (Layout) sont un type spécial de composants. Elles sont utilisées pour définir la structure d'une page et seront accessibles depuis votre application.
 
 ![Capture d'écran de l'éditeur Luna Park](../../assets/layout-editor/page-layouts-assets/screen1.png)
 
@@ -46,36 +44,4 @@ Les mises en page de page sont un type spécial de composants. Elles sont utilis
 
 Pour définir un composant comme composant de mise en page, il suffit de définir le **type** sur **page** dans le panneau d'inspection. Vous pourrez alors définir un **chemin** pour accéder à la page. La page principale de votre application doit être définie sur **/**.
 
-## Vue
-
-La vue d'une mise en page de page prend la forme d'un navigateur virtuel. Vous pouvez basculer vers l'affichage mobile ou afficher votre application en plein écran en utilisant les boutons en haut à droite du navigateur.
-
-<br/>
-
-# Stylisation
-
-Luna Park vous permet de styliser votre application comme vous le souhaitez. Vous pouvez utiliser le panneau d'inspection pour styliser n'importe quel élément. Vous pouvez également utiliser la palette pour personnaliser les couleurs globales.
-
-## Stylisation globale
-
-La stylisation globale de votre application est accessible depuis le bouton **palette** dans la barre supérieure de l'éditeur. Les valeurs de **chroma** peuvent être interprétées comme la saturation de la couleur et sont accompagnées de valeurs **hue**.
-
-Notez que vous pouvez **faire correspondre les couleurs de l'éditeur** avec les couleurs de votre application en utilisant l'option de correspondance de l'éditeur. Cela peut rendre la construction plus facile pour vos yeux.
-
-![Capture d'écran de l'éditeur Luna Park](../../assets/layout-editor/styling-assets/screen1.png)
-
-## Stylisation des éléments
-
-Chaque élément peut être stylisé individuellement en utilisant le panneau d'inspection, sous l'onglet **style**. Pour ajouter une catégorie de style, il suffit de cliquer sur le bouton **+** de l'onglet. Vous pouvez ensuite activer les propriétés en cliquant sur leur nom.
-
-Notez que certaines valeurs peuvent utiliser des jetons de conception globale. Pour y accéder, survolez une valeur, puis survolez le cercle bleu qui devrait apparaître en haut à droite de la valeur, et sélectionnez l'icône **place icon**.
-
-![Capture d'écran de l'éditeur Luna Park](../../assets/layout-editor/styling-assets/screen2.png)
-
-<br/>
-
-# Variables dynamiques
-
-Toutes les variables sont dynamiques. Cela signifie que si la valeur d'une variable est modifiée à tout moment, elle mettra à jour tout ce qui en dépend dans votre application.
-
-Pour utiliser des variables, survolez une valeur, puis survolez le cercle bleu qui devrait apparaître en haut à droite de la valeur, et sélectionnez l'icône **place icon**. Vous pouvez ensuite sélectionner la variable que vous souhaitez utiliser. Gardez à l'esprit que seules les variables du type attendu seront disponibles.
+![Capture d'écran de l'éditeur Luna Park](../../assets/layout-editor/page-layouts-assets/gif1.gif)

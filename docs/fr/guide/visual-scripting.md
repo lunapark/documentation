@@ -1,13 +1,13 @@
-# L'éditeur de script visuel
+# Le visual scripting
 
-L'éditeur de script visuel est l'outil qui vous permet de créer la logique et le flux de contrôle pour vos projets. Au lieu d'écrire du code, vous pouvez créer des scripts en connectant différents nœuds entre eux dans une structure en forme de graphe. Ces nœuds peuvent représenter une grande variété d'actions, comme comparer des valeurs, récupérer une API ou trier un tableau.
-
+Le visual scripting vous permet de définir la logique et le flux de contrôle de vos projets sans écrire de code. Vous pouvez créer des scripts en reliant des blocs (appelés nœuds) les uns aux autres dans une structure en graphe. Ces nœuds offrent une variété d'actions, comme comparer des valeurs, appeler une API, ou trier une liste
 ## Le graphe
 
-Le graphe est la grille où vous pouvez placer des nœuds. La grille est infinie dans les deux directions, mais vous devriez garder votre graphe logique assez petit. Si votre graphe devient trop complexe, il peut être utile de factoriser certaines logiques en créant de nouvelles fonctions, qui pourront ensuite être utilisées comme nœuds. Vous pouvez déplacer la grille et zoomer pour avoir une meilleure vue de ce sur quoi vous travaillez.
+Le graphe est la grille où vous pouvez placer des nœuds. La grille est infinie dans les deux directions, mais vous devriez garder votre graphe logique assez petit. <br/><br/>
+Si votre graphe devient trop complexe, il peut être utile de factoriser certaines logiques en créant de nouvelles fonctions, qui pourront ensuite être utilisées comme nœuds. <br/><br/>
+Sur l'éditeur, vous pouvez déplacer la grille et zoomer pour avoir une meilleure vue de ce sur quoi vous travaillez.
 
-** placer grille **
-** placer instructions **
+![Capture d'écran de l'éditeur Luna Park](../../assets/visual-scripting/screen1.png)
 
 ## Nœuds
 
@@ -29,7 +29,6 @@ Les ancres sont l'interface du nœud. Les ancres d'entrée sont affichées à ga
 - **Ancres de valeur** (**placer icône**/**placer icône**)
   Ces ancres sont affichées avec une forme circulaire lorsqu'elles contiennent une seule valeur, ou une forme carrée lorsqu'elles contiennent une liste (appelée tableau) de valeurs. Lorsque vous utilisez des ancres d'entrée, vous pouvez spécifier certains types, comme chaîne ou nombre, dans l'entrée à côté de l'ancre. La couleur de l'ancre dépend du type de valeur qu'elle contient.
 
-```vue
 <script setup>
 import { visualScriptingEditorTableData } from '../../tables-data'
 </script>

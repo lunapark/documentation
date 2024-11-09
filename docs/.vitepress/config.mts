@@ -18,6 +18,7 @@ export default defineConfig({
             items: [
               { text: 'Introduction', link: '/en/guide/introduction' },
               { text: 'Layout editor', link: '/en/guide/layout-editor' },
+              { text: 'Styling', link: '/en/guide/elements-styling' },
               { text: 'Visual scripting', link: '/en/guide/visual-scripting' },
               { text: 'Exporter', link: '/en/guide/exporter' }
             ]
@@ -47,6 +48,7 @@ export default defineConfig({
             items: [
               { text: 'Introduction', link: '/fr/guide/introduction' },
               { text: 'Éditeur de mise en page', link: '/fr/guide/layout-editor' },
+              { text: 'Stylisation', link: '/fr/guide/elements-styling' },
               { text: 'Scripting visuel', link: '/fr/guide/visual-scripting' },
               { text: 'Exportateur', link: '/fr/guide/exporter' }
             ]
