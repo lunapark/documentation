@@ -26,3 +26,12 @@ features:
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
 
+<script setup>
+import { useRoute } from 'vitepress';
+
+const route = useRoute();
+
+if (route.path === '/') {
+  window.location.href = '/en/';
+}
+</script>
