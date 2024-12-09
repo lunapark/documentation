@@ -40,17 +40,28 @@ export default defineConfig({
         nav: [
           { text: 'Accueil', link: '/fr/' },
           { text: 'Exemples', link: '/fr/markdown-examples' },
-          { text: 'Commencer', link: '/fr/guide/introduction' }
+          { text: 'Commencer', link: '/fr/guide/introduction/what-is-luna-park' }
         ],
         sidebar: [
           {
-            text: 'Guide',
+            text: 'Introduction',
             items: [
-              { text: 'Introduction', link: '/fr/guide/introduction' },
-              { text: 'Éditeur de mise en page', link: '/fr/guide/layout-editor' },
-              { text: 'Stylisation', link: '/fr/guide/elements-styling' },
-              { text: 'Scripting visuel', link: '/fr/guide/visual-scripting' },
-              { text: 'Exportateur', link: '/fr/guide/exporter' }
+              { text: 'Qu’est-ce que Luna Park ?', link: '/fr/guide/introduction/what-is-luna-park' },
+            ]
+          },
+            {
+            text: 'Prise en main',
+            items: [
+              { text: 'Éditeur de mise en page', link: '/fr/guide/getting-started/layout-editor' },
+              { text: 'Stylisation', link: '/fr/guide/getting-started/elements-styling' },
+              { text: 'Exportateur', link: '/fr/guide/getting-started/exporter' }
+            ]
+          },
+          {
+            text: 'Programmation visuelle',
+            items: [
+              { text: 'Introduction', link: '/fr/guide/visual-scripting/introduction' },
+              { text: 'Bases du graphe', link: '/fr/guide/visual-scripting/graph-basis' },
             ]
           },
           {

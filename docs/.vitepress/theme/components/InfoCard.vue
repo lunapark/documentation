@@ -1,6 +1,6 @@
 <template>
     <div class="cards-container">
-        <div v-for="(card, index) in cards" :key="index" class="info-card">
+        <div v-for="(card, index) in cards" :key="index" :class="['info-card', card.accent ? 'accent' : '']">
             <span class="title">{{ card.title }}</span>
             <ul class="info-list">
                 <li v-for="(info, idx) in card.infoPairs" :key="idx" class="info-item">
@@ -40,6 +40,11 @@ const props = defineProps({
     flex-basis: calc(33.33% - 20px); /* 3 cartes par ligne */
     transition: background-color 0.3s ease;
 
+    &.accent {
+        background-color: var(--color-background-2);
+        border-color: var(--color-background-3);
+    }
+
     span.title {
         color: var(--color-primary);
         margin: 0;
@@ -61,15 +66,19 @@ const props = defineProps({
             flex-direction: column;
 
             .info-label {
-                color: var(--color-content-litest);
+                color: var(--color-content);
             }
 
             .danger {
                 color: var(--color-error-content);
             }
 
-            .info-value {
-                color: var(--color-content);
+            .success {
+                color: var(--color-success-content);
+            }
+
+            .info {
+                color: var(--color-warning-content);
             }
 
         }

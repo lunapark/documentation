@@ -1,13 +1,24 @@
 # Le visual scripting
 
-Le visual scripting vous permet de définir la logique et le flux de contrôle de vos projets sans écrire de code. Vous pouvez créer des scripts en reliant des blocs (appelés nœuds) les uns aux autres dans une structure en graphe. Ces nœuds offrent une variété d'actions, comme comparer des valeurs, appeler une API, ou trier une liste
+Luna Park permet de créer des logiques complexes grâce à un système de **Visual Scripting**. Ce système repose sur des graphes interactifs où des **nœuds** (ou blocs) sont reliés entre eux pour définir le flux de contrôle et de données.
+
+Avec le Visual Scripting, vous pouvez créer des **algorithmes** sans écrire une seule ligne de code.
+
 ## Le graphe
+
+Un graphe est composé de nœuds connectés par des liens représentant des flux de logique ou de données. Voici les éléments principaux d'un graphe :
+
+- **Nœuds** : Chaque nœud représente une action, une condition, ou une opération.
+- **Connexions** : Les liens entre les nœuds représentent le chemin logique ou les données échangées. 
+- **Entrées/Sorties** : Chaque nœud possède des points d'entrée et de sortie pour connecter les données ou la logique.
+
+Voici un exemple de graphe simple dans Luna Park :
+
+![Capture d'écran de l'éditeur Luna Park](../../assets/visual-scripting/screen1.png)
 
 Le graphe est la grille où vous pouvez placer des nœuds. La grille est infinie dans les deux directions, mais vous devriez garder votre graphe logique assez petit. <br/><br/>
 Si votre graphe devient trop complexe, il peut être utile de factoriser certaines logiques en créant de nouvelles fonctions, qui pourront ensuite être utilisées comme nœuds. <br/><br/>
 Sur l'éditeur, vous pouvez déplacer la grille et zoomer pour avoir une meilleure vue de ce sur quoi vous travaillez.
-
-![Capture d'écran de l'éditeur Luna Park](../../assets/visual-scripting/screen1.png)
 
 ## Nœuds
 
@@ -30,7 +41,7 @@ Les ancres sont l'interface du nœud. Les ancres d'entrée sont affichées à ga
   Ces ancres sont affichées avec une forme circulaire lorsqu'elles contiennent une seule valeur, ou une forme carrée lorsqu'elles contiennent une liste (appelée tableau) de valeurs. Lorsque vous utilisez des ancres d'entrée, vous pouvez spécifier certains types, comme chaîne ou nombre, dans l'entrée à côté de l'ancre. La couleur de l'ancre dépend du type de valeur qu'elle contient.
 
 <script setup>
-import { visualScriptingEditorTableData } from '../../tables-data'
+import { visualScriptingEditorTableData } from '../../../tables-data'
 </script>
 
 <TypeTable

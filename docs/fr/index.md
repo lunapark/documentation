@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: Commencer
-      link: /fr/guide/introduction.html
+      link: /fr/guide/introduction/what-is-luna-park.html
     - theme: alt
       text: Exemples de projets
       link: /fr/api-examples.html
@@ -18,7 +18,7 @@ features:
   - title: Création intuitive d'applications
     details: Créez des applications web sans coder grâce à une interface visuelle simple.
 
-  - title: Scripting visuel avancé
+  - title: Programmation visuelle avancé
     details: Gérez la logique métier avec des blocs visuels (conditions, boucles, etc.).
 
   - title: Frontend personnalisé

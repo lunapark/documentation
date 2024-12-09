@@ -12,6 +12,13 @@
                     v-for="(col, colIndex) in columns"
                     :key="colIndex"
                     :class="getClass(row[col.key].value)">
+                    <Anchor
+                        v-if="colIndex === 0 || colIndex === 2"
+                        :type="colIndex === 0 ? 'value' : 'array'"
+                        :color="getColor(row[col.key].value)"
+                        class="anchor"
+                    />
+
                     <span v-html="getClass(row[col.key].value) === 'object' ? renderObject(row[col.key].value) : row[col.key].value"></span>
                 </td>
             </tr>
@@ -23,6 +30,7 @@
 
 <script setup>
 import {defineProps} from 'vue';
+import Anchor from "./Anchor.vue";
 
 const props = defineProps({
     columns: {
@@ -35,7 +43,35 @@ const props = defineProps({
     }
 });
 
+function getColor(content) {
+    const colorMapping = {
+        boolean: 'var(--color-type-boolean)',
+        number: 'var(--color-type-number)',
+        string: 'var(--color-type-string)',
+        object: 'var(--color-type-object)',
+        default: 'white'
+    };
+
+    if (content.startsWith('{')) {
+        return colorMapping.object;
+    }
+    if (content.startsWith('boolean')) {
+        return colorMapping.boolean;
+    }
+    if (content.startsWith('number')) {
+        return colorMapping.number;
+    }
+    if (content.startsWith('string')) {
+        return colorMapping.string;
+    }
+
+
+    return colorMapping.default;
+}
+
+
 function getClass(value) {
+
 
 
     if (value.startsWith('{') || value.endsWith(']')) {
@@ -81,6 +117,10 @@ function renderObject(value) {
 
 
 <style scoped lang="scss">
+
+.anchor {
+    padding: 0 10px;
+}
 .table-container {
     margin: 20px;
 }

@@ -5,14 +5,14 @@ Chaque élément de votre projet peut être stylisé individuellement dans le pa
 Pour ajouter une catégorie de style (par exemple, couleur, typographie, taille), cliquez simplement sur le bouton **+** dans l'onglet style. Une liste de propriétés s'affichera. Vous pouvez activer ou désactiver chaque propriété en cliquant sur son nom. <br/>
 Par exemple, pour ajouter ou retirer une bordure ou une ombre.
 
-![Capture d'écran de l'éditeur Luna Park](../../assets/layout-editor/styling-assets/screen2.png)
+![Capture d'écran de l'éditeur Luna Park](../../../assets/layout-editor/styling-assets/screen2.png)
 
 _Note : Toutes les règles de style disponibles dans Luna Park correspondent aux règles CSS que l’on peut retrouver dans les standards web._
 ## Couleurs et tokens de design globaux
 
 Luna Park permet aussi d’utiliser des tokens de **design globaux**, qui sont des couleurs, polices ou tailles définies pour tout le site, afin de garder une cohérence visuelle. Si vous changez un **token global**, tous les éléments qui utilisent ce token seront automatiquement mis à jour pour refléter ce changement.
 
-![Capture d'écran de l'éditeur Luna Park](../../assets/layout-editor/styling-assets/screen1.png)
+![Capture d'écran de l'éditeur Luna Park](../../../assets/layout-editor/styling-assets/screen1.png)
 
 Pour utiliser un token global :
 
@@ -20,7 +20,7 @@ Pour utiliser un token global :
 2. Lorsque le cercle bleu apparaît en haut à droite de la valeur, cliquez dessus.
 3. Sélectionnez l’icône place pour choisir un token global.
 
-![Capture d'écran de l'éditeur Luna Park](../../assets/layout-editor/styling-assets/gif1.gif)
+![Capture d'écran de l'éditeur Luna Park](../../../assets/layout-editor/styling-assets/gif1.gif)
 
 
 Cela est particulièrement utile si vous voulez créer un style uniforme pour tout le site, comme une couleur de texte cohérente ou une police unique.
@@ -44,7 +44,7 @@ Il existe trois types principaux de variables dans Luna Park :
   <br/>
   _Exemple_ : Une variable <Highlight text="isVisible"/> pourrait contrôler l'affichage d'un élément. En changeant isVisible de <Highlight text="true"/> à <Highlight text="false"/>, l'élément pourrait apparaître ou disparaître automatiquement.
 
-_Note : Il existe également des variables dites <Highlight text="Computed"/> (calculées), qui sont automatiquement mises à jour en fonction d'autres properties ou variables. Celles-ci sont surtout utilisées dans des cas de logique avancée, et seront abordées plus en détail dans la section sur le scripting visuel._
+_Note : Il existe également des variables dites <Highlight text="Computed"/> (calculées), qui sont automatiquement mises à jour en fonction d'autres properties ou variables. Celles-ci sont surtout utilisées dans des cas de logique avancée, et seront abordées plus en détail dans la section sur la programmation visuelle._
 ## Utilisation des variables
 Pour utiliser une variable dans une propriété de votre composant :
 
@@ -52,7 +52,7 @@ Survolez la valeur que vous souhaitez lier à une variable.
 Un cercle bleu apparaîtra en haut à droite de la valeur. Cliquez dessus pour afficher les options disponibles.
 Sélectionnez l'icône place pour choisir une variable existante.
 
-![Capture d'écran de l'éditeur Luna Park](../../assets/layout-editor/styling-assets/gif2.gif)
+![Capture d'écran de l'éditeur Luna Park](../../../assets/layout-editor/styling-assets/gif2.gif)
 
 _Note : Seules les variables correspondant au type attendu pour cette propriété seront disponibles dans la liste. Par exemple, une variable numérique apparaîtra uniquement pour une propriété attendue comme un nombre._
 
