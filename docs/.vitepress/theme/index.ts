@@ -17,6 +17,7 @@ import './styles/light_colors.scss';
 import './styles/dark_colors.scss';
 import './styles/length.scss';
 import Anchor from "./components/Anchor.vue";
+import GenericTable from "./components/GenericTable.vue";
 
 export default {
   extends: DefaultTheme,
@@ -34,6 +35,7 @@ export default {
     app.component('Highlight', Highlight);
     app.component('SystemRequirements', SystemRequirements);
     app.component('BrowserCompatibility', BrowserCompatibility);
+    app.component('GenericTable', GenericTable);
     app.component('font-awesome-icon', FontAwesomeIcon);
     app.component('Anchor', Anchor);
   }
