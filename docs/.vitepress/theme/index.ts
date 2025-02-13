@@ -12,10 +12,7 @@ import BrowserCompatibility from './components/BrowserCompatibility.vue';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 import './style.css';
-import './styles/custom.scss';
-import './styles/light_colors.scss';
-import './styles/dark_colors.scss';
-import './styles/length.scss';
+import './styles/index.css';
 import Anchor from "./components/Anchor.vue";
 import GenericTable from "./components/GenericTable.vue";
 

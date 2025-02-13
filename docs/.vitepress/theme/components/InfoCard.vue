@@ -23,7 +23,7 @@ const props = defineProps({
 })
 </script>
 
-<style scoped lang="scss">
+<style scoped>
 .cards-container {
     display: flex;
     flex-wrap: wrap;

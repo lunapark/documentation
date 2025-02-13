@@ -22,7 +22,7 @@ const props = defineProps({
 });
 </script>
 
-<style scoped lang="scss">
+<style scoped>
 .container {
     background: var(--color-warning-background);
     background-image: linear-gradient(135deg, var(--color-background-1), var(--color-warning-background));
@@ -32,6 +32,7 @@ const props = defineProps({
     overflow: hidden;
     height: 100%;
     position: relative;
+
     .side-line {
         background: var(--color-warning);
         width: 4px;
@@ -41,6 +42,7 @@ const props = defineProps({
         top: 0;
         bottom: 0;
     }
+
     .content {
         display: flex;
         flex-direction: column;
@@ -56,6 +58,7 @@ const props = defineProps({
             font-weight: 400;
         }
     }
+
     .icon {
         color: var(--color-content-litest);
         font-size: 2rem;

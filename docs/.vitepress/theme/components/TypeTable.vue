@@ -116,7 +116,7 @@ function renderObject(value) {
 </script>
 
 
-<style scoped lang="scss">
+<style scoped>
 
 .anchor {
     padding: 0 10px;

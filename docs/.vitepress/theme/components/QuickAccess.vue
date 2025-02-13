@@ -20,7 +20,7 @@ const props = defineProps({
 
 </script>
 
-<style scoped lang="scss">
+<style scoped>
 .quick-access {
     display: flex;
     flex-wrap: wrap;

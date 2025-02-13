@@ -25,7 +25,7 @@ defineProps<{
 }>()
 </script>
 
-<style scoped lang="scss">
+<style scoped>
 .anchor-wrapper {
     display: inline-flex;
     justify-content: center;

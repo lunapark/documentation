@@ -9,7 +9,7 @@ const props = defineProps({
 
 </script>
 
-<style scoped lang="scss">
+<style scoped>
 .highlight {
     background: var(--color-background-3);
     border-radius: var(--length-radius-s);
