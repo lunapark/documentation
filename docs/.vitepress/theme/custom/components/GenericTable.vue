@@ -22,16 +22,10 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
-    columns: {
-        type: Array,
-        default: () => []
-    },
-    rows: {
-        type: Array,
-        default: () => []
-    }
-})
+const props = defineProps<{
+    columns: Array<{ title: string, field: string }>,
+    rows: Array<Record<string ,unknown>>
+}>()
 </script>
 
 <style scoped>

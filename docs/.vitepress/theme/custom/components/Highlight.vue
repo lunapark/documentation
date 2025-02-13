@@ -3,10 +3,9 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
-    text: String
-})
-
+const props = defineProps<{
+    text: string
+}>();
 </script>
 
 <style scoped>

@@ -15,10 +15,10 @@
 import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome';
 import {faTriangleExclamation} from "@fortawesome/pro-solid-svg-icons";
 
-const props = defineProps({
-    title: String,
-    content: String
-});
+const props = defineProps<{
+    title: string,
+    content: string
+}>();
 </script>
 
 <style scoped>

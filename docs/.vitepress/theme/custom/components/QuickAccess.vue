@@ -10,14 +10,13 @@
 </template>
 
 <script setup lang="ts">
-
-const props = defineProps({
-    items: {
-        type: Array,
-        required: true
-    }
-});
-
+const props = defineProps<{
+    items: Array<{
+        title: string,
+        description: string,
+        link: string
+    }>;
+}>();
 </script>
 
 <style scoped>

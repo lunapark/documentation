@@ -31,16 +31,10 @@
 <script setup lang="ts">
 import Anchor from "./Anchor.vue";
 
-const props = defineProps({
-    columns: {
-        type: Array,
-        required: true
-    },
-    rows: {
-        type: Array,
-        required: true
-    }
-});
+const props = defineProps<{
+    columns: Array<{ key: string, title: string }>,
+    rows: Array<Record<string ,unknown>>
+}>();
 
 function getColor(content) {
     const colorMapping = {

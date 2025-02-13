@@ -13,12 +13,17 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
-    cards: {
-        type: Array,
-        required: true
-    }
-})
+const props = defineProps<{
+    cards: Array<{
+        title: string,
+        accent: boolean,
+        infoPairs: Array<{
+            label: string,
+            value: string,
+            styleClass: string
+        }>
+    }>;
+}>();
 </script>
 
 <style scoped>
