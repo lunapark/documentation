@@ -56,6 +56,7 @@ const { frontmatter, theme } = useData();
 .VPHome {
     position: relative;
     padding-bottom: 96px;
+    min-height: 100dvh;
 
     background: radial-gradient(ellipse 75vw 80vh at center 35vh,
     oklch(50% 60% var(--primary-hue)) 0%,
