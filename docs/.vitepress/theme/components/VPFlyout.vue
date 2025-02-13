@@ -75,11 +75,11 @@ function onBlur() {
 }
 
 .VPFlyout:hover .text {
-  color: var(--vp-c-text-2);
+  color: var(--color-content-liter);
 }
 
 .VPFlyout:hover .icon {
-  fill: var(--vp-c-text-2);
+  fill: var(--color-content-liter);
 }
 
 .VPFlyout.active .text {
@@ -108,7 +108,7 @@ function onBlur() {
   align-items: center;
   padding: 0 12px;
   height: var(--vp-nav-height);
-  color: var(--vp-c-text-1);
+  color: var(--color-content-lite);
   transition: color 0.5s;
 }
 
@@ -118,7 +118,7 @@ function onBlur() {
   line-height: var(--vp-nav-height);
   font-size: 14px;
   font-weight: 500;
-  color: var(--vp-c-text-1);
+  color: var(--color-content-lite);
   transition: color 0.25s;
 }
 

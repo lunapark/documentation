@@ -2,6 +2,8 @@ import { defineConfig } from "vitepress";
 
 export default defineConfig({
     title: "Luna Park",
+
+    appearance: "force-dark",
     description: "Luna Park Documentation",
     head: [
         [
@@ -92,8 +94,6 @@ export default defineConfig({
         }
     },
     themeConfig: {
-        appearance: "dark",
-        appearanceSwitch: false,
         socialLinks: [
             { icon: "github", link: "https://github.com/vuejs/vitepress" }
         ]

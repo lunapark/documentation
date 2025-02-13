@@ -1,35 +1,3 @@
-<script setup lang="ts">
-import { useRoute } from "vitepress";
-import { computed, provide, useSlots, watch } from "vue";
-import VPBackdrop from "./components/VPBackdrop.vue";
-import VPContent from "./components/VPContent.vue";
-import VPFooter from "./components/VPFooter.vue";
-import VPLocalNav from "./components/VPLocalNav.vue";
-import VPNav from "./components/VPNav.vue";
-import VPSidebar from "./components/VPSidebar.vue";
-import VPSkipLink from "./components/VPSkipLink.vue";
-import { useData } from "./composables/data";
-import { useCloseSidebarOnEscape, useSidebar } from "./composables/sidebar";
-
-const {
-    close: closeSidebar,
-    isOpen: isSidebarOpen,
-    open: openSidebar
-} = useSidebar();
-
-const route = useRoute();
-watch(() => route.path, closeSidebar);
-
-useCloseSidebarOnEscape(isSidebarOpen, closeSidebar);
-
-const { frontmatter } = useData();
-
-const slots = useSlots();
-const heroImageSlotExists = computed(() => !!slots["home-hero-image"]);
-
-provide("hero-image-slot-exists", heroImageSlotExists);
-</script>
-
 <template>
     <div
         v-if="frontmatter.layout !== false"
@@ -157,6 +125,38 @@ provide("hero-image-slot-exists", heroImageSlotExists);
     </div>
     <Content v-else />
 </template>
+
+<script setup lang="ts">
+import { useRoute } from "vitepress";
+import { computed, provide, useSlots, watch } from "vue";
+import VPBackdrop from "./components/VPBackdrop.vue";
+import VPContent from "./components/VPContent.vue";
+import VPFooter from "./components/VPFooter.vue";
+import VPLocalNav from "./components/VPLocalNav.vue";
+import VPNav from "./components/VPNav.vue";
+import VPSidebar from "./components/VPSidebar.vue";
+import VPSkipLink from "./components/VPSkipLink.vue";
+import { useData } from "./composables/data";
+import { useCloseSidebarOnEscape, useSidebar } from "./composables/sidebar";
+
+const {
+    close: closeSidebar,
+    isOpen: isSidebarOpen,
+    open: openSidebar
+} = useSidebar();
+
+const route = useRoute();
+watch(() => route.path, closeSidebar);
+
+useCloseSidebarOnEscape(isSidebarOpen, closeSidebar);
+
+const { frontmatter } = useData();
+
+const slots = useSlots();
+const heroImageSlotExists = computed(() => !!slots["home-hero-image"]);
+
+provide("hero-image-slot-exists", heroImageSlotExists);
+</script>
 
 <style scoped>
 .Layout {

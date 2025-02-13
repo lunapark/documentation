@@ -105,7 +105,7 @@
   border-left: 2px solid var(--vp-c-divider);
   padding-left: 16px;
   transition: border-color 0.5s;
-  color: var(--vp-c-text-2);
+  color: var(--color-content-liter);
 }
 
 .vp-doc blockquote > p {
@@ -190,7 +190,7 @@
   text-align: left;
   font-size: 14px;
   font-weight: 600;
-  color: var(--vp-c-text-2);
+  color: var(--color-content-liter);
   background-color: var(--vp-c-bg-soft);
 }
 

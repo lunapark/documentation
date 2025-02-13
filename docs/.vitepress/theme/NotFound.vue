@@ -73,7 +73,7 @@ const { currentLang } = useLangs();
   max-width: 256px;
   font-size: 14px;
   font-weight: 500;
-  color: var(--vp-c-text-2);
+  color: var(--color-content-liter);
 }
 
 .action {

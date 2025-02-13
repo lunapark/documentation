@@ -34,8 +34,8 @@ const translate = createSearchTranslate(defaultTranslations);
 [class*='DocSearch'] {
   --docsearch-primary-color: var(--vp-c-brand-1);
   --docsearch-highlight-color: var(--docsearch-primary-color);
-  --docsearch-text-color: var(--vp-c-text-1);
-  --docsearch-muted-color: var(--vp-c-text-2);
+  --docsearch-text-color: var(--color-content-lite);
+  --docsearch-muted-color: var(--color-content-liter);
   --docsearch-searchbox-shadow: none;
   --docsearch-searchbox-background: transparent;
   --docsearch-searchbox-focus-background: transparent;
@@ -48,9 +48,9 @@ const translate = createSearchTranslate(defaultTranslations);
 .dark [class*='DocSearch'] {
   --docsearch-modal-shadow: none;
   --docsearch-footer-shadow: none;
-  --docsearch-logo-color: var(--vp-c-text-2);
+  --docsearch-logo-color: var(--color-content-liter);
   --docsearch-hit-background: var(--vp-c-default-soft);
-  --docsearch-hit-color: var(--vp-c-text-2);
+  --docsearch-hit-color: var(--color-content-liter);
   --docsearch-hit-shadow: none;
 }
 
@@ -110,13 +110,13 @@ const translate = createSearchTranslate(defaultTranslations);
   position: relative;
   width: 16px;
   height: 16px;
-  color: var(--vp-c-text-1);
+  color: var(--color-content-lite);
   fill: currentColor;
   transition: color 0.5s;
 }
 
 .DocSearch-Button:hover .DocSearch-Search-Icon {
-  color: var(--vp-c-text-1);
+  color: var(--color-content-lite);
 }
 
 @media (min-width: 768px) {
@@ -125,7 +125,7 @@ const translate = createSearchTranslate(defaultTranslations);
     margin-right: 8px;
     width: 14px;
     height: 14px;
-    color: var(--vp-c-text-2);
+    color: var(--color-content-liter);
   }
 }
 
@@ -135,12 +135,12 @@ const translate = createSearchTranslate(defaultTranslations);
   padding: 0 16px 0 0;
   font-size: 13px;
   font-weight: 500;
-  color: var(--vp-c-text-2);
+  color: var(--color-content-liter);
   transition: color 0.5s;
 }
 
 .DocSearch-Button:hover .DocSearch-Button-Placeholder {
-  color: var(--vp-c-text-1);
+  color: var(--color-content-lite);
 }
 
 @media (min-width: 768px) {

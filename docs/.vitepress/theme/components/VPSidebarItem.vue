@@ -175,7 +175,7 @@ function onCaretClick() {
 
 .VPSidebarItem.level-0 .text {
   font-weight: 700;
-  color: var(--vp-c-text-1);
+  color: var(--color-content-lite);
 }
 
 .VPSidebarItem.level-1 .text,
@@ -184,7 +184,7 @@ function onCaretClick() {
 .VPSidebarItem.level-4 .text,
 .VPSidebarItem.level-5 .text {
   font-weight: 500;
-  color: var(--vp-c-text-2);
+  color: var(--color-content-liter);
 }
 
 .VPSidebarItem.level-0.is-link > .item > .link:hover .text,
@@ -208,7 +208,7 @@ function onCaretClick() {
 .VPSidebarItem.level-3.has-active > .item > .link > .text,
 .VPSidebarItem.level-4.has-active > .item > .link > .text,
 .VPSidebarItem.level-5.has-active > .item > .link > .text {
-  color: var(--vp-c-text-1);
+  color: var(--color-content-lite);
 }
 
 .VPSidebarItem.level-0.is-active > .item .link > .text,
@@ -234,11 +234,11 @@ function onCaretClick() {
 }
 
 .item:hover .caret {
-  color: var(--vp-c-text-2);
+  color: var(--color-content-liter);
 }
 
 .item:hover .caret:hover {
-  color: var(--vp-c-text-1);
+  color: var(--color-content-lite);
 }
 
 .caret-icon {

@@ -39,7 +39,7 @@ const { page } = useData();
   line-height: var(--vp-nav-height);
   font-size: 14px;
   font-weight: 500;
-  color: var(--vp-c-text-1);
+  color: var(--color-content-lite);
   transition: color 0.25s;
 }
 

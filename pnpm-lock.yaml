@@ -27,6 +27,9 @@ importers:
       '@fortawesome/vue-fontawesome':
         specifier: ^3.0.8
         version: 3.0.8(@fortawesome/fontawesome-svg-core@6.7.2)(vue@3.5.13(typescript@5.7.3))
+      '@luna-park/design':
+        specifier: link:..\core\packages\design
+        version: link:../core/packages/design
       '@vueuse/core':
         specifier: ^12.5.0
         version: 12.5.0(typescript@5.7.3)

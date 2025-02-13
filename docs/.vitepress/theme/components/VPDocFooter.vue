@@ -178,7 +178,7 @@ const showFooter = computed(
   line-height: 20px;
   font-size: 12px;
   font-weight: 500;
-  color: var(--vp-c-text-2);
+  color: var(--color-content-liter);
 }
 
 .title {

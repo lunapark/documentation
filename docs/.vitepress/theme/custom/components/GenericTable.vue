@@ -3,7 +3,6 @@
         <table>
             <thead>
                 <tr>
-                    <!-- On parcourt les colonnes pour afficher les titres -->
                     <th
                         v-for="(col, index) in columns"
                         :key="index"
@@ -13,7 +12,6 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- Pour chaque ligne, on affiche les valeurs en fonction de la clé définie dans chaque colonne -->
                 <tr
                     v-for="(row, rowIndex) in rows"
                     :key="rowIndex"

@@ -45,7 +45,7 @@ const { page } = useData();
   line-height: 32px;
   font-size: 14px;
   font-weight: 500;
-  color: var(--vp-c-text-1);
+  color: var(--color-content-lite);
   white-space: nowrap;
   transition:
     background-color 0.25s,

@@ -47,7 +47,7 @@ const { hasSidebar } = useSidebar();
 }
 
 .VPFooter :deep(a:hover) {
-  color: var(--vp-c-text-1);
+  color: var(--color-content-lite);
 }
 
 @media (min-width: 768px) {
@@ -67,6 +67,6 @@ const { hasSidebar } = useSidebar();
   line-height: 24px;
   font-size: 14px;
   font-weight: 500;
-  color: var(--vp-c-text-2);
+  color: var(--color-content-liter);
 }
 </style>

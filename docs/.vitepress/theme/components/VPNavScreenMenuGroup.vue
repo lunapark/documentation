@@ -117,7 +117,7 @@ function toggle() {
   line-height: 24px;
   font-size: 14px;
   font-weight: 500;
-  color: var(--vp-c-text-1);
+  color: var(--color-content-lite);
   transition: color 0.25s;
 }
 

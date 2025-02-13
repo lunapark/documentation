@@ -4,13 +4,13 @@ import VPImage from "./VPImage.vue";
 import VPLink from "./VPLink.vue";
 
 defineProps<{
-  title: string
-  details?: string
-  icon?: DefaultTheme.FeatureIcon
-  link?: string
-  linkText?: string
-  rel?: string
-  target?: string
+    title: string
+    details?: string
+    icon?: DefaultTheme.FeatureIcon
+    link?: string
+    linkText?: string
+    rel?: string
+    target?: string
 }>();
 </script>
 
@@ -71,70 +71,73 @@ defineProps<{
 
 <style scoped>
 .VPFeature {
-  display: block;
-  border: 1px solid var(--vp-c-bg-soft);
-  border-radius: 12px;
-  height: 100%;
-  background-color: var(--vp-c-bg-soft);
-  transition: border-color 0.25s, background-color 0.25s;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    backdrop-filter: blur(8px);
+    flex: 1 1 0;
+    border: 1px solid var(--color-primary-litest);
+    border-radius: var(--length-radius-m);
+    box-shadow: 0 16px 32px var(--color-background-litest);
 }
 
 .VPFeature.link:hover {
-  border-color: var(--vp-c-brand-1);
+    border-color: var(--vp-c-brand-1);
 }
 
 .box {
-  display: flex;
-  flex-direction: column;
-  padding: 24px;
-  height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    height: 100%;
 }
 
 .box > :deep(.VPImage) {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-  border-radius: 6px;
-  background-color: var(--vp-c-default-soft);
-  width: 48px;
-  height: 48px;
-  font-size: 24px;
-  transition: background-color 0.25s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    background-color: var(--vp-c-default-soft);
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+    transition: background-color 0.25s;
 }
 
 .title {
-  line-height: 24px;
-  font-size: 16px;
-  font-weight: 600;
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 .details {
-  flex-grow: 1;
-  padding-top: 8px;
-  line-height: 24px;
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--vp-c-text-2);
+    flex-grow: 1;
+    padding-top: 8px;
+    line-height: 24px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-content-liter);
 }
 
 .link-text {
-  padding-top: 8px;
+    padding-top: 8px;
 }
 
 .link-text-value {
-  display: flex;
-  align-items: center;
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--vp-c-brand-1);
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--vp-c-brand-1);
 }
 
 .link-text-icon {
-  margin-left: 6px;
+    margin-left: 6px;
 }
 </style>

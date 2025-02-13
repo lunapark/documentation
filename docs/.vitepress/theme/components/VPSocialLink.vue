@@ -57,12 +57,12 @@ if (import.meta.env.SSR) {
   align-items: center;
   width: 36px;
   height: 36px;
-  color: var(--vp-c-text-2);
+  color: var(--color-content-liter);
   transition: color 0.5s;
 }
 
 .VPSocialLink:hover {
-  color: var(--vp-c-text-1);
+  color: var(--color-content-lite);
   transition: color 0.25s;
 }
 

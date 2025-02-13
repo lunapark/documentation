@@ -58,7 +58,7 @@ function toggle() {
   align-items: center;
   font-size: 14px;
   font-weight: 500;
-  color: var(--vp-c-text-1);
+  color: var(--color-content-lite);
 }
 
 .icon {
@@ -80,6 +80,6 @@ function toggle() {
 .link {
   line-height: 32px;
   font-size: 13px;
-  color: var(--vp-c-text-1);
+  color: var(--color-content-lite);
 }
 </style>

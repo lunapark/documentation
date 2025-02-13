@@ -114,7 +114,7 @@ withDefaults(defineProps<Props>(), {
   line-height: 24px;
   font-size: 16px;
   font-weight: 500;
-  color: var(--vp-c-text-2);
+  color: var(--color-content-liter);
 }
 
 .sponsors {

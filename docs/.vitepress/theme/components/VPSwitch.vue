@@ -60,11 +60,11 @@
   left: 3px;
   width: 12px;
   height: 12px;
-  color: var(--vp-c-text-2);
+  color: var(--color-content-liter);
 }
 
 .dark .icon :deep([class^='vpi-']) {
-  color: var(--vp-c-text-1);
+  color: var(--color-content-lite);
   transition: opacity 0.25s !important;
 }
 </style>

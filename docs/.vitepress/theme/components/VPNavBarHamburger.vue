@@ -57,7 +57,7 @@ defineEmits<(e: "click") => void>();
 .VPNavBarHamburger.active:hover .top,
 .VPNavBarHamburger.active:hover .middle,
 .VPNavBarHamburger.active:hover .bottom {
-  background-color: var(--vp-c-text-2);
+  background-color: var(--color-content-liter);
   transition: top .25s, background-color .25s, transform .25s;
 }
 
@@ -67,7 +67,7 @@ defineEmits<(e: "click") => void>();
   position: absolute;
   width: 16px;
   height: 2px;
-  background-color: var(--vp-c-text-1);
+  background-color: var(--color-content-lite);
   transition: top .25s, background-color .5s, transform .25s;
 }
 

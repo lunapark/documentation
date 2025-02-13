@@ -95,7 +95,7 @@ const hasExtraContent = computed(
   line-height: 32px;
   font-size: 14px;
   font-weight: 700;
-  color: var(--vp-c-text-1);
+  color: var(--color-content-lite);
 }
 
 .item.appearance,

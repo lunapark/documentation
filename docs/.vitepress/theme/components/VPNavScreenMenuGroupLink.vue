@@ -30,7 +30,7 @@ const closeScreen = inject("close-screen") as () => void;
   line-height: 32px;
   font-size: 14px;
   font-weight: 400;
-  color: var(--vp-c-text-1);
+  color: var(--color-content-lite);
   transition: color 0.25s;
 }
 

@@ -122,18 +122,18 @@ function scrollToTop() {
   font-size: 12px;
   font-weight: 500;
   line-height: 24px;
-  color: var(--vp-c-text-2);
+  color: var(--color-content-liter);
   transition: color 0.5s;
   position: relative;
 }
 
 .VPLocalNavOutlineDropdown button:hover {
-  color: var(--vp-c-text-1);
+  color: var(--color-content-lite);
   transition: color 0.25s;
 }
 
 .VPLocalNavOutlineDropdown button.open {
-  color: var(--vp-c-text-1);
+  color: var(--color-content-lite);
 }
 
 .icon {

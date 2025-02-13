@@ -199,11 +199,11 @@ withDefaults(defineProps<Props>(), {
 .affiliation {
   margin: 0;
   font-weight: 500;
-  color: var(--vp-c-text-2);
+  color: var(--color-content-liter);
 }
 
 .org.link {
-  color: var(--vp-c-text-2);
+  color: var(--color-content-liter);
   transition: color 0.25s;
 }
 

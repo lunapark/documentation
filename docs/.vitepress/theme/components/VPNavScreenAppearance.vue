@@ -35,6 +35,6 @@ const { site, theme } = useData();
   line-height: 24px;
   font-size: 12px;
   font-weight: 500;
-  color: var(--vp-c-text-2);
+  color: var(--color-content-liter);
 }
 </style>
