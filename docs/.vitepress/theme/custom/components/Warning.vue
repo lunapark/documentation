@@ -2,7 +2,7 @@
     <div class="container">
         <div class="side-line" />
         <div class="icon">
-            <FontAwesomeIcon :icon="faTriangleExclamation"/>
+            <FontAwesomeIcon :icon="faTriangleExclamation" />
         </div>
         <div class="content">
             <span class="warning-title">{{ title }}</span>
@@ -12,8 +12,8 @@
 </template>
 
 <script setup lang="ts">
-import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome';
-import {faTriangleExclamation} from "@fortawesome/pro-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { faTriangleExclamation } from "@fortawesome/pro-solid-svg-icons";
 
 const props = defineProps<{
     title: string,

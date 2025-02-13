@@ -1,39 +1,39 @@
 <script setup lang="ts">
-import type { DefaultTheme } from 'vitepress/theme'
-import { withBase } from 'vitepress'
+import type { DefaultTheme } from "vitepress/theme";
+import { withBase } from "vitepress";
 
 defineProps<{
-  image: DefaultTheme.ThemeableImage
   alt?: string
-}>()
+  image: DefaultTheme.ThemeableImage
+}>();
 
-defineOptions({ inheritAttrs: false })
+defineOptions({ inheritAttrs: false });
 </script>
 
 <template>
-  <template v-if="image">
-    <img
-      v-if="typeof image === 'string' || 'src' in image"
-      class="VPImage"
-      v-bind="typeof image === 'string' ? $attrs : { ...image, ...$attrs }"
-      :src="withBase(typeof image === 'string' ? image : image.src)"
-      :alt="alt ?? (typeof image === 'string' ? '' : image.alt || '')"
-    />
-    <template v-else>
-      <VPImage
-        class="dark"
-        :image="image.dark"
-        :alt="image.alt"
-        v-bind="$attrs"
-      />
-      <VPImage
-        class="light"
-        :image="image.light"
-        :alt="image.alt"
-        v-bind="$attrs"
-      />
+    <template v-if="image">
+        <img
+            v-if="typeof image === 'string' || 'src' in image"
+            v-bind="typeof image === 'string' ? $attrs : { ...image, ...$attrs }"
+            :alt="alt ?? (typeof image === 'string' ? '' : image.alt || '')"
+            class="VPImage"
+            :src="withBase(typeof image === 'string' ? image : image.src)"
+        >
+        <template v-else>
+            <VPImage
+                :alt="image.alt"
+                class="dark"
+                :image="image.dark"
+                v-bind="$attrs"
+            />
+            <VPImage
+                :alt="image.alt"
+                class="light"
+                :image="image.light"
+                v-bind="$attrs"
+            />
+        </template>
     </template>
-  </template>
 </template>
 
 <style scoped>

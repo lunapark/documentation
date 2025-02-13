@@ -1,13 +1,16 @@
 <script lang="ts" setup>
 defineProps<{
   show: boolean
-}>()
+}>();
 </script>
 
 <template>
-  <transition name="fade">
-    <div v-if="show" class="VPBackdrop" />
-  </transition>
+    <transition name="fade">
+        <div
+            v-if="show"
+            class="VPBackdrop"
+        />
+    </transition>
 </template>
 
 <style scoped>

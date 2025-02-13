@@ -1,33 +1,33 @@
 export const visualScriptingEditorTableData = [
     {
-        type: { value: 'boolean', class: 'boolean' },
-        example: { value: 'true' },
-        type2: { value: 'boolean[]', class: 'boolean' },
-        example2: { value: '[true, false, false]' }
+        type: { class: "boolean", value: "boolean" },
+        example: { value: "true" },
+        example2: { value: "[true, false, false]" },
+        type2: { class: "boolean", value: "boolean[]" }
     },
     {
-        type: { value: 'number', class: 'number' },
-        example: { value: '1980' },
-        type2: { value: 'number[]', class: 'number' },
-        example2: { value: '[1980, 2020]' }
+        type: { class: "number", value: "number" },
+        example: { value: "1980" },
+        example2: { value: "[1980, 2020]" },
+        type2: { class: "number", value: "number[]" }
 
     },
     {
-        type: { value: 'string', class: 'string' },
-        example: { value: '"Hello World!"' },
-        type2: { value: 'string[]', class: 'string' },
-        example2: { value: '["Hello", "World!"]' }
+        type: { class: "string", value: "string" },
+        example: { value: "\"Hello World!\"" },
+        example2: { value: "[\"Hello\", \"World!\"]" },
+        type2: { class: "string", value: "string[]" }
     },
     {
-        type: { value: '{id: number}', class: 'object' },
-        example: { value: '{id: 42}' },
-        type2: { value: '{id: number}[]', class: 'object' },
-        example2: { value: '[{id: 42}, {id: 80}]' }
+        type: { class: "object", value: "{id: number}" },
+        example: { value: "{id: 42}" },
+        example2: { value: "[{id: 42}, {id: 80}]" },
+        type2: { class: "object", value: "{id: number}[]" }
     },
     {
-        type: { value: 'unknown', class: 'unknown' },
-        example: { value: '"Hello World!"' },
-        type2: { value: 'unknown', class: 'unknown' },
-        example2: { value: '["Hello", 42,{world: true}]' }
+        type: { class: "unknown", value: "unknown" },
+        example: { value: "\"Hello World!\"" },
+        example2: { value: "[\"Hello\", 42,{world: true}]" },
+        type2: { class: "unknown", value: "unknown" }
     }
 ];

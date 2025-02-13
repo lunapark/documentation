@@ -1,27 +1,35 @@
 <script setup lang="ts">
-import type { MenuItem } from '../composables/outline'
+import type { MenuItem } from "../composables/outline";
 
 defineProps<{
-  headers: MenuItem[]
+  headers: Array<MenuItem>
   root?: boolean
-}>()
+}>();
 
 function onClick({ target: el }: Event) {
-  const id = (el as HTMLAnchorElement).href!.split('#')[1]
-  const heading = document.getElementById(decodeURIComponent(id))
-  heading?.focus({ preventScroll: true })
+    const id = (el as HTMLAnchorElement).href!.split("#")[1];
+    const heading = document.getElementById(decodeURIComponent(id));
+    heading?.focus({ preventScroll: true });
 }
 </script>
 
 <template>
-  <ul class="VPDocOutlineItem" :class="root ? 'root' : 'nested'">
-    <li v-for="{ children, link, title } in headers">
-      <a class="outline-link" :href="link" @click="onClick" :title="title">{{ title }}</a>
-      <template v-if="children?.length">
-        <VPDocOutlineItem :headers="children" />
-      </template>
-    </li>
-  </ul>
+    <ul
+        class="VPDocOutlineItem"
+        :class="root ? 'root' : 'nested'"
+    >
+        <li v-for="{ children, link, title } in headers">
+            <a
+                class="outline-link"
+                :href="link"
+                :title="title"
+                @click="onClick"
+            >{{ title }}</a>
+            <template v-if="children?.length">
+                <VPDocOutlineItem :headers="children" />
+            </template>
+        </li>
+    </ul>
 </template>
 
 <style scoped>

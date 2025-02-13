@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import VPButton from './VPButton.vue'
-import VPSponsors from './VPSponsors.vue'
+import VPButton from "./VPButton.vue";
+import VPSponsors from "./VPSponsors.vue";
 
 export interface Sponsors {
+  items: Array<Sponsor>
+  size?: "medium" | "big"
   tier: string
-  size?: 'medium' | 'big'
-  items: Sponsor[]
 }
 
 export interface Sponsor {
@@ -14,36 +14,48 @@ export interface Sponsor {
   url: string
 }
 interface Props {
-  message?: string
-  actionText?: string
   actionLink?: string
-  data: Sponsors[]
+  actionText?: string
+  data: Array<Sponsors>
+  message?: string
 }
 
 withDefaults(defineProps<Props>(), {
-  actionText: 'Become a sponsor'
-})
+    actionText: "Become a sponsor"
+});
 </script>
 
 <template>
-  <section class="VPHomeSponsors">
-    <div class="container">
-      <div class="header">
-        <div class="love">
-          <span class="vpi-heart icon" />
+    <section class="VPHomeSponsors">
+        <div class="container">
+            <div class="header">
+                <div class="love">
+                    <span class="vpi-heart icon" />
+                </div>
+                <h2
+                    v-if="message"
+                    class="message"
+                >
+                    {{ message }}
+                </h2>
+            </div>
+
+            <div class="sponsors">
+                <VPSponsors :data="data" />
+            </div>
+
+            <div
+                v-if="actionLink"
+                class="action"
+            >
+                <VPButton
+                    :href="actionLink"
+                    :text="actionText"
+                    theme="sponsor"
+                />
+            </div>
         </div>
-        <h2 v-if="message" class="message">{{ message }}</h2>
-      </div>
-
-      <div class="sponsors">
-        <VPSponsors :data="data" />
-      </div>
-
-      <div v-if="actionLink" class="action">
-        <VPButton theme="sponsor" :text="actionText" :href="actionLink" />
-      </div>
-    </div>
-  </section>
+    </section>
 </template>
 
 <style scoped>

@@ -2,20 +2,29 @@
     <div class="generic-table">
         <table>
             <thead>
-            <tr>
-                <!-- On parcourt les colonnes pour afficher les titres -->
-                <th v-for="(col, index) in columns" :key="index">
-                    {{ col.title }}
-                </th>
-            </tr>
+                <tr>
+                    <!-- On parcourt les colonnes pour afficher les titres -->
+                    <th
+                        v-for="(col, index) in columns"
+                        :key="index"
+                    >
+                        {{ col.title }}
+                    </th>
+                </tr>
             </thead>
             <tbody>
-            <!-- Pour chaque ligne, on affiche les valeurs en fonction de la clé définie dans chaque colonne -->
-            <tr v-for="(row, rowIndex) in rows" :key="rowIndex">
-                <td v-for="(col, colIndex) in columns" :key="colIndex">
-                    {{ row[col.field] }}
-                </td>
-            </tr>
+                <!-- Pour chaque ligne, on affiche les valeurs en fonction de la clé définie dans chaque colonne -->
+                <tr
+                    v-for="(row, rowIndex) in rows"
+                    :key="rowIndex"
+                >
+                    <td
+                        v-for="(col, colIndex) in columns"
+                        :key="colIndex"
+                    >
+                        {{ row[col.field] }}
+                    </td>
+                </tr>
             </tbody>
         </table>
     </div>
@@ -24,8 +33,8 @@
 <script setup lang="ts">
 const props = defineProps<{
     columns: Array<{ title: string, field: string }>,
-    rows: Array<Record<string ,unknown>>
-}>()
+    rows: Array<Record<string, unknown>>
+}>();
 </script>
 
 <style scoped>

@@ -1,67 +1,74 @@
 <script lang="ts" setup>
-import { useScrollLock } from '@vueuse/core'
-import { inBrowser } from 'vitepress'
-import { ref, watch } from 'vue'
-import { useSidebar } from '../composables/sidebar'
-import VPSidebarGroup from './VPSidebarGroup.vue'
+import { useScrollLock } from "@vueuse/core";
+import { inBrowser } from "vitepress";
+import { ref, watch } from "vue";
+import { useSidebar } from "../composables/sidebar";
+import VPSidebarGroup from "./VPSidebarGroup.vue";
 
-const { sidebarGroups, hasSidebar } = useSidebar()
+const { hasSidebar, sidebarGroups } = useSidebar();
 
 const props = defineProps<{
   open: boolean
-}>()
+}>();
 
 // a11y: focus Nav element when menu has opened
-const navEl = ref<HTMLElement | null>(null)
-const isLocked = useScrollLock(inBrowser ? document.body : null)
+const navEl = ref<HTMLElement | null>(null);
+const isLocked = useScrollLock(inBrowser ? document.body : null);
 
 watch(
-  [props, navEl],
-  () => {
-    if (props.open) {
-      isLocked.value = true
-      navEl.value?.focus()
-    } else isLocked.value = false
-  },
-  { immediate: true, flush: 'post' }
-)
+    [props, navEl],
+    () => {
+        if (props.open) {
+            isLocked.value = true;
+            navEl.value?.focus();
+        }
+        else isLocked.value = false;
+    },
+    { flush: "post", immediate: true }
+);
 
-const key = ref(0)
+const key = ref(0);
 
 watch(
-  sidebarGroups,
-  () => {
-    key.value += 1
-  },
-  { deep: true }
-)
+    sidebarGroups,
+    () => {
+        key.value += 1;
+    },
+    { deep: true }
+);
 </script>
 
 <template>
-  <aside
-    v-if="hasSidebar"
-    class="VPSidebar"
-    :class="{ open }"
-    ref="navEl"
-    @click.stop
-  >
-    <div class="curtain" />
-
-    <nav
-      class="nav"
-      id="VPSidebarNav"
-      aria-labelledby="sidebar-aria-label"
-      tabindex="-1"
+    <aside
+        v-if="hasSidebar"
+        ref="navEl"
+        class="VPSidebar"
+        :class="{ open }"
+        @click.stop
     >
-      <span class="visually-hidden" id="sidebar-aria-label">
-        Sidebar Navigation
-      </span>
+        <div class="curtain" />
 
-      <slot name="sidebar-nav-before" />
-      <VPSidebarGroup :items="sidebarGroups" :key="key" />
-      <slot name="sidebar-nav-after" />
-    </nav>
-  </aside>
+        <nav
+            id="VPSidebarNav"
+            aria-labelledby="sidebar-aria-label"
+            class="nav"
+            tabindex="-1"
+        >
+            <span
+                id="sidebar-aria-label"
+                class="visually-hidden"
+            >
+                Sidebar Navigation
+            </span>
+
+            <slot name="sidebar-nav-before" />
+            <VPSidebarGroup
+                :key="key"
+                :items="sidebarGroups"
+            />
+            <slot name="sidebar-nav-after" />
+        </nav>
+    </aside>
 </template>
 
 <style scoped>

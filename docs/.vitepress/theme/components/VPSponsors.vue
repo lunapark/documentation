@@ -1,48 +1,59 @@
 <script setup lang="ts">
-import type { GridSize } from '../composables/sponsor-grid'
-import type { Sponsor } from './VPSponsorsGrid.vue'
-import { computed } from 'vue'
-import VPSponsorsGrid from './VPSponsorsGrid.vue'
+import type { GridSize } from "../composables/sponsor-grid";
+import type { Sponsor } from "./VPSponsorsGrid.vue";
+import { computed } from "vue";
+import VPSponsorsGrid from "./VPSponsorsGrid.vue";
 
 export interface Sponsors {
-  tier?: string
+  items: Array<Sponsor>
   size?: GridSize
-  items: Sponsor[]
+  tier?: string
 }
 interface Props {
-  mode?: 'normal' | 'aside'
-  tier?: string
+  data: Array<Sponsors> | Array<Sponsor>
+  mode?: "normal" | "aside"
   size?: GridSize
-  data: Sponsors[] | Sponsor[]
+  tier?: string
 }
 const props = withDefaults(defineProps<Props>(), {
-  mode: 'normal'
-})
+    mode: "normal"
+});
 
 const sponsors = computed(() => {
-  const isSponsors = props.data.some((s) => {
-    return 'items' in s
-  })
+    const isSponsors = props.data.some((s) => {
+        return "items" in s;
+    });
 
-  if (isSponsors) {
-    return props.data as Sponsors[]
-  }
+    if (isSponsors) {
+        return props.data as Array<Sponsors>;
+    }
 
-  return [
-    { tier: props.tier, size: props.size, items: props.data as Sponsor[] }
-  ]
-})
+    return [
+        { items: props.data as Array<Sponsor>, size: props.size, tier: props.tier }
+    ];
+});
 </script>
 
 <template>
-  <div class="VPSponsors vp-sponsor" :class="[mode]">
-    <section
-      v-for="(sponsor, index) in sponsors"
-      :key="index"
-      class="vp-sponsor-section"
+    <div
+        class="VPSponsors vp-sponsor"
+        :class="[mode]"
     >
-      <h3 v-if="sponsor.tier" class="vp-sponsor-tier">{{ sponsor.tier }}</h3>
-      <VPSponsorsGrid :size="sponsor.size" :data="sponsor.items" />
-    </section>
-  </div>
+        <section
+            v-for="(sponsor, index) in sponsors"
+            :key="index"
+            class="vp-sponsor-section"
+        >
+            <h3
+                v-if="sponsor.tier"
+                class="vp-sponsor-tier"
+            >
+                {{ sponsor.tier }}
+            </h3>
+            <VPSponsorsGrid
+                :data="sponsor.items"
+                :size="sponsor.size"
+            />
+        </section>
+    </div>
 </template>

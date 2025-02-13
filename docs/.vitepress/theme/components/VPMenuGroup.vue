@@ -1,20 +1,28 @@
 <script lang="ts" setup>
-import VPMenuLink from './VPMenuLink.vue'
+import VPMenuLink from "./VPMenuLink.vue";
 
 defineProps<{
+  items: Array<any>
   text?: string
-  items: any[]
-}>()
+}>();
 </script>
 
 <template>
-  <div class="VPMenuGroup">
-    <p v-if="text" class="title">{{ text }}</p>
+    <div class="VPMenuGroup">
+        <p
+            v-if="text"
+            class="title"
+        >
+            {{ text }}
+        </p>
 
-    <template v-for="item in items">
-      <VPMenuLink v-if="'link' in item" :item="item" />
-    </template>
-  </div>
+        <template v-for="item in items">
+            <VPMenuLink
+                v-if="'link' in item"
+                :item="item"
+            />
+        </template>
+    </div>
 </template>
 
 <style scoped>

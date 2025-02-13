@@ -1,80 +1,81 @@
 <script lang="ts" setup>
-import { useWindowScroll } from '@vueuse/core'
-import { onContentUpdated } from 'vitepress'
-import { computed, onMounted, ref } from 'vue'
-import { useData } from '../composables/data'
-import { useLocalNav } from '../composables/local-nav'
-import { getHeaders } from '../composables/outline'
-import { useSidebar } from '../composables/sidebar'
-import VPLocalNavOutlineDropdown from './VPLocalNavOutlineDropdown.vue'
+import { useWindowScroll } from "@vueuse/core";
+import { onContentUpdated } from "vitepress";
+import { computed, onMounted, ref } from "vue";
+import { useData } from "../composables/data";
+import { useLocalNav } from "../composables/local-nav";
+import { getHeaders } from "../composables/outline";
+import { useSidebar } from "../composables/sidebar";
+import VPLocalNavOutlineDropdown from "./VPLocalNavOutlineDropdown.vue";
 
 defineProps<{
   open: boolean
-}>()
+}>();
 
-defineEmits<{
-  (e: 'open-menu'): void
-}>()
+defineEmits<(e: "open-menu") => void>();
 
-const { theme, frontmatter } = useData()
-const { hasSidebar } = useSidebar()
-const { headers } = useLocalNav()
-const { y } = useWindowScroll()
+const { frontmatter, theme } = useData();
+const { hasSidebar } = useSidebar();
+const { headers } = useLocalNav();
+const { y } = useWindowScroll();
 
-const navHeight = ref(0)
+const navHeight = ref(0);
 
 onMounted(() => {
-  navHeight.value = parseInt(
-    getComputedStyle(document.documentElement).getPropertyValue(
-      '--vp-nav-height'
-    )
-  )
-})
+    navHeight.value = parseInt(
+        getComputedStyle(document.documentElement).getPropertyValue(
+            "--vp-nav-height"
+        )
+    );
+});
 
 onContentUpdated(() => {
-  headers.value = getHeaders(frontmatter.value.outline ?? theme.value.outline)
-})
+    headers.value = getHeaders(frontmatter.value.outline ?? theme.value.outline);
+});
 
 const empty = computed(() => {
-  return headers.value.length === 0
-})
+    return headers.value.length === 0;
+});
 
 const emptyAndNoSidebar = computed(() => {
-  return empty.value && !hasSidebar.value
-})
+    return empty.value && !hasSidebar.value;
+});
 
 const classes = computed(() => {
-  return {
-    VPLocalNav: true,
-    'has-sidebar': hasSidebar.value,
-    empty: empty.value,
-    fixed: emptyAndNoSidebar.value
-  }
-})
+    return {
+        empty: empty.value,
+        fixed: emptyAndNoSidebar.value,
+        "has-sidebar": hasSidebar.value,
+        VPLocalNav: true
+    };
+});
 </script>
 
 <template>
-  <div
-    v-if="frontmatter.layout !== 'home' && (!emptyAndNoSidebar || y >= navHeight)"
-    :class="classes"
-  >
-    <div class="container">
-      <button
-        v-if="hasSidebar"
-        class="menu"
-        :aria-expanded="open"
-        aria-controls="VPSidebarNav"
-        @click="$emit('open-menu')"
-      >
-        <span class="vpi-align-left menu-icon"></span>
-        <span class="menu-text">
-          {{ theme.sidebarMenuLabel || 'Menu' }}
-        </span>
-      </button>
+    <div
+        v-if="frontmatter.layout !== 'home' && (!emptyAndNoSidebar || y >= navHeight)"
+        :class="classes"
+    >
+        <div class="container">
+            <button
+                v-if="hasSidebar"
+                aria-controls="VPSidebarNav"
+                :aria-expanded="open"
+                class="menu"
+                @click="$emit('open-menu')"
+            >
+                <span class="vpi-align-left menu-icon" />
+                <span class="menu-text">
+                    {{ theme.sidebarMenuLabel || 'Menu' }}
+                </span>
+            </button>
 
-      <VPLocalNavOutlineDropdown :headers="headers" :navHeight="navHeight" />
+            <VPLocalNavOutlineDropdown
+                :headers="headers"
+                :nav-height="navHeight"
+            />
+        </div>
     </div>
-  </div>
 </template>
 
 <style scoped>

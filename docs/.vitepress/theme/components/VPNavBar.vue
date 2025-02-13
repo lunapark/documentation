@@ -1,72 +1,81 @@
 <script lang="ts" setup>
-import { useWindowScroll } from '@vueuse/core'
-import { ref, watchPostEffect } from 'vue'
-import { useData } from '../composables/data'
-import { useSidebar } from '../composables/sidebar'
-import VPNavBarAppearance from './VPNavBarAppearance.vue'
-import VPNavBarExtra from './VPNavBarExtra.vue'
-import VPNavBarHamburger from './VPNavBarHamburger.vue'
-import VPNavBarMenu from './VPNavBarMenu.vue'
-import VPNavBarSearch from './VPNavBarSearch.vue'
-import VPNavBarSocialLinks from './VPNavBarSocialLinks.vue'
-import VPNavBarTitle from './VPNavBarTitle.vue'
-import VPNavBarTranslations from './VPNavBarTranslations.vue'
+import { useWindowScroll } from "@vueuse/core";
+import { ref, watchPostEffect } from "vue";
+import { useData } from "../composables/data";
+import { useSidebar } from "../composables/sidebar";
+import VPNavBarAppearance from "./VPNavBarAppearance.vue";
+import VPNavBarExtra from "./VPNavBarExtra.vue";
+import VPNavBarHamburger from "./VPNavBarHamburger.vue";
+import VPNavBarMenu from "./VPNavBarMenu.vue";
+import VPNavBarSearch from "./VPNavBarSearch.vue";
+import VPNavBarSocialLinks from "./VPNavBarSocialLinks.vue";
+import VPNavBarTitle from "./VPNavBarTitle.vue";
+import VPNavBarTranslations from "./VPNavBarTranslations.vue";
 
 const props = defineProps<{
   isScreenOpen: boolean
-}>()
+}>();
 
-defineEmits<{
-  (e: 'toggle-screen'): void
-}>()
+defineEmits<(e: "toggle-screen") => void>();
 
-const { y } = useWindowScroll()
-const { hasSidebar } = useSidebar()
-const { frontmatter } = useData()
+const { y } = useWindowScroll();
+const { hasSidebar } = useSidebar();
+const { frontmatter } = useData();
 
-const classes = ref<Record<string, boolean>>({})
+const classes = ref<Record<string, boolean>>({});
 
 watchPostEffect(() => {
-  classes.value = {
-    'has-sidebar': hasSidebar.value,
-    'home': frontmatter.value.layout === 'home',
-    'top': y.value === 0,
-    'screen-open': props.isScreenOpen
-  }
-})
+    classes.value = {
+        "top": y.value === 0,
+        "has-sidebar": hasSidebar.value,
+        "home": frontmatter.value.layout === "home",
+        "screen-open": props.isScreenOpen
+    };
+});
 </script>
 
 <template>
-  <div class="VPNavBar" :class="classes">
-    <div class="wrapper">
-      <div class="container">
-        <div class="title">
-          <VPNavBarTitle>
-            <template #nav-bar-title-before><slot name="nav-bar-title-before" /></template>
-            <template #nav-bar-title-after><slot name="nav-bar-title-after" /></template>
-          </VPNavBarTitle>
+    <div
+        class="VPNavBar"
+        :class="classes"
+    >
+        <div class="wrapper">
+            <div class="container">
+                <div class="title">
+                    <VPNavBarTitle>
+                        <template #nav-bar-title-before>
+                            <slot name="nav-bar-title-before" />
+                        </template>
+                        <template #nav-bar-title-after>
+                            <slot name="nav-bar-title-after" />
+                        </template>
+                    </VPNavBarTitle>
+                </div>
+
+                <div class="content">
+                    <div class="content-body">
+                        <slot name="nav-bar-content-before" />
+                        <VPNavBarSearch class="search" />
+                        <VPNavBarMenu class="menu" />
+                        <VPNavBarTranslations class="translations" />
+                        <VPNavBarAppearance class="appearance" />
+                        <VPNavBarSocialLinks class="social-links" />
+                        <VPNavBarExtra class="extra" />
+                        <slot name="nav-bar-content-after" />
+                        <VPNavBarHamburger
+                            :active="isScreenOpen"
+                            class="hamburger"
+                            @click="$emit('toggle-screen')"
+                        />
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="content">
-          <div class="content-body">
-            <slot name="nav-bar-content-before" />
-            <VPNavBarSearch class="search" />
-            <VPNavBarMenu class="menu" />
-            <VPNavBarTranslations class="translations" />
-            <VPNavBarAppearance class="appearance" />
-            <VPNavBarSocialLinks class="social-links" />
-            <VPNavBarExtra class="extra" />
-            <slot name="nav-bar-content-after" />
-            <VPNavBarHamburger class="hamburger" :active="isScreenOpen" @click="$emit('toggle-screen')" />
-          </div>
+        <div class="divider">
+            <div class="divider-line" />
         </div>
-      </div>
     </div>
-
-    <div class="divider">
-      <div class="divider-line" />
-    </div>
-  </div>
 </template>
 
 <style scoped>

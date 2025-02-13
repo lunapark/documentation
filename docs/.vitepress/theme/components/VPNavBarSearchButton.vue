@@ -1,29 +1,33 @@
 <script lang="ts" setup>
-import type { ButtonTranslations } from '../../../../types/local-search'
-import { createSearchTranslate } from '../support/translation'
+import type { ButtonTranslations } from "../../../../types/local-search";
+import { createSearchTranslate } from "../support/translation";
 
 // Button-Translations
 const defaultTranslations: { button: ButtonTranslations } = {
-  button: {
-    buttonText: 'Search',
-    buttonAriaLabel: 'Search'
-  }
-}
+    button: {
+        buttonAriaLabel: "Search",
+        buttonText: "Search"
+    }
+};
 
-const translate = createSearchTranslate(defaultTranslations)
+const translate = createSearchTranslate(defaultTranslations);
 </script>
 
 <template>
-  <button type="button" class="DocSearch DocSearch-Button" :aria-label="translate('button.buttonAriaLabel')">
-    <span class="DocSearch-Button-Container">
-      <span class="vp-icon DocSearch-Search-Icon"></span>
-      <span class="DocSearch-Button-Placeholder">{{ translate('button.buttonText') }}</span>
-    </span>
-    <span class="DocSearch-Button-Keys">
-      <kbd class="DocSearch-Button-Key"></kbd>
-      <kbd class="DocSearch-Button-Key">K</kbd>
-    </span>
-  </button>
+    <button
+        :aria-label="translate('button.buttonAriaLabel')"
+        class="DocSearch DocSearch-Button"
+        type="button"
+    >
+        <span class="DocSearch-Button-Container">
+            <span class="vp-icon DocSearch-Search-Icon" />
+            <span class="DocSearch-Button-Placeholder">{{ translate('button.buttonText') }}</span>
+        </span>
+        <span class="DocSearch-Button-Keys">
+            <kbd class="DocSearch-Button-Key" />
+            <kbd class="DocSearch-Button-Key">K</kbd>
+        </span>
+    </button>
 </template>
 
 <style>

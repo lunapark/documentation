@@ -1,7 +1,7 @@
 <template>
-  <div class="VPTeamPage">
-    <slot />
-  </div>
+    <div class="VPTeamPage">
+        <slot />
+    </div>
 </template>
 
 <style scoped>

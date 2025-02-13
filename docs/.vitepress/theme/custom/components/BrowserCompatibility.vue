@@ -2,32 +2,32 @@
     <div class="browser-compatibility-table">
         <table>
             <thead>
-            <tr>
-                <th>Navigators</th>
-                <th>Minimum version</th>
-            </tr>
+                <tr>
+                    <th>Navigators</th>
+                    <th>Minimum version</th>
+                </tr>
             </thead>
             <tbody>
-            <tr>
-                <td>Chrome</td>
-                <td>v120</td>
-            </tr>
-            <tr>
-                <td>Edge</td>
-                <td>v120</td>
-            </tr>
-            <tr>
-                <td>Safari</td>
-                <td>v17.2</td>
-            </tr>
-            <tr>
-                <td>Firefox</td>
-                <td>v117</td>
-            </tr>
-            <tr>
-                <td>Opera</td>
-                <td>v106</td>
-            </tr>
+                <tr>
+                    <td>Chrome</td>
+                    <td>v120</td>
+                </tr>
+                <tr>
+                    <td>Edge</td>
+                    <td>v120</td>
+                </tr>
+                <tr>
+                    <td>Safari</td>
+                    <td>v17.2</td>
+                </tr>
+                <tr>
+                    <td>Firefox</td>
+                    <td>v117</td>
+                </tr>
+                <tr>
+                    <td>Opera</td>
+                    <td>v106</td>
+                </tr>
             </tbody>
         </table>
     </div>

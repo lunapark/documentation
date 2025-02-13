@@ -2,26 +2,35 @@
     <div class="table-container">
         <table class="type-table">
             <thead>
-            <tr>
-                <th v-for="(col, index) in columns" :key="index">{{ col.title }}</th>
-            </tr>
+                <tr>
+                    <th
+                        v-for="(col, index) in columns"
+                        :key="index"
+                    >
+                        {{ col.title }}
+                    </th>
+                </tr>
             </thead>
             <tbody>
-            <tr v-for="(row, rowIndex) in rows" :key="rowIndex">
-                <td
-                    v-for="(col, colIndex) in columns"
-                    :key="colIndex"
-                    :class="getClass(row[col.key].value)">
-                    <Anchor
-                        v-if="colIndex === 0 || colIndex === 2"
-                        :type="colIndex === 0 ? 'value' : 'array'"
-                        :color="getColor(row[col.key].value)"
-                        class="anchor"
-                    />
+                <tr
+                    v-for="(row, rowIndex) in rows"
+                    :key="rowIndex"
+                >
+                    <td
+                        v-for="(col, colIndex) in columns"
+                        :key="colIndex"
+                        :class="getClass(row[col.key].value)"
+                    >
+                        <Anchor
+                            v-if="colIndex === 0 || colIndex === 2"
+                            class="anchor"
+                            :color="getColor(row[col.key].value)"
+                            :type="colIndex === 0 ? 'value' : 'array'"
+                        />
 
-                    <span v-html="getClass(row[col.key].value) === 'object' ? renderObject(row[col.key].value) : row[col.key].value"></span>
-                </td>
-            </tr>
+                        <span v-html="getClass(row[col.key].value) === 'object' ? renderObject(row[col.key].value) : row[col.key].value" />
+                    </td>
+                </tr>
             </tbody>
         </table>
     </div>
@@ -32,29 +41,29 @@
 import Anchor from "./Anchor.vue";
 
 const props = defineProps<{
-    columns: Array<{ key: string, title: string }>,
-    rows: Array<Record<string ,unknown>>
+    columns: Array<{ title: string, key: string }>,
+    rows: Array<Record<string, unknown>>
 }>();
 
 function getColor(content) {
     const colorMapping = {
-        boolean: 'var(--color-type-boolean)',
-        number: 'var(--color-type-number)',
-        string: 'var(--color-type-string)',
-        object: 'var(--color-type-object)',
-        default: 'white'
+        boolean: "var(--color-type-boolean)",
+        default: "white",
+        number: "var(--color-type-number)",
+        object: "var(--color-type-object)",
+        string: "var(--color-type-string)"
     };
 
-    if (content.startsWith('{')) {
+    if (content.startsWith("{")) {
         return colorMapping.object;
     }
-    if (content.startsWith('boolean')) {
+    if (content.startsWith("boolean")) {
         return colorMapping.boolean;
     }
-    if (content.startsWith('number')) {
+    if (content.startsWith("number")) {
         return colorMapping.number;
     }
-    if (content.startsWith('string')) {
+    if (content.startsWith("string")) {
         return colorMapping.string;
     }
 
@@ -67,39 +76,40 @@ function getClass(value) {
 
 
 
-    if (value.startsWith('{') || value.endsWith(']')) {
-        return 'object'; // Classe pour les objets
+    if (value.startsWith("{") || value.endsWith("]")) {
+        return "object"; // Classe pour les objets
     }
 
     // Vérifier si c'est une chaîne de caractères
-    if (/^".*"$/.test(value) || value.startsWith('string')) {
-        return 'string';
+    if (/^".*"$/.test(value) || value.startsWith("string")) {
+        return "string";
     }
     // Vérifier si c'est un booléen "true" ou "false"
-    else if (value === 'true' || value === 'false' || value.startsWith("boolean")) {
-        return 'boolean';
+    else if (value === "true" || value === "false" || value.startsWith("boolean")) {
+        return "boolean";
     }
     // Vérifier si c'est un nombre
     else if (/^\d+$/.test(value) || value.startsWith("number")) {
-        return 'number';
+        return "number";
     }
-    return '';
+    return "";
 }
 
 function renderObject(value) {
     // Diviser la chaîne en conservant les séparateurs (espaces, accolades, crochets, virgules, etc.)
     const words = value.split(/([{}\[\]\s,:]+)/); // Garde les séparateurs
 
-    let result = '';
+    let result = "";
 
     // Parcourt chaque mot ou séparateur
     words.forEach((word) => {
         if (/^[\s,:{}\[\]]+$/.test(word)) {
             // Si c'est un séparateur ou des crochets, ajouter la classe 'bracket'
-            result += `<span class="unknown">${word}</span>`;
-        } else {
+            result += `<span class="unknown">${ word }</span>`;
+        }
+        else {
             // Sinon, utiliser getClass pour appliquer la classe appropriée
-            result += `<span class="${getClass(word)}">${word}</span>`;
+            result += `<span class="${ getClass(word) }">${ word }</span>`;
         }
     });
 

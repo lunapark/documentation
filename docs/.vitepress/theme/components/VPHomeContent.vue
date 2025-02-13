@@ -1,19 +1,19 @@
 <script setup lang="ts">
-import { useWindowSize } from '@vueuse/core'
+import { useWindowSize } from "@vueuse/core";
 
 const { width: vw } = useWindowSize({
-  initialWidth: 0,
-  includeScrollbar: false
-})
+    includeScrollbar: false,
+    initialWidth: 0
+});
 </script>
 
 <template>
-  <div
-    class="vp-doc container"
-    :style="vw ? { '--vp-offset': `calc(50% - ${vw / 2}px)` } : {}"
-  >
-    <slot />
-  </div>
+    <div
+        class="vp-doc container"
+        :style="vw ? { '--vp-offset': `calc(50% - ${vw / 2}px)` } : {}"
+    >
+        <slot />
+    </div>
 </template>
 
 <style scoped>

@@ -1,9 +1,17 @@
 <template>
     <div class="cards-container">
-        <div v-for="(card, index) in cards" :key="index" :class="['info-card', card.accent ? 'accent' : '']">
+        <div
+            v-for="(card, index) in cards"
+            :key="index"
+            :class="['info-card', card.accent ? 'accent' : '']"
+        >
             <span class="title">{{ card.title }}</span>
             <ul class="info-list">
-                <li v-for="(info, idx) in card.infoPairs" :key="idx" class="info-item">
+                <li
+                    v-for="(info, idx) in card.infoPairs"
+                    :key="idx"
+                    class="info-item"
+                >
                     <span class="info-label">{{ info.label }}</span>
                     <span :class="info.styleClass">{{ info.value }}</span>
                 </li>
@@ -19,8 +27,8 @@ const props = defineProps<{
         accent: boolean,
         infoPairs: Array<{
             label: string,
-            value: string,
-            styleClass: string
+            styleClass: string,
+            value: string
         }>
     }>;
 }>();

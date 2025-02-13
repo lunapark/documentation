@@ -1,68 +1,97 @@
 <script setup lang="ts">
-import { type Ref, inject } from 'vue'
-import type { DefaultTheme } from 'vitepress/theme'
-import VPButton from './VPButton.vue'
-import VPImage from './VPImage.vue'
+import { inject, type Ref } from "vue";
+import type { DefaultTheme } from "vitepress/theme";
+import VPButton from "./VPButton.vue";
+import VPImage from "./VPImage.vue";
 
 export interface HeroAction {
-  theme?: 'brand' | 'alt'
-  text: string
   link: string
-  target?: string
   rel?: string
+  target?: string
+  text: string
+  theme?: "brand" | "alt"
 }
 
 defineProps<{
   name?: string
-  text?: string
-  tagline?: string
+  actions?: Array<HeroAction>
   image?: DefaultTheme.ThemeableImage
-  actions?: HeroAction[]
-}>()
+  tagline?: string
+  text?: string
+}>();
 
-const heroImageSlotExists = inject('hero-image-slot-exists') as Ref<boolean>
+const heroImageSlotExists = inject("hero-image-slot-exists") as Ref<boolean>;
 </script>
 
 <template>
-  <div class="VPHero" :class="{ 'has-image': image || heroImageSlotExists }">
-    <div class="container">
-      <div class="main">
-        <slot name="home-hero-info-before" />
-        <slot name="home-hero-info">
-          <h1 class="heading">
-            <span v-if="name" v-html="name" class="name clip"></span>
-            <span v-if="text" v-html="text" class="text"></span>
-          </h1>
-          <p v-if="tagline" v-html="tagline" class="tagline"></p>
-        </slot>
-        <slot name="home-hero-info-after" />
+    <div
+        class="VPHero"
+        :class="{ 'has-image': image || heroImageSlotExists }"
+    >
+        <div class="container">
+            <div class="main">
+                <slot name="home-hero-info-before" />
+                <slot name="home-hero-info">
+                    <h1 class="heading">
+                        <span
+                            v-if="name"
+                            class="name clip"
+                            v-html="name"
+                        />
+                        <span
+                            v-if="text"
+                            class="text"
+                            v-html="text"
+                        />
+                    </h1>
+                    <p
+                        v-if="tagline"
+                        class="tagline"
+                        v-html="tagline"
+                    />
+                </slot>
+                <slot name="home-hero-info-after" />
 
-        <div v-if="actions" class="actions">
-          <div v-for="action in actions" :key="action.link" class="action">
-            <VPButton
-              tag="a"
-              size="medium"
-              :theme="action.theme"
-              :text="action.text"
-              :href="action.link"
-              :target="action.target"
-              :rel="action.rel"
-            />
-          </div>
-        </div>
-        <slot name="home-hero-actions-after" />
-      </div>
+                <div
+                    v-if="actions"
+                    class="actions"
+                >
+                    <div
+                        v-for="action in actions"
+                        :key="action.link"
+                        class="action"
+                    >
+                        <VPButton
+                            :href="action.link"
+                            :rel="action.rel"
+                            size="medium"
+                            tag="a"
+                            :target="action.target"
+                            :text="action.text"
+                            :theme="action.theme"
+                        />
+                    </div>
+                </div>
+                <slot name="home-hero-actions-after" />
+            </div>
 
-      <div v-if="image || heroImageSlotExists" class="image">
-        <div class="image-container">
-          <div class="image-bg" />
-          <slot name="home-hero-image">
-            <VPImage v-if="image" class="image-src" :image="image" />
-          </slot>
+            <div
+                v-if="image || heroImageSlotExists"
+                class="image"
+            >
+                <div class="image-container">
+                    <div class="image-bg" />
+                    <slot name="home-hero-image">
+                        <VPImage
+                            v-if="image"
+                            class="image-src"
+                            :image="image"
+                        />
+                    </slot>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </template>
 
 <style scoped>

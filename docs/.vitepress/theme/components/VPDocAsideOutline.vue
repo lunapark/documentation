@@ -1,51 +1,57 @@
 <script setup lang="ts">
-import { onContentUpdated } from 'vitepress'
-import { ref, shallowRef } from 'vue'
-import { useData } from '../composables/data'
+import { onContentUpdated } from "vitepress";
+import { ref, shallowRef } from "vue";
+import { useData } from "../composables/data";
 import {
-  getHeaders,
-  resolveTitle,
-  useActiveAnchor,
-  type MenuItem
-} from '../composables/outline'
-import VPDocOutlineItem from './VPDocOutlineItem.vue'
+    getHeaders,
+    type MenuItem,
+    resolveTitle,
+    useActiveAnchor
+} from "../composables/outline";
+import VPDocOutlineItem from "./VPDocOutlineItem.vue";
 
-const { frontmatter, theme } = useData()
+const { frontmatter, theme } = useData();
 
-const headers = shallowRef<MenuItem[]>([])
+const headers = shallowRef<Array<MenuItem>>([]);
 
 onContentUpdated(() => {
-  headers.value = getHeaders(frontmatter.value.outline ?? theme.value.outline)
-})
+    headers.value = getHeaders(frontmatter.value.outline ?? theme.value.outline);
+});
 
-const container = ref()
-const marker = ref()
+const container = ref();
+const marker = ref();
 
-useActiveAnchor(container, marker)
+useActiveAnchor(container, marker);
 </script>
 
 <template>
-  <nav
-    aria-labelledby="doc-outline-aria-label"
-    class="VPDocAsideOutline"
-    :class="{ 'has-outline': headers.length > 0 }"
-    ref="container"
-  >
-    <div class="content">
-      <div class="outline-marker" ref="marker" />
+    <nav
+        ref="container"
+        aria-labelledby="doc-outline-aria-label"
+        class="VPDocAsideOutline"
+        :class="{ 'has-outline': headers.length > 0 }"
+    >
+        <div class="content">
+            <div
+                ref="marker"
+                class="outline-marker"
+            />
 
-      <div
-        aria-level="2"
-        class="outline-title"
-        id="doc-outline-aria-label"
-        role="heading"
-      >
-        {{ resolveTitle(theme) }}
-      </div>
+            <div
+                id="doc-outline-aria-label"
+                aria-level="2"
+                class="outline-title"
+                role="heading"
+            >
+                {{ resolveTitle(theme) }}
+            </div>
 
-      <VPDocOutlineItem :headers="headers" :root="true" />
-    </div>
-  </nav>
+            <VPDocOutlineItem
+                :headers="headers"
+                :root="true"
+            />
+        </div>
+    </nav>
 </template>
 
 <style scoped>

@@ -1,17 +1,20 @@
 <script setup lang="ts">
 interface Props {
+  type?: "info" | "tip" | "warning" | "danger"
   text?: string
-  type?: 'info' | 'tip' | 'warning' | 'danger'
 }
 withDefaults(defineProps<Props>(), {
-  type: 'tip'
-})
+    type: "tip"
+});
 </script>
 
 <template>
-  <span class="VPBadge" :class="type">
-    <slot>{{ text }}</slot>
-  </span>
+    <span
+        class="VPBadge"
+        :class="type"
+    >
+        <slot>{{ text }}</slot>
+    </span>
 </template>
 
 <style>

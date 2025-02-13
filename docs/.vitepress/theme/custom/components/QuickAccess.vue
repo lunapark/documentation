@@ -1,7 +1,14 @@
 <template>
     <div class="quick-access">
-        <div v-for="item in items" :key="item.title" class="card">
-            <a :href="item.link" class="card-link">
+        <div
+            v-for="item in items"
+            :key="item.title"
+            class="card"
+        >
+            <a
+                class="card-link"
+                :href="item.link"
+            >
                 <span class="card-title">{{ item.title }}</span>
                 <p>{{ item.description }}</p>
             </a>
