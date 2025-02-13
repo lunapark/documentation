@@ -4,8 +4,8 @@ layout: home
 
 hero:
   name: "Luna Park"
-  text: "Luna Park Documentation"
-  tagline: Imaginez, créez et livrez des applications web modernes comme si vous étiez en 2034.
+  text: "L'éditeur de scripting visuel"
+  tagline: Créez des applications web rapides et évolutives sans code.
   actions:
     - theme: brand
       text: Commencer

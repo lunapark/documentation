@@ -40,7 +40,7 @@ Les ancres sont l'interface du nœud. Les ancres d'entrée sont affichées à ga
 - **Ancres de valeur** (**placer icône**/**placer icône**)
   Ces ancres sont affichées avec une forme circulaire lorsqu'elles contiennent une seule valeur, ou une forme carrée lorsqu'elles contiennent une liste (appelée tableau) de valeurs. Lorsque vous utilisez des ancres d'entrée, vous pouvez spécifier certains types, comme chaîne ou nombre, dans l'entrée à côté de l'ancre. La couleur de l'ancre dépend du type de valeur qu'elle contient.
 
-<script setup>
+<script setup lang="ts">
 import { visualScriptingEditorTableData } from '../../../tables-data'
 </script>
 

@@ -26,7 +26,7 @@ features:
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
 
-<script setup>
+<script setup lang="ts">
 import { useRoute } from 'vitepress';
 
 const route = useRoute();

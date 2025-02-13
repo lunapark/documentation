@@ -20,7 +20,7 @@ Les nœuds sont des briques logiques de base que l'on peut placer sur la grille.
 
 ![Capture d'écran de l'éditeur Luna Park](../../../assets/visual-scripting/graph-basis/screen2.png)
 
-<script setup>
+<script setup lang="ts">
 import { visualScriptingEditorTableData } from '../../../tables-data'
 </script>
 

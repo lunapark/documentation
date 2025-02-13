@@ -29,7 +29,7 @@ Anchors are the interface of the node. Input anchors are display on the left of 
 - **Value anchors** (**place icon**/**place icon**)
   Those anchors are displayed with a circle shape when holding a single value, or a square shape when holding a list (called array) of values. When used as input anchors, you can specify some types, like string and number, in the input next to the anchor. The color of the anchor depend on the type of value it's holding.
 
-<script setup>
+<script setup lang="ts">
 import { visualScriptingEditorTableData } from '../../tables-data'
 </script>
 

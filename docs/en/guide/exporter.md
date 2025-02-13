@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import {faLink, faGear, faHammer} from "@fortawesome/pro-solid-svg-icons";
 
 </script>
