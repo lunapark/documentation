@@ -94,7 +94,7 @@ const hasExtraContent = computed(
   padding: 0 24px 0 12px;
   line-height: 32px;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--color-content-lite);
 }
 

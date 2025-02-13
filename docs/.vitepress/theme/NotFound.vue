@@ -58,7 +58,7 @@ const { currentLang } = useLangs();
   letter-spacing: 2px;
   line-height: 20px;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .divider {

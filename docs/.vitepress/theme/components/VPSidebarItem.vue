@@ -174,7 +174,7 @@ function onCaretClick() {
 }
 
 .VPSidebarItem.level-0 .text {
-  font-weight: 700;
+  font-weight: 600;
   color: var(--color-content-lite);
 }
 

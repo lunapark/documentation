@@ -14,7 +14,10 @@ Pour accéder à votre application déployée sur Luna Park, cliquez simplement 
 
 Les paramètres sont disponibles dans l'onglet <Highlight text="paramètres"/> du panneau d'inspection (icône <font-awesome-icon :icon="faGear"/> dans la barre supérieure). Vous pouvez y modifier le nom de votre application, ainsi que définir si vous souhaitez qu'elle soit une PWA (Progressive Web App). Cela signifie que votre application peut être installée directement sur des navigateurs compatibles.
 
-<Warning title="PWA non disponible" content="Le mode PWA n'est pas encore prêt" />
+<LContainer type="warning">
+<h2>PWA non disponible</h2>
+Le mode PWA n'est pas encore prêt
+</LContainer>
 
 Vous pouvez également choisir le mode d'historique parmi ces types :
 
@@ -29,7 +32,10 @@ Pour exporter pour le bureau, cliquez simplement sur l'icône <font-awesome-icon
 - **Portable** : Génère un exécutable unique qui peut être lancé directement. Utile pour des tests rapides, mais pas recommandé pour la distribution car il peut ne pas fonctionner sur les anciens systèmes.
 - **Installateur** : Génère un installateur pour installer votre application. Recommandé pour la distribution, il prend en charge les mises à jour et peut être installé n'importe où.
 
-<Warning title="Compilation MacOS non disponible" content="L'exportation pour MacOS n'est pas encore prête." />
+<LContainer type="warning">
+<h2>Compilation MacOS non disponible</h2>
+L'exportation pour MacOS n'est pas encore prête.
+</LContainer>
 
 ## Paramètres
 
@@ -45,4 +51,7 @@ Les paramètres sont disponibles dans l'onglet <Highlight text="paramètres"/> d
 
 <br/>
 
-<Warning title="Exportation mobile non disponible" content="L'exportation pour mobile n'est pas encore prête." />
+<LContainer type="warning">
+<h2>Exportation mobile non disponible</h2>
+L'exportation pour mobile n'est pas encore prête.
+</LContainer>

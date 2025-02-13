@@ -109,16 +109,8 @@ _👉 Les variables **computed** sont très utiles pour éviter de devoir manuel
 
 ### 4. Comparaison entre les types de variables
 
-<GenericTable
-:columns="[
-{ title: 'Type de variable', field: 'type' },
-{ title: 'Réactivité', field: 'activity' },
-{ title: 'Utilisation principale', field: 'mainUse' }
-]"
-:rows="[
-{ type: 'Logique', activity: 'Non', mainUse: 'Contrôle de flux et logique interne' },
-{ type: 'Interface', activity: 'Oui', mainUse: 'Affichage et interaction avec l\'utilisateur' },
-{ type: 'Computed', activity: 'Oui', mainUse: 'Calculs automatiques basés sur d\'autres variables' }
-]"
-/>
-
+| Type de variable | Réactivité | Utilisation principale |
+| --- | --- | --- |
+| Logique | Non | Contrôle de flux et logique interne |
+| Interface | Oui | Affichage et interaction avec l'utilisateur |
+| Computed | Oui | Calculs automatiques basés sur d'autres variables |

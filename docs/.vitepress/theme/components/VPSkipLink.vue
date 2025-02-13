@@ -54,7 +54,7 @@ function focusOnTargetAnchor({ target }: Event) {
   text-decoration: none;
   color: var(--vp-c-brand-1);
   box-shadow: var(--vp-shadow-3);
-  background-color: var(--vp-c-bg);
+  background-color: var(--color-background-0);
 }
 
 .VPSkipLink:focus {

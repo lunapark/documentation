@@ -66,7 +66,7 @@
   line-height: 32px;
   font-size: 20px;
   font-weight: 500;
-  background-color: var(--vp-c-bg);
+  background-color: var(--color-background-0);
 }
 
 .lead {

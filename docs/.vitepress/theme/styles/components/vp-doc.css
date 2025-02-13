@@ -17,6 +17,7 @@
   letter-spacing: -0.02em;
   line-height: 40px;
   font-size: 28px;
+  color: var(--color-content);
 }
 
 .vp-doc h2 {
@@ -171,7 +172,7 @@
 }
 
 .vp-doc tr {
-  background-color: var(--vp-c-bg);
+  background-color: var(--color-background-0);
   border-top: 1px solid var(--vp-c-divider);
   transition: background-color 0.5s;
 }

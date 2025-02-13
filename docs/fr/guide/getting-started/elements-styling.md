@@ -1,3 +1,5 @@
+# Stylisation
+
 ## Stylisation des éléments
 
 Chaque élément de votre projet peut être stylisé individuellement dans le panneau d'inspection, sous l'onglet **style**. Cela vous permet de personnaliser l'apparence de chaque composant de votre application, comme les textes, les images, ou les boutons.

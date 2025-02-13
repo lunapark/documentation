@@ -37,8 +37,8 @@ body {
   font-family: var(--vp-font-family-base);
   font-size: 16px;
   font-weight: 400;
-  color: var(--color-content-lite);
-  background-color: var(--vp-c-bg);
+  color: var(--color-content-liter);
+  background-color: var(--color-background-0);
   font-synthesis: style;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -59,6 +59,7 @@ h6 {
   line-height: 24px;
   font-size: 16px;
   font-weight: 400;
+  color: var(--color-content-lite);
 }
 
 p {
@@ -68,6 +69,7 @@ p {
 strong,
 b {
   font-weight: 600;
+  color: var(--color-content-lite);
 }
 
 /**

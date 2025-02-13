@@ -15,7 +15,10 @@ To access your app deployed on Luna Park, simply click on the <Highlight text="o
 
 Settings are available in the <Highlight text="settings"/> tab of the inspector panel ( <font-awesome-icon :icon="faGear"/> icon in the top bar). You can update the name of your app, aswell as if you want it to be a PWA (Progressive Web App). This means that your app can be installed directly on browsers that support it.
 
-<Warning title="PWA is not available" content="The PWA mode is not ready yet" />
+<LContainer type="warning">
+<h2>PWA is not available</h2>
+The PWA mode is not ready yet
+</LContainer>
 
 You can also choose the history mode among these types:
 
@@ -39,7 +42,10 @@ To export for desktop, simply click on the <font-awesome-icon :icon="faHammer"/>
   <br/>
 Best for distribution, support updates and can be installed anywhere. 
 
-<Warning title="MacOS compilation is not available" content="The export for MacOS is not ready yet. " />
+<LContainer type="warning">
+<h2>MacOS compilation is not available</h2>
+The export for MacOS is not ready yet.
+</LContainer>
 
 ## Settings
 
@@ -55,4 +61,7 @@ Settings are available in the <Highlight text="settings"/> tab of the inspector 
 
 <br/>
 
-<Warning title="Mobile export is not available" content="The export for mobile is not ready yet. " />
+<LContainer type="warning">
+<h2>Mobile export is not available</h2>
+The export for mobile is not ready yet.
+</LContainer>

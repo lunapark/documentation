@@ -171,7 +171,7 @@ const pageName = computed(() =>
   z-index: 10;
   width: 224px;
   height: 32px;
-  background: linear-gradient(transparent, var(--vp-c-bg) 70%);
+  background: linear-gradient(transparent, var(--color-background-0) 70%);
   pointer-events: none;
 }
 

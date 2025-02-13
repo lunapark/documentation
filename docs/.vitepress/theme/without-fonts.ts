@@ -17,12 +17,11 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import QuickAccess from "./custom/components/QuickAccess.vue";
 import InfoCard from "./custom/components/InfoCard.vue";
 import TypeTable from "./custom/components/TypeTable.vue";
-import Warning from "./custom/components/Warning.vue";
 import SystemRequirements from "./custom/components/SystemRequirements.vue";
 import BrowserCompatibility from "./custom/components/BrowserCompatibility.vue";
-import GenericTable from "./custom/components/GenericTable.vue";
 import Anchor from "./custom/components/Anchor.vue";
 import Highlight from "./custom/components/Highlight.vue";
+import { LContainer } from "@luna-park/design";
 
 export { default as VPBadge } from "./components/VPBadge.vue";
 export { default as VPButton } from "./components/VPButton.vue";
@@ -53,11 +52,10 @@ const theme: Theme = {
         app.component("QuickAccess", QuickAccess);
         app.component("InfoCard", InfoCard);
         app.component("TypeTable", TypeTable);
-        app.component("Warning", Warning);
+        app.component("LContainer", LContainer);
         app.component("Highlight", Highlight);
         app.component("SystemRequirements", SystemRequirements);
         app.component("BrowserCompatibility", BrowserCompatibility);
-        app.component("GenericTable", GenericTable);
         app.component("FontAwesomeIcon", FontAwesomeIcon);
         app.component("Anchor", Anchor);
     },

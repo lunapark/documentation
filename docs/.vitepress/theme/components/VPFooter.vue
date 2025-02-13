@@ -33,7 +33,7 @@ const { hasSidebar } = useSidebar();
   z-index: var(--vp-z-index-footer);
   border-top: 1px solid var(--vp-c-gutter);
   padding: 32px 24px;
-  background-color: var(--vp-c-bg);
+  background-color: var(--color-background-0);
 }
 
 .VPFooter.has-sidebar {

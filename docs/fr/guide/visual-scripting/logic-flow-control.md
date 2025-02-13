@@ -109,15 +109,8 @@ Exemple : Utilisation d'une boucle **For** pour afficher une liste d’articles
 
 ## Récapitulatif des types de contrôle de flux
 
-<GenericTable
-:columns="[
-{ title: 'Type', field: 'type' },
-{ title: 'Description', field: 'description' },
-{ title: 'Exemple', field: 'example' }
-]"
-:rows="[
-{ type: 'Déclencheur', description: 'Exécution déclenchée par un événement', example: 'Incrémenter un score lors d’un clic' },
-{ type: 'Conditionnel', description: 'Test d’une condition logique', example: 'Afficher un message si le score dépasse 10' },
-{ type: 'Boucle', description: 'Répétition d’une logique sur un ensemble d’éléments', example: 'Afficher une liste d’articles' }
-]"
-/>
+| Type | Description | Exemple |
+| --- | --- | --- |
+| Déclencheur | Exécution déclenchée par un événement | Incrémenter un score lors d’un clic |
+| Conditionnel | Test d’une condition logique | Afficher un message si le score dépasse 10 |
+| Boucle | Répétition d’une logique sur un ensemble d’éléments | Afficher une liste d’articles |

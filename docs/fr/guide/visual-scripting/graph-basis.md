@@ -111,8 +111,7 @@ Lorsque vous utilisez l’inspection des valeurs, celles-ci sont :
 - Calculées en temps réel pour les **nœuds d’opération**.
 - Issues de la **dernière exécution** pour les **nœuds de fonction**.
 
-<Warning title="Note" content="Si certaines valeurs apparaissent comme indéfinies, il peut être nécessaire d’exécuter votre logique une fois pour initialiser toutes les valeurs." />
-
-
-
-
+<LContainer type="info">
+<h2>Note</h2>
+Si certaines valeurs apparaissent comme indéfinies, il peut être nécessaire d’exécuter votre logique une fois pour initialiser toutes les valeurs.
+</LContainer>

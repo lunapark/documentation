@@ -357,7 +357,7 @@
   --vp-code-copy-code-border-color: var(--vp-c-divider);
   --vp-code-copy-code-bg: var(--vp-c-bg-soft);
   --vp-code-copy-code-hover-border-color: var(--vp-c-divider);
-  --vp-code-copy-code-hover-bg: var(--vp-c-bg);
+  --vp-code-copy-code-hover-bg: var(--color-background-0);
   --vp-code-copy-code-active-text: var(--color-content-liter);
   --vp-code-copy-copied-text-content: 'Copied';
 
@@ -488,8 +488,8 @@
 
 :root {
   --vp-nav-height: 64px;
-  --vp-nav-bg-color: var(--vp-c-bg);
-  --vp-nav-screen-bg-color: var(--vp-c-bg);
+  --vp-nav-bg-color: var(--color-background-0);
+  --vp-nav-screen-bg-color: var(--color-background-0);
   --vp-nav-logo-height: 24px;
 }
 
@@ -506,7 +506,7 @@
  * -------------------------------------------------------------------------- */
 
 :root {
-  --vp-local-nav-bg-color: var(--vp-c-bg);
+  --vp-local-nav-bg-color: var(--color-background-0);
 }
 
 /**
@@ -577,10 +577,10 @@
   * -------------------------------------------------------------------------- */
 
 :root {
-  --vp-local-search-bg: var(--vp-c-bg);
-  --vp-local-search-result-bg: var(--vp-c-bg);
+  --vp-local-search-bg: var(--color-background-0);
+  --vp-local-search-result-bg: var(--color-background-0);
   --vp-local-search-result-border: var(--vp-c-divider);
-  --vp-local-search-result-selected-bg: var(--vp-c-bg);
+  --vp-local-search-result-selected-bg: var(--color-background-0);
   --vp-local-search-result-selected-border: var(--vp-c-brand-1);
   --vp-local-search-highlight-bg: var(--vp-c-brand-1);
   --vp-local-search-highlight-text: var(--vp-c-neutral-inverse);

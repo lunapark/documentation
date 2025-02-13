@@ -42,7 +42,7 @@ const translate = createSearchTranslate(defaultTranslations);
   --docsearch-key-gradient: transparent;
   --docsearch-key-shadow: none;
   --docsearch-modal-background: var(--vp-c-bg-soft);
-  --docsearch-footer-background: var(--vp-c-bg);
+  --docsearch-footer-background: var(--color-background-0);
 }
 
 .dark [class*='DocSearch'] {

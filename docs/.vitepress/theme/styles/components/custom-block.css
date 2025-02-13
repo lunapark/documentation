@@ -176,7 +176,7 @@
 
 .custom-block.details summary {
   margin: 0 0 8px;
-  font-weight: 700;
+  font-weight: 600;
   cursor: pointer;
   user-select: none;
 }
