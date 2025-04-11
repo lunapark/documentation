@@ -1,11 +1,10 @@
 # Le graphe
-Le graphe de Luna Park est l’outil central pour ajouter de la logique visuelle à votre application. Contrairement à l’éditeur visuel, qui sert à construire l’interface utilisateur, le graphe vous permet de définir les interactions et les workflows de manière intuitive.
 
-Un graphe est composé de nœuds connectés par des liens représentant des flux de logique ou de données. Voici les éléments principaux d'un graphe :
+Le graphe est la base de la logique visuelle dans Luna Park. C'est sur celui-ci que vous allez construire la logique de votre application. Il est composé de nœuds, de liens et d'ancres qui interagissent entre eux pour créer des flux logiques.
 
-- **Nœuds** : Chaque nœud représente une action, une condition, ou une opération.
-- **Connexions** : Les liens entre les nœuds représentent le chemin logique ou les données échangées.
-- **Entrées/Sorties** : Chaque nœud possède des points d'entrée et de sortie pour connecter les données ou la logique.
+- **Nœuds** : Un nœud représente une action, une condition, ou une opération.
+- **Ancres** : Chaque nœud a des ancres d'entrée et de sortie. Les ancres d'entrée sont utilisées pour recevoir des données, tandis que les ancres de sortie envoient des données.
+- **Liens** : Les liens permettent de connecter les ancres entre elles, formant ainsi un flux logique.
 
 Voici un exemple de graphe simple dans Luna Park :
 
@@ -13,10 +12,10 @@ Voici un exemple de graphe simple dans Luna Park :
 
 ## Nœuds
 
-Les nœuds sont des briques logiques de base que l'on peut placer sur la grille. Il existe deux types principaux de nœuds :
+Les nœuds sont des briques logiques de base que l'on peut placer sur le graphe. Il existe deux types principaux de nœuds :
 
-- **Nœuds de fonction** : Ces nœuds ont un fond **bleu**. Ils ont des ancres d'exécution d'entrée et/ou de sortie. Ils **s’exécutent** lorsqu’ils sont **connectés** dans le flux logique par le **fil d'exécution**.
-- **Nœuds d'opération** : Ces nœuds ont un fond **gris foncé**. Ils n'ont pas d'ancres d'exécution d'entrée et/ou de sortie. Ils servent à **manipuler** ou **transformer** des données et sont utilisés par les nœuds de fonction.
+- **Nœuds de fonction** : Ces nœuds ont un fond bleu. Ils ont des ancres d'exécution d'entrée et/ou de sortie. Ils s’exécutent lorsque leur ancre d'exécution d'entrée est déclenchée.
+- **Nœuds d'opération** : Ces nœuds ont un fond gris foncé. Ils n'ont pas d'ancres d'exécution d'entrée et/ou de sortie. Ils s'exécutent lorsque leur ancre de résultat est appelé par un nœud de fonction.
 
 ![Capture d'écran de l'éditeur Luna Park](../../../assets/visual-scripting/graph-basis/screen2.png)
 
@@ -26,13 +25,13 @@ import { visualScriptingEditorTableData } from '../../../tables-data'
 
 ## Ancres
 
-Les ancres sont l'interface du nœud. Les ancres d'entrée sont affichées à gauche du nœud, les ancres de sortie à droite. Il existe deux types d'ancres :
+Les ancres sont les interfaces des nœuds. Les ancres d'entrée sont affichées à gauche, les ancres de sortie à droite. Il existe deux types d'ancres :
 
 - **Ancres d'exécution** (<Anchor color="white" type="execution"/>)
-  Ces ancres sont affichées avec une forme carrée arrondie à gauche. Elles sont destinées à être reliées au fil d'exécution. Un nœud de fonction sera exécuté lorsque le fil d'exécution menant à ses ancres d'exécution sera déclenché. Ensuite, après son exécution, le nœud déclenchera son ancre d'exécution de sortie.
+  Ces ancres sont affichées avec une forme carrée arrondie à droite. Elles sont destinées à être reliées au fil d'exécution. Un nœud de fonction sera exécuté lorsque le fil d'exécution menant à ses ancres d'exécution sera déclenché. Ensuite, après son exécution, le nœud déclenchera son ancre d'exécution de sortie.
 
 - **Ancres de valeur** (<Anchor color="white" type="value"/> / <Anchor color="white" type="array"/>)
-  Ces ancres sont affichées avec une forme circulaire lorsqu'elles contiennent une seule valeur, ou une forme carrée lorsqu'elles contiennent une liste (appelée tableau) de valeurs. Lorsque vous utilisez des ancres d'entrée, vous pouvez spécifier certains types, comme chaîne ou nombre, dans l'entrée à côté de l'ancre. La couleur de l'ancre dépend du type de valeur qu'elle contient.
+  Ces ancres sont affichées avec une forme circulaire lorsqu'elles contiennent une seule valeur, ou une forme carrée lorsqu'elles contiennent une liste (appelée tableau) de valeurs. Lorsque vous utilisez des ancres d'entrée, vous pouvez spécifier certains types, comme du texte ou un nombre, dans l'entrée à côté de l'ancre. La couleur de l'ancre dépend du type de valeur qu'elle contient.
 
 
 <TypeTable
@@ -45,71 +44,80 @@ Les ancres sont l'interface du nœud. Les ancres d'entrée sont affichées à ga
 :rows="visualScriptingEditorTableData"
 />
 
-## Fils
+## Liens
 
-Les fils (communément appelés **wires**) sont les lignes qui connectent les ancres entre elles dans un graphe logique. Leur apparence change selon leur rôle :
+Les liens sont les lignes qui connectent les ancres entre elles dans un graphe logique. Leur apparence change selon leur rôle :
 - **Fil d'exécution** : ils sont blancs et épais pour représenter un flux d'exécution logique.
-- **Fil de valeur** : ils prennent la couleur du type de valeur qu'ils transportent (ex. : vert pour un nombre, jaune pour une chaîne).
+- **Fil de valeur** : ils prennent la couleur du type de valeur qu'ils transportent (ex. : vert pour un nombre, jaune pour du texte).
 
 ## Connexion des ancres
 
-Les **wires** permettent de connecter des ancres de types compatibles :
-En général, vous connecterez des ancres d’**entrée** et de **sortie** ayant le **même type**. <br><br>
-Vous pouvez relier des ancres moins définies. Par exemple, il est possible de connecter un **tableau de chaînes** (sortie) à une **entrée** d’un tableau de type inconnu, mais pas l’inverse.
+Les liens permettent de connecter des ancres de types compatibles :
+En général, vous connecterez des ancres d’entrée et de sortie ayant le même type.
+
+Cependant, vous pouvez également relier une ancre de sortie à une ancre d'entrée moins définie. Par exemple, il est possible de connecter une ancre de sortie d'un tableau de nombres à une ancre d'entrée d’un tableau de type inconnu.
 
 ## Exemple de logique dans le graphe
 
-Dans cet exemple, nous avons une logique simple construite avec des nœuds et des wires dans le graphe.
-
-_Ne vous inquiétez pas si certains concepts comme les variables ou les fonctions ne vous semblent pas encore clairs. Nous les aborderons plus en détail dans les prochains chapitres._
+Dans cet exemple, nous avons une logique simple construite avec des nœuds et des liens dans le graphe.
 
 ![Capture d'écran de l'éditeur Luna Park](../../../assets/visual-scripting/graph-basis/screen3.png)
 
 ### Étape par étape
 
-1. <span class="classic-bold">Déclencheur : "On Click (widget)"</span>
-   - Ce nœud représente un **événement** qui démarre la logique lorsqu’un utilisateur clique sur un élément (un bouton ou un widget).
-   - Le fil blanc (**fil d’exécution**) part de ce nœud et déclenche les actions suivantes.
-2. <span class="classic-bold">"Set score" (nœud de fonction)</span>
-   - Ce nœud **met à jour une valeur** appelée <Highlight text="score" />.
-   - Il est **exécuté** par le fil d’exécution venant de "On Click".
-   - La connexion verte (fil de données) envoie une nouvelle valeur de <Highlight text="score" /> depuis un autre nœud.
-3. <span class="classic-bold">"Get score" (nœud d’opération)</span>
-    - Ici, le nœud **récupère la valeur actuelle** de <Highlight text="score" />.
-    - Il n’a pas d’exécution (pas de fil blanc), car il s’agit uniquement d’une opération pour obtenir des données.
-4. <span class="classic-bold">Addition(+)</span>
-    - Le nœud d’opération au centre additionne deux valeurs :
-      - <Highlight text="A"/> (récupérée depuis le premier "Get score")
-      - <Highlight text="1" /> (une valeur fixe ajoutée directement).
-    - Le résultat est renvoyé vers le "Set score", qui met à jour la nouvelle valeur de score.
-5. <span class="classic-bold">Log (nœud de fonction) </span>
-    - Ce nœud affiche ou enregistre une valeur pour le débogage.
+1. **Déclencheur : "On Click (widget)"**
+   - Ce nœud représente un événement qui démarre l'exécution lorsqu’un utilisateur clique sur un élément sur votre interface (un bouton par exemple).
+   - Le lien blanc (fil d’exécution) part de ce nœud et déclenche les actions suivantes.
+2. **Lecture de Set score**
+   - Ce nœud de fonction met à jour une valeur appelée `score`.
+   - Il est exécuté par le fil d’exécution venant de "On Click".
+   - La connexion verte de score (fil de données) envoie une nouvelle valeur de `score` depuis un autre nœud, donc on remonte la chaîne pour récupérer la valeur.
+3. **Addition (+)**
+   - Ce nœud d’opération additionne deux valeurs :
+      - `A` (lié à un autre nœud).
+      - `1` (une valeur fixe ajoutée directement).
+   - La connexion verte de `A` (fil de données) nécessite de remonter un peu plus la chaine pour récupérer sa valeur.
+4. **Get score**
+   - Ce nœud d'opération permet de récupérer la valeur actuelle de `score`.
+   - On peut donc l'utiliser pour l'ajouter à `1` dans le nœud d'opération addition.
+5. **Exécution de Set score**
+   - Une fois les noeuds d'opération executé pour récupérer la nouvelle valeur de score, on met à jour la valeur de `score` avec le résultat de l'addition.
+   - Le lien blanc (fil d’exécution) part de ce nœud et déclenche les actions suivantes.
+6. **Lecture de Log**
+    - Ce nœud de fonction affiche ou enregistre une valeur pour le débogage.
     - Il est exécuté après "Set score" via le fil blanc.
     - La connexion verte envoie la valeur actuelle de score pour l’afficher.
+7. **Get score**
+   - Ce nœud d'opération permet de récupérer la nouvelle valeur de `score`.
+   - On peut donc l'utiliser pour l'afficher dans le nœud Log.
+8. **Exécution de Log**
+   - Une fois le nœud d'opération exécuté pour récupérer la nouvelle valeur de score, on peux logger sa nouvelle valeur.
+   - Il n'y a pas de lien blanc (fil d’exécution) partant de ce nœud, car il n'y a pas d'autres actions à exécuter après cela.
 
 ### Résumé visuel du flux :
 
 1. "On Click" → "Set score" → "Log".
-    - Le fil blanc représente l’ordre dans lequel les actions sont exécutées.
-2. Les **wires verts** transportent les données : 
-    - <Highlight text="score" /> est récupéré avec "Get score".
+    - Les liens blancs représentent l’ordre dans lequel les actions sont exécutées.
+2. Les liens de couleur transportent les données : 
+    - `score` est récupéré avec "Get score".
     - Il est modifié (+1) puis mis à jour avec "Set score".
     - Enfin, il est envoyé au "Log" pour être affiché.
 
 ## Inspection du graphe
 
-L’inspection vous permet de vérifier les **valeurs** et **types** détenus par les ancres grâce à deux modes : <br/><br/>
-**Type inspection** : pour visualiser les types de données. <Highlight text="Ctrl + Alt" />
-<br/><br/>
+L’inspection vous permet de vérifier les **valeurs** et **types** détenus par les ancres grâce à deux modes :
+
+**Inspection de type** : pour visualiser les types de données. `Ctrl + Alt`
+
 ![Capture d'écran de l'éditeur Luna Park](../../../assets/visual-scripting/graph-basis/screen4.png)
-<br/>
-**Value inspection** : pour afficher les valeurs réelles des ancres. <Highlight text="Ctrl + Space" />
-  <br/><br/>
+
+**Inspection de valeur** : pour afficher les valeurs réelles des ancres. `Ctrl + Space` ou `Ctrl + Q`
+
 ![Capture d'écran de l'éditeur Luna Park](../../../assets/visual-scripting/graph-basis/screen5.png)
 
 Lorsque vous utilisez l’inspection des valeurs, celles-ci sont :
-- Calculées en temps réel pour les **nœuds d’opération**.
-- Issues de la **dernière exécution** pour les **nœuds de fonction**.
+- Calculées en temps réel pour les nœuds d’opération.
+- Issues de la dernière exécution pour les nœuds de fonction.
 
 <LContainer type="info">
 <h2>Note</h2>

@@ -2,7 +2,6 @@ import { defineConfig } from "vitepress";
 
 export default defineConfig({
     title: "Luna Park",
-
     appearance: "force-dark",
     description: "Luna Park Documentation",
     head: [
@@ -11,6 +10,14 @@ export default defineConfig({
             {
                 href: "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap",
                 rel: "stylesheet"
+            }
+        ],
+        [
+            "link",
+            {
+                type: "image/png",
+                href: "/favicon.png",
+                rel: "icon"
             }
         ]
     ],
@@ -22,36 +29,36 @@ export default defineConfig({
             themeConfig: {
                 nav: [
                     { link: "/fr/", text: "Accueil" },
-                    { link: "/fr/markdown-examples", text: "Exemples" },
-                    { link: "/fr/guide/introduction/what-is-luna-park", text: "Commencer" }
+                    { link: "/fr/guide/getting-started/introduction", text: "Commencer" }
                 ],
                 sidebar: [
                     {
                         items: [
-                            { link: "/fr/guide/introduction/what-is-luna-park", text: "Qu’est-ce que Luna Park ?" }
-                        ],
-                        text: "Introduction"
-                    },
-                    {
-                        items: [
-                            { link: "/fr/guide/getting-started/layout-editor", text: "Éditeur de mise en page" },
-                            { link: "/fr/guide/getting-started/elements-styling", text: "Stylisation" },
-                            { link: "/fr/guide/getting-started/exporter", text: "Exportateur" }
+                            { link: "/fr/guide/getting-started/introduction", text: "Introduction" },
+                            { link: "/fr/guide/getting-started/comparison", text: "Différences" },
+                            { link: "/fr/guide/getting-started/quick-start", text: "Démarrage rapide" },
+                            { link: "/fr/guide/getting-started/find-help", text: "Trouver de l'aide" }
                         ],
                         text: "Prise en main"
                     },
                     {
                         items: [
-                            { link: "/fr/guide/visual-scripting/introduction", text: "Introduction" },
-                            { link: "/fr/guide/visual-scripting/graph-basis", text: "Bases du graphe" },
-                            { link: "/fr/guide/visual-scripting/variables", text: "Variables" },
-                            {
-                                link: "/fr/guide/visual-scripting/logic-flow-control",
-                                text: "Logique et contrôle de flux"
-                            },
-                            { link: "/fr/guide/visual-scripting/api-calls", text: "Appels API" }
+                            { link: "/fr/guide/layout/editor", text: "Éditeur" },
+                            { link: "/fr/guide/layout/components", text: "Composants" },
+                            { link: "/fr/guide/layout/templates", text: "Templates" },
+                            { link: "/fr/guide/layout/styling", text: "Stylisation" },
+                            { link: "/fr/guide/layout/exporter", text: "Exportation" }
                         ],
-                        text: "Programmation visuelle"
+                        text: "Layout"
+                    },
+                    {
+                        items: [
+                            { link: "/fr/guide/visual-scripting/introduction", text: "Introduction" },
+                            { link: "/fr/guide/visual-scripting/graph-basis", text: "Le graphe" },
+                            { link: "/fr/guide/visual-scripting/variables", text: "Variables" },
+                            { link: "/fr/guide/visual-scripting/flow-control", text: "Contrôle de flux" }
+                        ],
+                        text: "Visual scripting"
                     },
                     {
                         items: [
@@ -67,27 +74,44 @@ export default defineConfig({
             lang: "en",
             link: "/en/",
             themeConfig: {
-                nav: [
-                    { link: "/en/", text: "Home" },
-                    { link: "/en/markdown-examples", text: "Examples" },
-                    { link: "/en/guide/introduction", text: "Getting Started" }
+                "nav": [
+                    { "link": "/en/", "text": "Home" },
+                    { "link": "/en/guide/getting-started/introduction", "text": "Get Started" }
                 ],
-                sidebar: [
+                "sidebar": [
                     {
-                        items: [
-                            { link: "/en/guide/introduction", text: "Introduction" },
-                            { link: "/en/guide/layout-editor", text: "Layout editor" },
-                            { link: "/en/guide/elements-styling", text: "Styling" },
-                            { link: "/en/guide/visual-scripting", text: "Visual scripting" },
-                            { link: "/en/guide/exporter", text: "Exporter" }
+                        "items": [
+                            { "link": "/en/guide/getting-started/introduction", "text": "Introduction" },
+                            { "link": "/en/guide/getting-started/comparison", "text": "Differences" },
+                            { "link": "/en/guide/getting-started/quick-start", "text": "Quick Start" },
+                            { "link": "/en/guide/getting-started/find-help", "text": "Get Help" }
                         ],
-                        text: "Guide"
+                        "text": "Getting Started"
                     },
                     {
-                        items: [
-                            { link: "/en/configuration/prerequisites", text: "Prerequisites" }
+                        "items": [
+                            { "link": "/en/guide/layout/editor", "text": "Editor" },
+                            { "link": "/en/guide/layout/components", "text": "Components" },
+                            { "link": "/en/guide/layout/templates", "text": "Templates" },
+                            { "link": "/en/guide/layout/styling", "text": "Styling" },
+                            { "link": "/en/guide/layout/exporter", "text": "Export" }
                         ],
-                        text: "Configuration"
+                        "text": "Layout"
+                    },
+                    {
+                        "items": [
+                            { "link": "/en/guide/visual-scripting/introduction", "text": "Introduction" },
+                            { "link": "/en/guide/visual-scripting/graph-basis", "text": "The Graph" },
+                            { "link": "/en/guide/visual-scripting/variables", "text": "Variables" },
+                            { "link": "/en/guide/visual-scripting/flow-control", "text": "Flow Control" }
+                        ],
+                        "text": "Visual Scripting"
+                    },
+                    {
+                        "items": [
+                            { "link": "/en/configuration/prerequisites", "text": "Prerequisites" }
+                        ],
+                        "text": "Configuration"
                     }
                 ]
             }

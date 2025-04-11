@@ -1,3 +1,5 @@
+import { initApp, LContainer, LIcon } from "@luna-park/design";
+
 import "./styles/vars.css";
 import "./styles/base.css";
 import "./styles/icons.css";
@@ -21,7 +23,6 @@ import SystemRequirements from "./custom/components/SystemRequirements.vue";
 import BrowserCompatibility from "./custom/components/BrowserCompatibility.vue";
 import Anchor from "./custom/components/Anchor.vue";
 import Highlight from "./custom/components/Highlight.vue";
-import { LContainer } from "@luna-park/design";
 
 export { default as VPBadge } from "./components/VPBadge.vue";
 export { default as VPButton } from "./components/VPButton.vue";
@@ -47,12 +48,15 @@ export { useSidebar } from "./composables/sidebar";
 
 const theme: Theme = {
     enhanceApp: ({ app }) => {
+        initApp(app);
+
         app.component("Badge", VPBadge);
 
         app.component("QuickAccess", QuickAccess);
         app.component("InfoCard", InfoCard);
         app.component("TypeTable", TypeTable);
         app.component("LContainer", LContainer);
+        app.component("LIcon", LIcon);
         app.component("Highlight", Highlight);
         app.component("SystemRequirements", SystemRequirements);
         app.component("BrowserCompatibility", BrowserCompatibility);

@@ -9,35 +9,28 @@ hero:
   actions:
     - theme: brand
       text: Commencer
-      link: /fr/guide/introduction/what-is-luna-park.html
+      link: /fr/guide/getting-started/introduction.html
     - theme: alt
-      text: Exemples de projets
-      link: /fr/api-examples.html
+      text: Forum Communautaire
+      link: https://forum.luna-park.app/
+      target: _blank
 
 features:
-  - title: Création intuitive d'applications
-    details: Créez des applications web sans coder grâce à une interface visuelle simple.
-
-  - title: Programmation visuelle avancé
-    details: Gérez la logique métier avec des blocs visuels (conditions, boucles, etc.).
-
-  - title: Frontend personnalisé
-    details: Concevez des interfaces uniques avec un éditeur puissant et du CSS.
-
-  - title: Backend et API intégrés
-    details: Créez et gérez des API et connectez-vous à des services externes.
-
-  - title: Gestion simplifiée des bases de données
-    details: Configurez et manipulez vos données via une interface intuitive.
-
-  - title: Automatisation des tâches Cron
-    details: Planifiez des tâches comme l’envoi d’e-mails ou la synchronisation.
-
-  - title: Déploiement rapide
-    details: Déployez vos projets en un clic sur le cloud ou en local.
-
-  - title: Sécurité avancée
-    details: Protégez vos applications avec authentification et permissions.
-
+  - title: 🎨 Éditeur de Frontend
+    details: Créez des interfaces utilisateur dynamiques et réactives avec un éditeur visuel intuitif.
+  - title: ✨ Réactivité temps réel
+    details: Exploitez la puissance des frameworks JS modernes sans écrire de code.
+  - title: ⚙️ Création de Backend
+    details: Développez des API et services backend sans coder, via une interface visuelle.
+  - title: ⚡ Scripting Visuel
+    details: Concevez des logiques complexes sans code grâce à un éditeur de scripting visuel.
+  - title: ⏱️ Gestion des CRONs
+    details: Planifiez et gérez facilement les tâches récurrentes avec une interface visuelle.
+  - title: 💽 Base de Données
+    details: Gérez vos données sans configurer de serveur, grâce à une interface intégrée.
+  - title: 💾 Export de code
+    details: Exportez votre projet en code source pour un déploiement externe.
+  - title: 🚀 Performance
+    details: Bénéficiez de performances optimales grâce à une architecture moderne.
 ---
 
