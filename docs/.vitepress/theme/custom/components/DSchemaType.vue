@@ -1,6 +1,6 @@
 <template>
     <ClientOnly>
-        <DSchemaType :schema="schema" />
+        <LEditorConsoleType :schema="schema" />
     </ClientOnly>
 </template>
 
