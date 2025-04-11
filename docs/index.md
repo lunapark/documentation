@@ -1,37 +1,9 @@
----
-# https://vitepress.dev/reference/default-theme-home-page
-layout: home
-
-hero:
-  name: "Luna Park"
-  text: "Luna Park Documentation"
-  tagline: My great project tagline
-  actions:
-    - theme: brand
-      text: Get Started
-      link: /guide/introduction
-    - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
-
-features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
----
-
 <script setup lang="ts">
-import { useRoute } from 'vitepress';
+import { useRouter } from 'vitepress';
 
-const route = useRoute();
+const router = useRouter();
 
-if (route.path === '/') {
-  window.location.href = '/en/';
+if (router.route.path === '/') {
+  router.go('/en/');
 }
 </script>

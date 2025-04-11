@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import {LEditorConsoleValue, LEditorConsoleType} from "@luna-park/editor";
 import {LogicType} from "@luna-park/logicnodes";
 </script>
 
@@ -17,16 +16,16 @@ For example:
 
 Here are the data types you can use:
 
-- **Text** (<LEditorConsoleType :schema="LogicType.string()" />), a string representing text<br>
-  example: <LEditorConsoleValue value="Hello World" />
-- **Number** (<LEditorConsoleType :schema="LogicType.number()" />), a number, positive or negative, with or without a decimal<br>
-  example: <LEditorConsoleValue :value="42" />
-- **Boolean** (<LEditorConsoleType :schema="LogicType.boolean()" />), a value that is either `True` or `False`<br>
-  example: <LEditorConsoleValue :value="true" />
-- **Array** (<LEditorConsoleType :schema="LogicType.array(LogicType.number())" />), an ordered list of values<br>
-  example: <LEditorConsoleValue :value="[1, 2, 3]" />
-- **Object** (<LEditorConsoleType :schema="LogicType.object({name: LogicType.string(), age: LogicType.number()})" />), a set of properties and values<br>
-  example: <LEditorConsoleValue :value="{ name: 'John', age: 30 }" />
+- **Text** (<DSchemaType :schema="LogicType.string()" />), a string representing text<br>
+  example: <DSchemaValue value="Hello World" />
+- **Number** (<DSchemaType :schema="LogicType.number()" />), a number, positive or negative, with or without a decimal<br>
+  example: <DSchemaValue :value="42" />
+- **Boolean** (<DSchemaType :schema="LogicType.boolean()" />), a value that is either `True` or `False`<br>
+  example: <DSchemaValue :value="true" />
+- **Array** (<DSchemaType :schema="LogicType.array(LogicType.number())" />), an ordered list of values<br>
+  example: <DSchemaValue :value="[1, 2, 3]" />
+- **Object** (<DSchemaType :schema="LogicType.object({name: LogicType.string(), age: LogicType.number()})" />), a set of properties and values<br>
+  example: <DSchemaValue :value="{ name: 'John', age: 30 }" />
 
 ### Computed Variables
 

@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import {LEditorConsoleValue, LEditorConsoleType} from "@luna-park/editor";
 import {LogicType} from "@luna-park/logicnodes";
 </script>
 
@@ -27,10 +26,10 @@ When the user clicks the button, the **On Click** node triggers the execution of
 
 Conditional nodes allow you to test a condition and execute different actions based on the result.
 A conditional node has:
-- An execution input (<LEditorConsoleType :schema="LogicType.exec()" />)
-- A condition input (<LEditorConsoleType :schema="LogicType.boolean()" />)
-- A true output (<LEditorConsoleType :schema="LogicType.exec()" />)
-- A false output (<LEditorConsoleType :schema="LogicType.exec()" />)
+- An execution input (<DSchemaType :schema="LogicType.exec()" />)
+- A condition input (<DSchemaType :schema="LogicType.boolean()" />)
+- A true output (<DSchemaType :schema="LogicType.exec()" />)
+- A false output (<DSchemaType :schema="LogicType.exec()" />)
 
 ## Loop Nodes (For, While)
 
@@ -39,18 +38,18 @@ Loop nodes allow you to repeat an action multiple times based on a condition or 
 ### For Loop
 
 A For loop node has:
-- An execution input (<LEditorConsoleType :schema="LogicType.exec()" />)
-- An array input (<LEditorConsoleType :schema="LogicType.array(LogicType.unknown())" />)
-- An execution output (<LEditorConsoleType :schema="LogicType.exec()" />)
+- An execution input (<DSchemaType :schema="LogicType.exec()" />)
+- An array input (<DSchemaType :schema="LogicType.array(LogicType.unknown())" />)
+- An execution output (<DSchemaType :schema="LogicType.exec()" />)
 - An element output (of the array element type)
-- An index output (<LEditorConsoleType :schema="LogicType.number()" />)
-- An end output (<LEditorConsoleType :schema="LogicType.exec()" />)
+- An index output (<DSchemaType :schema="LogicType.number()" />)
+- An end output (<DSchemaType :schema="LogicType.exec()" />)
 
 ### While Loop
 
 A While loop node has:
-- An execution input (<LEditorConsoleType :schema="LogicType.exec()" />)
-- A condition input (<LEditorConsoleType :schema="LogicType.boolean()" />)
-- An execution output (<LEditorConsoleType :schema="LogicType.exec()" />)
-- An end output (<LEditorConsoleType :schema="LogicType.exec()" />)
+- An execution input (<DSchemaType :schema="LogicType.exec()" />)
+- A condition input (<DSchemaType :schema="LogicType.boolean()" />)
+- An execution output (<DSchemaType :schema="LogicType.exec()" />)
+- An end output (<DSchemaType :schema="LogicType.exec()" />)
 

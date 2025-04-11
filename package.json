@@ -18,7 +18,8 @@
         "@luna-park/design": "link:..\\core\\packages\\design",
         "@luna-park/editor": "link:..\\core\\packages\\editor",
         "@luna-park/logicnodes": "link:..\\core\\packages\\logicnodes",
-        "@vueuse/core": "^13.1.0"
+        "@vueuse/core": "^13.1.0",
+        "pinia": "^3.0.2"
     },
     "devDependencies": {
         "@eslint/eslintrc": "^3.3.1",

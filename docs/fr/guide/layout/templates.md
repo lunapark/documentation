@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import {LEditorConsoleValue, LEditorConsoleType} from "@luna-park/editor";
 import {LogicType} from "@luna-park/logicnodes";
 </script>
 
@@ -60,7 +59,7 @@ Exemple : Afficher une liste d’articles
 ### 1. Création de la page et de la variable articles
 1. Créez une nouvelle page nommée **Articles**.
 2. Dans le panneau **Inspector**, ajoutez une variable de type **Array** (tableau) appelée `articles`.
-3. Remplissez cette variable avec des valeurs, par exemple : <br/> <LEditorConsoleValue :value='["sushi", "onigiri", "takoyaki", "tsukune"]'/>.
+3. Remplissez cette variable avec des valeurs, par exemple : <br/> <DSchemaValue :value='["sushi", "onigiri", "takoyaki", "tsukune"]'/>.
 
 ![Capture d'écran de l'éditeur Luna Park](../../../assets/visual-scripting/flow-control/screen4.png)
 

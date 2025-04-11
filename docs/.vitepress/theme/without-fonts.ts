@@ -18,11 +18,11 @@ import Layout from "./Layout.vue";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import QuickAccess from "./custom/components/QuickAccess.vue";
 import InfoCard from "./custom/components/InfoCard.vue";
-import TypeTable from "./custom/components/TypeTable.vue";
 import SystemRequirements from "./custom/components/SystemRequirements.vue";
 import BrowserCompatibility from "./custom/components/BrowserCompatibility.vue";
-import Anchor from "./custom/components/Anchor.vue";
-import Highlight from "./custom/components/Highlight.vue";
+import DAnchorIcon from "./custom/components/DAnchorIcon.vue";
+import DSchemaType from "./custom/components/DSchemaType.vue";
+import DSchemaValue from "./custom/components/DSchemaValue.vue";
 
 export { default as VPBadge } from "./components/VPBadge.vue";
 export { default as VPButton } from "./components/VPButton.vue";
@@ -53,14 +53,15 @@ const theme: Theme = {
         app.component("Badge", VPBadge);
         app.component("QuickAccess", QuickAccess);
         app.component("InfoCard", InfoCard);
-        app.component("TypeTable", TypeTable);
         app.component("LContainer", LContainer);
         app.component("LIcon", LIcon);
-        app.component("Highlight", Highlight);
         app.component("SystemRequirements", SystemRequirements);
         app.component("BrowserCompatibility", BrowserCompatibility);
         app.component("FontAwesomeIcon", FontAwesomeIcon);
-        app.component("Anchor", Anchor);
+
+        app.component("DAnchorIcon", DAnchorIcon);
+        app.component("DSchemaType", DSchemaType);
+        app.component("DSchemaValue", DSchemaValue);
     },
     Layout
 };

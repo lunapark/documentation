@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import {LogicType} from "@luna-park/logicnodes";
+</script>
+
 # Le graphe
 
 Le graphe est la base de la logique visuelle dans Luna Park. C'est sur celui-ci que vous allez construire la logique de votre application. Il est composé de nœuds, de liens et d'ancres qui interagissent entre eux pour créer des flux logiques.
@@ -19,30 +23,24 @@ Les nœuds sont des briques logiques de base que l'on peut placer sur le graphe.
 
 ![Capture d'écran de l'éditeur Luna Park](../../../assets/visual-scripting/graph-basis/screen2.png)
 
-<script setup lang="ts">
-import { visualScriptingEditorTableData } from '../../../tables-data'
-</script>
-
 ## Ancres
 
 Les ancres sont les interfaces des nœuds. Les ancres d'entrée sont affichées à gauche, les ancres de sortie à droite. Il existe deux types d'ancres :
 
-- **Ancres d'exécution** (<Anchor color="white" type="execution"/>)
+- **Ancres d'exécution** (<DAnchorIcon :schema="LogicType.exec()" />)
   Ces ancres sont affichées avec une forme carrée arrondie à droite. Elles sont destinées à être reliées au fil d'exécution. Un nœud de fonction sera exécuté lorsque le fil d'exécution menant à ses ancres d'exécution sera déclenché. Ensuite, après son exécution, le nœud déclenchera son ancre d'exécution de sortie.
 
-- **Ancres de valeur** (<Anchor color="white" type="value"/> / <Anchor color="white" type="array"/>)
+- **Ancres de valeur** (<DAnchorIcon :schema="LogicType.unknown()" /> / <DAnchorIcon :schema="LogicType.array(LogicType.unknown())" />)
   Ces ancres sont affichées avec une forme circulaire lorsqu'elles contiennent une seule valeur, ou une forme carrée lorsqu'elles contiennent une liste (appelée tableau) de valeurs. Lorsque vous utilisez des ancres d'entrée, vous pouvez spécifier certains types, comme du texte ou un nombre, dans l'entrée à côté de l'ancre. La couleur de l'ancre dépend du type de valeur qu'elle contient.
 
 
-<TypeTable
-:columns="[
-{ title: 'Type', key: 'type' },
-{ title: 'Exemple', key: 'example' },
-{ title: 'Type', key: 'type2' },
-{ title: 'Exemple', key: 'example2' }
-]"
-:rows="visualScriptingEditorTableData"
-/>
+| Type                                                                                       | Example                                             | Type | Example                                                                              |
+|--------------------------------------------------------------------------------------------|-----------------------------------------------------|------|--------------------------------------------------------------------------------------|
+| <DAnchorIcon :schema="LogicType.boolean()"/> <DSchemaType :schema="LogicType.boolean()" /> | <DSchemaValue :value="true" />                      | <DAnchorIcon :schema="LogicType.array(LogicType.boolean())" /> <DSchemaType :schema="LogicType.array(LogicType.boolean())" /> | <DSchemaValue :value="[true, false, false]" />                                       |
+| <DAnchorIcon :schema="LogicType.number()"/> <DSchemaType :schema="LogicType.number()" /> | <DSchemaValue :value="1980" />                      | <DAnchorIcon :schema="LogicType.array(LogicType.number())" /> <DSchemaType :schema="LogicType.array(LogicType.number())" /> | <DSchemaValue :value="[1980, 2020]" />                                               |
+| <DAnchorIcon :schema="LogicType.string()"/> <DSchemaType :schema="LogicType.string()" /> | <DSchemaValue :value="'Hello World'" />             | <DAnchorIcon :schema="LogicType.array(LogicType.string())" /> <DSchemaType :schema="LogicType.array(LogicType.string())" /> | <DSchemaValue :value="['Hello', 'World']" />                                         |
+| <DAnchorIcon :schema="LogicType.object({name: LogicType.string(), age: LogicType.number()})" /> <DSchemaType :schema="LogicType.object({name: LogicType.string(), age: LogicType.number()})" /> | <DSchemaValue :value="{ name: 'John', age: 30 }" /> | <DAnchorIcon :schema="LogicType.array(LogicType.object({name: LogicType.string(), age: LogicType.number()}))" /> <DSchemaType :schema="LogicType.array(LogicType.object({name: LogicType.string(), age: LogicType.number()}))" /> | <DSchemaValue :value="[{'name': 'John', 'age': 30}, {'name': 'Jane', 'age': 25}]" /> |
+| <DAnchorIcon :schema="LogicType.unknown()" /> <DSchemaType :schema="LogicType.unknown()" /> | <DSchemaValue value="Hello world" />                | <DAnchorIcon :schema="LogicType.array(LogicType.unknown())" /> <DSchemaType :schema="LogicType.array(LogicType.unknown())" /> | <DSchemaValue :value="['Hello', 1234]" />                                            |
 
 ## Liens
 

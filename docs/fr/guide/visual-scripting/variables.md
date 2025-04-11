@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import {LEditorConsoleValue, LEditorConsoleType} from "@luna-park/editor";
 import {LogicType} from "@luna-park/logicnodes";
 </script>
 
@@ -17,16 +16,16 @@ Par exemple :
 
 Voici les types données que vous pouvez utiliser :
 
-- **Texte** (<LEditorConsoleType :schema="LogicType.string()" />), une chaine de caractères représentant du texte<br>
-exemple : <LEditorConsoleValue value="Hello World" />
-- **Nombre** (<LEditorConsoleType :schema="LogicType.number()" />), un nombre, positif ou négatif, avec ou sans virgule<br>
-exemple : <LEditorConsoleValue :value="42" />
-- **Booléen** (<LEditorConsoleType :schema="LogicType.boolean()" />), une valeur qui vaut `Vrai` ou `Faux`<br>
-exemple : <LEditorConsoleValue :value="true" />
-- **Tableau** (<LEditorConsoleType :schema="LogicType.array(LogicType.number())" />), une liste ordonnée de valeurs<br>
-exemple : <LEditorConsoleValue :value="[1, 2, 3]" />
-- **Object** (<LEditorConsoleType :schema="LogicType.object({name: LogicType.string(), age: LogicType.number()})" />), un ensemble de propriétés et de valeurs<br>
-exemple : <LEditorConsoleValue :value="{ name: 'John', age: 30 }" />
+- **Texte** (<DSchemaType :schema="LogicType.string()" />), une chaine de caractères représentant du texte<br>
+exemple : <DSchemaValue value="Hello World" />
+- **Nombre** (<DSchemaType :schema="LogicType.number()" />), un nombre, positif ou négatif, avec ou sans virgule<br>
+exemple : <DSchemaValue :value="42" />
+- **Booléen** (<DSchemaType :schema="LogicType.boolean()" />), une valeur qui vaut `Vrai` ou `Faux`<br>
+exemple : <DSchemaValue :value="true" />
+- **Tableau** (<DSchemaType :schema="LogicType.array(LogicType.number())" />), une liste ordonnée de valeurs<br>
+exemple : <DSchemaValue :value="[1, 2, 3]" />
+- **Object** (<DSchemaType :schema="LogicType.object({name: LogicType.string(), age: LogicType.number()})" />), un ensemble de propriétés et de valeurs<br>
+exemple : <DSchemaValue :value="{ name: 'John', age: 30 }" />
 
 ### Les variables computed
 
