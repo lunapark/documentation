@@ -18,8 +18,7 @@
         "@luna-park/design": "link:..\\core\\packages\\design",
         "@luna-park/editor": "link:..\\core\\packages\\editor",
         "@luna-park/logicnodes": "link:..\\core\\packages\\logicnodes",
-        "@vueuse/core": "^13.0.0",
-        "dotenv": "^16.4.7"
+        "@vueuse/core": "^13.1.0"
     },
     "devDependencies": {
         "@eslint/eslintrc": "^3.3.1",
@@ -31,7 +30,7 @@
         "eslint-plugin-promise": "^7.2.1",
         "eslint-plugin-sort-keys-custom-order": "^2.2.1",
         "eslint-plugin-vue": "^10.0.0",
-        "typescript-eslint": "^8.29.0",
+        "typescript-eslint": "^8.29.1",
         "vitepress": "^1.6.3",
         "vue": "^3.5.13"
     },
@@ -41,8 +40,7 @@
             "@fortawesome/pro-regular-svg-icons": "link:..\\..\\@fortawesome\\pro-regular-svg-icons"
         },
         "onlyBuiltDependencies": [
-            "esbuild",
-            "vue-demi"
+            "esbuild"
         ]
     }
 }

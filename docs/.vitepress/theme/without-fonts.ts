@@ -51,7 +51,6 @@ const theme: Theme = {
         initApp(app);
 
         app.component("Badge", VPBadge);
-
         app.component("QuickAccess", QuickAccess);
         app.component("InfoCard", InfoCard);
         app.component("TypeTable", TypeTable);

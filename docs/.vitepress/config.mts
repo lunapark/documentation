@@ -119,7 +119,7 @@ export default defineConfig({
     },
     themeConfig: {
         socialLinks: [
-            { icon: "github", link: "https://github.com/vuejs/vitepress" }
+            { icon: "github", link: "https://github.com/lunapark/lunapark" }
         ]
     }
 });

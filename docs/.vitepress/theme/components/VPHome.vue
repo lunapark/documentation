@@ -47,7 +47,6 @@ import VPHomeHero from "./VPHomeHero.vue";
 import VPHomeFeatures from "./VPHomeFeatures.vue";
 import VPHomeContent from "./VPHomeContent.vue";
 import { useData } from "../composables/data";
-import { Content } from "vitepress";
 
 const { frontmatter, theme } = useData();
 </script>
