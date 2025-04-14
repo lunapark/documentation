@@ -18,7 +18,7 @@ Luna Park's **visual scripting** engine allows you to build any type of logic po
 
 From a technical standpoint, the logic you create with visual scripting is compiled directly into JavaScript, with each node equivalent to a line of code. In production, it is not read by a heavy interpreter like other tools, but directly executed by the JavaScript engine.
 
-<InfoCard
+<DInfoCard
 :cards="[
 {
 title: 'NO-CODE',

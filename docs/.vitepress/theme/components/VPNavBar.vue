@@ -89,12 +89,12 @@ watchPostEffect(() => {
 
 .VPNavBar.screen-open {
   transition: none;
-  background-color: var(--color-background-0);
+  background-color: var(--color-background-dark);
   border-bottom: 1px solid var(--vp-c-divider);
 }
 
 .VPNavBar:not(.home) {
-  background-color: var(--color-background-0);
+  background-color: var(--color-background-dark);
 }
 
 @media (min-width: 960px) {
@@ -103,7 +103,7 @@ watchPostEffect(() => {
   }
 
   .VPNavBar:not(.has-sidebar):not(.home.top) {
-    background-color: var(--color-background-0);
+    background-color: var(--color-background-dark);
   }
 }
 

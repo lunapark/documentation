@@ -2,63 +2,70 @@
 import {LogicType} from "@luna-park/logicnodes";
 </script>
 
-# Les variables
+# Variables
 
-Les variables sont des conteneurs permettant de stocker des informations que vous pouvez utiliser et manipuler dans votre graphe.
+Les variables sont des conteneurs utilisés pour stocker des informations que vous pouvez utiliser et manipuler dans votre graphe.
 
 Par exemple :
 
-- un nom d'utilisateur (du texte)
+- un nom d'utilisateur (texte)
 - un score (un nombre)
-- une liste d'articles (un tableau)
+- une liste d'éléments (un tableau)
 
-## Les types de variables
+## Types de Variables
 
-Voici les types données que vous pouvez utiliser :
+Voici les types de données que vous pouvez utiliser :
 
-- **Texte** (<DSchemaType :schema="LogicType.string()" />), une chaine de caractères représentant du texte<br>
-exemple : <DSchemaValue value="Hello World" />
-- **Nombre** (<DSchemaType :schema="LogicType.number()" />), un nombre, positif ou négatif, avec ou sans virgule<br>
-exemple : <DSchemaValue :value="42" />
-- **Booléen** (<DSchemaType :schema="LogicType.boolean()" />), une valeur qui vaut `Vrai` ou `Faux`<br>
-exemple : <DSchemaValue :value="true" />
+- **Texte** (<DSchemaType :schema="LogicType.string()" />), une chaîne de caractères représentant du texte<br>
+  exemple : <DSchemaValue value="Hello World" />
+- **Nombre** (<DSchemaType :schema="LogicType.number()" />), un nombre, positif ou négatif, avec ou sans décimale<br>
+  exemple : <DSchemaValue :value="42" />
+- **Booléen** (<DSchemaType :schema="LogicType.boolean()" />), une valeur qui est soit `Vrai` soit `Faux`<br>
+  exemple : <DSchemaValue :value="true" />
 - **Tableau** (<DSchemaType :schema="LogicType.array(LogicType.number())" />), une liste ordonnée de valeurs<br>
-exemple : <DSchemaValue :value="[1, 2, 3]" />
-- **Object** (<DSchemaType :schema="LogicType.object({name: LogicType.string(), age: LogicType.number()})" />), un ensemble de propriétés et de valeurs<br>
-exemple : <DSchemaValue :value="{ name: 'John', age: 30 }" />
+  exemple : <DSchemaValue :value="[1, 2, 3]" />
+- **Objet** (<DSchemaType :schema="LogicType.object({name: LogicType.string(), age: LogicType.number()})" />), un ensemble de propriétés et de valeurs<br>
+  exemple : <DSchemaValue :value="{ name: 'John', age: 30 }" />
 
-### Les variables computed
+### Variables Calculées
 
-Les variables **computed** sont des variables dont la valeur est automatiquement recalculée en fonction d'autres variables ou conditions. Elles sont également **réactives**.
+Les variables **calculées** sont des variables dont la valeur est automatiquement recalculée en fonction d'autres variables ou conditions. Elles sont également **réactives**.
 
-## Définir, afficher et mettre à jour une variable
+## Définir, Afficher et Mettre à Jour une Variable
 
-### 1. Définir une variable
+### 1. Définir une Variable
 
-1. Sélectionnez un composant dans l’éditeur en cliquant dessus dans l'explorateur
+1. Sélectionnez un composant dans l'éditeur en cliquant dessus dans l'explorateur.
 2. Dans le panneau d'inspection, ajoutez une variable en cliquant sur le bouton `+` dans la section **Variables**.
-3. Donnez-lui un nom et un type (ex. : `score` de type **Nombre**).
-4. Donnez-lui une valeur initiale dans la section **Default** (ex. : `0`).
+3. Donnez-lui un nom et un type (par exemple, `score` de type **Nombre**).
+4. Donnez-lui une valeur initiale dans la section **Défaut** (par exemple, `0`).
 
-![Capture d'écran de l'éditeur Luna Park](../../../assets/visual-scripting/variables/screen1.png)
+<DImage
+src="/assets/visual-scripting/variables/screen1.png"
+alt="Capture d'écran de l'éditeur Luna Park"
+/>
 
+### 2. Ajouter un Élément d'Affichage
 
-### 2. Ajouter un élément d'affichage
+1. Insérez un élément **Variable** dans l'arborescence de votre composant.
+2. Sélectionnez cet élément et liez-le à une variable dans le panneau d'inspection.
 
-1. Insérez un élément **Variable** dans l'arbre de votre composant.
-2. Sélectionnez cet élément et associez-le à une variable dans le panneau d'inspection.
+<DImage
+src="/assets/visual-scripting/variables/screen2.png"
+alt="Capture d'écran de l'éditeur Luna Park"
+/>
 
-![Capture d'écran de l'éditeur Luna Park](../../../assets/visual-scripting/variables/screen2.png)
+### 3. Ajouter des Boutons pour Modifier la Variable
 
-### 3. Ajouter des boutons pour modifier la variable
+1. Ajoutez deux boutons à l'interface, un pour **ajouter** et un pour **soustraire** un point au score.
+2. Configurez les boutons pour déclencher un événement **On Click**.
 
-1. Ajoutez deux boutons dans l’interface, un pour **ajouter** et un pour **soustraire** un point au score.
-2. Configurez les boutons pour qu’ils déclenchent un événement **On Click**.
+<DImage
+src="/assets/visual-scripting/variables/gif1.gif"
+alt="Capture d'écran de l'éditeur Luna Park"
+/>
 
-![Capture d'écran de l'éditeur Luna Park](../../../assets/visual-scripting/variables/gif1.gif)
-
-
-### 4. Créer la logique de mise à jour de la variable
+### 4. Créer la Logique pour Mettre à Jour la Variable
 
 1. Utilisez le nœud On Click connecté au bouton `+`.
 2. Ajoutez les nœuds suivants :
@@ -67,32 +74,31 @@ Les variables **computed** sont des variables dont la valeur est automatiquement
    - `Set score` pour mettre à jour la variable avec le nouveau score.
 3. Répétez le processus pour le bouton `-`, mais utilisez le nœud `Subtract (-)` au lieu de `Add (+)`.
 
-![Capture d'écran de l'éditeur Luna Park](../../../assets/visual-scripting/variables/screen3.png)
+![Capture d'écran de l'éditeur Luna Park](/assets/visual-scripting/variables/screen3.png)
 
+### 5. Tester et Vérifier
 
-### 5. Tester et vérifier
-
-- Passer en mode `Preview` pour tester votre application.
-- Cliquez sur les boutons `+` et `-` dans l’interface.
+- Passez en mode **Aperçu** pour tester votre application.
+- Cliquez sur les boutons `+` et `-` dans l'interface.
 - Vous devriez voir la valeur de la variable se mettre à jour en temps réel.
 
-![Capture d'écran de l'éditeur Luna Park](../../../assets/visual-scripting/variables/gif2.gif)
+![Capture d'écran de l'éditeur Luna Park](/assets/visual-scripting/variables/gif2.gif)
 
-## Réactivité des variables
+## Réactivité des Variables
 
-### Dans l'interface
+### Dans l'Interface
 
-Les variables peuvent être utilisées pour afficher des informations dynamiques dans l'interface utilisateur. Si vous modifiez une variable, l'interface se met à jour automatiquement pour refléter cette modification.
+Les variables peuvent être utilisées pour afficher des informations dynamiques dans l'interface utilisateur. Si vous modifiez une variable, l'interface se met automatiquement à jour pour refléter ce changement.
 
-### Les variables computed
+### Variables Calculées
 
-Les variables **computed** sont des variables dont la valeur est automatiquement recalculée en fonction d’autres variables ou conditions.
+Les variables **calculées** sont des variables dont la valeur est automatiquement recalculée en fonction d'autres variables ou conditions.
 
-Fonctionnement :
+Comment cela fonctionne :
 
-- Une variable **computed** dépend d’une ou plusieurs autres variables.
-- Lorsque ces variables changent, la valeur de la variable **computed** est mise à jour automatiquement.
+- Une variable **calculée** dépend d'une ou plusieurs autres variables.
+- Lorsque ces variables changent, la valeur de la variable **calculée** est automatiquement mise à jour.
 
-Imaginons que vous ayez une variable `score` et que vous souhaitiez afficher le double de ce score dans l'interface. Vous pouvez créer une variable **computed** qui double la valeur de `score`.
+Imaginez que vous avez une variable `score` et que vous souhaitez afficher le double de ce score dans l'interface. Vous pouvez créer une variable **calculée** qui double la valeur de `score`.
 
-Si `score` est `10`, la variable **computed** affichera `20`. Si `score` change à `15`, la variable **computed** affichera automatiquement `30`.
+Si `score` est `10`, la variable **calculée** affichera `20`. Si `score` change à `15`, la variable **calculée** affichera automatiquement `30`.

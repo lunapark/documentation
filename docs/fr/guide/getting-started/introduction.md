@@ -18,7 +18,7 @@ Le moteur de **visual scripting** de Luna Park vous permet de construire n'impor
 
 D'un point de vue technique, la logique que vous créez en visual scripting est compilée directement en javascript, chaque nœud étant équivalent à une ligne de code. En production, il n'est pas lu par un interpréteur lourd comme le font d'autres outils, mais directement executé par le moteur javascript.
 
-<InfoCard
+<DInfoCard
 :cards="[
 {
 title: 'NO-CODE',

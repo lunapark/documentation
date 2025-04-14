@@ -81,7 +81,7 @@ watch(
     padding: 32px 32px 96px;
     width: calc(100vw - 64px);
     max-width: 320px;
-    background-color: var(--color-background-dark);
+    background-color: var(--color-background-darker);
     opacity: 0;
     box-shadow: var(--vp-c-shadow-3);
     overflow-x: hidden;
@@ -108,7 +108,6 @@ watch(
         padding-top: var(--vp-nav-height);
         width: var(--vp-sidebar-width);
         max-width: 100%;
-        background-color: var(--color-background-dark);
         opacity: 1;
         visibility: visible;
         box-shadow: none;
@@ -133,7 +132,7 @@ watch(
         margin-right: -32px;
         margin-left: -32px;
         height: var(--vp-nav-height);
-        background-color: var(--color-background-dark);
+        background-color: var(--color-background-darker);
     }
 }
 

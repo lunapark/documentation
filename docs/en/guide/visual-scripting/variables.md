@@ -40,21 +40,30 @@ Here are the data types you can use:
 3. Give it a name and a type (e.g., `score` of type **Number**).
 4. Give it an initial value in the **Default** section (e.g., `0`).
 
-![Screenshot of the Luna Park editor](../../../assets/visual-scripting/variables/screen1.png)
+<DImage 
+  src="/assets/visual-scripting/variables/screen1.png"
+  alt="Screenshot of the Luna Park editor"
+/>
 
 ### 2. Add a Display Element
 
 1. Insert a **Variable** element into your component's tree.
 2. Select this element and link it to a variable in the inspection panel.
 
-![Screenshot of the Luna Park editor](../../../assets/visual-scripting/variables/screen2.png)
+<DImage 
+  src="/assets/visual-scripting/variables/screen2.png"
+  alt="Screenshot of the Luna Park editor"
+/>
 
 ### 3. Add Buttons to Modify the Variable
 
 1. Add two buttons to the interface, one to **add** and one to **subtract** a point from the score.
 2. Configure the buttons to trigger an **On Click** event.
 
-![Screenshot of the Luna Park editor](../../../assets/visual-scripting/variables/gif1.gif)
+<DImage 
+  src="/assets/visual-scripting/variables/gif1.gif"
+  alt="Screenshot of the Luna Park editor"
+/>
 
 ### 4. Create the Logic to Update the Variable
 
@@ -65,7 +74,7 @@ Here are the data types you can use:
    - `Set score` to update the variable with the new score.
 3. Repeat the process for the `-` button, but use the `Subtract (-)` node instead of `Add (+)`.
 
-![Screenshot of the Luna Park editor](../../../assets/visual-scripting/variables/screen3.png)
+![Screenshot of the Luna Park editor](/assets/visual-scripting/variables/screen3.png)
 
 ### 5. Test and Verify
 
@@ -73,7 +82,7 @@ Here are the data types you can use:
 - Click the `+` and `-` buttons in the interface.
 - You should see the variable's value update in real-time.
 
-![Screenshot of the Luna Park editor](../../../assets/visual-scripting/variables/gif2.gif)
+![Screenshot of the Luna Park editor](/assets/visual-scripting/variables/gif2.gif)
 
 ## Variable Reactivity
 

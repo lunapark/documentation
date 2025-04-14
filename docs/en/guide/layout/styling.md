@@ -1,12 +1,26 @@
 # Styling
 
+## Global Styling
+
+The global styling of your app is accessible from the `Palette` button on the top bar of the editor. You can update the primary and the content colors, the shades will automatically be generated.
+
+Note that you can match the editor colors with your app colors by using the match editor option. This can make the building easier for your eyes.
+
+<DImage
+src="/assets/layout-editor/styling-assets/screen3.png"
+alt="Screenshot of the Luna Park editor"
+/>
+
 ## Element Styling
 
 Each element of your project can be styled individually in the inspector, under the **style** tab. This allows you to customize the appearance of each component of your application, such as text, images, or buttons.
 
 To add a style category (e.g., color, typography, size), simply click the **+** button in the style tab. You can enable or disable each property by clicking on its name.
 
-![Screenshot of the Luna Park editor](../../../assets/layout-editor/styling-assets/screen2.png)
+<DImage 
+  src="/assets/layout-editor/styling-assets/screen2.png"
+  alt="Screenshot of the Luna Park editor"
+/>
 
 _Note: All styling rules available in Luna Park correspond to the CSS rules found in web standards._
 
@@ -14,7 +28,10 @@ _Note: All styling rules available in Luna Park correspond to the CSS rules foun
 
 Luna Park also allows the use of design tokens. These are reusable values that ensure a consistent style throughout the application. For example, you can define a primary color and use it everywhere in your application. This makes style management easier and allows for quick global changes.
 
-![Screenshot of the Luna Park editor](../../../assets/layout-editor/styling-assets/screen1.png)
+<DImage 
+  src="/assets/layout-editor/styling-assets/screen1.png"
+  alt="Screenshot of the Luna Park editor"
+/>
 
 _Note: For now, design tokens are fixed. It is not yet possible to modify or add them in the editor._
 
@@ -24,7 +41,7 @@ To use a design token:
 2. Click the link icon to switch to design token selection mode.
 3. Select the design token you want to use.
 
-![Screenshot of the Luna Park editor](../../../assets/layout-editor/styling-assets/gif1.gif)
+![Screenshot of the Luna Park editor](/assets/layout-editor/styling-assets/gif1.gif)
 
 ## Style Variables
 
@@ -36,7 +53,7 @@ To use a variable in a property of your component:
 2. Click the lightning icon to switch to variable selection mode.
 3. Select the variable you want to use.
 
-![Screenshot of the Luna Park editor](../../../assets/layout-editor/styling-assets/gif2.gif)
+![Screenshot of the Luna Park editor](/assets/layout-editor/styling-assets/gif2.gif)
 
 _Note: Only variables matching the expected type for this property will be available in the list. For example, a numeric variable will only appear for a property expected to be a number._
 

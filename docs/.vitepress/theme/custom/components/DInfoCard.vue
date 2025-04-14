@@ -43,27 +43,22 @@ const props = defineProps<{
 }
 
 .info-card {
-    background-color: var(--color-background-1);
+    background-color: var(--color-background-dark);
     border: 1px solid var(--color-background-3);
-    border-radius: 10px;
-    padding: 20px;
-    text-align: left;
-    flex-basis: calc(33.33% - 20px); /* 3 cartes par ligne */
-    transition: background-color 0.3s ease;
+    border-radius: var(--length-radius-m);
+    box-shadow: 0 0 32px var(--color-background-litest);
+    padding: var(--length-m) var(--length-l);
+    flex: 1 1 0;
 
     &.accent {
-        background-color: var(--color-background-2);
-        border-color: var(--color-background-3);
+        background-color: var(--color-background-0);
+        border: 1px solid var(--color-primary-dark-lite);
     }
 
     span.title {
         color: var(--color-primary);
         margin: 0;
         text-shadow: 0 0 32px var(--color-primary);
-    }
-
-    .ul{
-        margin:0;
     }
 
     ul.info-list {
@@ -77,7 +72,7 @@ const props = defineProps<{
             flex-direction: column;
 
             .info-label {
-                color: var(--color-content);
+                color: var(--color-content-lite);
             }
 
             .danger {
@@ -91,7 +86,6 @@ const props = defineProps<{
             .info {
                 color: var(--color-warning-content);
             }
-
         }
     }
 }

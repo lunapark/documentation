@@ -36,35 +36,35 @@ export default defineConfig({
                         items: [
                             { link: "/fr/guide/getting-started/introduction", text: "Introduction" },
                             { link: "/fr/guide/getting-started/comparison", text: "Différences" },
-                            { link: "/fr/guide/getting-started/quick-start", text: "Démarrage rapide" },
-                            { link: "/fr/guide/getting-started/find-help", text: "Trouver de l'aide" }
+                            { link: "/fr/guide/getting-started/quick-start", text: "Démarrage Rapide" },
+                            { link: "/fr/guide/getting-started/find-help", text: "Obtenir de l'Aide" }
                         ],
-                        text: "Prise en main"
+                        text: "Pour Commencer"
                     },
                     {
                         items: [
                             { link: "/fr/guide/layout/editor", text: "Éditeur" },
                             { link: "/fr/guide/layout/components", text: "Composants" },
-                            { link: "/fr/guide/layout/templates", text: "Templates" },
-                            { link: "/fr/guide/layout/styling", text: "Stylisation" },
-                            { link: "/fr/guide/layout/exporter", text: "Exportation" }
+                            { link: "/fr/guide/layout/templates", text: "Modèles" },
+                            { link: "/fr/guide/layout/styling", text: "Stylisation" }
                         ],
-                        text: "Layout"
+                        text: "Éditeur de Mise en Page"
                     },
                     {
                         items: [
                             { link: "/fr/guide/visual-scripting/introduction", text: "Introduction" },
-                            { link: "/fr/guide/visual-scripting/graph-basis", text: "Le graphe" },
-                            { link: "/fr/guide/visual-scripting/variables", text: "Variables" },
-                            { link: "/fr/guide/visual-scripting/flow-control", text: "Contrôle de flux" }
+                            { link: "/fr/guide/visual-scripting/graph", text: "Le Graphe" },
+                            { link: "/fr/guide/visual-scripting/flow-control", text: "Contrôle de Flux" },
+                            { link: "/fr/guide/visual-scripting/variables", text: "Variables" }
                         ],
-                        text: "Visual scripting"
+                        text: "Script Visuel"
                     },
                     {
                         items: [
-                            { link: "/fr/configuration/prerequisites", text: "Prérequis" }
+                            { link: "/fr/guide/export/compilation", text: "Compilation" },
+                            { link: "/fr/guide/export/prerequisites", text: "Prérequis" }
                         ],
-                        text: "Configuration"
+                        text: "Exportation"
                     }
                 ]
             }
@@ -93,25 +93,25 @@ export default defineConfig({
                             { "link": "/en/guide/layout/editor", "text": "Editor" },
                             { "link": "/en/guide/layout/components", "text": "Components" },
                             { "link": "/en/guide/layout/templates", "text": "Templates" },
-                            { "link": "/en/guide/layout/styling", "text": "Styling" },
-                            { "link": "/en/guide/layout/exporter", "text": "Export" }
+                            { "link": "/en/guide/layout/styling", "text": "Styling" }
                         ],
-                        "text": "Layout"
+                        "text": "Layout Editor"
                     },
                     {
                         "items": [
                             { "link": "/en/guide/visual-scripting/introduction", "text": "Introduction" },
-                            { "link": "/en/guide/visual-scripting/graph-basis", "text": "The Graph" },
-                            { "link": "/en/guide/visual-scripting/variables", "text": "Variables" },
-                            { "link": "/en/guide/visual-scripting/flow-control", "text": "Flow Control" }
+                            { "link": "/en/guide/visual-scripting/graph", "text": "The Graph" },
+                            { "link": "/en/guide/visual-scripting/flow-control", "text": "Flow Control" },
+                            { "link": "/en/guide/visual-scripting/variables", "text": "Variables" }
                         ],
                         "text": "Visual Scripting"
                     },
                     {
                         "items": [
-                            { "link": "/en/configuration/prerequisites", "text": "Prerequisites" }
+                            { "link": "/en/guide/export/compilation", "text": "Compilation" },
+                            { "link": "/en/guide/export/prerequisites", "text": "Prerequisites" }
                         ],
-                        "text": "Configuration"
+                        "text": "Export"
                     }
                 ]
             }

@@ -1,4 +1,4 @@
-import { initApp, LContainer, LIcon } from "@luna-park/design";
+import { initApp, LContainer, LIcon, LKeyIcon, LMouseIcon } from "@luna-park/design";
 
 import "./styles/vars.css";
 import "./styles/base.css";
@@ -13,16 +13,13 @@ import "./styles/components/vp-sponsor.css";
 import "./custom/style.css";
 
 import type { Theme } from "vitepress";
-import VPBadge from "./components/VPBadge.vue";
 import Layout from "./Layout.vue";
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import QuickAccess from "./custom/components/QuickAccess.vue";
-import InfoCard from "./custom/components/InfoCard.vue";
-import SystemRequirements from "./custom/components/SystemRequirements.vue";
-import BrowserCompatibility from "./custom/components/BrowserCompatibility.vue";
+import DInfoCard from "./custom/components/DInfoCard.vue";
 import DAnchorIcon from "./custom/components/DAnchorIcon.vue";
 import DSchemaType from "./custom/components/DSchemaType.vue";
 import DSchemaValue from "./custom/components/DSchemaValue.vue";
+import DImage from "./custom/components/DImage.vue";
+import DExampleEditor from "./custom/components/DExampleEditor.vue";
 
 export { default as VPBadge } from "./components/VPBadge.vue";
 export { default as VPButton } from "./components/VPButton.vue";
@@ -49,19 +46,17 @@ export { useSidebar } from "./composables/sidebar";
 const theme: Theme = {
     enhanceApp: ({ app }) => {
         initApp(app);
-
-        app.component("Badge", VPBadge);
-        app.component("QuickAccess", QuickAccess);
-        app.component("InfoCard", InfoCard);
         app.component("LContainer", LContainer);
         app.component("LIcon", LIcon);
-        app.component("SystemRequirements", SystemRequirements);
-        app.component("BrowserCompatibility", BrowserCompatibility);
-        app.component("FontAwesomeIcon", FontAwesomeIcon);
+        app.component("LKeyIcon", LKeyIcon);
+        app.component("LMouseIcon", LMouseIcon);
 
+        app.component("DInfoCard", DInfoCard);
         app.component("DAnchorIcon", DAnchorIcon);
         app.component("DSchemaType", DSchemaType);
         app.component("DSchemaValue", DSchemaValue);
+        app.component("DImage", DImage);
+        app.component("DExampleEditor", DExampleEditor);
     },
     Layout
 };
