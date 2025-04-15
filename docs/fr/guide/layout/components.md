@@ -1,6 +1,8 @@
 <script setup>
 import {faSquare} from "@fortawesome/pro-regular-svg-icons";
 import { faBolt, faBox, faGear, faPuzzlePiece, faQuoteLeft, faSprayCan, faCode } from "@fortawesome/pro-solid-svg-icons";
+
+import Screen1 from '/assets/images/layout/components/screen1.png';
 </script>
 
 # Composants
@@ -8,7 +10,7 @@ import { faBolt, faBox, faGear, faPuzzlePiece, faQuoteLeft, faSprayCan, faCode }
 Les fichiers de **composant** sont utilisés pour définir l'interface de votre application. Ils vous permettent de créer des éléments visuels réutilisables dans tout votre projet.
 
 <DImage
-src="../../../assets/layout-editor/page-layouts-assets/screen1.png"
+:src="Screen1"
 alt="Capture d'écran de l'éditeur Luna Park"
 />
 
@@ -42,4 +44,4 @@ Voici quelques options à votre disposition pour chaque élément de mise en pag
 
 Pour définir un composant comme une **page**, changez simplement son type dans l'inspecteur. Vous pouvez ensuite définir un chemin pour accéder à la page. La page principale de votre application sera toujours `/` (sans rien après).
 
-![Capture d'écran de l'éditeur Luna Park](/assets/layout-editor/page-layouts-assets/gif1.gif)
+![Capture d'écran de l'éditeur Luna Park](/assets/images/layout/components/gif1.gif)

@@ -1,5 +1,9 @@
 <script setup lang="ts">
 import {LogicType} from "@luna-park/logicnodes";
+
+import Screen2 from '/assets/images/layout/templates/screen2.png';
+import Screen3 from '/assets/images/layout/templates/screen3.png';
+import Screen6 from '/assets/images/layout/templates/screen6.png';
 </script>
 
 # Template Elements
@@ -21,7 +25,7 @@ In this example, we will display a message "You win" when the score exceeds a ce
 2. In the **Inspector** panel, add a computed variable called `displayWin`.
 3. Define it as a **boolean** (true or false).
 
-![Screenshot of the Luna Park editor](/assets/visual-scripting/flow-control/screen1.png)
+![Screenshot of the Luna Park editor](/assets/images/layout/templates/screen1.png)
 
 ### 2. Use the Computed Variable in the Interface
 
@@ -31,8 +35,8 @@ In this example, we will display a message "You win" when the score exceeds a ce
     - If `displayWin` is true, the message will be displayed.
     - If `displayWin` is false, the message will not be displayed.
 
-<DImage 
-  src="../../../assets/visual-scripting/flow-control/screen2.png"
+<DImage
+  :src="Screen2"
   alt="Screenshot of the Luna Park editor"
 />
 
@@ -42,8 +46,8 @@ In this example, we will display a message "You win" when the score exceeds a ce
 2. Use a **Condition** node (`A >= B`) to check if the score is greater than or equal to `10`.
 3. Connect the result of this condition to the **computed variable displayWin**.
 
-<DImage 
-  src="../../../assets/visual-scripting/flow-control/screen3.png"
+<DImage
+  :src="Screen3"
   alt="Screenshot of the Luna Park editor"
 />
 
@@ -52,7 +56,7 @@ In this example, we will display a message "You win" when the score exceeds a ce
 - Modify the score using the buttons in the interface.
 - When the score reaches or exceeds `10`, the message "You win" should automatically appear.
 
-![Screenshot of the Luna Park editor](/assets/visual-scripting/flow-control/gif1.gif)
+![Screenshot of the Luna Park editor](/assets/images/layout/templates/gif1.gif)
 
 ## For Templates
 
@@ -66,7 +70,7 @@ Example: Display a list of items
 2. In the **Inspector** panel, add a variable of type **Array** (array) called `articles`.
 3. Fill this variable with values, for example: <br/> <DSchemaValue :value='["sushi", "onigiri", "takoyaki", "tsukune"]'/>.
 
-![Screenshot of the Luna Park editor](/assets/visual-scripting/flow-control/screen4.png)
+![Screenshot of the Luna Park editor](/assets/images/layout/templates/screen4.png)
 
 ### 2. Set Up the Loop Logic
 
@@ -75,7 +79,7 @@ Example: Display a list of items
 3. The For logic allows you to iterate over each element of the `articles` array.
 4. The Template will execute its content once for each article.
 
-![Screenshot of the Luna Park editor](/assets/visual-scripting/flow-control/screen5.png)
+![Screenshot of the Luna Park editor](/assets/images/layout/templates/screen5.png)
 
 ### 3. Display the Elements in the Interface
 
@@ -84,4 +88,7 @@ Example: Display a list of items
 3. Link this variable to `Template[].Value`, which corresponds to each element of the iterated array.
 4. Now, when you view the **Articles** page in the interface, you will see each element of the `articles` array displayed in a new block.
 
-![Capture d'écran de l'éditeur Luna Park](/assets/visual-scripting/flow-control/screen6.png)
+<DImage
+:src="Screen6"
+alt="Screenshot of the Luna Park editor"
+/>

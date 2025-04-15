@@ -1,5 +1,10 @@
 <script setup lang="ts">
 import {LogicType} from "@luna-park/logicnodes";
+
+import Screen1 from '/assets/images/visual-scripting/variables/screen1.png';
+import Screen2 from '/assets/images/visual-scripting/variables/screen2.png';
+import Screen3 from '/assets/images/visual-scripting/variables/screen3.png';
+import Gif1 from '/assets/images/visual-scripting/variables/gif1.gif';
 </script>
 
 # Variables
@@ -41,7 +46,7 @@ Les variables **calculées** sont des variables dont la valeur est automatiqueme
 4. Donnez-lui une valeur initiale dans la section **Défaut** (par exemple, `0`).
 
 <DImage
-src="../../../assets/visual-scripting/variables/screen1.png"
+:src="Screen1"
 alt="Capture d'écran de l'éditeur Luna Park"
 />
 
@@ -51,7 +56,7 @@ alt="Capture d'écran de l'éditeur Luna Park"
 2. Sélectionnez cet élément et liez-le à une variable dans le panneau d'inspection.
 
 <DImage
-src="../../../assets/visual-scripting/variables/screen2.png"
+:src="Screen2"
 alt="Capture d'écran de l'éditeur Luna Park"
 />
 
@@ -61,7 +66,7 @@ alt="Capture d'écran de l'éditeur Luna Park"
 2. Configurez les boutons pour déclencher un événement **On Click**.
 
 <DImage
-src="../../../assets/visual-scripting/variables/gif1.gif"
+:src="Gif1"
 alt="Capture d'écran de l'éditeur Luna Park"
 />
 
@@ -74,7 +79,10 @@ alt="Capture d'écran de l'éditeur Luna Park"
    - `Set score` pour mettre à jour la variable avec le nouveau score.
 3. Répétez le processus pour le bouton `-`, mais utilisez le nœud `Subtract (-)` au lieu de `Add (+)`.
 
-![Capture d'écran de l'éditeur Luna Park](/assets/visual-scripting/variables/screen3.png)
+<DImage
+:src="Screen3"
+alt="Capture d'écran de l'éditeur Luna Park"
+/>
 
 ### 5. Tester et Vérifier
 
@@ -82,7 +90,7 @@ alt="Capture d'écran de l'éditeur Luna Park"
 - Cliquez sur les boutons `+` et `-` dans l'interface.
 - Vous devriez voir la valeur de la variable se mettre à jour en temps réel.
 
-![Capture d'écran de l'éditeur Luna Park](/assets/visual-scripting/variables/gif2.gif)
+![Capture d'écran de l'éditeur Luna Park](/assets/images/visual-scripting/variables/gif2.gif)
 
 ## Réactivité des Variables
 

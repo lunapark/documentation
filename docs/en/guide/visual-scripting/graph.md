@@ -36,7 +36,7 @@ Les nœuds sont les blocs de construction logique de base qui peuvent être plac
 - **Nœuds de Fonction** : Ces nœuds ont un fond bleu. Ils possèdent des ancrages d'exécution d'entrée et/ou de sortie. Ils s'exécutent lorsque leur ancrage d'exécution d'entrée est déclenché.
 - **Nœuds d'Opération** : Ces nœuds ont un fond gris foncé. Ils ne possèdent pas d'ancrages d'exécution d'entrée et/ou de sortie. Ils s'exécutent lorsque leur ancrage de résultat est appelé par un nœud de fonction.
 
-![Capture d'écran de l'éditeur Luna Park](/assets/visual-scripting/graph-basis/screen2.png)
+![Capture d'écran de l'éditeur Luna Park](/assets/images/visual-scripting/graph/screen2.png)
 
 | Icône                                                                                         | Action                    | Description               |
 |-----------------------------------------------------------------------------------------------|---------------------------|---------------------------|
@@ -92,7 +92,7 @@ Cependant, vous pouvez également connecter un ancrage de sortie à un ancrage d
 
 Dans cet exemple, nous avons une logique simple construite avec des nœuds et des fils dans le graphe.
 
-![Capture d'écran de l'éditeur Luna Park](/assets/visual-scripting/graph-basis/screen3.png)
+![Capture d'écran de l'éditeur Luna Park](/assets/images/visual-scripting/graph/screen3.png)
 
 ### Étape par Étape
 
@@ -145,11 +145,11 @@ L'inspection permet de vérifier les **valeurs** et les **types** contenus par l
 
 **Inspection des Types** : Pour visualiser les types de données. `Ctrl + Alt`
 
-![Capture d'écran de l'éditeur Luna Park](/assets/visual-scripting/graph-basis/screen4.png)
+![Capture d'écran de l'éditeur Luna Park](/assets/images/visual-scripting/graph/screen4.png)
 
 **Inspection des Valeurs** : Pour afficher les valeurs réelles des ancrages. `Ctrl + Espace` ou `Ctrl + Q`
 
-![Capture d'écran de l'éditeur Luna Park](/assets/visual-scripting/graph-basis/screen5.png)
+![Capture d'écran de l'éditeur Luna Park](/assets/images/visual-scripting/graph/screen5.png)
 
 Lors de l'utilisation de l'inspection des valeurs, les valeurs sont :
 

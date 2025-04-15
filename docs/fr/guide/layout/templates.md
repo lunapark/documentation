@@ -1,5 +1,9 @@
 <script setup lang="ts">
 import {LogicType} from "@luna-park/logicnodes";
+
+import Screen2 from '/assets/images/layout/templates/screen2.png';
+import Screen3 from '/assets/images/layout/templates/screen3.png';
+import Screen6 from '/assets/images/layout/templates/screen6.png';
 </script>
 
 # Éléments de Modèle
@@ -21,7 +25,7 @@ Dans cet exemple, nous allons afficher un message "Vous avez gagné" lorsque le 
 2. Dans le panneau **Inspecteur**, ajoutez une variable calculée appelée `afficherVictoire`.
 3. Définissez-la comme un **booléen** (vrai ou faux).
 
-![Capture d'écran de l'éditeur Luna Park](/assets/visual-scripting/flow-control/screen1.png)
+![Capture d'écran de l'éditeur Luna Park](/assets/images/layout/templates/screen1.png)
 
 ### 2. Utiliser la Variable Calculée dans l'Interface
 
@@ -32,8 +36,8 @@ Dans cet exemple, nous allons afficher un message "Vous avez gagné" lorsque le 
     - Si `afficherVictoire` est faux, le message ne sera pas affiché.
 
 <DImage
-  src="../../../assets/visual-scripting/flow-control/screen2.png"
-  alt="Capture d'écran de l'éditeur Luna Park"
+:src="Screen2"
+alt="Screenshot of the Luna Park editor"
 />
 
 ### 3. Définir la Logique pour la Variable Calculée
@@ -43,8 +47,8 @@ Dans cet exemple, nous allons afficher un message "Vous avez gagné" lorsque le 
 3. Connectez le résultat de cette condition à la **variable calculée afficherVictoire**.
 
 <DImage
-  src="../../../assets/visual-scripting/flow-control/screen3.png"
-  alt="Capture d'écran de l'éditeur Luna Park"
+:src="Screen3"
+alt="Screenshot of the Luna Park editor"
 />
 
 ### 4. Tester Votre Logique
@@ -52,7 +56,7 @@ Dans cet exemple, nous allons afficher un message "Vous avez gagné" lorsque le 
 - Modifiez le score en utilisant les boutons de l'interface.
 - Lorsque le score atteint ou dépasse `10`, le message "Vous avez gagné" devrait apparaître automatiquement.
 
-![Capture d'écran de l'éditeur Luna Park](/assets/visual-scripting/flow-control/gif1.gif)
+![Capture d'écran de l'éditeur Luna Park](/assets/images/layout/templates/gif1.gif)
 
 ## Modèles For
 
@@ -66,7 +70,7 @@ Exemple : Afficher une liste d'articles
 2. Dans le panneau **Inspecteur**, ajoutez une variable de type **Tableau** (array) appelée `articles`.
 3. Remplissez cette variable avec des valeurs, par exemple : <br/> <DSchemaValue :value='["sushi", "onigiri", "takoyaki", "tsukune"]'/>.
 
-![Capture d'écran de l'éditeur Luna Park](/assets/visual-scripting/flow-control/screen4.png)
+![Capture d'écran de l'éditeur Luna Park](/assets/images/layout/templates/screen4.png)
 
 ### 2. Configurer la Logique de Boucle
 
@@ -75,7 +79,7 @@ Exemple : Afficher une liste d'articles
 3. La logique For permet d'itérer sur chaque élément du tableau `articles`.
 4. Le Modèle exécutera son contenu une fois pour chaque article.
 
-![Capture d'écran de l'éditeur Luna Park](/assets/visual-scripting/flow-control/screen5.png)
+![Capture d'écran de l'éditeur Luna Park](/assets/images/layout/templates/screen5.png)
 
 ### 3. Afficher les Éléments dans l'Interface
 
@@ -84,4 +88,7 @@ Exemple : Afficher une liste d'articles
 3. Liez cette variable à `Template[].Value`, qui correspond à chaque élément du tableau itéré.
 4. Maintenant, lorsque vous visualisez la page **Articles** dans l'interface, vous verrez chaque élément du tableau `articles` affiché dans un nouveau bloc.
 
-![Capture d'écran de l'éditeur Luna Park](/assets/visual-scripting/flow-control/screen6.png)
+<DImage
+:src="Screen6"
+alt="Screenshot of the Luna Park editor"
+/>

@@ -1,14 +1,16 @@
 <script setup>
 import {faSquare} from "@fortawesome/pro-regular-svg-icons";
 import { faBolt, faBox, faGear, faPuzzlePiece, faQuoteLeft, faSprayCan, faCode } from "@fortawesome/pro-solid-svg-icons";
+
+import Screen1 from '/assets/images/layout/components/screen1.png';
 </script>
 
 # Components
 
 **Component** files are used to define the interface of your application. They allow you to create reusable visual elements throughout your project.
 
-<DImage 
-  src="../../../assets/layout-editor/page-layouts-assets/screen1.png"
+<DImage
+  :src="Screen1"
   alt="Screenshot of the Luna Park editor"
 />
 
@@ -44,4 +46,4 @@ There are a few options at your disposal for each layout element, here are the m
 
 To define a component as a **page**, simply change its type in the inspector. You can then define a path to access the page. The main page of your application will always be `/` (with nothing following).
 
-![Screenshot of the Luna Park editor](/assets/layout-editor/page-layouts-assets/gif1.gif)
+![Screenshot of the Luna Park editor](/assets/images/layout/components/gif1.gif)

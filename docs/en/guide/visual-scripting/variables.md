@@ -1,5 +1,10 @@
 <script setup lang="ts">
 import {LogicType} from "@luna-park/logicnodes";
+
+import Screen1 from '/assets/images/visual-scripting/variables/screen1.png';
+import Screen2 from '/assets/images/visual-scripting/variables/screen2.png';
+import Screen3 from '/assets/images/visual-scripting/variables/screen3.png';
+import Gif1 from '/assets/images/visual-scripting/variables/gif1.gif';
 </script>
 
 # Variables
@@ -41,7 +46,7 @@ Here are the data types you can use:
 4. Give it an initial value in the **Default** section (e.g., `0`).
 
 <DImage 
-  src="../../../assets/visual-scripting/variables/screen1.png"
+  :src="Screen1"
   alt="Screenshot of the Luna Park editor"
 />
 
@@ -50,8 +55,8 @@ Here are the data types you can use:
 1. Insert a **Variable** element into your component's tree.
 2. Select this element and link it to a variable in the inspection panel.
 
-<DImage 
-  src="../../../assets/visual-scripting/variables/screen2.png"
+<DImage
+  :src="Screen2"
   alt="Screenshot of the Luna Park editor"
 />
 
@@ -61,7 +66,7 @@ Here are the data types you can use:
 2. Configure the buttons to trigger an **On Click** event.
 
 <DImage 
-  src="../../../assets/visual-scripting/variables/gif1.gif"
+  :src="Gif1"
   alt="Screenshot of the Luna Park editor"
 />
 
@@ -74,7 +79,10 @@ Here are the data types you can use:
    - `Set score` to update the variable with the new score.
 3. Repeat the process for the `-` button, but use the `Subtract (-)` node instead of `Add (+)`.
 
-![Screenshot of the Luna Park editor](/assets/visual-scripting/variables/screen3.png)
+<DImage
+:src="Screen3"
+alt="Screenshot of the Luna Park editor"
+/>
 
 ### 5. Test and Verify
 
@@ -82,7 +90,7 @@ Here are the data types you can use:
 - Click the `+` and `-` buttons in the interface.
 - You should see the variable's value update in real-time.
 
-![Screenshot of the Luna Park editor](/assets/visual-scripting/variables/gif2.gif)
+![Screenshot of the Luna Park editor](/assets/images/visual-scripting/variables/gif2.gif)
 
 ## Variable Reactivity
 
