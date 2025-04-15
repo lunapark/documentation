@@ -41,7 +41,7 @@ Here are the data types you can use:
 4. Give it an initial value in the **Default** section (e.g., `0`).
 
 <DImage 
-  src="/assets/visual-scripting/variables/screen1.png"
+  src="../../../assets/visual-scripting/variables/screen1.png"
   alt="Screenshot of the Luna Park editor"
 />
 
@@ -51,7 +51,7 @@ Here are the data types you can use:
 2. Select this element and link it to a variable in the inspection panel.
 
 <DImage 
-  src="/assets/visual-scripting/variables/screen2.png"
+  src="../../../assets/visual-scripting/variables/screen2.png"
   alt="Screenshot of the Luna Park editor"
 />
 
@@ -61,7 +61,7 @@ Here are the data types you can use:
 2. Configure the buttons to trigger an **On Click** event.
 
 <DImage 
-  src="/assets/visual-scripting/variables/gif1.gif"
+  src="../../../assets/visual-scripting/variables/gif1.gif"
   alt="Screenshot of the Luna Park editor"
 />
 

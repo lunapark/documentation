@@ -32,7 +32,7 @@ Dans cet exemple, nous allons afficher un message "Vous avez gagné" lorsque le 
     - Si `afficherVictoire` est faux, le message ne sera pas affiché.
 
 <DImage
-  src="/assets/visual-scripting/flow-control/screen2.png"
+  src="../../../assets/visual-scripting/flow-control/screen2.png"
   alt="Capture d'écran de l'éditeur Luna Park"
 />
 
@@ -43,7 +43,7 @@ Dans cet exemple, nous allons afficher un message "Vous avez gagné" lorsque le 
 3. Connectez le résultat de cette condition à la **variable calculée afficherVictoire**.
 
 <DImage
-  src="/assets/visual-scripting/flow-control/screen3.png"
+  src="../../../assets/visual-scripting/flow-control/screen3.png"
   alt="Capture d'écran de l'éditeur Luna Park"
 />
 

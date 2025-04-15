@@ -41,7 +41,7 @@ Les variables **calculées** sont des variables dont la valeur est automatiqueme
 4. Donnez-lui une valeur initiale dans la section **Défaut** (par exemple, `0`).
 
 <DImage
-src="/assets/visual-scripting/variables/screen1.png"
+src="../../../assets/visual-scripting/variables/screen1.png"
 alt="Capture d'écran de l'éditeur Luna Park"
 />
 
@@ -51,7 +51,7 @@ alt="Capture d'écran de l'éditeur Luna Park"
 2. Sélectionnez cet élément et liez-le à une variable dans le panneau d'inspection.
 
 <DImage
-src="/assets/visual-scripting/variables/screen2.png"
+src="../../../assets/visual-scripting/variables/screen2.png"
 alt="Capture d'écran de l'éditeur Luna Park"
 />
 
@@ -61,7 +61,7 @@ alt="Capture d'écran de l'éditeur Luna Park"
 2. Configurez les boutons pour déclencher un événement **On Click**.
 
 <DImage
-src="/assets/visual-scripting/variables/gif1.gif"
+src="../../../assets/visual-scripting/variables/gif1.gif"
 alt="Capture d'écran de l'éditeur Luna Park"
 />
 

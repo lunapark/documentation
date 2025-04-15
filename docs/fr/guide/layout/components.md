@@ -8,7 +8,7 @@ import { faBolt, faBox, faGear, faPuzzlePiece, faQuoteLeft, faSprayCan, faCode }
 Les fichiers de **composant** sont utilisés pour définir l'interface de votre application. Ils vous permettent de créer des éléments visuels réutilisables dans tout votre projet.
 
 <DImage
-src="/assets/layout-editor/page-layouts-assets/screen1.png"
+src="../../../assets/layout-editor/page-layouts-assets/screen1.png"
 alt="Capture d'écran de l'éditeur Luna Park"
 />
 

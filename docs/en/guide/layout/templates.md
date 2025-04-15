@@ -32,7 +32,7 @@ In this example, we will display a message "You win" when the score exceeds a ce
     - If `displayWin` is false, the message will not be displayed.
 
 <DImage 
-  src="/assets/visual-scripting/flow-control/screen2.png"
+  src="../../../assets/visual-scripting/flow-control/screen2.png"
   alt="Screenshot of the Luna Park editor"
 />
 
@@ -43,7 +43,7 @@ In this example, we will display a message "You win" when the score exceeds a ce
 3. Connect the result of this condition to the **computed variable displayWin**.
 
 <DImage 
-  src="/assets/visual-scripting/flow-control/screen3.png"
+  src="../../../assets/visual-scripting/flow-control/screen3.png"
   alt="Screenshot of the Luna Park editor"
 />
 

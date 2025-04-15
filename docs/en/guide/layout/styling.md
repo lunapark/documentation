@@ -7,7 +7,7 @@ The global styling of your app is accessible from the `Palette` button on the to
 Note that you can match the editor colors with your app colors by using the match editor option. This can make the building easier for your eyes.
 
 <DImage
-src="/assets/layout-editor/styling-assets/screen3.png"
+src="../../../assets/layout-editor/styling-assets/screen3.png"
 alt="Screenshot of the Luna Park editor"
 />
 
@@ -18,7 +18,7 @@ Each element of your project can be styled individually in the inspector, under 
 To add a style category (e.g., color, typography, size), simply click the **+** button in the style tab. You can enable or disable each property by clicking on its name.
 
 <DImage 
-  src="/assets/layout-editor/styling-assets/screen2.png"
+  src="../../../assets/layout-editor/styling-assets/screen2.png"
   alt="Screenshot of the Luna Park editor"
 />
 
@@ -29,7 +29,7 @@ _Note: All styling rules available in Luna Park correspond to the CSS rules foun
 Luna Park also allows the use of design tokens. These are reusable values that ensure a consistent style throughout the application. For example, you can define a primary color and use it everywhere in your application. This makes style management easier and allows for quick global changes.
 
 <DImage 
-  src="/assets/layout-editor/styling-assets/screen1.png"
+  src="../../../assets/layout-editor/styling-assets/screen1.png"
   alt="Screenshot of the Luna Park editor"
 />
 

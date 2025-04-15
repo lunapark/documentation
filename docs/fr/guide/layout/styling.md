@@ -7,7 +7,7 @@ La stylisation globale de votre application est accessible depuis le bouton `Pal
 Notez que vous pouvez faire correspondre les couleurs de l'éditeur avec celles de votre application en utilisant l'option de correspondance de l'éditeur. Cela peut rendre la construction plus facile pour vos yeux.
 
 <DImage
-src="/assets/layout-editor/styling-assets/screen3.png"
+src="../../../assets/layout-editor/styling-assets/screen3.png"
 alt="Capture d'écran de l'éditeur Luna Park"
 />
 
@@ -18,7 +18,7 @@ Chaque élément de votre projet peut être stylisé individuellement dans l'ins
 Pour ajouter une catégorie de style (par exemple, couleur, typographie, taille), cliquez simplement sur le bouton **+** dans l'onglet style. Vous pouvez activer ou désactiver chaque propriété en cliquant sur son nom.
 
 <DImage
-src="/assets/layout-editor/styling-assets/screen2.png"
+src="../../../assets/layout-editor/styling-assets/screen2.png"
 alt="Capture d'écran de l'éditeur Luna Park"
 />
 
@@ -29,7 +29,7 @@ _Note : Toutes les règles de stylisation disponibles dans Luna Park corresponde
 Luna Park permet également l'utilisation de jetons de design. Ce sont des valeurs réutilisables qui garantissent un style cohérent dans toute l'application. Par exemple, vous pouvez définir une couleur principale et l'utiliser partout dans votre application. Cela facilite la gestion des styles et permet des modifications globales rapides.
 
 <DImage
-src="/assets/layout-editor/styling-assets/screen1.png"
+src="../../../assets/layout-editor/styling-assets/screen1.png"
 alt="Capture d'écran de l'éditeur Luna Park"
 />
 

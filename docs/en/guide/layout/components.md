@@ -8,7 +8,7 @@ import { faBolt, faBox, faGear, faPuzzlePiece, faQuoteLeft, faSprayCan, faCode }
 **Component** files are used to define the interface of your application. They allow you to create reusable visual elements throughout your project.
 
 <DImage 
-  src="/assets/layout-editor/page-layouts-assets/screen1.png"
+  src="../../../assets/layout-editor/page-layouts-assets/screen1.png"
   alt="Screenshot of the Luna Park editor"
 />
 
