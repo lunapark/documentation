@@ -1,4 +1,4 @@
-export const graphWire = {
+{
     "nodes": {
         "1812984e-08df-462b-9db0-07d9f1052d64": { "location": { "x": -3, "y": 2 }, "logic": "debug/log" },
         "3e0fc9fd-f9a6-4fb4-8952-d7a9e7c5bca2": {
@@ -87,4 +87,4 @@ export const graphWire = {
             }, "to": { "key": "in_exec", "node": "611b1766-7a81-4cbf-b72f-6390765e2788" }
         }
     }
-};
+}

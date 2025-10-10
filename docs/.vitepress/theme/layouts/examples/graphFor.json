@@ -1,4 +1,4 @@
-export const graphFor = {
+{
     "nodes": {
         "1b3d908e-93fd-4d10-a9c2-94e472bcdc7e": {
             "internal": { "inputs": { "in_object": "Done!" } },
@@ -44,4 +44,4 @@ export const graphFor = {
             }, "to": { "key": "in_exec", "node": "1b3d908e-93fd-4d10-a9c2-94e472bcdc7e" }
         }
     }
-};
+}

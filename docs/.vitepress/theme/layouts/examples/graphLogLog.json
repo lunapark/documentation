@@ -1,4 +1,4 @@
-export const graphLogLog = {
+{
     "nodes": {
         "16f85052-d290-4d1b-bf27-7b9ccefc5ba0": {
             "internal": { "inputs": { "in_object": "World" } },
@@ -30,4 +30,4 @@ export const graphLogLog = {
             }, "to": { "key": "in_exec", "node": "16f85052-d290-4d1b-bf27-7b9ccefc5ba0" }
         }
     }
-};
+}

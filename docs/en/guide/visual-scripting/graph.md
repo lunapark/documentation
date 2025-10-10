@@ -20,7 +20,7 @@ The graph is the foundation of visual logic in Luna Park. This is where you will
 - **Anchors**: Each node has input and output anchors. Input anchors are used to receive data, while output anchors send data.
 - **Links**: Links connect the anchors to each other, forming a logical flow.
 
-<DExampleEditor :graph="graphLog" editor-id="graph-log" animation :zoomLevel="0"/>
+<DExampleEditor graph="log" animation :zoomLevel="0"/>
 
 | Icon                       | Action                    | Description                          |
 |----------------------------|---------------------------|--------------------------------------|
@@ -70,7 +70,7 @@ Links are the lines that connect the anchors to each other in a logical graph. T
 - **Execution Flow**: They are white and thick to represent a logical execution flow.
 - **Value Flow**: They take the color of the type of value they carry (e.g., green for a number, yellow for text).
 
-<DExampleEditor :graph="graphWire" editor-id="graph-wire" animation :zoomLevel="2"/>
+<DExampleEditor graph="wire" animation :zoomLevel="2"/>
 
 *Note that this is not a well-designed logic graph; it is only used to showcase wires, wire stacking, and reroute anchors. A well-designed logic graph should have an execution wire as straight as possible, making it easier to read.*
 

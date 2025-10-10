@@ -20,7 +20,7 @@ Le graphe est la base de la logique visuelle dans Luna Park. C'est ici que vous 
 - **Ancrages** : Chaque nœud possède des ancrages d'entrée et de sortie. Les ancrages d'entrée servent à recevoir des données, tandis que les ancrages de sortie envoient des données.
 - **Fils** : Les fils connectent les ancrages entre eux, formant un flux logique.
 
-<DExampleEditor :graph="graphLog" editor-id="graph-log" animation :zoomLevel="0"/>
+<DExampleEditor graph="log" animation :zoomLevel="0"/>
 
 | Icône                      | Action                    | Description                       |
 |----------------------------|---------------------------|-----------------------------------|
@@ -70,7 +70,7 @@ Les fils sont les lignes qui connectent les ancrages entre eux dans un graphe lo
 - **Flux d'Exécution** : Ils sont blancs et en gras pour représenter un flux d'exécution logique.
 - **Flux de Valeur** : Ils prennent la couleur du type de valeur qu'ils transportent (par exemple, vert pour un nombre, jaune pour du texte).
 
-<DExampleEditor :graph="graphWire" editor-id="graph-wire" animation :zoomLevel="2"/>
+<DExampleEditor graph="wire" animation :zoomLevel="2"/>
 
 *Notez que ce n'est pas un graphe logique bien conçu, il sert uniquement à présenter les fils, l'empilement des fils et les ancrages de réacheminement. Un graphe logique bien conçu devrait avoir un fil d'exécution aussi droit que possible, le rendant plus facile à lire.*
 

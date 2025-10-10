@@ -9,7 +9,7 @@ import {graphFor} from "/assets/examples/graphFor.ts";
 
 Le flux logique est l'ordre dans lequel vos nœuds sont exécutés. Habituellement, le flux commence sur un événement déclenché (nœud de lecture manuelle, nœud au chargement, fonction...). Ensuite, il suit le fil d'exécution représenté par un lien blanc en gras.
 
-<DExampleEditor :graph="graphLogLog" editor-id="graph-log-log" animation :zoomLevel="1"/>
+<DExampleEditor graph="loglog" animation :zoomLevel="1"/>
 
 Le contrôle de flux permet de définir l'**ordre d'exécution** des nœuds dans votre graphe et de gérer les **conditions** ou les **répétitions** des actions.
 
@@ -38,7 +38,7 @@ Un nœud conditionnel possède :
 - Une sortie vraie (<DSchemaType :schema="LogicType.exec()" />)
 - Une sortie fausse (<DSchemaType :schema="LogicType.exec()" />)
 
-<DExampleEditor :graph="graphIf" editor-id="graph-if" animation :zoomLevel="1"/>
+<DExampleEditor graph="if" animation :zoomLevel="1"/>
 
 ## Nœuds de Boucle (For, While)
 
@@ -54,7 +54,7 @@ Un nœud de boucle For possède :
 - Une sortie d'index (<DSchemaType :schema="LogicType.number()" />)
 - Une sortie de fin (<DSchemaType :schema="LogicType.exec()" />)
 
-<DExampleEditor :graph="graphFor" editor-id="graph-for" animation :zoomLevel="1"/>
+<DExampleEditor graph="for" animation :zoomLevel="1"/>
 
 ### Boucle While
 

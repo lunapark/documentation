@@ -1,4 +1,4 @@
-export const graphLog = {
+{
     "nodes": {
         "400b8a31-e191-47cf-aa1e-28331cbb3d6a": {
             "data": { "_size": { "x": 10, "y": 4 } },
@@ -19,4 +19,4 @@ export const graphLog = {
             }, "to": { "key": "in_exec", "node": "caaba131-5e7f-48e3-92a8-45fc21f031b4" }
         }
     }
-};
+}

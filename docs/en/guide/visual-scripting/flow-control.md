@@ -1,15 +1,12 @@
 <script setup lang="ts">
 import {LogicType} from "@luna-park/logicnodes";
-import {graphLogLog} from "/assets/examples/graphLogLog.ts";
-import {graphIf} from "/assets/examples/graphIf.ts";
-import {graphFor} from "/assets/examples/graphFor.ts";
 </script>
 
 # Flow Control
 
 The logic flow is the order in which your nodes are executed. Usually, the flow start on a triggered event (manual play node, on load node, function...). Then, it follows the execution thread represented by a bold white link.
 
-<DExampleEditor :graph="graphLogLog" editor-id="graph-log-log" animation :zoomLevel="1"/>
+<DExampleEditor graph="loglog" animation :zoomLevel="1"/>
 
 Flow control allows you to define the **execution order** of nodes in your graph and manage **conditions** or **repetitions** of actions.
 
@@ -39,7 +36,7 @@ A conditional node has:
 - A false output (<DSchemaType :schema="LogicType.exec()" />)
 
 
-<DExampleEditor :graph="graphIf" editor-id="graph-if" animation :zoomLevel="1"/>
+<DExampleEditor graph="if" animation :zoomLevel="1"/>
 
 ## Loop Nodes (For, While)
 
@@ -55,7 +52,7 @@ A For loop node has:
 - An index output (<DSchemaType :schema="LogicType.number()" />)
 - An end output (<DSchemaType :schema="LogicType.exec()" />)
 
-<DExampleEditor :graph="graphFor" editor-id="graph-for" animation :zoomLevel="1"/>
+<DExampleEditor graph="for" animation :zoomLevel="1"/>
 
 ### While Loop
 

@@ -1,32 +1,11 @@
 <template>
-    <ClientOnly>
-        <div
-            v-if="ready"
-            class="example-editor"
-        >
-            <LLogicEditor
-                class="editor"
-                :editor-id="editorId"
-                :graph="graph"
-                playground
-            />
-            <div class="console-wrapper">
-                <div class="console-title">
-                    Console
-                </div>
-                <LEditorConsole
-                    class="console"
-                    :editor-id="editorId"
-                />
-            </div>
-        </div>
-    </ClientOnly>
+    <iframe :src="target" allowTransparency="true" @load="onLoad" :class="{loading: !loaded}"/>
 </template>
 
 
 <script setup lang="ts">
 import { LEditorConsole, LLogicEditor, useCanvasStore, useEditorStore, useLogicStore } from "@luna-park/editor";
-import { nextTick, onMounted, ref } from "vue";
+import {computed, nextTick, onMounted, ref} from "vue";
 
 const props = withDefaults(defineProps<{
     animation?: boolean;
@@ -37,52 +16,31 @@ const props = withDefaults(defineProps<{
     zoomLevel: 0
 });
 
-const ready = ref(false);
+const loaded = ref(false);
 
-onMounted(async () => {
-    await useLogicStore(props.editorId).loadLibs(["standard", "string"]);
-    useEditorStore(props.editorId).flags.animation = props.animation;
+const target = computed(() => {
+    const searchParams = new URLSearchParams();
+    searchParams.set("graph", props.graph);
+    searchParams.set("animation", props.animation ? "1" : "0");
+    searchParams.set("zoomLevel", props.zoomLevel.toString());
 
-    ready.value = true;
-    await nextTick();
-    useCanvasStore(props.editorId).zoomFloat = props.zoomLevel;
+    return `/editor?${searchParams.toString()}`;
 });
+
+function onLoad() {
+    loaded.value = true;
+}
 </script>
 
 <style scoped>
-.example-editor {
-    display: flex;
-    flex-direction: column;
+iframe {
+    height: 282px;
+    width: 100%;
+    border: none;
+    background: transparent;
 
-    .editor {
-        position: relative;
-        z-index: 1;
-        flex-grow: 1;
-        border-radius: var(--length-radius-m) var(--length-radius-m) 0 0;
-        height: 200px;
-    }
-
-    .console-wrapper {
-        position: relative;
-        border-top: 2px solid var(--color-background-0);
-
-        .console-title {
-            font-size: 1.2rem;
-            pointer-events: none;
-            text-transform: uppercase;
-            font-weight: 600;
-            color: var(--color-soft);
-            right: 0;
-            position: absolute;
-            padding: 0 var(--length-s);
-        }
-    }
-
-    .console {
-        height: 80px;
-        border-radius: 0 0 var(--length-radius-m) var(--length-radius-m);
-        flex-grow: 0;
-        flex-shrink: 0;
+    &.loading {
+        opacity: 0;
     }
 }
 </style>
