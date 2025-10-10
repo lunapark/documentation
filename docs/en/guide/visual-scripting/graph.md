@@ -12,151 +12,151 @@ import {graphWire} from "/assets/examples/graphWire.ts";
 }
 </style>
 
-# Le Graphe
+# The Graph
 
-Le graphe est la base de la logique visuelle dans Luna Park. C'est ici que vous construirez la logique de votre application. Il se compose de nœuds, de liens et d'ancrages qui interagissent pour créer des flux logiques.
+The graph is the foundation of visual logic in Luna Park. This is where you will build the logic of your application. It consists of nodes, links, and anchors that interact to create logical flows.
 
-- **Nœuds** : Un nœud représente une action, une condition ou une opération.
-- **Ancrages** : Chaque nœud possède des ancrages d'entrée et de sortie. Les ancrages d'entrée servent à recevoir des données, tandis que les ancrages de sortie envoient des données.
-- **Fils** : Les fils connectent les ancrages entre eux, formant un flux logique.
+- **Nodes**: A node represents an action, a condition, or an operation.
+- **Anchors**: Each node has input and output anchors. Input anchors are used to receive data, while output anchors send data.
+- **Links**: Links connect the anchors to each other, forming a logical flow.
 
 <DExampleEditor :graph="graphLog" editor-id="graph-log" animation :zoomLevel="0"/>
 
-| Icône                      | Action                    | Description                       |
-|----------------------------|---------------------------|-----------------------------------|
-| <LMouseIcon left />        | Clic gauche sur le graphe  | Sélectionner le graphe (nécessaire pour zoomer) |
-| <LMouseIcon move right />  | Maintenir le clic droit et déplacer | Déplacer le graphe le long des axes X et Y |
-| <LMouseIcon scroll />      | Faire défiler sur le graphe | Zoomer avant et arrière          |
-| <LMouseIcon left move />   | Maintenir le clic gauche et déplacer | Dessiner une boîte de sélection |
+| Icon                       | Action                    | Description                          |
+|----------------------------|---------------------------|--------------------------------------|
+| <LMouseIcon left />        | Left click on the graph   | Select the graph (needed for zooming) |
+| <LMouseIcon move right />  | Hold right click and move | Move the graph along X and Y axis    |
+| <LMouseIcon scroll />      | Scroll on the graph       | Zoom in and out                      |
+| <LMouseIcon left move />   | Hold left click and drag  | Draw a selection box                 |
 
-## Nœuds
 
-Les nœuds sont les blocs de construction logique de base qui peuvent être placés sur le graphe. Il existe deux types principaux de nœuds :
+## Nodes
 
-- **Nœuds de Fonction** : Ces nœuds ont un fond bleu. Ils possèdent des ancrages d'exécution d'entrée et/ou de sortie. Ils s'exécutent lorsque leur ancrage d'exécution d'entrée est déclenché.
-- **Nœuds d'Opération** : Ces nœuds ont un fond gris foncé. Ils ne possèdent pas d'ancrages d'exécution d'entrée et/ou de sortie. Ils s'exécutent lorsque leur ancrage de résultat est appelé par un nœud de fonction.
+Nodes are the basic logical building blocks that can be placed on the graph. There are two main types of nodes:
 
-![Capture d'écran de l'éditeur Luna Park](/assets/images/visual-scripting/graph/screen2.png)
+- **Function Nodes**: These nodes have a blue background. They have input and/or output execution anchors. They execute when their input execution anchor is triggered.
+- **Operation Nodes**: These nodes have a dark gray background. They do not have input and/or output execution anchors. They execute when their result anchor is called by a function node.
 
-| Icône                                                                                         | Action                    | Description               |
-|-----------------------------------------------------------------------------------------------|---------------------------|---------------------------|
-| <LMouseIcon left />                                                                           | Clic gauche sur un nœud   | Sélectionner le nœud      |
-| <LMouseIcon move left />                                                                      | Maintenir le clic gauche et déplacer | Déplacer le nœud         |
-| <div class="shortcut"><LKeyIcon key-name="Ctrl" /> + <LMouseIcon left /></div>               | Clic Ctrl sur un nœud      | Ajouter/retirer de la sélection |
-| <div class="shortcut"><LKeyIcon key-name="Delete" />/<LKeyIcon key-name="Backspace" /></div> | Supprimer avec le nœud sélectionné | Supprimer le nœud       |
+![Screenshot of the Luna Park editor](/assets/images/visual-scripting/graph/screen2.png)
 
-## Ancrages
+| Icon                                                                                          | Action                   | Description                   |
+|-----------------------------------------------------------------------------------------------|-------------------------|------------------------------|
+| <LMouseIcon left />                                                                           | Left click on a node     | Select the node              |
+| <LMouseIcon move left />                                                                      | Hold left click and move | Move the node                |
+| <div class="shortcut"><LKeyIcon key-name="Ctrl" /> + <LMouseIcon left /></div>               | Ctrl click on a node     | Add/remove from the selection |
+| <div class="shortcut"><LKeyIcon key-name="Delete" />/<LKeyIcon key-name="Backspace" /></div> | Delete on selected node  | Delete the node              |
 
-Les ancrages sont les interfaces des nœuds. Les ancrages d'entrée sont affichés à gauche, et les ancrages de sortie à droite. Il existe deux types d'ancrages :
+## Anchors
 
-- **Ancrages d'Exécution** (<DAnchorIcon :schema="LogicType.exec()" />)
-  Ces ancrages sont affichés avec une forme carrée arrondie à droite. Ils sont destinés à être connectés au flux d'exécution. Un nœud de fonction sera exécuté lorsque le flux d'exécution menant à ses ancrages d'exécution est déclenché. Ensuite, après son exécution, le nœud déclenchera son ancrage d'exécution de sortie.
+Anchors are the interfaces of the nodes. Input anchors are displayed on the left, and output anchors on the right. There are two types of anchors:
 
-- **Ancrages de Valeur** (<DAnchorIcon :schema="LogicType.unknown()" /> / <DAnchorIcon :schema="LogicType.array(LogicType.unknown())" />)
-  Ces ancrages sont affichés avec une forme circulaire lorsqu'ils contiennent une seule valeur, ou une forme carrée lorsqu'ils contiennent une liste (appelée tableau) de valeurs. Lors de l'utilisation des ancrages d'entrée, vous pouvez spécifier certains types, comme du texte ou un nombre, dans l'entrée à côté de l'ancrage. La couleur de l'ancrage dépend du type de valeur qu'il contient.
+- **Execution Anchors** (<DAnchorIcon :schema="LogicType.exec()" />)
+  These anchors are displayed with a rounded square shape on the right. They are intended to be connected to the execution flow. A function node will be executed when the execution flow leading to its execution anchors is triggered. Then, after its execution, the node will trigger its output execution anchor.
 
-| Type                                                                                                                                                                                            | Exemple                                             | Type                                                                                                                                                                                                                              | Exemple                                                                              |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
-| <DAnchorIcon :schema="LogicType.boolean()"/> <DSchemaType :schema="LogicType.boolean()" />                                                                                                      | <DSchemaValue :value="true" />                      | <DAnchorIcon :schema="LogicType.array(LogicType.boolean())" /> <DSchemaType :schema="LogicType.array(LogicType.boolean())" />                                                                                                     | <DSchemaValue :value="[true, false, false]" />                                       |
-| <DAnchorIcon :schema="LogicType.number()"/> <DSchemaType :schema="LogicType.number()" />                                                                                                        | <DSchemaValue :value="1980" />                      | <DAnchorIcon :schema="LogicType.array(LogicType.number())" /> <DSchemaType :schema="LogicType.array(LogicType.number())" />                                                                                                       | <DSchemaValue :value="[1980, 2020]" />                                               |
-| <DAnchorIcon :schema="LogicType.string()"/> <DSchemaType :schema="LogicType.string()" />                                                                                                        | <DSchemaValue :value="'Hello World'" />             | <DAnchorIcon :schema="LogicType.array(LogicType.string())" /> <DSchemaType :schema="LogicType.array(LogicType.string())" />                                                                                                       | <DSchemaValue :value="['Hello', 'World']" />                                         |
+- **Value Anchors** (<DAnchorIcon :schema="LogicType.unknown()" /> / <DAnchorIcon :schema="LogicType.array(LogicType.unknown())" />)
+  These anchors are displayed with a circular shape when they contain a single value, or a square shape when they contain a list (called an array) of values. When using input anchors, you can specify certain types, such as text or a number, in the input next to the anchor. The color of the anchor depends on the type of value it contains.
+
+| Type                                                                                       | Example                                             | Type | Example                                                                              |
+|--------------------------------------------------------------------------------------------|-----------------------------------------------------|------|--------------------------------------------------------------------------------------|
+| <DAnchorIcon :schema="LogicType.boolean()"/> <DSchemaType :schema="LogicType.boolean()" /> | <DSchemaValue :value="true" />                      | <DAnchorIcon :schema="LogicType.array(LogicType.boolean())" /> <DSchemaType :schema="LogicType.array(LogicType.boolean())" /> | <DSchemaValue :value="[true, false, false]" />                                       |
+| <DAnchorIcon :schema="LogicType.number()"/> <DSchemaType :schema="LogicType.number()" /> | <DSchemaValue :value="1980" />                      | <DAnchorIcon :schema="LogicType.array(LogicType.number())" /> <DSchemaType :schema="LogicType.array(LogicType.number())" /> | <DSchemaValue :value="[1980, 2020]" />                                               |
+| <DAnchorIcon :schema="LogicType.string()"/> <DSchemaType :schema="LogicType.string()" /> | <DSchemaValue :value="'Hello World'" />             | <DAnchorIcon :schema="LogicType.array(LogicType.string())" /> <DSchemaType :schema="LogicType.array(LogicType.string())" /> | <DSchemaValue :value="['Hello', 'World']" />                                         |
 | <DAnchorIcon :schema="LogicType.object({name: LogicType.string(), age: LogicType.number()})" /> <DSchemaType :schema="LogicType.object({name: LogicType.string(), age: LogicType.number()})" /> | <DSchemaValue :value="{ name: 'John', age: 30 }" /> | <DAnchorIcon :schema="LogicType.array(LogicType.object({name: LogicType.string(), age: LogicType.number()}))" /> <DSchemaType :schema="LogicType.array(LogicType.object({name: LogicType.string(), age: LogicType.number()}))" /> | <DSchemaValue :value="[{'name': 'John', 'age': 30}, {'name': 'Jane', 'age': 25}]" /> |
-| <DAnchorIcon :schema="LogicType.unknown()" /> <DSchemaType :schema="LogicType.unknown()" />                                                                                                     | <DSchemaValue value="Hello world" />                | <DAnchorIcon :schema="LogicType.array(LogicType.unknown())" /> <DSchemaType :schema="LogicType.array(LogicType.unknown())" />                                                                                                     | <DSchemaValue :value="['Hello', 1234]" />                                            |
+| <DAnchorIcon :schema="LogicType.unknown()" /> <DSchemaType :schema="LogicType.unknown()" /> | <DSchemaValue value="Hello world" />                | <DAnchorIcon :schema="LogicType.array(LogicType.unknown())" /> <DSchemaType :schema="LogicType.array(LogicType.unknown())" /> | <DSchemaValue :value="['Hello', 1234]" />                                            |
 
-## Fils
+## Links
 
-Les fils sont les lignes qui connectent les ancrages entre eux dans un graphe logique. Leur apparence change en fonction de leur rôle :
-
-- **Flux d'Exécution** : Ils sont blancs et en gras pour représenter un flux d'exécution logique.
-- **Flux de Valeur** : Ils prennent la couleur du type de valeur qu'ils transportent (par exemple, vert pour un nombre, jaune pour du texte).
+Links are the lines that connect the anchors to each other in a logical graph. Their appearance changes according to their role:
+- **Execution Flow**: They are white and thick to represent a logical execution flow.
+- **Value Flow**: They take the color of the type of value they carry (e.g., green for a number, yellow for text).
 
 <DExampleEditor :graph="graphWire" editor-id="graph-wire" animation :zoomLevel="2"/>
 
-*Notez que ce n'est pas un graphe logique bien conçu, il sert uniquement à présenter les fils, l'empilement des fils et les ancrages de réacheminement. Un graphe logique bien conçu devrait avoir un fil d'exécution aussi droit que possible, le rendant plus facile à lire.*
+*Note that this is not a well-designed logic graph; it is only used to showcase wires, wire stacking, and reroute anchors. A well-designed logic graph should have an execution wire as straight as possible, making it easier to read.*
 
-| Icône                                                                                         | Action                            | Description                             |
-|---------------------------------------------------------------------------------------------|-----------------------------------|-----------------------------------------|
-| <LMouseIcon left move />                                                                     | Clic gauche sur un ancrage et déplacer | Créer un fil partant de cet ancrage    |
-| <LMouseIcon double left />                                                                   | Double clic sur un fil            | Créer un nœud de réacheminement         |
-| <div class="shortcut"><LKeyIcon key-name="Ctrl" /> + <LMouseIcon left /></div>               | Clic Ctrl sur un fil              | Supprimer le fil survolé               |
-| <div class="shortcut"><LKeyIcon key-name="Delete" />/<LKeyIcon key-name="Backspace" /></div> | Supprimer avec le fil sélectionné | Supprimer le fil                       |
+| Icon                                                                                          | Action                               | Description                       |
+|-----------------------------------------------------------------------------------------------|--------------------------------------|-----------------------------------|
+| <LMouseIcon left move />                                                                      | Left click on an anchor and drag     | Create a wire starting from it    |
+| <LMouseIcon double left />                                                                    | Double click on a wire               | Create a reroute node             |
+| <div class="shortcut"><LKeyIcon key-name="Ctrl" /> + <LMouseIcon left /></div>               | Ctrl click on a wire                 | Delete the hovered wire           |
+| <div class="shortcut"><LKeyIcon key-name="Delete" />/<LKeyIcon key-name="Backspace" /></div> | Delete with a wire selected          | Delete the wire                   |
 
-## Connexion des Ancrages
+## Connecting Anchors
 
-Les fils permettent de connecter des ancrages de types compatibles :
-Généralement, vous connecterez des ancrages d'entrée et de sortie du même type.
+Links allow you to connect anchors of compatible types:
+Generally, you will connect input and output anchors of the same type.
 
-Cependant, vous pouvez également connecter un ancrage de sortie à un ancrage d'entrée moins défini. Par exemple, il est possible de connecter un ancrage de sortie d'un tableau de nombres à un ancrage d'entrée d'un tableau de type inconnu.
+However, you can also connect an output anchor to a less defined input anchor. For example, it is possible to connect an output anchor of an array of numbers to an input anchor of an array of unknown type.
 
-## Exemple de Logique dans le Graphe
+## Example of Logic in the Graph
 
-Dans cet exemple, nous avons une logique simple construite avec des nœuds et des fils dans le graphe.
+In this example, we have a simple logic built with nodes and links in the graph.
 
-![Capture d'écran de l'éditeur Luna Park](/assets/images/visual-scripting/graph/screen3.png)
+![Screenshot of the Luna Park editor](/assets/images/visual-scripting/graph/screen3.png)
 
-### Étape par Étape
+### Step-by-Step
 
-1. **Déclencheur : "On Click (widget)"**
-    - Ce nœud représente un événement qui démarre l'exécution lorsqu'un utilisateur clique sur un élément de votre interface (par exemple, un bouton).
-    - Le fil blanc (flux d'exécution) commence à partir de ce nœud et déclenche les actions suivantes.
-2. **Lecture Set score**
-    - Ce nœud de fonction met à jour une valeur appelée `score`.
-    - Il est exécuté par le flux d'exécution provenant de "On Click".
-    - La connexion verte de score (flux de données) envoie une nouvelle valeur de `score` provenant d'un autre nœud, nous remontons donc la chaîne pour récupérer la valeur.
+1. **Trigger: "On Click (widget)"**
+   - This node represents an event that starts execution when a user clicks on an element in your interface (e.g., a button).
+   - The white link (execution flow) starts from this node and triggers the following actions.
+2. **Reading Set score**
+   - This function node updates a value called `score`.
+   - It is executed by the execution flow from "On Click".
+   - The green score connection (data flow) sends a new value of `score` from another node, so we trace back the chain to retrieve the value.
 3. **Addition (+)**
-    - Ce nœud d'opération additionne deux valeurs :
-        - `A` (lié à un autre nœud).
-        - `1` (une valeur fixe ajoutée directement).
-    - La connexion verte de `A` (flux de données) nécessite de remonter un peu plus loin dans la chaîne pour récupérer sa valeur.
+   - This operation node adds two values:
+      - `A` (linked to another node).
+      - `1` (a fixed value added directly).
+   - The green connection of `A` (data flow) requires tracing back a bit further in the chain to retrieve its value.
 4. **Get score**
-    - Ce nœud d'opération récupère la valeur actuelle de `score`.
-    - Il peut ensuite être utilisé pour ajouter `1` dans le nœud d'opération d'addition.
-5. **Exécution de Set score**
-    - Une fois que les nœuds d'opération sont exécutés pour récupérer la nouvelle valeur de score, la valeur de `score` est mise à jour avec le résultat de l'addition.
-    - Le fil blanc (flux d'exécution) commence à partir de ce nœud et déclenche les actions suivantes.
-6. **Lecture Log**
-    - Ce nœud de fonction affiche ou enregistre une valeur pour le débogage.
-    - Il est exécuté après "Set score" via le flux blanc.
-    - La connexion verte envoie la valeur actuelle de score pour l'afficher.
+   - This operation node retrieves the current value of `score`.
+   - It can then be used to add to `1` in the addition operation node.
+5. **Execution of Set score**
+   - Once the operation nodes are executed to retrieve the new value of score, the value of `score` is updated with the result of the addition.
+   - The white link (execution flow) starts from this node and triggers the following actions.
+6. **Reading Log**
+   - This function node displays or records a value for debugging.
+   - It is executed after "Set score" via the white flow.
+   - The green connection sends the current value of score to display it.
 7. **Get score**
-    - Ce nœud d'opération récupère la nouvelle valeur de `score`.
-    - Il peut ensuite être utilisé pour l'afficher dans le nœud Log.
-8. **Exécution de Log**
-    - Une fois que le nœud d'opération est exécuté pour récupérer la nouvelle valeur de score, la nouvelle valeur peut être enregistrée.
-    - Il n'y a pas de fil blanc (flux d'exécution) partant de ce nœud, car il n'y a pas d'autres actions à exécuter après cela.
+   - This operation node retrieves the new value of `score`.
+   - It can then be used to display it in the Log node.
+8. **Execution of Log**
+   - Once the operation node is executed to retrieve the new value of score, the new value can be logged.
+   - There is no white link (execution flow) starting from this node, as there are no further actions to execute after this.
 
-### Résumé Visuel du Flux :
+### Visual Summary of the Flow:
 
 1. "On Click" → "Set score" → "Log".
-    - Les fils blancs représentent l'ordre dans lequel les actions sont exécutées.
-2. Les fils colorés transportent les données :
-    - `score` est récupéré avec "Get score".
-    - Il est modifié (+1) puis mis à jour avec "Set score".
-    - Enfin, il est envoyé au "Log" pour être affiché.
+   - The white links represent the order in which the actions are executed.
+2. The colored links carry the data:
+   - `score` is retrieved with "Get score".
+   - It is modified (+1) and then updated with "Set score".
+   - Finally, it is sent to the "Log" to be displayed.
 
-## Inspection du Graphe
+## Inspecting the Graph
 
-L'inspection permet de vérifier les **valeurs** et les **types** contenus par les ancrages via deux modes :
+Inspection allows you to check the **values** and **types** held by the anchors through two modes:
 
-| Icône                                                                                                                                                                    | Description              |
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------|
-| <div class="shortcut"><LKeyIcon key-name="Ctrl" /> + <LKeyIcon key-name="Alt" /></div>                                                                                  | Afficher l'inspection des types |
-| <div class="shortcut"><LKeyIcon key-name="Ctrl" /> + <LKeyIcon space /></div> (ou <div class="shortcut"><LKeyIcon key-name="Ctrl" /> + <LKeyIcon key-name="Q" /></div>) | Afficher l'inspection des valeurs |
+| Icon                                                                                                             | Description              |
+|------------------------------------------------------------------------------------------------------------------|--------------------------|
+| <div class="shortcut"><LKeyIcon key-name="Ctrl" /> + <LKeyIcon key-name="Alt" /></div>                      | Show type inspection     |
+| <div class="shortcut"><LKeyIcon key-name="Ctrl" /> + <LKeyIcon space /></div> (or <div class="shortcut"><LKeyIcon key-name="Ctrl" /> + <LKeyIcon key-name="Q" /></div>) | Show value inspection    |
 
-**Inspection des Types** : Pour visualiser les types de données. `Ctrl + Alt`
+**Type Inspection**: To visualize data types. `Ctrl + Alt`
 
-![Capture d'écran de l'éditeur Luna Park](/assets/images/visual-scripting/graph/screen4.png)
+![Screenshot of the Luna Park editor](/assets/images/visual-scripting/graph/screen4.png)
 
-**Inspection des Valeurs** : Pour afficher les valeurs réelles des ancrages. `Ctrl + Espace` ou `Ctrl + Q`
+**Value Inspection**: To display the actual values of the anchors. `Ctrl + Space` or `Ctrl + Q`
 
-![Capture d'écran de l'éditeur Luna Park](/assets/images/visual-scripting/graph/screen5.png)
+![Screenshot of the Luna Park editor](/assets/images/visual-scripting/graph/screen5.png)
 
-Lors de l'utilisation de l'inspection des valeurs, les valeurs sont :
-
-- Calculées en temps réel pour les nœuds d'opération.
-- Prises à partir de la dernière exécution pour les nœuds de fonction.
+When using value inspection, the values are:
+- Calculated in real-time for operation nodes.
+- Taken from the last execution for function nodes.
 
 <LContainer type="info">
 <h2>Note</h2>
-Si certaines valeurs apparaissent comme non définies, il peut être nécessaire d'exécuter votre logique une fois pour initialiser toutes les valeurs.
+If some values appear as undefined, it may be necessary to run your logic once to initialize all the values.
 </LContainer>
+
