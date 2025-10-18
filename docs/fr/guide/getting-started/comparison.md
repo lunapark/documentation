@@ -1,4 +1,4 @@
-# En quoi Luna Park est différent des autres créateurs d’applications ?
+# Quelles différences avec les autres outils no-code ?
 
 ## Les solutions no-code traditionnelles
 
@@ -8,9 +8,9 @@ Leur motivation est de vous garder sur leur plateforme, ce qui signifie que vous
 
 ## Notre solution, Luna Park
 
-Luna Park, quant à lui, est un **environnement de développement** (IDE). Vous payez un montant fix, quelque soit votre projet. Le code généré vous appartient, vous pouvez donc l’héberger où vous voulez sans aucune contrainte.
+Luna Park, quant à lui, est un **environnement de développement** (IDE). Vous payez un montant fixe, quelque soit votre projet. Le code généré vous appartient, vous pouvez donc l’héberger où vous voulez sans aucune contrainte.
 
-Notre motivation est de vous permettre de créer des applications performantes et évolutives, de manière rapide et efficace. Nous sommes incité à vous fournir le meilleur outil pour créer vos applications.
+Notre motivation est de vous permettre de créer des applications **performantes et évolutives**, de manière **rapide** et **efficace**. Nous sommes incité à vous fournir le meilleur outil pour créer vos applications.
 
 ## La contrepartie
 

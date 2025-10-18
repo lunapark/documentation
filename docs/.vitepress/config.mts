@@ -33,38 +33,98 @@ export default defineConfig({
                 ],
                 sidebar: [
                     {
+                        collapsed: true,
+                        items: [
+                            { link: "/fr/news/patch-notes", text: "Patch Notes" }
+                        ],
+                        text: "Nouveautés"
+                    },
+                    {
+                        collapsed: true,
                         items: [
                             { link: "/fr/guide/getting-started/introduction", text: "Introduction" },
-                            { link: "/fr/guide/getting-started/comparison", text: "Différences" },
+                            { link: "/fr/guide/getting-started/comparison", text: "Quelles différences avec les autres outils no-code ?" },
+                            { link: "/fr/guide/getting-started/is-luna-park-for-me", text: "Est-ce que Luna Park est fait pour moi ?" },
                             { link: "/fr/guide/getting-started/quick-start", text: "Démarrage Rapide" },
-                            { link: "/fr/guide/getting-started/find-help", text: "Obtenir de l'Aide" }
+                            { link: "/fr/guide/getting-started/find-help", text: "Obtenir de l'aide" }
                         ],
                         text: "Pour Commencer"
                     },
                     {
+                        collapsed: true,
                         items: [
-                            { link: "/fr/guide/layout/editor", text: "Éditeur" },
-                            { link: "/fr/guide/layout/components", text: "Composants" },
-                            { link: "/fr/guide/layout/templates", text: "Modèles" },
-                            { link: "/fr/guide/layout/styling", text: "Stylisation" }
+                            {
+                                collapsed: true,
+                                items: [
+                                    { link: "/fr/guide/fundamentals/interface/editor", text: "Éditeur" },
+                                    { link: "/fr/guide/fundamentals/interface/components", text: "Composants" },
+                                    { link: "/fr/guide/fundamentals/interface/templates", text: "Conditions et boucles" },
+                                    {
+                                        collapsed: true,
+                                        items: [
+                                            { link: "/fr/guide/fundamentals/interface/styling/palette", text: "Palette et couleurs globales" },
+                                            { link: "/fr/guide/fundamentals/interface/styling/tokens", text: "Tokens et variables de style" },
+                                            { link: "/fr/guide/fundamentals/interface/styling/typography", text: "Typographie" },
+                                            { link: "/fr/guide/fundamentals/interface/styling/typography", text: "Disposition et alignement" },
+                                            { link: "/fr/guide/fundamentals/interface/styling/typography", text: "Effets visuels" },
+
+                                        ],
+                                        text: "Style"
+                                    }
+                                ],
+                                text: "Interface (Frontend)"
+                            },
+                            {
+                                collapsed: true,
+                                items: [
+                                    { link: "/fr/guide/fundamentals/visual-scripting/introduction", text: "Introduction" },
+                                    { link: "/fr/guide/fundamentals/visual-scripting/graph", text: "Le Graphe" },
+                                    { link: "/fr/guide/fundamentals/visual-scripting/flow-control", text: "Contrôle de Flux" },
+                                    { link: "/fr/guide/fundamentals/visual-scripting/variables", text: "Variables" }
+                                ],
+                                text: "Script Visuel"
+                            },
+                            {
+                                collapsed: true,
+                                items: [
+                                    { link: "/fr/guide/fundamentals/data/database", text: "BDD" },
+                                    { link: "/fr/guide/fundamentals/data/routes", text: "Routes" },
+                                    { link: "/fr/guide/fundamentals/data/auth", text: "Auth" }
+                                ],
+                                text: "Données (Backend)"
+                            }
                         ],
-                        text: "Éditeur de Mise en Page"
+                        text: "Comprendre les Principes Fondamentaux"
                     },
                     {
+                        collapsed: true,
                         items: [
-                            { link: "/fr/guide/visual-scripting/introduction", text: "Introduction" },
-                            { link: "/fr/guide/visual-scripting/graph", text: "Le Graphe" },
-                            { link: "/fr/guide/visual-scripting/flow-control", text: "Contrôle de Flux" },
-                            { link: "/fr/guide/visual-scripting/variables", text: "Variables" }
+                            { link: "/fr/guide/integrations/npm", text: "NPM" }
                         ],
-                        text: "Script Visuel"
+                        text: "Intégrations"
                     },
                     {
+                        collapsed: true,
                         items: [
-                            { link: "/fr/guide/export/compilation", text: "Compilation" },
-                            { link: "/fr/guide/export/prerequisites", text: "Prérequis" }
+                            { link: "/fr/guide/deployment/compilation", text: "Compilation" },
+                            { link: "/fr/guide/deployment/prerequisites", text: "Prérequis" },
+                            { link: "/fr/guide/deployment/deployment", text: "Déploiement" }
                         ],
-                        text: "Exportation"
+                        text: "Déploiement & Exportation"
+                    },
+                    {
+                        collapsed: true,
+                        items: [
+                            {
+                                collapsed: true,
+                                items: [
+                                    { link: "/fr/examples/kahoot/backend", text: "Backend" },
+                                    { link: "/fr/examples/kahoot/frontend", text: "Frontend" }
+                                ],
+                                text: "Kahoot"
+                            }
+                        ],
+                        text: "Exemples et Tutoriels"
                     }
                 ]
             }

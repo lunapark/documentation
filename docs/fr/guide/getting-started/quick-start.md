@@ -8,6 +8,9 @@ Ce tutoriel sous forme de jeu vous permettra de découvrir les fonctionnalités 
 
 Chaque niveau vous propose un défi sur un aspect particulier de Luna Park. Sa résolution vous permettra de débloquer d'autres niveaux et de progresser dans votre apprentissage.
 
+## L'académie
+
+Une fois le challenge passé, nous vous conseillons de passer dans l'onglet [Académie](https://luna-park.app/academy) et découvrir un cas pratique étape par étape.
 ## La version logicielle
 
 Vous pouvez directement téléchager la version logicielle de Luna Park en cliquant sur le bouton **Download** de la [page d'accueil](https://luna-park.app/).
