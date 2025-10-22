@@ -5,11 +5,10 @@ import Screen3 from '/assets/images/layout/styling/screen3.png';
 import {faLink, faBolt} from "@fortawesome/pro-solid-svg-icons";
 </script>
 
+# Tokens et variables de style
 
-## Tokens de Design
-
-Les **tokens de design** sont des valeurs réutilisables qui définissent les fondations visuelles de votre application (couleurs, tailles, espacements, polices, etc.).
-Ils garantissent **la cohérence des styles et permettent de **modifier l'apparence globale sans avoir à éditer chaque composant individuellement.
+Les **tokens** sont des valeurs réutilisables qui définissent les fondations visuelles de votre application (couleurs, tailles, espacements, polices, etc.).
+Ils garantissent **la cohérence des styles** et permettent de modifier l'apparence globale sans avoir à éditer chaque composant individuellement.
 
 Par exemple, si vous modifiez le token `primary-color`, toutes les zones qui l'utilisent seront mises à jour instantanément.
 
@@ -25,7 +24,10 @@ alt="Capture d'écran de l'éditeur Luna Park"
 2. Cliquez sur l'icône **<LIcon :icon="faLink" />**  pour activer le mode de sélection de token.
 3. Sélectionnez le token de design que vous souhaitez utiliser.
 
-![Capture d'écran de l'éditeur Luna Park](/assets/images/layout/styling/gif1.gif)
+<DImage
+src="/assets/images/layout/styling/gif1.gif"
+alt="Exemple d'utilisation de token'"
+/>
 
 _Note: Les tokens remplacent les valeurs en dur et servent de base à la personnalisation globale du style._
 
@@ -41,6 +43,10 @@ Contrairement aux tokens, qui sont statiques et globaux, les variables sont **co
 2. Cliquez sur l'icône **<LIcon :icon="faBolt" />**  pour passer en mode de sélection de variable.
 3. Sélectionnez la variable que vous souhaitez utiliser.
 
-![Capture d'écran de l'éditeur Luna Park](/assets/images/layout/styling/gif2.gif)
+<DImage
+src="/assets/images/layout/styling/gif2.gif"
+alt="Exemple d'utilisation de token'"
+/>
+
 
 _Note : Seules les variables compatibles avec le type de propriété apparaîtront dans la liste. Par exemple, une variable numérique ne sera disponible que pour une propriété de type nombre._

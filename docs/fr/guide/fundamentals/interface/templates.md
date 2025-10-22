@@ -58,9 +58,9 @@ alt="Screenshot of the Luna Park editor"
 
 ![Capture d'écran de l'éditeur Luna Park](/assets/images/layout/templates/gif1.gif)
 
-## Modèles For
+## Template For
 
-Le modèle For permet de répéter un élément plusieurs fois en fonction d'un tableau ou d'une liste. Il est utile pour afficher dynamiquement des éléments similaires dans l'interface.
+Le Template `For` permet de répéter un élément plusieurs fois en fonction d'un tableau ou d'une liste. Il est utile pour afficher dynamiquement des éléments similaires dans l'interface.
 
 Exemple : Afficher une liste d'articles
 
@@ -74,17 +74,17 @@ Exemple : Afficher une liste d'articles
 
 ### 2. Configurer la Logique de Boucle
 
-1. Ajoutez un composant **Modèle** à l'interface.
-2. Configurez le Modèle avec la logique **For** et liez-le à la variable `articles`.
+1. Ajoutez un composant `Template` à l'interface.
+2. Configurez le `Template` avec la logique **For** et liez-le à la variable `articles`.
 3. La logique For permet d'itérer sur chaque élément du tableau `articles`.
-4. Le Modèle exécutera son contenu une fois pour chaque article.
+4. Le `Template` exécutera son contenu une fois pour chaque article.
 
 ![Capture d'écran de l'éditeur Luna Park](/assets/images/layout/templates/screen5.png)
 
 ### 3. Afficher les Éléments dans l'Interface
 
-1. À l'intérieur du Modèle, ajoutez un **Div**.
-2. Insérez un composant **Variable** dans ce div.
+1. À l'intérieur du `Template`, ajoutez un `Block`.
+2. Insérez un composant `Variable` dans ce `Block`.
 3. Liez cette variable à `Template[].Value`, qui correspond à chaque élément du tableau itéré.
 4. Maintenant, lorsque vous visualisez la page **Articles** dans l'interface, vous verrez chaque élément du tableau `articles` affiché dans un nouveau bloc.
 
