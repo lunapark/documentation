@@ -216,6 +216,7 @@ export default defineConfig({
                 ],
                 sidebar: [
                     {
+                        collapsed: true,
                         items: [
                             {
                                 link: "/en/guide/getting-started/introduction",
@@ -223,7 +224,11 @@ export default defineConfig({
                             },
                             {
                                 link: "/en/guide/getting-started/comparison",
-                                text: "Differences"
+                                text: "Comparison"
+                            },
+                            {
+                                link: "/en/guide/getting-started/target-users",
+                                text: "Target Users"
                             },
                             {
                                 link: "/en/guide/getting-started/quick-start",
@@ -237,59 +242,137 @@ export default defineConfig({
                         text: "Getting Started"
                     },
                     {
+                        collapsed: true,
                         items: [
                             {
-                                link: "/en/guide/layout/editor",
-                                text: "Editor"
+                                collapsed: true,
+                                items: [
+                                    {
+                                        link: "/en/guide/fundamentals/interface/editor",
+                                        text: "Editor"
+                                    },
+                                    {
+                                        link: "/en/guide/fundamentals/interface/components",
+                                        text: "Components"
+                                    },
+                                    {
+                                        link: "/en/guide/fundamentals/interface/templates",
+                                        text: "Conditions and Loops"
+                                    },
+                                    {
+                                        collapsed: true,
+                                        items: [
+                                            {
+                                                link: "/en/guide/fundamentals/interface/styling/palette",
+                                                text: "Palette"
+                                            },
+                                            {
+                                                link: "/en/guide/fundamentals/interface/styling/tokens",
+                                                text: "Tokens"
+                                            },
+                                            {
+                                                link: "/en/guide/fundamentals/interface/styling/typography",
+                                                text: "Typography"
+                                            },
+                                            {
+                                                link: "/en/guide/fundamentals/interface/styling/alignment",
+                                                text: "Alignment"
+                                            },
+                                            {
+                                                link: "/en/guide/fundamentals/interface/styling/visual-effects",
+                                                text: "Visual Effects"
+                                            },
+                                            {
+                                                link: "/en/guide/fundamentals/interface/styling/advanced-style",
+                                                text: "Advanced Styling"
+                                            }
+                                        ],
+                                        text: "Styling"
+                                    }
+                                ],
+                                text: "Interface"
                             },
                             {
-                                link: "/en/guide/layout/components",
-                                text: "Components"
+                                collapsed: true,
+                                items: [
+                                    {
+                                        collapsed: true,
+                                        items: [
+                                            {
+                                                link: "/en/guide/fundamentals/logic/visual-scripting/introduction",
+                                                text: "Introduction"
+                                            },
+                                            {
+                                                link: "/en/guide/fundamentals/logic/visual-scripting/graph",
+                                                text: "The Graph"
+                                            },
+                                            {
+                                                link: "/en/guide/fundamentals/logic/visual-scripting/flow-control",
+                                                text: "Flow Control"
+                                            },
+                                            {
+                                                link: "/en/guide/fundamentals/logic/visual-scripting/variables",
+                                                text: "Variables"
+                                            }
+                                        ],
+                                        text: "Visual Scripting"
+                                    },
+                                    {
+                                        link: "/en/guide/fundamentals/logic/store",
+                                        text: "Store"
+                                    },
+                                    {
+                                        link: "/en/guide/fundamentals/logic/variables",
+                                        text: "Variables"
+                                    }
+                                ],
+                                text: "Logic"
                             },
                             {
-                                link: "/en/guide/layout/templates",
-                                text: "Templates"
-                            },
-                            {
-                                link: "/en/guide/layout/styling",
-                                text: "Styling"
+                                collapsed: true,
+                                items: [
+                                    {
+                                        link: "/en/guide/fundamentals/data/database",
+                                        text: "Database"
+                                    },
+                                    {
+                                        link: "/en/guide/fundamentals/data/routes",
+                                        text: "Routes"
+                                    },
+                                    {
+                                        link: "/en/guide/fundamentals/data/auth",
+                                        text: "Auth"
+                                    }
+                                ],
+                                text: "Data Management"
                             }
                         ],
-                        text: "Layout Editor"
+                        text: "Fundamentals"
                     },
                     {
+                        collapsed: true,
                         items: [
-                            {
-                                link: "/en/guide/visual-scripting/introduction",
-                                text: "Introduction"
-                            },
-                            {
-                                link: "/en/guide/visual-scripting/graph",
-                                text: "The Graph"
-                            },
-                            {
-                                link: "/en/guide/visual-scripting/flow-control",
-                                text: "Flow Control"
-                            },
-                            {
-                                link: "/en/guide/visual-scripting/variables",
-                                text: "Variables"
-                            }
+                            { link: "/en/guide/integrations/npm", text: "NPM" }
                         ],
-                        text: "Visual Scripting"
+                        text: "Integrations"
                     },
                     {
+                        collapsed: true,
                         items: [
                             {
-                                link: "/en/guide/export/compilation",
+                                link: "/en/guide/deployment/compilation",
                                 text: "Compilation"
                             },
                             {
-                                link: "/en/guide/export/prerequisites",
+                                link: "/en/guide/deployment/prerequisites",
                                 text: "Prerequisites"
+                            },
+                            {
+                                link: "/en/guide/deployment/deployment",
+                                text: "Deployment"
                             }
                         ],
-                        text: "Export"
+                        text: "Deployment & Export"
                     }
                 ]
             }
