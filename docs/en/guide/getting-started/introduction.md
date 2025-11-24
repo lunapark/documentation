@@ -4,13 +4,7 @@ Luna Park is a **visual programming framework**. It allows you to create **fast*
 
 Many advanced features are available, such as reactivity, visual programming, CRON management, backend creation, and much more. It is aimed at both **developers** and **non-developers**.
 
-### For Developers
 
-In Luna Park, you will find all the features you expect from a **modern JS framework** (like React, Vue, or Angular), but without having to write code. You can create reusable components, manage the state of your application, and even create backend APIs.
-
-### For Non-Developers
-
-Luna Park is designed to provide the same level of flexibility as code, but with an **intuitive visual interface**. You will be able to develop applications as complex as those you could create with code, but without having to worry about syntax or compilation errors.
 
 ## How does visual scripting differ from other no-code logic?
 

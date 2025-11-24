@@ -1,15 +1,24 @@
 <template>
-    <iframe :src="target" allowTransparency="true" @load="onLoad" :class="{loading: !loaded}"/>
+    <div class="example-editor-container">
+        <LLoading
+            v-if="!loaded"
+            class="loader"
+        />
+        <iframe
+            allowTransparency="true"
+            :class="{loading: !loaded}"
+            :src="target"
+            @load="onLoad"
+        />
+    </div>
 </template>
 
-
 <script setup lang="ts">
-import { LEditorConsole, LLogicEditor, useCanvasStore, useEditorStore, useLogicStore } from "@luna-park/editor";
-import {computed, nextTick, onMounted, ref} from "vue";
+import { LLoading } from "@luna-park/design";
+import { computed, ref } from "vue";
 
 const props = withDefaults(defineProps<{
     animation?: boolean;
-    editorId: string;
     graph: unknown;
     zoomLevel?: number;
 }>(), {
@@ -24,7 +33,7 @@ const target = computed(() => {
     searchParams.set("animation", props.animation ? "1" : "0");
     searchParams.set("zoomLevel", props.zoomLevel.toString());
 
-    return `/editor?${searchParams.toString()}`;
+    return `/editor?${ searchParams.toString() }`;
 });
 
 function onLoad() {
@@ -33,8 +42,22 @@ function onLoad() {
 </script>
 
 <style scoped>
-iframe {
+.example-editor-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
     height: 282px;
+
+    .loader {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+iframe {
+    height: 100%;
     width: 100%;
     border: none;
     background: transparent;
