@@ -18,11 +18,11 @@ L'utilisation des classes CSS et de Tailwind nécessite d'injecter du code (CSS 
 
 ### Comment faire (exemple)
 - **<LIcon :icon="faPalette" />** Palette => **update tokens** =>  **<LIcon :icon="faTowerCell" />** Inject => **CSS Injection**
-- Collez le code ci dessous
+- Collez le code ci-dessous
 
 <LContainer type="warning">
-<h2>Pour les utilisateurs de firefox</h2>
-Vérifiez que layout.css.at-scope.enabled est à true dans about:config
+<h2>Pour les utilisateurs de Firefox</h2>
+Vérifiez que layout.css.at-scope.enabled est à `true` dans about:config
 </LContainer>
 
 
@@ -60,7 +60,7 @@ alt="Exemple d'utilisation de classe CSS"
 ### Comment faire (exemple)
 
 - **<LIcon :icon="faPalette" />** Palette => **update tokens** =>  **<LIcon :icon="faTowerCell" />** Inject => **JS Injection**
-- Collez le code ci dessous
+- Collez le code ci-dessous
 
 ```js
 import scope from 'https://esm.sh/@luna-park/tailwind-scope';
@@ -72,5 +72,5 @@ Vous pouvez désormais utiliser Tailwind dans n'importe quel composant!
 
 <DImage
 src="/assets/images/fundamentals/styling/screen10.png"
-alt="Exemple d'utilisation de classe tailwind"
+alt="Exemple d'utilisation de classe Tailwind"
 />

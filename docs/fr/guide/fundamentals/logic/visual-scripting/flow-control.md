@@ -5,7 +5,7 @@ import {graphIf} from "/assets/examples/graphIf.ts";
 import {graphFor} from "/assets/examples/graphFor.ts";
 </script>
 
-# Contrôle de Flux
+# Contrôle de flux
 
 Le flux logique est l'ordre dans lequel vos nœuds sont exécutés. Habituellement, le flux commence sur un événement déclenché (nœud de lecture manuelle, nœud au chargement, fonction...). Ensuite, il suit le fil d'exécution représenté par un lien blanc en gras.
 
@@ -15,7 +15,7 @@ Le contrôle de flux permet de définir l'**ordre d'exécution** des nœuds dans
 
 Le contrôle de flux est divisé en trois catégories principales :
 - **Déclencheurs** : Démarrent le flux d'exécution.
-- **Nœuds Conditionnels** : Modifient le flux d'exécution en fonction d'une condition.
+- **Nœuds conditionnels** : Modifient le flux d'exécution en fonction d'une condition.
 - **Boucles** : Répètent des actions en fonction d'un critère donné.
 
 ## Déclencheurs
@@ -29,7 +29,7 @@ Exemple : **Déclencher l'incrémentation d'un score**
 
 Lorsque l'utilisateur clique sur le bouton, le nœud **On Click** déclenche l'exécution de la logique, et le nœud **Log** affiche un message dans la console.
 
-## Nœuds Conditionnels (If)
+## Nœuds conditionnels (If)
 
 Les nœuds conditionnels permettent de tester une condition et d'exécuter différentes actions en fonction du résultat.
 Un nœud conditionnel possède :
@@ -40,7 +40,7 @@ Un nœud conditionnel possède :
 
 <DExampleEditor graph="if" animation :zoomLevel="1"/>
 
-## Nœuds de Boucle (For, While)
+## Nœuds de boucle (For, While)
 
 Les nœuds de boucle permettent de répéter une action plusieurs fois en fonction d'une condition ou d'une liste.
 

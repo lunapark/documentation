@@ -21,7 +21,7 @@ Dans cet exemple, nous allons afficher un message "Vous avez gagné" lorsque le 
 
 ### 1. Définir la Variable Calculée (ou `Computed`)
 
-1. Sélectionnez le composant **Layout**.
+1. Sélectionnez un composant.
 2. Dans le panneau **Inspecteur**, ajoutez une variable `Computed` appelée `afficherVictoire`.
 3. Définissez-la comme un **booléen** (vrai ou faux).
 
@@ -37,7 +37,7 @@ Dans cet exemple, nous allons afficher un message "Vous avez gagné" lorsque le 
 
 <DImage
 :src="Screen2"
-alt="Screenshot of the Luna Park editor"
+alt="Capture d'écran de l'éditeur Luna Park"
 />
 
 ### 3. Définir la Logique pour la Variable Calculée
@@ -48,7 +48,7 @@ alt="Screenshot of the Luna Park editor"
 
 <DImage
 :src="Screen3"
-alt="Screenshot of the Luna Park editor"
+alt="Capture d'écran de l'éditeur Luna Park"
 />
 
 ### 4. Tester Votre Logique
@@ -83,12 +83,12 @@ Exemple : Afficher une liste d'articles
 
 ### 3. Afficher les Éléments dans l'Interface
 
-1. À l'intérieur du `Template`, ajoutez un `Block`.
+1. À l'intérieur du `Template`, ajoutez un `Bloc`.
 2. Insérez un composant `Variable` dans ce `Block`.
 3. Liez cette variable à `Template[].Value`, qui correspond à chaque élément du tableau itéré.
 4. Maintenant, lorsque vous visualisez la page **Articles** dans l'interface, vous verrez chaque élément du tableau `articles` affiché dans un nouveau bloc.
 
 <DImage
 :src="Screen6"
-alt="Screenshot of the Luna Park editor"
+alt="Capture d'écran de l'éditeur Luna Park"
 />

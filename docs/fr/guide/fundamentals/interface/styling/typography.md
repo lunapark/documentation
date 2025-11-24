@@ -10,7 +10,7 @@ La typographie dans Luna Park contrôle la manière dont le texte est affiché d
 
 Chaque élément de texte peut être rendu avec une balise HTML différente selon son rôle dans la page :
 
-- `div` : bloc générique (par défault).
+- `div` : bloc générique (par défaut).
 - `p` : paragraphe standard.
 - `span` : texte en ligne, utilisé pour styliser une partie spécifique d'un texte.
 
@@ -38,7 +38,7 @@ Ces propriétés contrôlent la base typographique de vos éléments.
 | **Letter Spacing** | Ajuste l'espacement entre les lettres. |
 | **Line Height** | Définit la hauteur de ligne. |
 | **Size** | Détermine la taille du texte. |
-| **Style** | Définit le style de la police (normal, italic, etc.). |
+| **Style** | Définit le style de la police (normal, italique, etc.). |
 | **Weight** | Contrôle l'épaisseur du texte (light, regular, bold, etc.). |
 
 ### Text

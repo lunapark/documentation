@@ -12,7 +12,7 @@ import {graphWire} from "/assets/examples/graphWire.ts";
 }
 </style>
 
-# Le Graphe
+# Le graphe
 
 Le graphe est la base de la logique visuelle dans Luna Park. C'est ici que vous construirez la logique de votre application. Il se compose de nœuds, de liens et d'ancrages qui interagissent pour créer des flux logiques.
 
@@ -33,8 +33,8 @@ Le graphe est la base de la logique visuelle dans Luna Park. C'est ici que vous 
 
 Les nœuds sont les blocs de construction logique de base qui peuvent être placés sur le graphe. Il existe deux types principaux de nœuds :
 
-- **Nœuds de Fonction** : Ces nœuds ont un fond bleu. Ils possèdent des ancrages d'exécution d'entrée et/ou de sortie. Ils s'exécutent lorsque leur ancrage d'exécution d'entrée est déclenché.
-- **Nœuds d'Opération** : Ces nœuds ont un fond gris foncé. Ils ne possèdent pas d'ancrages d'exécution d'entrée et/ou de sortie. Ils s'exécutent lorsque leur ancrage de résultat est appelé par un nœud de fonction.
+- **Nœuds de fonction** : Ces nœuds ont un fond bleu. Ils possèdent des ancrages d'exécution d'entrée et/ou de sortie. Ils s'exécutent lorsque leur ancrage d'exécution d'entrée est déclenché.
+- **Nœuds d'opération** : Ces nœuds ont un fond gris foncé. Ils ne possèdent pas d'ancrages d'exécution d'entrée et/ou de sortie. Ils s'exécutent lorsque leur ancrage de résultat est appelé par un nœud de fonction.
 
 ![Capture d'écran de l'éditeur Luna Park](/assets/images/visual-scripting/graph/screen2.png)
 
@@ -49,10 +49,10 @@ Les nœuds sont les blocs de construction logique de base qui peuvent être plac
 
 Les ancrages sont les interfaces des nœuds. Les ancrages d'entrée sont affichés à gauche, et les ancrages de sortie à droite. Il existe deux types d'ancrages :
 
-- **Ancrages d'Exécution** (<DAnchorIcon :schema="LogicType.exec()" />)
+- **Ancrages d'exécution** (<DAnchorIcon :schema="LogicType.exec()" />)
   Ces ancrages sont affichés avec une forme carrée arrondie à droite. Ils sont destinés à être connectés au flux d'exécution. Un nœud de fonction sera exécuté lorsque le flux d'exécution menant à ses ancrages d'exécution est déclenché. Ensuite, après son exécution, le nœud déclenchera son ancrage d'exécution de sortie.
 
-- **Ancrages de Valeur** (<DAnchorIcon :schema="LogicType.unknown()" /> / <DAnchorIcon :schema="LogicType.array(LogicType.unknown())" />)
+- **Ancrages de valeur** (<DAnchorIcon :schema="LogicType.unknown()" /> / <DAnchorIcon :schema="LogicType.array(LogicType.unknown())" />)
   Ces ancrages sont affichés avec une forme circulaire lorsqu'ils contiennent une seule valeur, ou une forme carrée lorsqu'ils contiennent une liste (appelée tableau) de valeurs. Lors de l'utilisation des ancrages d'entrée, vous pouvez spécifier certains types, comme du texte ou un nombre, dans l'entrée à côté de l'ancrage. La couleur de l'ancrage dépend du type de valeur qu'il contient.
 
 | Type                                                                                                                                                                                            | Exemple                                             | Type                                                                                                                                                                                                                              | Exemple                                                                              |
@@ -67,8 +67,8 @@ Les ancrages sont les interfaces des nœuds. Les ancrages d'entrée sont affich�
 
 Les fils sont les lignes qui connectent les ancrages entre eux dans un graphe logique. Leur apparence change en fonction de leur rôle :
 
-- **Flux d'Exécution** : Ils sont blancs et en gras pour représenter un flux d'exécution logique.
-- **Flux de Valeur** : Ils prennent la couleur du type de valeur qu'ils transportent (par exemple, vert pour un nombre, jaune pour du texte).
+- **Flux d'exécution** : Ils sont blancs et en gras pour représenter un flux d'exécution logique.
+- **Flux de valeur** : Ils prennent la couleur du type de valeur qu'ils transportent (par exemple, vert pour un nombre, jaune pour du texte).
 
 <DExampleEditor graph="wire" animation :zoomLevel="2"/>
 
@@ -81,20 +81,20 @@ Les fils sont les lignes qui connectent les ancrages entre eux dans un graphe lo
 | <div class="shortcut"><LKeyIcon key-name="Ctrl" /> + <LMouseIcon left /></div>               | Clic Ctrl sur un fil              | Supprimer le fil survolé               |
 | <div class="shortcut"><LKeyIcon key-name="Delete" />/<LKeyIcon key-name="Backspace" /></div> | Supprimer avec le fil sélectionné | Supprimer le fil                       |
 
-## Connexion des Ancrages
+## Connexion des ancrages
 
 Les fils permettent de connecter des ancrages de types compatibles :
 Généralement, vous connecterez des ancrages d'entrée et de sortie du même type.
 
 Cependant, vous pouvez également connecter un ancrage de sortie à un ancrage d'entrée moins défini. Par exemple, il est possible de connecter un ancrage de sortie d'un tableau de nombres à un ancrage d'entrée d'un tableau de type inconnu.
 
-## Exemple de Logique dans le Graphe
+## Exemple de logique dans le graphe
 
 Dans cet exemple, nous avons une logique simple construite avec des nœuds et des fils dans le graphe.
 
 ![Capture d'écran de l'éditeur Luna Park](/assets/images/visual-scripting/graph/screen3.png)
 
-### Étape par Étape
+### Étape par étape
 
 1. **Déclencheur : "On Click (widget)"**
    - Ce nœud représente un événement qui démarre l'exécution lorsqu'un utilisateur clique sur un élément de votre interface (par exemple, un bouton).
@@ -134,7 +134,7 @@ Dans cet exemple, nous avons une logique simple construite avec des nœuds et de
    - Il est modifié (+1) puis mis à jour avec "Set score".
    - Enfin, il est envoyé au "Log" pour être affiché.
 
-## Inspection du Graphe
+## Inspection du graphe
 
 L'inspection permet de vérifier les **valeurs** et les **types** contenus par les ancrages via deux modes :
 
@@ -143,11 +143,11 @@ L'inspection permet de vérifier les **valeurs** et les **types** contenus par l
 | <div class="shortcut"><LKeyIcon key-name="Ctrl" /> + <LKeyIcon key-name="Alt" /></div>                                                                                  | Afficher l'inspection des types |
 | <div class="shortcut"><LKeyIcon key-name="Ctrl" /> + <LKeyIcon space /></div> (ou <div class="shortcut"><LKeyIcon key-name="Ctrl" /> + <LKeyIcon key-name="Q" /></div>) | Afficher l'inspection des valeurs |
 
-**Inspection des Types** : Pour visualiser les types de données. `Ctrl + Alt`
+**Inspection des types** : Pour visualiser les types de données. `Ctrl + Alt`
 
 ![Capture d'écran de l'éditeur Luna Park](/assets/images/visual-scripting/graph/screen4.png)
 
-**Inspection des Valeurs** : Pour afficher les valeurs réelles des ancrages. `Ctrl + Espace` ou `Ctrl + Q`
+**Inspection des valeurs** : Pour afficher les valeurs réelles des ancrages. `Ctrl + Espace` ou `Ctrl + Q`
 
 ![Capture d'écran de l'éditeur Luna Park](/assets/images/visual-scripting/graph/screen5.png)
 

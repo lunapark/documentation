@@ -13,7 +13,7 @@ La prise en main est **rapide**. La logique visuelle reste très proche de la st
 
 Luna Park est parfait pour **apprendre le développement web**. Vous découvrirez les concepts fondamentaux d'une vraie application web (état, logique, données...) mais avec une **interface visuelle** qui rend l'apprentissage beaucoup moins intimidant que du code brut.
 
-## Cas d'usages recommandés
+## Cas d'usage recommandés
 
 Luna Park est idéal pour **créer des applications complexes et durables** ainsi que **des prototypes réutilisables**, vous permettant de concevoir un **MVP fonctionnel** et de **l'étendre sans recommencer de zéro**.
 

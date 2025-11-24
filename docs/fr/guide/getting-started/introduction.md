@@ -41,10 +41,10 @@ infoPairs: [
 
 Le **visual scripting** est en fait une branche du no-code. Ici, quand nous parlons de "no-code traditionnel", nous faisons référence aux outils qui vous permettent de **créer de la logique de façon simplifiée**.
 
-C'est une approche plus **avancée**, qui vous permet de **créer des logiques complexes**, requérant des connaissances en **algorithmie** et en **architecture**.
+C'est une approche plus **avancée**, qui vous permet de **créer des logiques complexes**, requérant des connaissances en **algorithmique** et en **architecture**.
 
 ## En quoi le visual scripting diffère-t-il des autres logiques no-code ?
 
 Le moteur de **visual scripting** de Luna Park vous permet de construire n'importe quel type de logique possible en code, avec des performances natives. Il n'y a pas de limites à ce que vous pouvez créer, et le résultat est **extrêmement léger** et **performant**.
 
-D'un point de vue technique, la logique que vous créez en visual scripting est compilée directement en javascript, chaque nœud étant équivalent à une ligne de code. En production, il n'est pas lu par un interpréteur lourd comme le font d'autres outils, mais directement executé par le moteur javascript.
+D'un point de vue technique, la logique que vous créez en visual scripting est compilée directement en javascript, chaque nœud étant équivalent à une ligne de code. En production, il n'est pas lu par un interpréteur lourd comme le font d'autres outils, mais directement exécuté par le moteur javascript.

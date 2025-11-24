@@ -17,7 +17,7 @@ Par exemple :
 - un score (un nombre)
 - une liste d'éléments (un tableau)
 
-## Types de Variables
+## Types de variables
 
 Voici les types de données que vous pouvez utiliser :
 
@@ -32,11 +32,11 @@ Voici les types de données que vous pouvez utiliser :
 - **Objet** (<DSchemaType :schema="LogicType.object({name: LogicType.string(), age: LogicType.number()})" />), un ensemble de propriétés et de valeurs<br>
   exemple : <DSchemaValue :value="{ name: 'John', age: 30 }" />
 
-### Variables Calculées
+### Variables calculées
 
 Les variables **calculées** sont des variables dont la valeur est automatiquement recalculée en fonction d'autres variables ou conditions. Elles sont également **réactives**.
 
-## Définir, Afficher et Mettre à Jour une Variable
+## Définir, afficher et mettre à jour une variable
 
 ### 1. Définir une Variable
 
@@ -50,7 +50,7 @@ Les variables **calculées** sont des variables dont la valeur est automatiqueme
 alt="Capture d'écran de l'éditeur Luna Park"
 />
 
-### 2. Ajouter un Élément d'Affichage
+### 2. Ajouter un élément d'affichage
 
 1. Insérez un élément **Variable** dans l'arborescence de votre composant.
 2. Sélectionnez cet élément et liez-le à une variable dans le panneau d'inspection.
@@ -60,7 +60,7 @@ alt="Capture d'écran de l'éditeur Luna Park"
 alt="Capture d'écran de l'éditeur Luna Park"
 />
 
-### 3. Ajouter des Boutons pour Modifier la Variable
+### 3. Ajouter des boutons pour modifier la variable
 
 1. Ajoutez deux boutons à l'interface, un pour **ajouter** et un pour **soustraire** un point au score.
 2. Configurez les boutons pour déclencher un événement **On Click**.
@@ -70,7 +70,7 @@ alt="Capture d'écran de l'éditeur Luna Park"
 alt="Capture d'écran de l'éditeur Luna Park"
 />
 
-### 4. Créer la Logique pour Mettre à Jour la Variable
+### 4. Créer la logique pour mettre à jour la variable
 
 1. Utilisez le nœud On Click connecté au bouton `+`.
 2. Ajoutez les nœuds suivants :
@@ -84,7 +84,7 @@ alt="Capture d'écran de l'éditeur Luna Park"
 alt="Capture d'écran de l'éditeur Luna Park"
 />
 
-### 5. Tester et Vérifier
+### 5. Tester et vérifier
 
 - Passez en mode **Aperçu** pour tester votre application.
 - Cliquez sur les boutons `+` et `-` dans l'interface.
@@ -92,13 +92,13 @@ alt="Capture d'écran de l'éditeur Luna Park"
 
 ![Capture d'écran de l'éditeur Luna Park](/assets/images/visual-scripting/variables/gif2.gif)
 
-## Réactivité des Variables
+## Réactivité des variables
 
-### Dans l'Interface
+### Dans l'interface
 
 Les variables peuvent être utilisées pour afficher des informations dynamiques dans l'interface utilisateur. Si vous modifiez une variable, l'interface se met automatiquement à jour pour refléter ce changement.
 
-### Variables Calculées
+### Variables calculées
 
 Les variables **calculées** sont des variables dont la valeur est automatiquement recalculée en fonction d'autres variables ou conditions.
 

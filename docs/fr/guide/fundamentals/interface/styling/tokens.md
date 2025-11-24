@@ -26,12 +26,12 @@ alt="Capture d'écran de l'éditeur Luna Park"
 
 <DImage
 src="/assets/images/layout/styling/gif1.gif"
-alt="Exemple d'utilisation de token'"
+alt="Exemple d'utilisation de token"
 />
 
 _Note: Les tokens remplacent les valeurs en dur et servent de base à la personnalisation globale du style._
 
-## Variables de Style
+## Variables de style
 
 Les **variables de style** permettent de rendre vos composants dynamiques : une couleur, une taille ou une propriété peut changer en fonction de l'état ou des données de votre application.
 
@@ -45,7 +45,7 @@ Contrairement aux tokens, qui sont statiques et globaux, les variables sont **co
 
 <DImage
 src="/assets/images/layout/styling/gif2.gif"
-alt="Exemple d'utilisation de token'"
+alt="Exemple d'utilisation de token"
 />
 
 

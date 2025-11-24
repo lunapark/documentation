@@ -20,7 +20,7 @@ Le code d'export est le résultat de la compilation de votre application. Il con
 
 ### Paramètres
 
-Les paramètres sont disponibles dans l'onglet `Paramètres Généraux` du panneau d'inspection (icône <LIcon :icon="faGear"/> dans la barre supérieure). Vous pouvez y modifier le nom de votre application, ainsi que définir si vous souhaitez qu'elle soit une PWA (Progressive Web App). Cela signifie que votre application peut être installée directement sur les navigateurs compatibles.
+Les paramètres sont disponibles dans l'onglet `Paramètres généraux` du panneau d'inspection (icône <LIcon :icon="faGear"/> dans la barre supérieure). Vous pouvez y modifier le nom de votre application, ainsi que définir si vous souhaitez qu'elle soit une PWA (Progressive Web App). Cela signifie que votre application peut être installée directement sur les navigateurs compatibles.
 
 <LContainer type="warning">
 <h2>PWA non disponible</h2>
@@ -38,7 +38,7 @@ Vous pouvez également choisir le mode d'historique parmi ces types :
 Pour exporter une application de bureau, cliquez simplement sur l'icône <LIcon :icon="faHammer"/> (Compiler) dans la barre supérieure. Ensuite, choisissez l'OS sur lequel vous souhaitez exporter (Windows, Linux ou Mac) dans la section `portable` ou `installateur`.
 
 - **Portable** : Génère un exécutable unique qui peut être lancé directement. Utile pour des tests rapides, mais n'est pas recommandé pour la distribution.
-- **Installateur** : Génère un installeur qui peut être distribué. Il est recommandé pour la distribution de votre application.
+- **Installateur** : Génère un installateur qui peut être distribué. Il est recommandé pour la distribution de votre application.
 
 <LContainer type="warning">
 <h2>Compilation MacOS non disponible</h2>
@@ -47,7 +47,7 @@ L'exportation pour MacOS n'est pas encore prête.
 
 ### Paramètres
 
-Les paramètres sont disponibles dans l'onglet `Paramètres Bureau` du panneau d'inspection (icône <LIcon :icon="faGear"/> dans la barre supérieure).
+Les paramètres sont disponibles dans l'onglet `Paramètres bureau` du panneau d'inspection (icône <LIcon :icon="faGear"/> dans la barre supérieure).
 
 - **Nom du package** : Utilisé pour les mises à jour, il doit rester le même. Il est actuellement généré automatiquement à partir du nom de votre application.
 - **Version** : Utilisée pour les mises à jour, suivez le format semver (ex : 1.0.0).

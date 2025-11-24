@@ -10,7 +10,7 @@ import Screen3 from '/assets/images/layout/styling/screen3.png';
 
 La stylisation globale de votre application est accessible depuis le bouton `Palette` de la barre supérieure de l'éditeur. Vous pouvez mettre à jour les couleurs primaires et de contenu, les nuances seront automatiquement générées.
 
-Notez que vous pouvez faire correspondre les couleurs de l'éditeur avec celles de votre application en utilisant l'option de correspondance de l'éditeur. Cela peut rendre la construction plus facile pour vos yeux.
+Notez que vous pouvez faire correspondre les couleurs de l'éditeur avec celles de votre application en utilisant l'option de correspondance de l'éditeur. Cela peut rendre la construction plus confortable pour vos yeux.
 
 <DImage
 :src="Screen3"
@@ -30,7 +30,7 @@ alt="Capture d'écran de l'éditeur Luna Park"
 
 _Note : Toutes les règles de stylisation disponibles dans Luna Park correspondent aux règles CSS trouvées dans les standards du web._
 
-## Jetons de Design
+## Jetons de design
 
 Luna Park permet également l'utilisation de jetons de design. Ce sont des valeurs réutilisables qui garantissent un style cohérent dans toute l'application. Par exemple, vous pouvez définir une couleur principale et l'utiliser partout dans votre application. Cela facilite la gestion des styles et permet des modifications globales rapides.
 
@@ -49,7 +49,7 @@ Pour utiliser un jeton de design :
 
 ![Capture d'écran de l'éditeur Luna Park](/assets/images/layout/styling/gif1.gif)
 
-## Variables de Style
+## Variables de style
 
 Il est également possible d'utiliser des variables pour styliser vos composants. Ces variables peuvent être utilisées dans les propriétés de style de vos composants. Cela vous permet de créer des styles dynamiques qui changent en fonction de l'état de votre application.
 
