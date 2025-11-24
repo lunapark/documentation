@@ -16,7 +16,3 @@ Luna Park is perfect for **learning web development**. You will discover the fun
 ## Recommended Use Cases
 
 Luna Park is ideal for **creating complex and sustainable applications** as well as **reusable prototypes**, allowing you to design a **functional MVP** and **extend it without starting from zero**.
-
-## What Luna Park is Not
-
-Although you can use it for this, Luna Park **is not intended for showcase sites or projects without logic**. Its strength lies in the **creation of structured and scalable applications**, where other simpler no-code tools would suffice for basic projects.
