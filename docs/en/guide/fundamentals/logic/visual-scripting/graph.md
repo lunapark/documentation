@@ -2,6 +2,8 @@
 import {LogicType} from "@luna-park/logicnodes";
 import {graphLog} from "/assets/examples/graphLog.ts";
 import {graphWire} from "/assets/examples/graphWire.ts";
+import {graphLog} from "/assets/examples/graphLog.ts";
+import {graphWire} from "/assets/examples/graphWire.ts";
 </script>
 
 <style>

@@ -16,19 +16,19 @@ hero:
       target: _blank
 
 features:
-  - title: 🎨 Frontend Editor
+  - title: 🎨 Frontend editor
     details: Create dynamic and reactive user interfaces with an intuitive visual editor.
-  - title: ✨ Real-time Reactivity
+  - title: ✨ Real-time reactivity
     details: Use the power of modern JS frameworks without writing code.
-  - title: ⚙️ Backend Creation
+  - title: ⚙️ Backend creation
     details: Develop APIs and backend services without coding, through a visual interface.
-  - title: ⚡ Visual Scripting
+  - title: ⚡ Visual scripting
     details: Design complex logic without code using a visual scripting editor.
-  - title: ⏱️ CRON Management
+  - title: ⏱️ CRON management
     details: Easily schedule and manage recurring tasks with a visual interface.
   - title: 💽 Database
     details: Manage your data without setting up a server, thanks to an integrated interface.
-  - title: 💾 Code Export
+  - title: 💾 Code export
     details: Export your project as source code for external deployment.
   - title: 🚀 Performance
     details: Enjoy optimal performance with a modern architecture.

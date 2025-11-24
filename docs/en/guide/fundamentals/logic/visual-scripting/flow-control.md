@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import {LogicType} from "@luna-park/logicnodes";
+import {graphLogLog} from "/assets/examples/graphLogLog.ts";
+import {graphIf} from "/assets/examples/graphIf.ts";
+import {graphFor} from "/assets/examples/graphFor.ts";
 </script>
 
 # Flow Control
