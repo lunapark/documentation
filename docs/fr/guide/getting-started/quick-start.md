@@ -11,14 +11,24 @@ Chaque niveau vous propose un défi sur un aspect particulier de Luna Park. Sa r
 ## L'académie
 
 Une fois le challenge passé, nous vous conseillons de passer dans l'onglet [Académie](https://luna-park.app/academy) et découvrir un cas pratique étape par étape.
-## La version logicielle
-
-Vous pouvez directement téléchager la version logicielle de Luna Park en cliquant sur le bouton **Download** de la [page d'accueil](https://luna-park.app/).
-
-Vous pourrez ensuite utiliser Luna Park gratuitement sans license pour une durée de 30 jours. Passé ce délai, vous pourrez continuer à l'utiliser gratuitement, mais avec certaines limitations. Vous pourrez également acheter une license pour bénéficier de toutes les fonctionnalités du framework.
 
 ## La version cloud
 
-Luna Park est également disponible en version cloud. Vous pouvez vous inscrire directement sur la [page d'accueil](https://luna-park.app/) et commencer à utiliser Luna Park directement dans votre navigateur.
+Luna Park est disponible en version cloud. Vous pouvez vous inscrire directement sur la [page d'accueil](https://luna-park.app/) et commencer à utiliser Luna Park directement dans votre navigateur.
 
-Encore une fois, l'achat d'une license vous permettra de bénéficier de toutes les fonctionnalités du framework. Vous pourrez également utiliser Luna Park gratuitement, mais avec certaines limitations.
+L'achat d'une license vous permettra de bénéficier de toutes les fonctionnalités du framework. Vous pouvez également utiliser Luna Park gratuitement, mais avec certaines limitations (pas d'usage commercial).
+
+## La version logicielle
+
+<LContainer type="warning">
+<h2>Attention</h2>
+La version logicielle de Luna Park n'est pas encore totalement stable (notament la version MacOS). Utilisez cette version avec précaution. Notez aussi que la version logicielle a quelques versions de retard par rapport à la version cloud.
+</LContainer>
+
+Vous pouvez directement télécharger la version logicielle de Luna Park en cliquant sur le bouton **Download** de la [page d'accueil](https://luna-park.app/).
+
+Vous pouvez ensuite utiliser Luna Park gratuitement sans license pour une durée de 30 jours. Passé ce délai, vous pouvez continuer à l'utiliser gratuitement, mais avec certaines limitations. Vous pouvez également acheter une license pour bénéficier de toutes les fonctionnalités du framework.
+
+
+
+
