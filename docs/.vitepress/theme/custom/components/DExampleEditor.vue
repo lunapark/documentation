@@ -1,19 +1,24 @@
 <template>
     <div class="example-editor-container">
-        <div class="loader-container" v-if="!loaded">
-            <div class="loader"></div>
-        </div>
-        <iframe :src="target" allowTransparency="true" @load="onLoad" :class="{loading: !loaded}"/>
+        <LLoading
+            v-if="!loaded"
+            class="loader"
+        />
+        <iframe
+            allowTransparency="true"
+            :class="{loading: !loaded}"
+            :src="target"
+            @load="onLoad"
+        />
     </div>
 </template>
 
-
 <script setup lang="ts">
-import {computed, nextTick, onMounted, ref} from "vue";
+import { LLoading } from "@luna-park/design";
+import { computed, ref } from "vue";
 
 const props = withDefaults(defineProps<{
     animation?: boolean;
-    editorId: string;
     graph: unknown;
     zoomLevel?: number;
 }>(), {
@@ -28,7 +33,7 @@ const target = computed(() => {
     searchParams.set("animation", props.animation ? "1" : "0");
     searchParams.set("zoomLevel", props.zoomLevel.toString());
 
-    return `/editor?${searchParams.toString()}`;
+    return `/editor?${ searchParams.toString() }`;
 });
 
 function onLoad() {
@@ -40,37 +45,19 @@ function onLoad() {
 .example-editor-container {
     position: relative;
     width: 100%;
-    border: 2px solid rgba(0, 122, 255, 0.6);
-    border-radius: 8px;
-    box-shadow: 0 0 20px rgba(0, 122, 255, 0.4),
-                0 0 40px rgba(0, 122, 255, 0.2),
-                inset 0 0 20px rgba(0, 122, 255, 0.1);
     overflow: hidden;
-}
+    height: 282px;
 
-.interactive-hint :deep(svg) {
-    width: 16px;
-    height: 16px;
-}
-
-
-.loader {
-    width: 40px;
-    height: 40px;
-    border: 3px solid rgba(0, 122, 255, 0.2);
-    border-top-color: rgba(0, 122, 255, 0.8);
-    border-radius: 50%;
-    animation: spin 0.8s linear infinite;
-}
-
-@keyframes spin {
-    to {
-        transform: rotate(360deg);
+    .loader {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }
 
 iframe {
-    height: 282px;
+    height: 100%;
     width: 100%;
     border: none;
     background: transparent;

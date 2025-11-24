@@ -13,16 +13,15 @@
                 <div class="console-title">
                     Console
                 </div>
-                <LEditorConsole class="console"/>
+                <LEditorConsole class="console" />
             </div>
         </div>
     </ClientOnly>
 </template>
 
-
 <script setup lang="ts">
-import {LEditorConsole, LLogicEditor, useCanvasStore, useEditorStore, useLogicStore} from "@luna-park/editor";
-import {nextTick, onMounted, ref} from "vue";
+import { LEditorConsole, LLogicEditor, useEditorStore, useLogicStore } from "@luna-park/editor";
+import { onMounted, ref } from "vue";
 
 const query = new URLSearchParams(window.location.search);
 
@@ -36,26 +35,29 @@ onMounted(async () => {
     graph.value = await (async () => {
         switch (query.get("graph")) {
             case "for":
-                return (await import("./examples/graphFor.json", {assert: {type: "json"}})).default;
+                return (await import("./examples/graphFor.json", { assert: { type: "json" } })).default;
             case "if":
-                return (await import("./examples/graphIf.json", {assert: {type: "json"}})).default;
+                return (await import("./examples/graphIf.json", { assert: { type: "json" } })).default;
             case "log":
-                return (await import("./examples/graphLog.json", {assert: {type: "json"}})).default;
+                return (await import("./examples/graphLog.json", { assert: { type: "json" } })).default;
             case "loglog":
-                return (await import("./examples/graphLogLog.json", {assert: {type: "json"}})).default;
+                return (await import("./examples/graphLogLog.json", { assert: { type: "json" } })).default;
             case "wire":
-                return (await import("./examples/graphWire.json", {assert: {type: "json"}})).default;
+                return (await import("./examples/graphWire.json", { assert: { type: "json" } })).default;
             default:
-                return {nodes: {}, wires: {}};
+                return { nodes: {}, wires: {} };
         }
     })();
+
+    graph.value.canvas = {
+        location: { x: 0, y: 0 },
+        zoom: zoomLevel
+    };
 
     await useLogicStore().loadLibs(["standard", "string"]);
     useEditorStore().flags.animation = animation;
 
     ready.value = true;
-    await nextTick();
-    useCanvasStore().zoomFloat = zoomLevel;
 });
 </script>
 
