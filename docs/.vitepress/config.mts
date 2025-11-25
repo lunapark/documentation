@@ -196,6 +196,40 @@ export default defineConfig({
                             }
                         ],
                         text: "Déploiement & Exportation"
+                    },
+                    {
+                        collapsed: true,
+                        items: [
+                            {
+                                link: "/fr/guide/plugins/introduction",
+                                text: "Introduction"
+                            },
+                            {
+                                link: "/fr/guide/plugins/setup",
+                                text: "Configuration de l'environnement"
+                            },
+                            {
+                                link: "/fr/guide/plugins/basics",
+                                text: "Bases"
+                            },
+                            {
+                                link: "/fr/guide/plugins/typing",
+                                text: "Typage"
+                            },
+                            {
+                                link: "/fr/guide/plugins/components",
+                                text: "Composants personnalisés"
+                            },
+                            {
+                                link: "/fr/guide/plugins/nodes",
+                                text: "Nœuds personnalisés"
+                            },
+                            {
+                                link: "/fr/guide/plugins/deployment",
+                                text: "Déploiement"
+                            }
+                        ],
+                        text: "API Plugin"
                     }
                 ]
             }
@@ -430,7 +464,7 @@ export default defineConfig({
             fs: {
                 allow: [
                     searchForWorkspaceRoot(process.cwd()),
-                    `${ searchForWorkspaceRoot(process.cwd()) }/../core/packages/design`
+                    `${searchForWorkspaceRoot(process.cwd())}/../core/packages/design`
                 ]
             }
         }
