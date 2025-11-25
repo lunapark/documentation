@@ -1,3 +1,11 @@
+<script setup lang="ts">
+import Screen6 from "/assets/images/fundamentals/styling/screen6.png";
+import Screen7 from "/assets/images/fundamentals/styling/screen7.png";
+import Screen8 from "/assets/images/fundamentals/styling/screen8.png";
+import Gif1 from "/assets/images/fundamentals/styling/gif1.gif";
+import Gif2 from "/assets/images/fundamentals/styling/gif2.gif";
+</script>
+
 # Effets visuels
 
 Les effets visuels permettent d’ajouter de la profondeur et du relief à votre interface.
@@ -10,7 +18,7 @@ Ils influencent la perception des éléments sans modifier leur structure.
 | **Border Radius** | Définit le rayon de courbure des coins. Peut être appliqué uniformément ou individuellement (haut-gauche, haut-droit, etc.). |
 
 <DImage
-src="/assets/images/fundamentals/styling/screen6.png"
+:src="Screen6"
 alt="Exemple de coins arrondis sur différents éléments"
 />
 
@@ -26,7 +34,7 @@ alt="Exemple de coins arrondis sur différents éléments"
 | **Style** | Type de bordure (solid, dashed, dotted). |
 
 <DImage
-src="/assets/images/fundamentals/styling/screen7.png"
+:src="Screen7"
 alt="Exemples de styles de bordures"
 />
 
@@ -38,7 +46,7 @@ alt="Exemples de styles de bordures"
 | **Opacity** | Définit la transparence de l'élément (de 0 à 100%). |
 
 <DImage
-src="/assets/images/fundamentals/styling/screen8.png"
+:src="Screen8"
 alt="Exemples de niveaux d'opacité"
 />
 
@@ -64,7 +72,7 @@ Pour activer le mode *hover*, cliquez sur l'icône en forme de **main** dans la 
 Un nouvel état de style apparaît alors, vous permettant de modifier librement les propriétés (couleur, ombre, opacité, etc.) appliquées uniquement au survol.
 
 <DImage
-src="/assets/images/fundamentals/styling/gif2.gif"
+:src="Gif2"
 alt="Activation du style hover dans l'éditeur Luna Park"
 />
 
@@ -80,7 +88,7 @@ alt="Activation du style hover dans l'éditeur Luna Park"
 | **Delay** | Définit le délai avant le démarrage de l'effet. |
 
 <DImage
-src="/assets/images/fundamentals/styling/gif1.gif"
+:src="Gif1"
 alt="Exemple de transition appliquée sur un bouton"
 />
 

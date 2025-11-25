@@ -1,3 +1,10 @@
+<script setup>
+import screen2 from '/assets/images/fundamentals/styling/screen2.png';
+import screen3 from '/assets/images/fundamentals/styling/screen3.png';
+import screen4 from '/assets/images/fundamentals/styling/screen4.png';
+import screen5 from '/assets/images/fundamentals/styling/screen5.png';
+</script>
+
 # Layout and Alignment
 
 Layout controls how elements are organized in space.
@@ -11,8 +18,8 @@ Each element acts as a **container block** (parent) that can organize its **chil
 Layout properties therefore apply to the **parent**, while alignment influences the position of children inside.
 
 <DImage
-src="/assets/images/fundamentals/styling/screen2.png"
-alt="Screenshot of a container with multiple children"
+  :src="screen2"
+  alt="Screenshot of a container with multiple children"
 />
 
 ---
@@ -31,8 +38,8 @@ You can define the main layout mode of the element:
 > *Flex* and *Grid* modes are recommended for structuring complex interfaces.
 
 <DImage
-src="/assets/images/fundamentals/styling/screen3.png"
-alt="Selection of Flex mode in the style panel"
+  :src="screen3"
+  alt="Selection of Flex mode in the style panel"
 />
 
 ---
@@ -50,8 +57,8 @@ Once a container is in Flex or Grid mode, several properties control the positio
 | **Wrap** | Indicates if elements should wrap to the next line when space is insufficient. |
 
 <DImage
-src="/assets/images/fundamentals/styling/screen4.png"
-alt="Flex container with direction, justify and align"
+  :src="screen4"
+  alt="Flex container with direction, justify and align"
 />
 
 ---
@@ -67,8 +74,8 @@ For cases requiring free placement (overlays, badges, tooltips), you can enable 
 | **Z-index** | Manages layering between elements. |
 
 <DImage
-src="/assets/images/fundamentals/styling/screen5.png"
-alt="Example of absolute positioning in Luna Park"
+  :src="screen5"
+  alt="Example of absolute positioning in Luna Park"
 />
 
 ---

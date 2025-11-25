@@ -1,3 +1,7 @@
+<script setup>
+import urlInstall from '/assets/images/plugins/setup/url-install.png';
+</script>
+
 # Environment Setup
 
 To build plugins for Luna Park, a modern IDE such as WebStorm or Visual Studio Code is recommended. Basic knowledge of TypeScript and Vue is also required.
@@ -36,8 +40,8 @@ You can now install the plugin directly in Luna Park. Open a project or the [pla
 Locate the "Install from URL" input field at the bottom of the plugins panel.
 
 <DImage
-src="/assets/images/plugins/setup/url-install.png"
-alt="Install from URL"
+  :src="urlInstall"
+  alt="Install from URL"
 />
 
 Paste your plugin's URL (default: `http://127.0.0.1:2084`) and press Enter.

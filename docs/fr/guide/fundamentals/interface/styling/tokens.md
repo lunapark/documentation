@@ -2,6 +2,8 @@
 import Screen1 from '/assets/images/layout/styling/screen1.png';
 import Screen2 from '/assets/images/layout/styling/screen2.png';
 import Screen3 from '/assets/images/layout/styling/screen3.png';
+import Gif1 from '/assets/images/layout/styling/gif1.gif';
+import Gif2 from '/assets/images/layout/styling/gif2.gif';
 import {faLink, faBolt} from "@fortawesome/pro-solid-svg-icons";
 </script>
 
@@ -25,7 +27,7 @@ alt="Capture d'écran de l'éditeur Luna Park"
 3. Sélectionnez le token de design que vous souhaitez utiliser.
 
 <DImage
-src="/assets/images/layout/styling/gif1.gif"
+:src="Gif1"
 alt="Exemple d'utilisation de token"
 />
 
@@ -44,7 +46,7 @@ Contrairement aux tokens, qui sont statiques et globaux, les variables sont **co
 3. Sélectionnez la variable que vous souhaitez utiliser.
 
 <DImage
-src="/assets/images/layout/styling/gif2.gif"
+:src="Gif2"
 alt="Exemple d'utilisation de token"
 />
 

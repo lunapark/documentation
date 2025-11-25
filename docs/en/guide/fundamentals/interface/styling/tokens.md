@@ -3,6 +3,8 @@ import Screen1 from '/assets/images/layout/styling/screen1.png';
 import Screen2 from '/assets/images/layout/styling/screen2.png';
 import Screen3 from '/assets/images/layout/styling/screen3.png';
 import {faLink, faBolt} from "@fortawesome/pro-solid-svg-icons";
+import gif1 from '/assets/images/layout/styling/gif1.gif';
+import gif2 from '/assets/images/layout/styling/gif2.gif';
 </script>
 
 # Tokens and Style Variables
@@ -25,8 +27,8 @@ alt="Screenshot of the Luna Park editor"
 3. Select the design token you want to use.
 
 <DImage
-src="/assets/images/layout/styling/gif1.gif"
-alt="Example of token usage"
+  :src="gif1"
+  alt="Example of token usage"
 />
 
 _Note: Tokens replace hardcoded values and serve as a basis for global style customization._
@@ -44,8 +46,8 @@ Unlike tokens, which are static and global, variables are **contextual and react
 3. Select the variable you want to use.
 
 <DImage
-src="/assets/images/layout/styling/gif2.gif"
-alt="Example of variable usage"
+  :src="gif2"
+  alt="Example of variable usage"
 />
 
 

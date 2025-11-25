@@ -1,3 +1,10 @@
+<script setup lang="ts">
+import Screen2 from "/assets/images/fundamentals/styling/screen2.png";
+import Screen3 from "/assets/images/fundamentals/styling/screen3.png";
+import Screen4 from "/assets/images/fundamentals/styling/screen4.png";
+import Screen5 from "/assets/images/fundamentals/styling/screen5.png";
+</script>
+
 # Disposition et Alignement
 
 La disposition contrôle la manière dont les éléments sont organisés dans l’espace.  
@@ -11,7 +18,7 @@ Chaque élément agit comme un **bloc conteneur** (parent) pouvant organiser ses
 Les propriétés de disposition s’appliquent donc au **parent**, tandis que l’alignement influence la position des enfants à l’intérieur.
 
 <DImage
-src="/assets/images/fundamentals/styling/screen2.png"
+:src="Screen2"
 alt="Capture d'écran d'un conteneur avec plusieurs enfants"
 />
 
@@ -31,7 +38,7 @@ Vous pouvez définir le mode de disposition principal de l’élément :
 > Les modes *Flex* et *Grid* sont recommandés pour structurer les interfaces complexes.
 
 <DImage
-src="/assets/images/fundamentals/styling/screen3.png"
+:src="Screen3"
 alt="Sélection du mode Flex dans le panneau de style"
 />
 
@@ -50,7 +57,7 @@ Une fois un conteneur en mode Flex ou Grid, plusieurs propriétés contrôlent l
 | **Wrap** | Indique si les éléments doivent revenir à la ligne quand l’espace est insuffisant. |
 
 <DImage
-src="/assets/images/fundamentals/styling/screen4.png"
+:src="Screen4"
 alt="Conteneur en flex avec direction, justify et align"
 />
 
@@ -67,7 +74,7 @@ Pour les cas nécessitant un placement libre (overlays, badges, tooltips), vous 
 | **Z-index** | Gère la superposition entre éléments. |
 
 <DImage
-src="/assets/images/fundamentals/styling/screen5.png"
+:src="Screen5"
 alt="Exemple de positionnement absolu dans Luna Park"
 />
 

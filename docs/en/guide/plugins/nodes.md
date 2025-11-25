@@ -1,3 +1,8 @@
+<script setup>
+import functionNode from '/assets/images/plugins/nodes/function.png';
+import operationNode from '/assets/images/plugins/nodes/operation.png';
+</script>
+
 # Custom Logic Nodes
 
 You can create custom logic nodes to extend Luna Park's visual scripting editor.
@@ -39,8 +44,8 @@ Note that every input key must start with `in_`, and every output key must start
 
 This node will be displayed like this:
 <DImage
-src="/assets/images/plugins/nodes/function.png"
-alt="Function node"
+  :src="functionNode"
+  alt="Function node"
 />
 
 ## Operation Nodes
@@ -73,6 +78,6 @@ export const myOperationNode = makeLogicNode({
 
 This node will be displayed like this:
 <DImage
-src="/assets/images/plugins/nodes/operation.png"
-alt="Operation node"
+  :src="operationNode"
+  alt="Operation node"
 />

@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import Plugins from "/assets/images/plugins/introduction/plugins.png";
+import Install from "/assets/images/plugins/introduction/install.png";
+</script>
+
 # Introduction aux plugins
 
 Luna Park supporte les plugins pour étendre ses fonctionnalités. Les plugins peuvent introduire une large gamme de fonctionnalités, y compris de nouveaux composants, des nœuds logiques, des jetons de design, et plus encore.
@@ -7,14 +12,14 @@ Luna Park supporte les plugins pour étendre ses fonctionnalités. Les plugins p
 Une liste des plugins disponibles se trouve dans le panneau `Libraries > Plugins > Install Plugins`.
 
 <DImage
-src="/assets/images/plugins/introduction/plugins.png"
+:src="Plugins"
 alt="Recherche de plugins"
 />
 
 Pour installer un plugin, sélectionnez-le dans la liste et cliquez sur le bouton `Install plugin`.
 
 <DImage
-src="/assets/images/plugins/introduction/install.png"
+:src="Install"
 alt="Installation de plugin"
 />
 

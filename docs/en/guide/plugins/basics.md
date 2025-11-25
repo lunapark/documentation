@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import Config from "/assets/images/plugins/basics/config.png";
+</script>
+
 # Plugin Basics
 
 The `@luna-park/plugin` package provides essential helpers for creating plugins.
@@ -42,7 +46,7 @@ export default({
 This creates a form with a single text field, defaulting to "Marty McFly".
 
 <DImage
-src="/assets/images/plugins/basics/config.png"
+:src="Config"
 alt="Plugin configuration form"
 />
 

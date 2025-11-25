@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import Config from "/assets/images/plugins/basics/config.png";
+</script>
+
 # Bases des plugins
 
 Le package `@luna-park/plugin` fournit des aides essentielles pour la création de plugins.
@@ -42,7 +46,7 @@ export default({
 Cela crée un formulaire avec un seul champ texte, ayant pour valeur par défaut "Marty McFly".
 
 <DImage
-src="/assets/images/plugins/basics/config.png"
+:src="Config"
 alt="Formulaire de configuration du plugin"
 />
 

@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import {faPalette, faTowerCell} from "@fortawesome/pro-solid-svg-icons";
+import Screen9 from "/assets/images/fundamentals/styling/screen9.png";
+import Screen10 from "/assets/images/fundamentals/styling/screen10.png";
 </script>
 
 # Styles avancés
@@ -42,7 +44,7 @@ Vérifiez que layout.css.at-scope.enabled est à `true` dans about:config
 Vous pouvez désormais utiliser votre classe dans n'importe quel composant!
 
 <DImage
-src="/assets/images/fundamentals/styling/screen9.png"
+:src="Screen9"
 alt="Exemple d'utilisation de classe CSS"
 />
 
@@ -70,6 +72,6 @@ scope({ from: '.fw-body' });
 Vous pouvez désormais utiliser Tailwind dans n'importe quel composant!
 
 <DImage
-src="/assets/images/fundamentals/styling/screen10.png"
+:src="Screen10"
 alt="Exemple d'utilisation de classe Tailwind"
 />

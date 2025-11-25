@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import {faLink} from "@fortawesome/pro-solid-svg-icons";
+import screen1 from '/assets/images/fundamentals/styling/screen1.png';
 </script>
 
 # Typography
@@ -15,8 +16,8 @@ Each text element can be rendered with a different HTML tag depending on its rol
 - `span`: inline text, used to style a specific part of a text.
 
 <DImage
-src="/assets/images/fundamentals/styling/screen1.png"
-alt="Example of semantic usage"
+  :src="screen1"
+  alt="Example of semantic usage"
 />
 
 

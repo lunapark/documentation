@@ -1,3 +1,9 @@
+<script setup lang="ts">
+import Function from "/assets/images/plugins/nodes/function.png";
+import Operation from "/assets/images/plugins/nodes/operation.png";
+</script>
+
+
 # Nœuds logiques personnalisés
 
 Vous pouvez créer des nœuds logiques personnalisés pour étendre l'éditeur de script visuel de Luna Park.
@@ -39,7 +45,7 @@ Notez que chaque clé d'entrée doit commencer par `in_`, et chaque clé de sort
 
 Ce nœud sera affiché comme ceci :
 <DImage
-src="/assets/images/plugins/nodes/function.png"
+:src="Function"
 alt="Nœud de fonction"
 />
 
@@ -73,6 +79,6 @@ export const myOperationNode = makeLogicNode({
 
 Ce nœud sera affiché comme ceci :
 <DImage
-src="/assets/images/plugins/nodes/operation.png"
+:src="Operation"
 alt="Nœud d'opération"
 />

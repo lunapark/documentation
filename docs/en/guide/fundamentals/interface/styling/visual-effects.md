@@ -1,3 +1,11 @@
+<script setup>
+import screen6 from '/assets/images/fundamentals/styling/screen6.png';
+import screen7 from '/assets/images/fundamentals/styling/screen7.png';
+import screen8 from '/assets/images/fundamentals/styling/screen8.png';
+import gif2 from '/assets/images/fundamentals/styling/gif2.gif';
+import gif1 from '/assets/images/fundamentals/styling/gif1.gif';
+</script>
+
 # Visual Effects
 
 Visual effects allow you to add depth and relief to your interface.
@@ -10,8 +18,8 @@ They influence the perception of elements without modifying their structure.
 | **Border Radius** | Defines the curvature radius of corners. Can be applied uniformly or individually (top-left, top-right, etc.). |
 
 <DImage
-src="/assets/images/fundamentals/styling/screen6.png"
-alt="Example of rounded corners on different elements"
+  :src="screen6"
+  alt="Example of rounded corners on different elements"
 />
 
 
@@ -26,8 +34,8 @@ alt="Example of rounded corners on different elements"
 | **Style** | Border style (solid, dashed, dotted). |
 
 <DImage
-src="/assets/images/fundamentals/styling/screen7.png"
-alt="Examples of border styles"
+  :src="screen7"
+  alt="Examples of border styles"
 />
 
 ---
@@ -38,8 +46,8 @@ alt="Examples of border styles"
 | **Opacity** | Defines the transparency of the element (from 0 to 100%). |
 
 <DImage
-src="/assets/images/fundamentals/styling/screen8.png"
-alt="Examples of opacity levels"
+  :src="screen8"
+  alt="Examples of opacity levels"
 />
 
 ---
@@ -64,8 +72,8 @@ To activate *hover* mode, click on the **hand** icon in the properties bar.
 A new style state then appears, allowing you to freely modify properties (color, shadow, opacity, etc.) applied only on hover.
 
 <DImage
-src="/assets/images/fundamentals/styling/gif2.gif"
-alt="Activation of hover style in Luna Park editor"
+  :src="gif2"
+  alt="Activation of hover style in Luna Park editor"
 />
 
 ---
@@ -80,8 +88,8 @@ alt="Activation of hover style in Luna Park editor"
 | **Delay** | Defines the delay before the effect starts. |
 
 <DImage
-src="/assets/images/fundamentals/styling/gif1.gif"
-alt="Example of transition applied on a button"
+  :src="gif1"
+  alt="Example of transition applied on a button"
 />
 
 ## Going Further

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import {faLink} from "@fortawesome/pro-solid-svg-icons";
+import Screen1 from "/assets/images/fundamentals/styling/screen1.png";
 </script>
 
 # Typographie
@@ -15,7 +16,7 @@ Chaque élément de texte peut être rendu avec une balise HTML différente selo
 - `span` : texte en ligne, utilisé pour styliser une partie spécifique d'un texte.
 
 <DImage
-src="/assets/images/fundamentals/styling/screen1.png"
+:src="Screen1"
 alt="Exemple d'utilisation de sémantique"
 />
 
