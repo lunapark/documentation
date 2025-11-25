@@ -1,10 +1,10 @@
-# Custom logic nodes
+# Custom Logic Nodes
 
-You can create custom logic nodes to extend the visual scripting editor of Luna Park.
+You can create custom logic nodes to extend Luna Park's visual scripting editor.
 
-## Function nodes
+## Function Nodes
 
-Function nodes are used for heavy functions or promises. They need an input execution thread anchor and are computed on execution.
+Function nodes are designed for complex operations or asynchronous tasks (promises). They require an input execution anchor (`in_exec`) and are evaluated only when triggered.
 
 Example:
 ```ts
@@ -43,33 +43,30 @@ src="/assets/images/plugins/nodes/function.png"
 alt="Function node"
 />
 
-## Operation nodes
+## Operation Nodes
 
-Operation nodes are used for simple logic operations. They don't need an input execution thread anchor and are computed on the fly.
+Operation nodes are used for simple, synchronous logic operations. They do not require an input execution anchor and are evaluated on demand.
 
 Example:
 ```ts
 import { LogicType, makeLogicNode } from "@luna-park/plugin";
 
-export const myFunctionNode = makeLogicNode({
-    name: "function-node",
+export const myOperationNode = makeLogicNode({
+    name: "operation-node",
     inputs: {
-        in_exec: LogicType.exec(),
         in_a: LogicType.number({ name: "A" }),
         in_b: LogicType.number({ name: "B" })
     },
     outputs: {
-        out_exec: LogicType.exec(),
         out_result: LogicType.number({ name: "A+B" })
     },
     methods: {
-        async in_exec() {
-            this.out_result = this.in_a + this.in_b;
-            await this.out_exec();
+        compute() {
+             this.out_result = this.in_a + this.in_b;
         }
     },
     display: {
-        name: "My Function Node"
+        name: "My Operation Node"
     }
 });
 ```
@@ -77,5 +74,5 @@ export const myFunctionNode = makeLogicNode({
 This node will be displayed like this:
 <DImage
 src="/assets/images/plugins/nodes/operation.png"
-alt="Function node"
+alt="Operation node"
 />

@@ -1,8 +1,8 @@
-# Plugin basics
+# Plugin Basics
 
-The `@luna-park/plugin` package provides helpers for creating plugins.
+The `@luna-park/plugin` package provides essential helpers for creating plugins.
 
-Your plugin should expose an object which is typed by the `makePlugin` function:
+Your plugin must export an object defined using the `makePlugin` function:
 
 ```ts
 import { makePlugin } from '@luna-park/plugin';
@@ -15,16 +15,16 @@ export default makePlugin({
 });
 ```
 
-Here are the required properties:
-- `id`: the plugin's unique identifier (this must not conflict with other plugins)
-- `name`: the plugin's name
-- `icon`: the plugin's icon (this can be a URL string, or a SVG string)
+The following properties are required:
+- `id`: The plugin's unique identifier (must be unique across all plugins).
+- `name`: The display name of the plugin.
+- `icon`: The plugin's icon (can be a URL string or an SVG string).
 
-## Config
+## Configuration
 
-You can use the `config` property to expose a configuration form for your plugin. The configuration will be displayed on the plugin's settings page, on the top bar of the editor, and be saved with the plugin's data.
+The `config` property allows you to define a configuration form for your plugin. This configuration appears on the plugin's settings page and the editor's top bar, and is saved alongside the plugin's data.
 
-It's a `LogicType` object, which you can learn more about in the [Typing](./typing) section.
+It is defined as a `LogicType` object. For more details, refer to the [Typing](./typing) section.
 
 Example:
 
@@ -39,18 +39,18 @@ export default({
 });
 ```
 
-This will expose a form with a single text field, with the default value "Marty McFly".
+This creates a form with a single text field, defaulting to "Marty McFly".
 
 <DImage
 src="/assets/images/plugins/basics/config.png"
 alt="Plugin configuration form"
 />
 
-The `config` property will be available on your plugin's hooks and init functions. Here, the `name` will be find under `config.name`.
+The `config` object is available in your plugin's hooks and initialization functions. In this example, the `name` property can be accessed via `config.name`.
 
-## Internal state
+## Internal State
 
-If you ever need to save some data related to your plugin, you can use the `internal` property. The data will be saved with the plugin's data, but won't be displayed on the settings page. You must set the default value of the internal state.
+Use the `internal` property to store data related to your plugin. This data is saved with the plugin but is not visible on the settings page. You must define a default value for the internal state.
 
 ```ts
 import { makePlugin } from '@luna-park/plugin';
@@ -63,28 +63,28 @@ export default({
 });
 ```
 
-The `internal` property will be available on your plugin's hooks and init functions. Here, the `tutorial` will be find under `internal.tutorial`.
+The `internal` object is available in your plugin's hooks and initialization functions. In this example, the `tutorial` property can be accessed via `internal.tutorial`.
 
 
 # Customization
 
-All the following customization options can either be:
-- an object of the type of the customization
-- a function returning an object of the type of the customization
+The following customization options can be defined as either:
+- A direct object.
+- A function that returns the object.
 
-If you use a function, this function can be asynchronous, and will be called with some useful arguments:
-- `config`: the plugin's configuration
-- `internal`: the plugin's internal state
-- `mode`: "build" or "editor", depending on the current mode
-- `app`: the whole project application instance
+If a function is used, it can be asynchronous and will receive the following arguments:
+- `config`: The current configuration.
+- `internal`: The current internal state.
+- `mode`: `build` or `editor`, depending on the environment.
+- `app`: The entire project application instance.
 
-You can update those objects during the execution of these functions.
+You can modify these objects during the function's execution.
 
-## Lifecycles
+## Lifecycle Hooks
 
 ### Mount
 
-This function is called when the plugin is mounted in the editor, either on installation, or when the project is loaded.
+Called when the plugin is mounted in the editor, either upon installation or when the project loads.
 
 ```ts
 import { makePlugin } from '@luna-park/plugin';
@@ -98,7 +98,7 @@ export default({
 
 ### Unmount
 
-This function is called when the plugin is uninstalled.
+Called when the plugin is uninstalled.
 
 ```ts
 import { makePlugin } from '@luna-park/plugin';
@@ -112,7 +112,7 @@ export default({
 
 ### Update
 
-This function is called when the configuration of the plugin is updated.
+Called whenever the plugin's configuration is updated.
 
 ```ts
 import { makePlugin } from '@luna-park/plugin';
@@ -120,15 +120,15 @@ import { makePlugin } from '@luna-park/plugin';
 export default({
     lifecycle: {
         update: ({config}) => { console.log("New config:", config) }
-    }
+    })
 });
 ```
 
 ## Injections
 
-You can inject CSS or JS into the editor using the `inject` property.
+The `inject` property allows you to inject CSS or JavaScript into the editor.
 
-### CSS
+### CSS Injection
 
 ```ts
 import { makePlugin } from '@luna-park/plugin';
@@ -140,7 +140,7 @@ export default({
 });
 ```
 
-### JS
+### JavaScript Injection
 
 ```ts
 import { makePlugin } from '@luna-park/plugin';

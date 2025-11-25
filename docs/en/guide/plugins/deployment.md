@@ -1,17 +1,17 @@
 # Deployment
 
 :::warning
-Luna Park compilation is not yet ready for plugins. You can still use them during the development phase of your app, but the compilation will be available soon.
+Luna Park's compilation system does not yet support plugins. While you can use plugins during the development phase, full compilation support will be available soon.
 :::
 
 :::warning
-Non official plugins will be only available for build on the desktop version of Luna Park.
+Unofficial plugins will only be available for builds on the desktop version of Luna Park.
 :::
 
-## Restricted distribution
+## Restricted Distribution
 
-If you intend to restrict the distribution of your plugin, you can push it to github and use a service like https://pkg.pr.new/ to distribute it. People will have to paste the url of your plugin in the "Install from URL" input.
+If you wish to distribute your plugin privately, you can host it on GitHub and use a service like [pkg.pr.new](https://pkg.pr.new/). Users will need to manually enter your plugin's URL in the "Install from URL" field.
 
-## Public distribution
+## Public Distribution
 
-If you want your plugin to appear on the search page in Luna Park, you need to publish it on npm with the tags `luna-park` and `plugin`. It will be available for everyone to install.
+To make your plugin discoverable in Luna Park's search page, publish it to npm with the tags `luna-park` and `plugin`. This will make it available for public installation.

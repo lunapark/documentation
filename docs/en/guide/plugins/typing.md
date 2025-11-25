@@ -1,12 +1,12 @@
-# Typing system
+# Typing System
 
-Luna Park typing system looks a bit like TypeBox or Zod, with some twists.
+The Luna Park typing system is similar to TypeBox or Zod, but with some unique features.
 
 ## Types
 
-Here a small comparison between Luna Park types and Typescript types.
+Below is a comparison between Luna Park types and TypeScript types.
 
-| Typescript type     | Luna Park type                                               |
+| TypeScript Type     | Luna Park Type                                               |
 |---------------------|--------------------------------------------------------------|
 | `string`            | `LogicType.string()`                                         |
 | `number`            | `LogicType.number()`                                         |
@@ -18,7 +18,7 @@ Here a small comparison between Luna Park types and Typescript types.
 | `{foo:string}`      | `LogicType.object({foo: LogicType.string()})`                |
 
 
-You can also use type functions like `(foo: string, bar: number) => boolean` :
+You can also define function types, such as `(foo: string, bar: number) => boolean`:
 ```ts
 LogicType.function(
     [
@@ -31,31 +31,31 @@ LogicType.function(
 
 ## Arguments
 
-All types have an argument parameter to customize their behaviour.
+All types accept an options object to customize their behavior.
 
-Here's an example with a name, a description, and a default value:
+Example with a name, description, and default value:
 ```ts
 LogicType.number({
-    name: age,
-    description: "The users's age",
+    name: 'age',
+    description: "The user's age",
     default: 25
 });
 ```
 
-Here's a list of some arguments:
-- `name` : the name of the type
-- `description` : a description of the type
-- `default` : the default value of the type
-- `customizable` : if the type can be customized by the user (usually for unknown types)
-- `enum` : an array of possible values for the type
-- `example` : an example of a value for the type
-- `optional` : if the type is optional
-- `required` : if the type is required (used only on component arguments)
+Available arguments include:
+- `name`: The name of the type.
+- `description`: A description of the type.
+- `default`: The default value.
+- `customizable`: Whether the type can be customized by the user (typically for unknown types).
+- `enum`: An array of possible values.
+- `example`: An example value.
+- `optional`: Whether the type is optional.
+- `required`: Whether the type is required (used only for component props).
 
 ## Utilities
 
-You can use some utilities to create types:
-- `LogicType.omit()` : remove some keys from an object type
-- `LogicType.pick()` : keep only some keys from an object type
-- `LogicType.partial()` : make all keys of an object type optional
-- `LogicType.required()` : make all keys of an object type required
+The following utilities are available for creating types:
+- `LogicType.omit()`: Removes specific keys from an object type.
+- `LogicType.pick()`: Selects specific keys from an object type.
+- `LogicType.partial()`: Makes all keys of an object type optional.
+- `LogicType.required()`: Makes all keys of an object type required.

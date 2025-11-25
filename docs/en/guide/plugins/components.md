@@ -1,6 +1,6 @@
-# Custom components
+# Custom Components
 
-You can expose custom components to the editor, for example, to create a component library.
+You can expose custom components to the editor, enabling the creation of component libraries.
 
 ```ts
 import { makePlugin } from '@luna-park/plugin';
@@ -14,7 +14,7 @@ export default({
 });
 ```
 
-Here is an example of a custom component:
+Below is an example of a custom component definition:
 ```ts
 import { TComponent } from '@luna-park/plugin';
 import BaseComponent from './BaseComponent.vue';
@@ -37,11 +37,11 @@ export default {
 } satisfies TComponent;
 ```
 
-The `BaseComponent` is a Vue component, with its props, events, slots and model transcripted into Luna Park's typing system.
+`BaseComponent` is a standard Vue component. Its props, events, slots, and models are mapped to Luna Park's typing system.
 
-## Wrapper
+## Component Wrapper
 
-If your app needs to run inside a wrapper (for example, to inject some context), you can expose it like this:
+If your application requires a wrapper (e.g., for context injection), you can expose it as follows:
 ```ts
 import { makePlugin } from '@luna-park/plugin';
 import MyWrapper from './MyWrapper.vue';

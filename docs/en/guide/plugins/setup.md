@@ -1,51 +1,52 @@
-# Environment setup
+# Environment Setup
 
-To build plugins for Luna Park, you'll need a modern IDE like WebStorm or Visual Studio Code. You'll also need some basic knowledge of TypeScript and Vue.
+To build plugins for Luna Park, a modern IDE such as WebStorm or Visual Studio Code is recommended. Basic knowledge of TypeScript and Vue is also required.
 
-## Download the boilerplate
+## Downloading the Boilerplate
 
-Start by cloning the boilerplate repository:
+Start by cloning the plugin boilerplate repository:
 ```bash
 git clone https://github.com/lunapark/plugin-boilerplate
 ```
 
 :::info
-We use PNPM instead of NPM, so might want to install it with `npm install -g pnpm` if you don't have it yet.
+We use PNPM instead of NPM. If you don't have it installed, you can install it using `npm install -g pnpm`.
 :::
 
-Now, you can install the dependencies with:
+Next, install the project dependencies:
 ```bash
 pnpm install
 ```
 
-## Testing your plugin
+## Testing Your Plugin
 
-To test your plugin (you can directly test the boilerplate as an example), you'll need to run two terminals:
-- one to build the plugin and watch for changes
+To test your plugin (or the boilerplate), you will need to run two separate terminal instances:
+
+1. One to build the plugin and watch for changes:
 ```bash
 pnpm run dev
 ```
-- one to serve the plugin
+2. One to serve the plugin:
 ```bash
 pnpm run preview 
 ```
 
-You can now install the plugin directly in Luna Park. Open a project or the [playground editor](https://luna-park.app/editor), then click on the `Libraries/Plugins/Install plugins`.
+You can now install the plugin directly in Luna Park. Open a project or the [playground editor](https://luna-park.app/editor), then navigate to `Libraries > Plugins > Install Plugins`.
 
-You'll find an input with the label "Install from URL" at the bottom off the plugins panel.
+Locate the "Install from URL" input field at the bottom of the plugins panel.
 
 <DImage
 src="/assets/images/plugins/setup/url-install.png"
 alt="Install from URL"
 />
 
-Paste the URL of your plugin (default is `http://127.0.0.1:2084`) and hit enter.
+Paste your plugin's URL (default: `http://127.0.0.1:2084`) and press Enter.
 
-You should see **Plugin Boilerplate successfully installed.** displayed in the console.
+You should see the message **Plugin Boilerplate successfully installed.** in the console.
 
-## Build your plugin
+## Building Your Plugin
 
-When you want to distribute your plugin, you can build it with:
+To build your plugin for distribution, run the following command:
 ```bash
 pnpm run build
 ```

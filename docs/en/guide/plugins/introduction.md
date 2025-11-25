@@ -1,23 +1,23 @@
-# Introduction to plugins
+# Introduction to Plugins
 
-Luna Park includes plugins to extend its functionality. They can add a lot of useful features, such as new components, new logic nodes, new design tokens, etc.
+Luna Park supports plugins to extend its functionality. Plugins can introduce a wide range of features, including new components, logic nodes, design tokens, and more.
 
-## Installing plugins
+## Installing Plugins
 
-You can find a list of available plugins in the `Libraries/Plugins/Install Plugins` panel.
+A list of available plugins can be found in the `Libraries > Plugins > Install Plugins` panel.
 
 <DImage
 src="/assets/images/plugins/introduction/plugins.png"
 alt="Plugins search"
 />
 
-To install a plugin, simply click on the plugin you wish to install, then click on the `Install plugin` button.
+To install a plugin, select it from the list and click the `Install plugin` button.
 
 <DImage
 src="/assets/images/plugins/introduction/install.png"
 alt="Plugin installation"
 />
 
-## Creating plugins
+## Creating Plugins
 
-You can build your own plugin for Luna Park to add your own features. You can start right away, as long as you know how to code in TypeScript (and Vue for the components).
+You can also create your own plugins to add custom features to Luna Park. If you are familiar with TypeScript (and Vue for components), you can get started immediately.
