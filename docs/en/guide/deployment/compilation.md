@@ -22,10 +22,9 @@ The export code is the result of compiling your application. It contains all the
 
 The settings are available in the `General Settings` tab of the inspection panel (<LIcon :icon="faGear"/> icon in the top bar). You can modify the name of your application there, as well as define whether you want it to be a PWA (Progressive Web App). This means your application can be installed directly on compatible browsers.
 
-<LContainer type="warning">
-<h2>PWA Not Available</h2>
+::: warning PWA Not Available
 PWA mode is not ready yet.
-</LContainer>
+:::
 
 You can also choose the history mode from the following types:
 
@@ -40,10 +39,9 @@ To export a desktop application, simply click on the <LIcon :icon="faHammer"/> (
 - **Portable**: Generates a single executable that can be run directly. Useful for quick tests, but not recommended for distribution.
 - **Installer**: Generates an installer that can be distributed. Recommended for distributing your application.
 
-<LContainer type="warning">
-<h2>MacOS Compilation Not Available</h2>
+::: warning MacOS Compilation Not Available
 Export for MacOS is not ready yet.
-</LContainer>
+:::
 
 ### Settings
 
@@ -59,8 +57,7 @@ The settings are available in the `Desktop Settings` tab of the inspection panel
 
 <br/>
 
-<LContainer type="warning">
-<h2>Mobile Export Not Available</h2>
+::: warning Mobile Export Not Available
 Export for mobile is not ready yet.
-</LContainer>
+:::
 

@@ -20,10 +20,9 @@ Purchasing a license will allow you to benefit from all the features of the fram
 
 ## The Software Version
 
-<LContainer type="warning">
-<h2>Warning</h2>
+::: warning Warning
 The software version of Luna Park is not yet fully stable (notably the MacOS version). Use this version with caution. Also note that the software version is a few versions behind the cloud version.
-</LContainer>
+:::
 
 You can directly download the software version of Luna Park by clicking the **Download** button on the [homepage](https://luna-park.app/).
 

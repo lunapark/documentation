@@ -22,10 +22,9 @@ Le code d'export est le résultat de la compilation de votre application. Il con
 
 Les paramètres sont disponibles dans l'onglet `Paramètres généraux` du panneau d'inspection (icône <LIcon :icon="faGear"/> dans la barre supérieure). Vous pouvez y modifier le nom de votre application, ainsi que définir si vous souhaitez qu'elle soit une PWA (Progressive Web App). Cela signifie que votre application peut être installée directement sur les navigateurs compatibles.
 
-<LContainer type="warning">
-<h2>PWA non disponible</h2>
+::: warning PWA non disponible
 Le mode PWA n'est pas encore prêt.
-</LContainer>
+:::
 
 Vous pouvez également choisir le mode d'historique parmi ces types :
 
@@ -40,10 +39,9 @@ Pour exporter une application de bureau, cliquez simplement sur l'icône <LIcon 
 - **Portable** : Génère un exécutable unique qui peut être lancé directement. Utile pour des tests rapides, mais n'est pas recommandé pour la distribution.
 - **Installateur** : Génère un installateur qui peut être distribué. Il est recommandé pour la distribution de votre application.
 
-<LContainer type="warning">
-<h2>Compilation MacOS non disponible</h2>
+::: warning Compilation MacOS non disponible
 L'exportation pour MacOS n'est pas encore prête.
-</LContainer>
+:::
 
 ### Paramètres
 
@@ -59,7 +57,6 @@ Les paramètres sont disponibles dans l'onglet `Paramètres bureau` du panneau d
 
 <br/>
 
-<LContainer type="warning">
-<h2>Exportation mobile non disponible</h2>
+::: warning Exportation mobile non disponible
 L'exportation pour mobile n'est pas encore prête.
-</LContainer>
+:::

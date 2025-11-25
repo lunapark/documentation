@@ -153,8 +153,6 @@ When using value inspection, the values are:
 - Calculated in real-time for operation nodes.
 - Taken from the last execution for function nodes.
 
-<LContainer type="info">
-<h2>Note</h2>
+:::info
 If some values appear as undefined, it may be necessary to run your logic once to initialize all the values.
-</LContainer>
-
+:::

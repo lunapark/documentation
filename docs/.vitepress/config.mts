@@ -1,3 +1,4 @@
+import { searchForWorkspaceRoot } from "vite";
 import { defineConfig } from "vitepress";
 
 export default defineConfig({
@@ -352,7 +353,10 @@ export default defineConfig({
                     {
                         collapsed: true,
                         items: [
-                            { link: "/en/guide/integrations/npm", text: "NPM" }
+                            {
+                                link: "/en/guide/integrations/npm",
+                                text: "NPM"
+                            }
                         ],
                         text: "Integrations"
                     },
@@ -373,6 +377,40 @@ export default defineConfig({
                             }
                         ],
                         text: "Deployment & Export"
+                    },
+                    {
+                        collapsed: true,
+                        items: [
+                            {
+                                link: "/en/guide/plugins/introduction",
+                                text: "Introduction"
+                            },
+                            {
+                                link: "/en/guide/plugins/setup",
+                                text: "Environment setup"
+                            },
+                            {
+                                link: "/en/guide/plugins/basics",
+                                text: "Basics"
+                            },
+                            {
+                                link: "/en/guide/plugins/typing",
+                                text: "Typing"
+                            },
+                            {
+                                link: "/en/guide/plugins/components",
+                                text: "Custom components"
+                            },
+                            {
+                                link: "/en/guide/plugins/nodes",
+                                text: "Custom nodes"
+                            },
+                            {
+                                link: "/en/guide/plugins/deployment",
+                                text: "Deployment"
+                            }
+                        ],
+                        text: "Plugin API"
                     }
                 ]
             }
@@ -386,5 +424,15 @@ export default defineConfig({
             }
         ]
     },
-    title: "Luna Park"
+    title: "Luna Park",
+    vite: {
+        server: {
+            fs: {
+                allow: [
+                    searchForWorkspaceRoot(process.cwd()),
+                    `${ searchForWorkspaceRoot(process.cwd()) }/../core/packages/design`
+                ]
+            }
+        }
+    }
 });

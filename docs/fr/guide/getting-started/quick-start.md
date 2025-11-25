@@ -20,10 +20,9 @@ L'achat d'une licence vous permettra de bénéficier de toutes les fonctionnalit
 
 ## La version logicielle
 
-<LContainer type="warning">
-<h2>Attention</h2>
+::: warning Attention
 La version logicielle de Luna Park n'est pas encore totalement stable (notamment la version MacOS). Utilisez cette version avec précaution. Notez aussi que la version logicielle a quelques versions de retard par rapport à la version cloud.
-</LContainer>
+:::
 
 Vous pouvez directement télécharger la version logicielle de Luna Park en cliquant sur le bouton **Télécharger** de la [page d'accueil](https://luna-park.app/).
 

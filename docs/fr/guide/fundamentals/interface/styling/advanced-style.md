@@ -20,10 +20,9 @@ L'utilisation des classes CSS et de Tailwind nécessite d'injecter du code (CSS 
 - **<LIcon :icon="faPalette" />** Palette => **update tokens** =>  **<LIcon :icon="faTowerCell" />** Inject => **CSS Injection**
 - Collez le code ci-dessous
 
-<LContainer type="warning">
-<h2>Pour les utilisateurs de Firefox</h2>
+::: warning Pour les utilisateurs de Firefox
 Vérifiez que layout.css.at-scope.enabled est à `true` dans about:config
-</LContainer>
+:::
 
 
 ```css

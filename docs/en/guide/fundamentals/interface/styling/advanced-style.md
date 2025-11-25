@@ -20,10 +20,9 @@ Using CSS classes and Tailwind requires injecting code (CSS or JS) into the appl
 - **<LIcon :icon="faPalette" />** Palette => **update tokens** =>  **<LIcon :icon="faTowerCell" />** Inject => **CSS Injection**
 - Paste the code below
 
-<LContainer type="warning">
-<h2>For Firefox users</h2>
+::: warning For Firefox users
 Check that layout.css.at-scope.enabled is set to `true` in about:config
-</LContainer>
+:::
 
 
 ```css

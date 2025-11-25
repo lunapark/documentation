@@ -154,7 +154,6 @@ Lors de l'utilisation de l'inspection des valeurs, les valeurs sont :
 - Calculées en temps réel pour les nœuds d'opération.
 - Prises à partir de la dernière exécution pour les nœuds de fonction.
 
-<LContainer type="info">
-<h2>Note</h2>
+::: info Note
 Si certaines valeurs apparaissent comme non définies, il peut être nécessaire d'exécuter votre logique une fois pour initialiser toutes les valeurs.
-</LContainer>
+:::
