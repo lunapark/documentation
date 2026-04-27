@@ -5,8 +5,6 @@ import install from '/assets/images/plugins/introduction/install.png';
 
 # Introduction to Plugins
 
-# Introduction to Plugins
-
 Luna Park supports plugins to extend its functionality. Plugins can introduce a wide range of features, including new components, logic nodes, design tokens, and more.
 
 ## Installing Plugins

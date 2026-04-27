@@ -9,7 +9,7 @@
         }"
     >
         <LStarsBackground class="background" />
-        <LGridHero class="grid" />
+        <DGridHero class="grid" />
         <slot name="home-hero-before" />
         <VPHomeHero>
             <template #home-hero-info-before>
@@ -42,11 +42,13 @@
 </template>
 
 <script setup lang="ts">
-import { LGridHero, LStarsBackground } from "@luna-park/design";
-import VPHomeHero from "./VPHomeHero.vue";
-import VPHomeFeatures from "./VPHomeFeatures.vue";
-import VPHomeContent from "./VPHomeContent.vue";
+import { LStarsBackground } from "@luna-park/design";
+
 import { useData } from "../composables/data";
+import DGridHero from "../custom/components/DGridHero.vue";
+import VPHomeContent from "./VPHomeContent.vue";
+import VPHomeFeatures from "./VPHomeFeatures.vue";
+import VPHomeHero from "./VPHomeHero.vue";
 
 const { frontmatter, theme } = useData();
 </script>
