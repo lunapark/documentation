@@ -38,8 +38,17 @@ A conditional node has:
 - A true output (<DSchemaType :schema="LogicType.exec()" />)
 - A false output (<DSchemaType :schema="LogicType.exec()" />)
 
-
 <DExampleEditor graph="if" animation :zoomLevel="1"/>
+
+## Switch Node
+
+The **Switch** node routes execution based on the match between a value and multiple cases. Use it when you have multiple execution branches based on different values (string or number).
+
+A Switch node has:
+- An execution input (<DSchemaType :schema="LogicType.exec()" />)
+- A value input (<DSchemaType :schema="LogicType.union(LogicType.string(), LogicType.number())" />)
+- An output for each matching case (<DSchemaType :schema="LogicType.exec()" />)
+- A default output (<DSchemaType :schema="LogicType.exec()" />)
 
 ## Loop Nodes (For, While)
 
@@ -64,4 +73,3 @@ A While loop node has:
 - A condition input (<DSchemaType :schema="LogicType.boolean()" />)
 - An execution output (<DSchemaType :schema="LogicType.exec()" />)
 - An end output (<DSchemaType :schema="LogicType.exec()" />)
-

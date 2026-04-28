@@ -11,6 +11,11 @@ You can access the `palette` via the <LIcon :icon="faPalette" /> button in the t
 The main colors (primary, secondary, content) can be modified at any time. Associated shades and gradients are **automatically generated** to ensure **visual consistency** throughout the application.
 
 The `Match editor` option allows you to apply the same colors to the editor interface. Useful for **reducing visual fatigue** during design.
+
+## Responsive strategy
+
+The responsive strategy can be configured from the style settings of the `palette`. It determines how your application adapts to different screen sizes.
+
 <DImage
 :src="Screen3"
 alt="Screenshot of the Luna Park editor"

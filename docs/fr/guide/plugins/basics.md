@@ -156,6 +156,46 @@ export default({
 });
 ```
 
+## Fenêtres personnalisées
+
+Les plugins peuvent définir et ouvrir des fenêtres personnalisées pour étendre l'éditeur avec des panneaux d'interface utilisateur sur mesure. Utilisez le composant `LPluginWindow` pour charger dynamiquement les fenêtres de votre plugin.
+
+Le composant `LPluginWindow` charge les fenêtres via des paramètres d'URL, ce qui permet à votre plugin de contrôler le contenu et le comportement des panneaux personnalisés.
+
+```ts
+import { LPluginWindow } from '@luna-park/plugin';
+
+export default({
+    /* ... */
+    components: {
+        MyWindow: LPluginWindow
+    }
+});
+```
+
+Vous pouvez ensuite ouvrir une fenêtre à partir de votre logique de plugin en passant les paramètres d'URL appropriés. <!-- TODO: confirm API shape for opening windows and parameter passing --> Les fenêtres personnalisées apparaissent comme des panneaux flottants dans l'éditeur et restent accessibles pendant la session de travail.
+
+## Templates
+
+Les plugins peuvent fournir des fichiers de template que les utilisateurs peuvent importer dans leurs projets. Cela permet aux plugins d'offrir des mises en page de démarrage et des composants.
+
+Définissez les templates de votre plugin en utilisant la propriété `templates` :
+
+```ts
+import { makePlugin } from '@luna-park/plugin';
+
+export default({
+    /* ... */
+    templates: [
+        /* Templates définis ici */
+    ]
+});
+```
+
+<!-- TODO: confirm template structure and properties -->
+
+Une fois définis, les templates apparaissent dans l'interface d'importation de l'éditeur. Les utilisateurs peuvent les sélectionner pour créer rapidement de nouveaux composants avec la mise en page et les composants prédéfinis offerts par votre plugin.
+
 ---
 
 :::info

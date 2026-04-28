@@ -8,7 +8,7 @@ import Gif2 from "/assets/images/fundamentals/styling/gif2.gif";
 
 # Effets visuels
 
-Les effets visuels permettent d’ajouter de la profondeur et du relief à votre interface.
+Les effets visuels permettent d'ajouter de la profondeur et du relief à votre interface.
 Ils influencent la perception des éléments sans modifier leur structure.
 
 ## Coins arrondis (`Radius`)
@@ -39,6 +39,20 @@ alt="Exemples de styles de bordures"
 />
 
 ---
+
+## Ombres (`Shadow`)
+
+| Propriété | Description |
+|------------|--------------|
+| **Blur Radius** | Contrôle le flou de l'ombre. Une valeur plus élevée crée une ombre plus douce. |
+| **Spread Radius** | Augmente ou réduit la taille de l'ombre. |
+| **Offset X/Y** | Définit la position horizontale et verticale de l'ombre par rapport à l'élément. |
+| **Color** | Couleur de l'ombre. |
+
+SCREEN_HERE: panneau de configuration des propriétés d'ombre dans l'éditeur Luna Park
+
+---
+
 ## Opacité (`Opacity`)
 
 | Propriété | Description                                                                                       |
@@ -54,12 +68,12 @@ alt="Exemples de niveaux d'opacité"
 
 ## Transformations (`Transform`)
 
-Les transformations permettent de modifier la position, la taille et l’orientation d’un élément sans affecter son flux dans la page.  
+Les transformations permettent de modifier la position, la taille et l'orientation d'un élément sans affecter son flux dans la page.  
 Elles sont souvent utilisées pour créer des animations ou des effets visuels dynamiques.
 
 | Propriété | Description                                                                    |
 |------------|--------------------------------------------------------------------------------|
-| **Translate** | Déplace un élément sur l’axe X, Y ou Z. Exemple : `translateX(50px)`.          |
+| **Translate** | Déplace un élément sur l'axe X, Y ou Z. Exemple : `translateX(50px)`.          |
 | **Rotate** | Fait pivoter un élément autour de son centre. Exemple : `rotate(45deg)`.       |
 | **Scale** | Agrandit ou réduit un élément. Exemple : `scale(110%)`.                        |
 

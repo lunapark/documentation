@@ -14,3 +14,9 @@ Dans cette section, vous découvrirez comment utiliser l'éditeur de programmati
 - Construire et connecter des blocs logiques (nœuds).
 - Gérer des variables dynamiques et des flux de données.
 - Implémenter des conditions, des boucles, et des appels API.
+
+## Opérations asynchrones
+
+Vos logiques visuelles peuvent inclure des opérations **async** et gérer les **promise** nativement. Cela signifie que vous pouvez effectuer des opérations qui prennent du temps, comme des appels API ou des requêtes de base de données, sans bloquer l'exécution de votre application.
+
+Dans votre graphe visuel, les nœuds peuvent attendre le résultat d'une `promise` avant de continuer l'exécution. Cette capacité facilite la construction de workflows qui dépendent d'opérations externes ou asynchrones.

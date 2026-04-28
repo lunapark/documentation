@@ -40,6 +40,16 @@ Un nœud conditionnel possède :
 
 <DExampleEditor graph="if" animation :zoomLevel="1"/>
 
+## Nœud Switch
+
+Le nœud **Switch** route l'exécution en fonction de la correspondance entre une valeur et plusieurs cas. Utilisez-le lorsque vous avez plusieurs branches d'exécution basées sur différentes valeurs (string ou number).
+
+Un nœud Switch possède :
+- Une entrée d'exécution (<DSchemaType :schema="LogicType.exec()" />)
+- Une entrée de valeur (<DSchemaType :schema="LogicType.union(LogicType.string(), LogicType.number())" />)
+- Une sortie par cas correspondant (<DSchemaType :schema="LogicType.exec()" />)
+- Une sortie par défaut (<DSchemaType :schema="LogicType.exec()" />)
+
 ## Nœuds de boucle (For, While)
 
 Les nœuds de boucle permettent de répéter une action plusieurs fois en fonction d'une condition ou d'une liste.

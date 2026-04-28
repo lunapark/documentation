@@ -14,3 +14,9 @@ In this section, you will discover how to use the visual programming editor to:
 - Build and connect logical blocks (nodes).
 - Manage dynamic variables and data flows.
 - Implement conditions, loops, and API calls.
+
+## Asynchronous operations
+
+Your visual logics can include **async** operations and handle **promises** natively. This means you can perform operations that take time, such as API calls or database queries, without blocking your application's execution.
+
+In your visual graph, nodes can wait for the result of a `promise` before continuing execution. This capability makes it easier to build workflows that depend on external or asynchronous operations.

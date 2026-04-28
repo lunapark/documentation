@@ -30,6 +30,20 @@ alt="Capture d'écran de l'éditeur Luna Park"
 
 _Note : Toutes les règles de stylisation disponibles dans Luna Park correspondent aux règles CSS trouvées dans les standards du web._
 
+## Propriétés à deux valeurs
+
+Certaines propriétés de style acceptent exactement deux valeurs, comme la translation (X/Y) ou l'espacement (horizontal/vertical). Luna Park fournit une interface d'entrée spécialisée pour ces propriétés avec des contrôles séparés pour chaque axe.
+
+Lorsque vous modifiez une propriété à deux valeurs :
+
+1. Vous verrez deux champs d'entrée, un pour la valeur horizontale et un pour la valeur verticale.
+2. Chaque champ dispose de son propre menu déroulant d'unité pour une flexibilité maximale.
+3. Modifiez indépendamment chaque valeur selon vos besoins.
+
+## Mise en évidence automatique de la recherche de style
+
+Lorsque vous recherchez une propriété de style dans l'onglet **style** et la sélectionnez, la ligne correspondante est automatiquement mise en évidence pendant 4 secondes. Cela rend plus facile de localiser la propriété dans la liste, surtout lorsque vous travaillez avec de nombreuses propriétés de style.
+
 ## Jetons de design
 
 Luna Park permet également l'utilisation de jetons de design. Ce sont des valeurs réutilisables qui garantissent un style cohérent dans toute l'application. Par exemple, vous pouvez définir une couleur principale et l'utiliser partout dans votre application. Cela facilite la gestion des styles et permet des modifications globales rapides.

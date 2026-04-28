@@ -11,6 +11,11 @@ Vous pouvez accéder à la `palette` via le bouton <LIcon :icon="faPalette" />  
 Les couleurs principales (primaire, secondaire, contenu) peuvent être modifiées à tout moment. Les nuances et dégradés associés sont **générés automatiquement** pour assurer la **cohérence visuelle** sur l'ensemble de l'application.
 
 L'option `Match editor` permet d'appliquer les mêmes couleurs à l'interface de l'éditeur. Utile pour **réduire la fatigue visuelle** pendant la conception.
+
+## Responsive strategy
+
+La stratégie responsive peut être configurée depuis les paramètres de style de la `palette`. Elle détermine comment votre application s'adapte à différentes tailles d'écran.
+
 <DImage
 :src="Screen3"
 alt="Capture d'écran de l'éditeur Luna Park"

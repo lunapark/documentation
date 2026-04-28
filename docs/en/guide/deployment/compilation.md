@@ -32,6 +32,15 @@ You can also choose the history mode from the following types:
 - **Web Mode**: Generates links like `myApp.com/home/dashboard`. This mode is better for SEO but requires server configuration to redirect all 404 errors to the `index` file.
 - **Memory Mode**: Generates links like `myApp.com/` (the path is hidden). This mode works in all conditions but is not optimal for SEO.
 
+## Components and Features of Generated Web Applications
+
+### RouterLink Component
+
+Your generated web applications include an `LRouterLink` component that automatically handles navigation:
+
+- Internal links are routed via vue-router for optimized navigation
+- External links open in a new tab
+
 ## Export a Desktop Application
 
 To export a desktop application, simply click on the <LIcon :icon="faHammer"/> (Compile) icon in the top bar. Then, choose the OS on which you want to export (Windows, Linux, or Mac) in the `portable` or `installer` section.
@@ -60,4 +69,3 @@ The settings are available in the `Desktop Settings` tab of the inspection panel
 ::: warning Mobile Export Not Available
 Export for mobile is not ready yet.
 :::
-

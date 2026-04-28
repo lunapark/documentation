@@ -227,6 +227,10 @@ export default defineConfig({
                             {
                                 link: "/fr/guide/plugins/deployment",
                                 text: "Déploiement"
+                            },
+                            {
+                                link: "/fr/guide/plugins/tokens",
+                                text: "Tokens"
                             }
                         ],
                         text: "API Plugin"
@@ -442,6 +446,10 @@ export default defineConfig({
                             {
                                 link: "/en/guide/plugins/deployment",
                                 text: "Deployment"
+                            },
+                            {
+                                link: "/en/guide/plugins/tokens",
+                                text: "Tokens"
                             }
                         ],
                         text: "Plugin API"

@@ -124,7 +124,7 @@ import { makePlugin } from '@luna-park/plugin';
 export default({
     lifecycle: {
         update: ({config}) => { console.log("New config:", config) }
-    })
+    }
 });
 ```
 
@@ -156,8 +156,48 @@ export default({
 });
 ```
 
+## Custom Windows
+
+Plugins can define and open custom windows to extend the editor with custom user interface panels. Use the `LPluginWindow` component to dynamically load your plugin's windows.
+
+The `LPluginWindow` component loads windows via URL parameters, allowing your plugin to control the content and behavior of custom panels.
+
+```ts
+import { LPluginWindow } from '@luna-park/plugin';
+
+export default({
+    /* ... */
+    components: {
+        MyWindow: LPluginWindow
+    }
+});
+```
+
+You can then open a window from your plugin logic by passing the appropriate URL parameters. <!-- TODO: confirm API shape for opening windows and parameter passing --> Custom windows appear as floating panels in the editor and remain accessible throughout the work session.
+
+## Templates
+
+Plugins can provide template files that users can import into their projects. This allows plugins to offer starter layouts and components.
+
+Define your plugin's templates using the `templates` property:
+
+```ts
+import { makePlugin } from '@luna-park/plugin';
+
+export default({
+    /* ... */
+    templates: [
+        /* Templates defined here */
+    ]
+});
+```
+
+<!-- TODO: confirm template structure and properties -->
+
+Once defined, templates appear in the editor's import interface. Users can select them to quickly create new components with the predefined layout and components offered by your plugin.
+
 ---
 
 :::info
-Components and logic nodes are covered in later sections.
+Components and logic nodes are covered in the following sections.
 :::
