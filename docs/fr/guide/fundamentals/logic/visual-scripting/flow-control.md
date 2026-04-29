@@ -42,13 +42,13 @@ Un nœud conditionnel possède :
 
 ## Nœud Switch
 
-Le nœud **Switch** route l'exécution en fonction de la correspondance entre une valeur et plusieurs cas. Utilisez-le lorsque vous avez plusieurs branches d'exécution basées sur différentes valeurs (string ou number).
+Le nœud **Switch** route l'exécution selon la valeur d'une entrée, comme un `switch` en JavaScript. Pour chaque cas déclaré, une sortie d'exécution dédiée est exposée ; une sortie `default` capture les valeurs non matchées.
 
 Un nœud Switch possède :
 - Une entrée d'exécution (<DSchemaType :schema="LogicType.exec()" />)
 - Une entrée de valeur (<DSchemaType :schema="LogicType.union(LogicType.string(), LogicType.number())" />)
-- Une sortie par cas correspondant (<DSchemaType :schema="LogicType.exec()" />)
-- Une sortie par défaut (<DSchemaType :schema="LogicType.exec()" />)
+- Une sortie d'exécution par cas déclaré (<DSchemaType :schema="LogicType.exec()" />)
+- Une sortie `default` (<DSchemaType :schema="LogicType.exec()" />)
 
 ## Nœuds de boucle (For, While)
 
@@ -73,3 +73,9 @@ Un nœud de boucle While possède :
 - Une entrée de condition (<DSchemaType :schema="LogicType.boolean()" />)
 - Une sortie d'exécution (<DSchemaType :schema="LogicType.exec()" />)
 - Une sortie de fin (<DSchemaType :schema="LogicType.exec()" />)
+
+## Opérations asynchrones
+
+Le flux d'exécution gère nativement les opérations **async**. Quand un nœud doit attendre un résultat qui prend du temps (appel API, requête BDD, etc.), le flux se met en pause jusqu'à ce que ce résultat soit prêt ; il reprend ensuite avec la valeur disponible sur la sortie du nœud.
+
+_Pour les développeurs JavaScript : c'est l'équivalent d'un `await` sur une promise._

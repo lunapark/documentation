@@ -44,9 +44,9 @@ alt="Exemples de styles de bordures"
 
 | Propriété | Description |
 |------------|--------------|
-| **Blur Radius** | Contrôle le flou de l'ombre. Une valeur plus élevée crée une ombre plus douce. |
-| **Spread Radius** | Augmente ou réduit la taille de l'ombre. |
-| **Offset X/Y** | Définit la position horizontale et verticale de l'ombre par rapport à l'élément. |
+| **Blur Radius** | Flou de l'ombre. |
+| **Spread Radius** | Taille de l'ombre. |
+| **Offset X/Y** | Décalage horizontal et vertical. |
 | **Color** | Couleur de l'ombre. |
 
 SCREEN_HERE: panneau de configuration des propriétés d'ombre dans l'éditeur Luna Park

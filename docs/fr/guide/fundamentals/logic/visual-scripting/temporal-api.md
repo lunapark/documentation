@@ -1,60 +1,35 @@
-<script setup>
-import { faCalendar, faClock, faHourglassEnd } from '@fortawesome/pro-solid-svg-icons'
-</script>
-
 # Temporal API
 
-La **Temporal API** fournit un ensemble de `nodes` pour manipuler les dates et heures avec précision. Elle remplace l'approche traditionnelle de JavaScript `Date` en offrant des types distincts pour les dates, les heures et les durées, sans les complications liées aux fuseaux horaires ou à l'implémentation.
+Les nodes **Temporal** permettent de manipuler dates, heures et durées dans votre logique.
 
-## Utiliser les nodes Temporal
+## Types disponibles
 
-Les `nodes` Temporal s'intègrent dans votre logique visuelle comme n'importe quel autre `node`. Vous pouvez les combiner pour construire des opérations complexes de gestion du temps.
+| Type | Exemple |
+|------|---------|
+| **Date** | `2026-04-28` |
+| **Time** | `14:30:00` |
+| **DateTime** | `2026-04-28T14:30:00` |
+| **Duration** | `PT3H25M` |
 
-- <LIcon :icon="faCalendar" /> **PlainDate** - Représente une date spécifique (année, mois, jour) sans heure ni fuseau horaire.
-- <LIcon :icon="faClock" /> **PlainTime** - Représente une heure spécifique (heures, minutes, secondes, millisecondes) sans date ni fuseau horaire.
-- <LIcon :icon="faCalendar" /> **PlainDateTime** - Combine une date et une heure en une seule valeur, sans fuseau horaire.
-- <LIcon :icon="faHourglassEnd" /> **Duration** - Représente une période de temps (années, mois, semaines, jours, heures, minutes, secondes).
+## Opérations
 
-## PlainDate
+Pour chaque type, un ensemble de nodes couvre les opérations courantes. Exemple pour **Date** :
 
-Le `node` **PlainDate** crée ou manipule une date. Vous pouvez l'utiliser pour stocker des dates dans votre `store` ou les transmettre à d'autres parties de votre application.
+| Node | Effet |
+|------|-------|
+| `Create Date` | Crée une date depuis ses composants (année, mois, jour). |
+| `Date From` | Parse une date depuis une chaîne. |
+| `Date Now` | Date courante. |
+| `Date Add` | Ajoute une `Duration` à la date. |
+| `Substract` | Soustrait une `Duration`. |
+| `Compare` | Compare deux dates. |
+| `Since` / `Until` | Calcule la durée entre deux dates. |
+| `To Date Time` | Convertit la date en `DateTime`. |
 
-Les opérations courantes incluent :
+Les types **Time**, **DateTime** et **Duration** suivent la même convention de nommage (`Create DateTime`, `DateTime Add`, etc.).
 
-- Créer une date à partir d'une année, un mois et un jour.
-- Ajouter ou soustraire une durée à une date.
-- Comparer deux dates.
-- Accéder aux composants d'une date (jour de la semaine, numéro de la semaine, etc.).
+Le node `Create Duration` se distingue : ses entrées sont optionnelles. Vous cochez les unités voulues (`years`, `months`, `weeks`, `days`, `hours`, `minutes`, `seconds`, `milliseconds`, `microseconds`, `nanoseconds`) et chaque case ajoute une entrée numérique sur le node. La sortie est une `Duration` ISO.
 
-## PlainTime
+SCREEN_HERE: nodes Temporal dans le menu d'insertion.
 
-Le `node` **PlainTime** représente une heure sans date. Utilisez-le pour stocker des horaires, des heures d'ouverture ou des délais.
-
-Les opérations courantes incluent :
-
-- Créer une heure à partir d'heures, minutes, secondes.
-- Ajouter ou soustraire une durée.
-- Comparer deux heures.
-- Accéder aux composants d'une heure (heure, minute, seconde).
-
-## PlainDateTime
-
-Le `node` **PlainDateTime** combine une date et une heure. Utilisez-le lorsque vous avez besoin d'une valeur de date et d'heure complète, mais sans fuseau horaire.
-
-Les opérations courantes incluent :
-
-- Créer une date-heure à partir d'une date et d'une heure.
-- Ajouter ou soustraire une durée.
-- Comparer deux dates-heures.
-- Diviser une date-heure en ses composants date et heure.
-
-## Duration
-
-Le `node` **Duration** représente une période de temps. Utilisez-le pour exprimer des intervalles, calculer les différences entre dates, ou ajouter du temps aux valeurs Temporal.
-
-Les opérations courantes incluent :
-
-- Créer une durée à partir de différentes unités (jours, heures, minutes, secondes).
-- Ajouter une durée à une date, heure ou date-heure.
-- Calculer la différence entre deux dates ou heures.
-- Accéder aux composants d'une durée (jours, heures, minutes).
+SCREEN_HERE: node Create Duration avec quelques unités cochées et leurs entrées.

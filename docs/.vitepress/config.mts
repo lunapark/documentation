@@ -58,6 +58,10 @@ export default defineConfig({
                                 text: "Démarrage Rapide"
                             },
                             {
+                                link: "/fr/guide/getting-started/sidekick-settings",
+                                text: "Configurer le Sidekick"
+                            },
+                            {
                                 link: "/fr/guide/getting-started/find-help",
                                 text: "Obtenir de l'aide"
                             }
@@ -136,6 +140,10 @@ export default defineConfig({
                                             {
                                                 link: "/fr/guide/fundamentals/logic/visual-scripting/variables",
                                                 text: "Variables"
+                                            },
+                                            {
+                                                link: "/fr/guide/fundamentals/logic/visual-scripting/temporal-api",
+                                                text: "Temporal API"
                                             }
                                         ],
                                         text: "Script Visuel"
@@ -175,7 +183,8 @@ export default defineConfig({
                     {
                         collapsed: true,
                         items: [
-                            { link: "/fr/guide/integrations/npm", text: "NPM" }
+                            { link: "/fr/guide/integrations/npm", text: "NPM" },
+                            { link: "/fr/guide/integrations/plugins", text: "Plugins" }
                         ],
                         text: "Intégrations"
                     },
@@ -233,7 +242,7 @@ export default defineConfig({
                                 text: "Tokens"
                             }
                         ],
-                        text: "API Plugin"
+                        text: "Développer un plugin"
                     }
                 ]
             }

@@ -1,6 +1,6 @@
 <script setup>
 import {faSquare} from "@fortawesome/pro-regular-svg-icons";
-import { faBolt, faBox, faGear, faPuzzlePiece, faQuoteLeft, faSprayCan, faCode, faCommentDots } from "@fortawesome/pro-solid-svg-icons";
+import { faBolt, faBox, faGear, faPuzzlePiece, faQuoteLeft, faSprayCan, faCode } from "@fortawesome/pro-solid-svg-icons";
 
 import Screen1 from '/assets/images/layout/components/screen1.png';
 </script>
@@ -39,19 +39,6 @@ Voici quelques options à votre disposition pour chaque élément de mise en pag
 - <LIcon :icon="faQuoteLeft" /> **Texte personnalisé** - Écrivez du texte en Markdown.
 - <LIcon :icon="faCode" /> **HTML personnalisé** - Écrivez du code HTML personnalisé.
 - <LIcon :icon="faBolt" /> **Variable** - Utilisez ce type d'élément pour afficher une variable.
-- <LIcon :icon="faCommentDots" /> **Tooltip** - Affiche une info-bulle flottante pour fournir de l'aide contextuelle ou des étiquettes.
-
-## Tooltips
-
-Le composant **Tooltip** vous permet d'afficher une info-bulle flottante qui fournit une aide contextuelle ou des étiquettes lorsque l'utilisateur interagit avec des éléments. Les tooltips améliorent l'expérience utilisateur en guidant les visiteurs sans encombrer votre interface.
-
-### Fonctionnalités
-
-- **Placement personnalisable** - Positionnez la tooltip au-dessus, en dessous, à gauche ou à droite de l'élément cible selon votre mise en page.
-- **Mode sans bordure** - Supprimez la bordure pour une apparence plus épurée et intégrée à votre design.
-- **Animations fluides** - Les tooltips apparaissent et disparaissent avec des transitions fluides qui améliorent la fluidité de l'interface.
-
-Lorsque vous insérez une `Tooltip` dans votre composant, vous configurez ces propriétés via le panneau d'inspection pour adapter le comportement et l'apparence à votre application.
 
 ## Pages
 

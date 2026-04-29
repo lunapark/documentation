@@ -12,9 +12,14 @@ Les couleurs principales (primaire, secondaire, contenu) peuvent être modifiée
 
 L'option `Match editor` permet d'appliquer les mêmes couleurs à l'interface de l'éditeur. Utile pour **réduire la fatigue visuelle** pendant la conception.
 
-## Responsive strategy
+## Stratégie responsive
 
-La stratégie responsive peut être configurée depuis les paramètres de style de la `palette`. Elle détermine comment votre application s'adapte à différentes tailles d'écran.
+La palette définit aussi la **stratégie responsive** de l'application : `desktop first` ou `mobile first`. Elle détermine le sens des media queries appliquées dans vos styles.
+
+Pour un breakpoint posé à `1024px` :
+
+- **Mobile first** : la règle s'applique aux écrans **≥ 1024**.
+- **Desktop first** : la règle s'applique aux écrans **≤ 1024**.
 
 <DImage
 :src="Screen3"

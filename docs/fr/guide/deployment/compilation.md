@@ -32,15 +32,6 @@ Vous pouvez également choisir le mode d'historique parmi ces types :
 - **Mode Web** : Génère des liens comme `monApp.com/accueil/dashboard`. Ce mode est meilleur pour le SEO mais nécessite une configuration sur votre serveur pour rediriger toutes les 404 vers le fichier `index`.
 - **Mode Mémoire** : Génère des liens comme `monApp.com/` (le chemin est caché). Ce mode fonctionne dans toutes les conditions mais n'est pas optimal pour le SEO.
 
-## Composants et fonctionnalités des applications web générées
-
-### Composant RouterLink
-
-Vos applications web générées incluent un composant `LRouterLink` qui gère automatiquement la navigation :
-
-- Les liens internes sont routés via vue-router pour une navigation optimisée
-- Les liens externes s'ouvrent dans un nouvel onglet
-
 ## Exporter une application de bureau
 
 Pour exporter une application de bureau, cliquez simplement sur l'icône <LIcon :icon="faHammer"/> (Compiler) dans la barre supérieure. Ensuite, choisissez l'OS sur lequel vous souhaitez exporter (Windows, Linux ou Mac) dans la section `portable` ou `installateur`.

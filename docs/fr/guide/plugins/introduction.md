@@ -1,28 +1,26 @@
-<script setup lang="ts">
-import Plugins from "/assets/images/plugins/introduction/plugins.png";
-import Install from "/assets/images/plugins/introduction/install.png";
-</script>
+# Introduction
 
-# Introduction aux plugins
+Cette section couvre la création de plugins pour Luna Park. Si vous cherchez plutôt à installer et utiliser un plugin existant, voir [Intégrations > Plugins](/fr/guide/integrations/plugins).
 
-Luna Park supporte les plugins pour étendre ses fonctionnalités. Les plugins peuvent introduire une large gamme de fonctionnalités, y compris de nouveaux composants, des nœuds logiques, des jetons de design, et plus encore.
+## Ce qu'un plugin peut étendre
 
-## Installation de plugins
+Un plugin peut exposer :
 
-Une liste des plugins disponibles se trouve dans le panneau `Libraries > Plugins > Install Plugins`.
+- **Composants personnalisés** : des composants Vue qui apparaissent dans la palette de l'éditeur, avec leurs props, slots, événements et modèles typés.
+- **Nœuds logiques personnalisés** : des opérations et fonctions disponibles dans le graphe de script visuel.
+- **Design tokens** : des valeurs de style réutilisables (couleurs, longueurs, polices) qui apparaissent dans le panneau de style.
+- **Hooks de cycle de vie** : du code qui s'exécute au montage, à la mise à jour ou au démontage du plugin.
+- **Injections** : du CSS ou du JavaScript injecté dans l'éditeur.
+- **Fenêtres personnalisées** : des panneaux d'interface sur mesure ouverts depuis votre plugin.
+- **Templates** : des compositions prêtes à l'emploi que les utilisateurs peuvent importer dans leurs projets.
 
-<DImage
-:src="Plugins"
-alt="Recherche de plugins"
-/>
+## Prérequis
 
-Pour installer un plugin, sélectionnez-le dans la liste et cliquez sur le bouton `Install plugin`.
+- **TypeScript** pour la définition du plugin.
+- **Vue** si vous exposez des composants personnalisés.
 
-<DImage
-:src="Install"
-alt="Installation de plugin"
-/>
+## Démarrer
 
-## Création de plugins
-
-Vous pouvez également créer vos propres plugins pour ajouter des fonctionnalités personnalisées à Luna Park. Si vous êtes familier avec TypeScript (et Vue pour les composants), vous pouvez commencer immédiatement.
+1. [Configuration de l'environnement](./setup) pour initialiser un projet de plugin.
+2. [Bases](./basics) pour la structure d'un plugin (id, config, état interne, hooks).
+3. Les sections suivantes couvrent les composants, nœuds, tokens, et le déploiement.

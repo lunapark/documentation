@@ -4,9 +4,9 @@ import Config from "/assets/images/plugins/basics/config.png";
 
 # Bases des plugins
 
-Le package `@luna-park/plugin` fournit des aides essentielles pour la création de plugins.
+Le package `@luna-park/plugin` fournit les outils nécessaires à la création de plugins.
 
-Votre plugin doit exporter un objet défini en utilisant la fonction `makePlugin` :
+Un plugin exporte un objet défini avec `makePlugin` :
 
 ```ts
 import { makePlugin } from '@luna-park/plugin';
@@ -19,23 +19,19 @@ export default makePlugin({
 });
 ```
 
-Les propriétés suivantes sont requises :
-- `id` : L'identifiant unique du plugin (doit être unique parmi tous les plugins).
-- `name` : Le nom d'affichage du plugin.
-- `icon` : L'icône du plugin (peut être une string URL ou une string SVG).
+Propriétés requises :
+- `id` : identifiant unique parmi tous les plugins.
+- `name` : nom d'affichage.
+- `icon` : string URL ou string SVG.
 
 ## Configuration
 
-La propriété `config` vous permet de définir un formulaire de configuration pour votre plugin. Cette configuration apparaît sur la page des paramètres du plugin et dans la barre supérieure de l'éditeur, et est sauvegardée avec les données du plugin.
+La propriété `config` définit un formulaire affiché dans les paramètres du plugin et dans la barre supérieure de l'éditeur. Les valeurs sont sauvegardées avec les données du plugin.
 
-Elle est définie comme un objet `LogicType`. Pour plus de détails, référez-vous à la section [Typage](./typing).
-
-Exemple :
+`config` est un `LogicType` (voir [Typage](./typing)).
 
 ```ts
-import { makePlugin } from '@luna-park/plugin';
-
-export default({
+makePlugin({
     /* ... */
     config: LogicType.object({
         name: LogicType.string({ default: "Marty McFly" })
@@ -43,23 +39,19 @@ export default({
 });
 ```
 
-Cela crée un formulaire avec un seul champ texte, ayant pour valeur par défaut "Marty McFly".
-
 <DImage
 :src="Config"
 alt="Formulaire de configuration du plugin"
 />
 
-L'objet `config` est disponible dans les hooks et les fonctions d'initialisation de votre plugin. Dans cet exemple, la propriété `name` peut être accédée via `config.name`.
+L'objet `config` est disponible dans les hooks et fonctions d'initialisation (e.g. `config.name`).
 
 ## État interne
 
-Utilisez la propriété `internal` pour stocker des données liées à votre plugin. Ces données sont sauvegardées avec le plugin mais ne sont pas visibles sur la page des paramètres. Vous devez définir une valeur par défaut pour l'état interne.
+`internal` stocke des données du plugin qui ne sont pas exposées dans la page des paramètres. Une valeur par défaut est requise.
 
 ```ts
-import { makePlugin } from '@luna-park/plugin';
-
-export default({
+makePlugin({
     /* ... */
     internal: {
         tutorial: true
@@ -67,33 +59,33 @@ export default({
 });
 ```
 
-L'objet `internal` est disponible dans les hooks et les fonctions d'initialisation de votre plugin. Dans cet exemple, la propriété `tutorial` peut être accédée via `internal.tutorial`.
+Disponible comme `config` dans les hooks et fonctions d'initialisation (e.g. `internal.tutorial`).
 
+## Format des options
 
-# Personnalisation
+Les options qui suivent (hooks, injections, fenêtres, templates) acceptent indifféremment :
+- un objet direct,
+- une fonction qui retourne l'objet (peut être asynchrone).
 
-Les options de personnalisation suivantes peuvent être définies soit comme :
-- Un objet direct.
-- Une fonction qui retourne l'objet.
+Quand une fonction est utilisée, elle reçoit :
 
-Si une fonction est utilisée, elle peut être asynchrone et recevra les arguments suivants :
-- `config` : La configuration actuelle.
-- `internal` : L'état interne actuel.
-- `mode` : `build` ou `editor`, selon l'environnement.
-- `app` : L'instance entière de l'application du projet.
+| Argument   | Description                                      |
+|------------|--------------------------------------------------|
+| `config`   | la configuration actuelle                        |
+| `internal` | l'état interne actuel                            |
+| `mode`     | `build` ou `editor` selon l'environnement        |
+| `app`      | l'instance de l'application du projet            |
 
-Vous pouvez modifier ces objets durant l'exécution de la fonction.
+Ces objets peuvent être modifiés durant l'exécution.
 
 ## Hooks de cycle de vie
 
 ### Mount
 
-Appelé lorsque le plugin est monté dans l'éditeur, soit lors de l'installation, soit lors du chargement du projet.
+Appelé lorsque le plugin est monté dans l'éditeur (installation ou chargement du projet).
 
 ```ts
-import { makePlugin } from '@luna-park/plugin';
-
-export default({
+makePlugin({
     lifecycle: {
         mount: () => { console.log("Plugin monté !") }
     }
@@ -105,9 +97,7 @@ export default({
 Appelé lorsque le plugin est désinstallé.
 
 ```ts
-import { makePlugin } from '@luna-park/plugin';
-
-export default({
+makePlugin({
     lifecycle: {
         unmount: () => { console.log("Au revoir !") }
     }
@@ -116,56 +106,39 @@ export default({
 
 ### Update
 
-Appelé à chaque fois que la configuration du plugin est mise à jour.
+Appelé à chaque mise à jour de la configuration du plugin.
 
 ```ts
-import { makePlugin } from '@luna-park/plugin';
-
-export default({
+makePlugin({
     lifecycle: {
-        update: ({config}) => { console.log("Nouvelle config :", config) }
+        update: ({ config }) => { console.log("Nouvelle config :", config) }
     }
 });
 ```
 
 ## Injections
 
-La propriété `inject` vous permet d'injecter du CSS ou du JavaScript dans l'éditeur.
-
-### Injection CSS
+`inject` injecte du CSS ou du JavaScript dans l'éditeur :
 
 ```ts
-import { makePlugin } from '@luna-park/plugin';
-
-export default({
+makePlugin({
     inject: {
-        css: `#app { background-color: red; }` // Notez que cela peut être une fonction retournant une string
+        css: `#app { background-color: red; }`,
+        js: `alert("Salut !");`
     }
 });
 ```
 
-### Injection JavaScript
-
-```ts
-import { makePlugin } from '@luna-park/plugin';
-
-export default({
-    inject: {
-        js: `alert("Salut !");` // Notez que cela peut être une fonction retournant une string
-    }
-});
-```
+Chaque entrée peut être une string ou une fonction qui retourne une string.
 
 ## Fenêtres personnalisées
 
-Les plugins peuvent définir et ouvrir des fenêtres personnalisées pour étendre l'éditeur avec des panneaux d'interface utilisateur sur mesure. Utilisez le composant `LPluginWindow` pour charger dynamiquement les fenêtres de votre plugin.
-
-Le composant `LPluginWindow` charge les fenêtres via des paramètres d'URL, ce qui permet à votre plugin de contrôler le contenu et le comportement des panneaux personnalisés.
+Un plugin peut afficher des fenêtres flottantes dans l'éditeur via le composant `LPluginWindow`. Son contenu et son comportement sont contrôlés par paramètres d'URL.
 
 ```ts
 import { LPluginWindow } from '@luna-park/plugin';
 
-export default({
+makePlugin({
     /* ... */
     components: {
         MyWindow: LPluginWindow
@@ -173,31 +146,27 @@ export default({
 });
 ```
 
-Vous pouvez ensuite ouvrir une fenêtre à partir de votre logique de plugin en passant les paramètres d'URL appropriés. <!-- TODO: confirm API shape for opening windows and parameter passing --> Les fenêtres personnalisées apparaissent comme des panneaux flottants dans l'éditeur et restent accessibles pendant la session de travail.
+<!-- TODO: documenter l'ouverture d'une fenêtre et le passage de paramètres -->
 
 ## Templates
 
-Les plugins peuvent fournir des fichiers de template que les utilisateurs peuvent importer dans leurs projets. Cela permet aux plugins d'offrir des mises en page de démarrage et des composants.
-
-Définissez les templates de votre plugin en utilisant la propriété `templates` :
+Un plugin peut fournir des templates importables dans les projets via la propriété `templates` :
 
 ```ts
-import { makePlugin } from '@luna-park/plugin';
-
-export default({
+makePlugin({
     /* ... */
     templates: [
-        /* Templates définis ici */
+        /* ... */
     ]
 });
 ```
 
-<!-- TODO: confirm template structure and properties -->
+<!-- TODO: documenter la structure d'un template -->
 
-Une fois définis, les templates apparaissent dans l'interface d'importation de l'éditeur. Les utilisateurs peuvent les sélectionner pour créer rapidement de nouveaux composants avec la mise en page et les composants prédéfinis offerts par votre plugin.
+Les templates apparaissent dans l'interface d'importation de l'éditeur.
 
 ---
 
 :::info
-Les composants et les nœuds logiques sont couverts dans les sections suivantes.
+Les composants et nœuds logiques sont couverts dans les pages suivantes.
 :::
