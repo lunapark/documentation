@@ -1,29 +1,38 @@
 import type { Plugin } from "vite";
 import path from "path";
 
-interface ImportMapPluginOptions {
+type TImportMapPluginOptions = {
     imports: Record<string, string>;
-}
+};
+
+const localImportPrefixes = ["./", "../", "/"];
 
 export function importMapPlugin({
     imports = {}
-}: ImportMapPluginOptions): Plugin {
+}: TImportMapPluginOptions): Plugin {
     const chunkReferenceMap = new Map<string, string>();
     let base = "/";
+    let root = process.cwd();
 
     return {
         name: "vite-import-map",
 
-        buildStart() {
+        async buildStart() {
             if (this.meta.watchMode) {
                 return;
             }
 
             for (const [key, value] of Object.entries(imports)) {
-                if (["./", "../", "/"].some((prefix) => value.startsWith(prefix))) {
-                    const resolvedPath = path.resolve(`./${ value }`);
+                if (localImportPrefixes.some((prefix) => value.startsWith(prefix))) {
+                    const localImportPath = value.startsWith("/") ? `.${ value }` : value;
+                    const resolvedImport = await this.resolve(path.resolve(root, localImportPath));
+
+                    if (!resolvedImport) {
+                        this.error(`Could not resolve import map entry "${ value }".`);
+                    }
+
                     const fileRef = this.emitFile({
-                        id: resolvedPath,
+                        id: resolvedImport.id,
                         type: "chunk",
                         preserveSignature: "strict"
                     });
@@ -34,6 +43,7 @@ export function importMapPlugin({
 
         configResolved(config) {
             base = config.base;
+            root = config.root;
         },
 
         generateBundle() {

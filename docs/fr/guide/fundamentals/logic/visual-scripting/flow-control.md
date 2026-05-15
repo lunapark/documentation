@@ -46,7 +46,7 @@ Le nœud **Switch** route l'exécution selon la valeur d'une entrée, comme un `
 
 Un nœud Switch possède :
 - Une entrée d'exécution (<DSchemaType :schema="LogicType.exec()" />)
-- Une entrée de valeur (<DSchemaType :schema="LogicType.union(LogicType.string(), LogicType.number())" />)
+- Une entrée de valeur (<DSchemaType :schema="LogicType.union([LogicType.string(), LogicType.number()])" />)
 - Une sortie d'exécution par cas déclaré (<DSchemaType :schema="LogicType.exec()" />)
 - Une sortie `default` (<DSchemaType :schema="LogicType.exec()" />)
 

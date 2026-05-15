@@ -46,7 +46,7 @@ The **Switch** node routes execution based on the value of an input, like a `swi
 
 A Switch node has:
 - An execution input (<DSchemaType :schema="LogicType.exec()" />)
-- A value input (<DSchemaType :schema="LogicType.union(LogicType.string(), LogicType.number())" />)
+- A value input (<DSchemaType :schema="LogicType.union([LogicType.string(), LogicType.number()])" />)
 - One execution output per declared case (<DSchemaType :schema="LogicType.exec()" />)
 - A `default` output (<DSchemaType :schema="LogicType.exec()" />)
 
