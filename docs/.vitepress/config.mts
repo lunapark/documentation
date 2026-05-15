@@ -493,18 +493,10 @@ export default defineConfig({
         ]
     },
     title: "Luna Park",
-    transformHead() {
-        return [
-            [
-                "script",
-                {
-                    type: "importmap"
-                },
-                JSON.stringify({
-                    imports: importMap.createImportMap()
-                })
-            ]
-        ];
+    transformHtml(code) {
+        return code.replace("</title>", `</title>\n<script type ="importmap">${ JSON.stringify({
+            imports: importMap.createImportMap()
+        }) }</script>`);
     },
     vite: {
         plugins: [
