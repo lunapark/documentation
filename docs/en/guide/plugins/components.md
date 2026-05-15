@@ -1,4 +1,4 @@
-# Custom Components
+# Custom components
 
 You can expose custom components to the editor, enabling the creation of component libraries.
 
@@ -39,9 +39,9 @@ export default {
 
 `BaseComponent` is a standard Vue component. Its props, events, slots, and models are mapped to Luna Park's typing system.
 
-## Component Wrapper
+## Component wrapper
 
-If your application requires a wrapper (e.g., for context injection), you can expose it as follows:
+If your application requires a wrapper (e.g. for context injection), you can expose it as follows:
 ```ts
 import { makePlugin } from '@luna-park/plugin';
 import MyWrapper from './MyWrapper.vue';

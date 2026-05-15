@@ -2,6 +2,7 @@
 import Screen1 from '/assets/images/layout/styling/screen1.png';
 import Screen2 from '/assets/images/layout/styling/screen2.png';
 import Screen3 from '/assets/images/layout/styling/screen3.png';
+import QuickStylePanels from '/assets/images/layout/styling/quick-style-panels.png';
 </script>
 
 # Stylisation
@@ -28,11 +29,19 @@ Pour ajouter une catégorie de style (par exemple, couleur, typographie, taille)
 alt="Capture d'écran de l'éditeur Luna Park"
 />
 
+Certaines propriétés acceptent deux valeurs, comme la translation (X/Y) ou l'espacement (horizontal/vertical). Luna Park affiche alors deux champs d'entrée, chacun avec son menu d'unité, modifiables indépendamment.
+
 _Note : Toutes les règles de stylisation disponibles dans Luna Park correspondent aux règles CSS trouvées dans les standards du web._
 
-## Jetons de design
+## Quick style panels
 
-Luna Park permet également l'utilisation de jetons de design. Ce sont des valeurs réutilisables qui garantissent un style cohérent dans toute l'application. Par exemple, vous pouvez définir une couleur principale et l'utiliser partout dans votre application. Cela facilite la gestion des styles et permet des modifications globales rapides.
+Pour les modifications courantes, certaines catégories de style sont accessibles directement depuis le **layout builder**, sans passer par l'onglet style de l'inspecteur. Sélectionnez un élément pour faire apparaître les `quick style panels` (bordure, arrière-plan, taille, espacement, texte, ombre, etc.).
+
+<DImage :src="QuickStylePanels" alt="Quick style panels affichés à côté d'un élément sélectionné dans le layout builder" />
+
+## Tokens de design
+
+Luna Park permet également l'utilisation de tokens de design. Ce sont des valeurs réutilisables qui garantissent un style cohérent dans toute l'application. Par exemple, vous pouvez définir une couleur principale et l'utiliser partout dans votre application. Cela facilite la gestion des styles et permet des modifications globales rapides.
 
 <DImage
 :src="Screen1"
@@ -40,11 +49,11 @@ alt="Capture d'écran de l'éditeur Luna Park"
 />
 
 
-Pour utiliser un jeton de design :
+Pour utiliser un token de design :
 
 1. Passez la souris sur la valeur que vous souhaitez modifier.
-2. Cliquez sur l'icône de lien pour passer en mode de sélection de jeton de design.
-3. Sélectionnez le jeton de design que vous souhaitez utiliser.
+2. Cliquez sur l'icône de lien pour passer en mode de sélection de token de design.
+3. Sélectionnez le token de design que vous souhaitez utiliser.
 
 ![Capture d'écran de l'éditeur Luna Park](/assets/images/layout/styling/gif1.gif)
 

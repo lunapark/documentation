@@ -11,6 +11,16 @@ Vous pouvez accéder à la `palette` via le bouton <LIcon :icon="faPalette" />  
 Les couleurs principales (primaire, secondaire, contenu) peuvent être modifiées à tout moment. Les nuances et dégradés associés sont **générés automatiquement** pour assurer la **cohérence visuelle** sur l'ensemble de l'application.
 
 L'option `Match editor` permet d'appliquer les mêmes couleurs à l'interface de l'éditeur. Utile pour **réduire la fatigue visuelle** pendant la conception.
+
+## Stratégie responsive
+
+La palette définit aussi la **stratégie responsive** de l'application : `desktop first` ou `mobile first`. Elle détermine le sens des media queries appliquées dans vos styles.
+
+Pour un breakpoint posé à `1024px` :
+
+- **Mobile first** : la règle s'applique aux écrans **≥ 1024**.
+- **Desktop first** : la règle s'applique aux écrans **≤ 1024**.
+
 <DImage
 :src="Screen3"
 alt="Capture d'écran de l'éditeur Luna Park"

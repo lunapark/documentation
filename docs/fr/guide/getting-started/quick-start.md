@@ -24,10 +24,6 @@ L'achat d'une licence vous permettra de bénéficier de toutes les fonctionnalit
 La version logicielle de Luna Park n'est pas encore totalement stable (notamment la version MacOS). Utilisez cette version avec précaution. Notez aussi que la version logicielle a quelques versions de retard par rapport à la version cloud.
 :::
 
-Vous pouvez directement télécharger la version logicielle de Luna Park en cliquant sur le bouton **Télécharger** de la [page d'accueil](https://luna-park.app/).
+Le téléchargement de la version logicielle est temporairement indisponible. Cette fonctionnalité sera rétablie dans une version future.
 
-Vous pouvez ensuite utiliser Luna Park gratuitement sans licence pour une durée de 30 jours. Passé ce délai, vous pouvez continuer à l'utiliser gratuitement, mais avec certaines limitations. Vous pouvez également acheter une licence pour bénéficier de toutes les fonctionnalités du framework.
-
-
-
-
+Vous pouvez en attendant utiliser Luna Park en version cloud sur la [page d'accueil](https://luna-park.app/).

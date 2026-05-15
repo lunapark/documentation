@@ -7,6 +7,7 @@ Le **scripting visuel** (ou programmation visuelle) est une manière de dévelop
 - **Performance :** La logique créée est compilée en code JS, offrant une performance équivalente à une application codée manuellement.
 - **Liberté :** La plupart des fonctions disponibles dans le code sont accessibles en scripting visuel, vous permettant de créer des logiques complexes.
 - **Accessibilité :** La suppression de l'aspect syntaxique du code réduit le temps d'apprentissage et facilite la création de logiques.
+- **Async natif :** Les nœuds peuvent attendre des promises (appels API, requêtes BDD) sans bloquer l'exécution.
 
 ## Ce que vous allez apprendre dans cette section
 

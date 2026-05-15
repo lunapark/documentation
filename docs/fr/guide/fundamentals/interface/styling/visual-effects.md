@@ -4,11 +4,12 @@ import Screen7 from "/assets/images/fundamentals/styling/screen7.png";
 import Screen8 from "/assets/images/fundamentals/styling/screen8.png";
 import Gif1 from "/assets/images/fundamentals/styling/gif1.gif";
 import Gif2 from "/assets/images/fundamentals/styling/gif2.gif";
+import ShadowPanel from "/assets/images/layout/styling/shadow-panel.png";
 </script>
 
 # Effets visuels
 
-Les effets visuels permettent d’ajouter de la profondeur et du relief à votre interface.
+Les effets visuels permettent d'ajouter de la profondeur et du relief à votre interface.
 Ils influencent la perception des éléments sans modifier leur structure.
 
 ## Coins arrondis (`Radius`)
@@ -39,6 +40,20 @@ alt="Exemples de styles de bordures"
 />
 
 ---
+
+## Ombres (`Shadow`)
+
+| Propriété | Description |
+|------------|--------------|
+| **Blur Radius** | Flou de l'ombre. |
+| **Spread Radius** | Taille de l'ombre. |
+| **Offset X/Y** | Décalage horizontal et vertical. |
+| **Color** | Couleur de l'ombre. |
+
+<DImage :src="ShadowPanel" alt="Panneau de configuration des propriétés d'ombre dans l'éditeur Luna Park" />
+
+---
+
 ## Opacité (`Opacity`)
 
 | Propriété | Description                                                                                       |
@@ -54,12 +69,12 @@ alt="Exemples de niveaux d'opacité"
 
 ## Transformations (`Transform`)
 
-Les transformations permettent de modifier la position, la taille et l’orientation d’un élément sans affecter son flux dans la page.  
+Les transformations permettent de modifier la position, la taille et l'orientation d'un élément sans affecter son flux dans la page.  
 Elles sont souvent utilisées pour créer des animations ou des effets visuels dynamiques.
 
 | Propriété | Description                                                                    |
 |------------|--------------------------------------------------------------------------------|
-| **Translate** | Déplace un élément sur l’axe X, Y ou Z. Exemple : `translateX(50px)`.          |
+| **Translate** | Déplace un élément sur l'axe X, Y ou Z. Exemple : `translateX(50px)`.          |
 | **Rotate** | Fait pivoter un élément autour de son centre. Exemple : `rotate(45deg)`.       |
 | **Scale** | Agrandit ou réduit un élément. Exemple : `scale(110%)`.                        |
 

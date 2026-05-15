@@ -1,28 +1,26 @@
-<script setup>
-import plugins from '/assets/images/plugins/introduction/plugins.png';
-import install from '/assets/images/plugins/introduction/install.png';
-</script>
+# Introduction
 
-# Introduction to Plugins
+This section covers creating plugins for Luna Park. If you are looking to install and use an existing plugin instead, see [Integrations > Plugins](/en/guide/integrations/plugins).
 
-Luna Park supports plugins to extend its functionality. Plugins can introduce a wide range of features, including new components, logic nodes, design tokens, and more.
+## What a plugin can extend
 
-## Installing Plugins
+A plugin can expose:
 
-A list of available plugins can be found in the `Libraries > Plugins > Install Plugins` panel.
+- **Custom components**: Vue components that appear in the editor palette, with typed props, slots, events, and models.
+- **Custom logic nodes**: operations and functions available in the visual scripting graph.
+- **Design tokens**: reusable style values (colors, lengths, fonts) that appear in the style panel.
+- **Lifecycle hooks**: code that runs on mount, update, or unmount of the plugin.
+- **Injections**: CSS or JavaScript injected into the editor.
+- **Custom windows**: tailored UI panels opened from your plugin.
+- **Templates**: ready-made compositions that users can import into their projects.
 
-<DImage
-:src="plugins"
-alt="Plugins search"
-/>
+## Prerequisites
 
-To install a plugin, select it from the list and click the `Install plugin` button.
+- **TypeScript** for the plugin definition.
+- **Vue** if you expose custom components.
 
-<DImage
-:src="install"
-alt="Plugin installation"
-/>
+## Get started
 
-## Creating Plugins
-
-You can also create your own plugins to add custom features to Luna Park. If you are familiar with TypeScript (and Vue for components), you can get started immediately.
+1. [Environment setup](./setup) to initialize a plugin project.
+2. [Basics](./basics) for the structure of a plugin (id, config, internal state, hooks).
+3. The following sections cover components, nodes, tokens, and deployment.

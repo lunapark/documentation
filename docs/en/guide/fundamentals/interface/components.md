@@ -27,11 +27,9 @@ When selecting a component file, you'll get a few configuration options in the i
 
 ## Layout tree
 
-The layout tree accessible in the options panel allows you to build the architecture of your component. To add an element to the tree, simply click on the
+The layout tree accessible in the options panel allows you to build the architecture of your component. To add an element to the tree, simply click on the button. Some elements can have children. These slots for children are called slots.
 
-button. Some of the elements can have children. Those kind of emplacement to put children are called slots.
-
-There are a few options at your disposal for each layout element, here are the most common ones:
+Here are a few options at your disposal for each layout element, here are the most common ones:
 
 - <LIcon :icon="faSquare" /> **Block** - Most basic element type, it's just a box that can have children.
 - <LIcon :icon="faSprayCan" /> **UI Library** - Pre-made UI elements to speed up the building of your app.

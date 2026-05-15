@@ -58,6 +58,10 @@ export default defineConfig({
                                 text: "Démarrage Rapide"
                             },
                             {
+                                link: "/fr/guide/getting-started/sidekick-settings",
+                                text: "Configurer le Sidekick"
+                            },
+                            {
                                 link: "/fr/guide/getting-started/find-help",
                                 text: "Obtenir de l'aide"
                             }
@@ -134,8 +138,8 @@ export default defineConfig({
                                                 text: "Contrôle de Flux"
                                             },
                                             {
-                                                link: "/fr/guide/fundamentals/logic/visual-scripting/variables",
-                                                text: "Variables"
+                                                link: "/fr/guide/fundamentals/logic/visual-scripting/temporal-api",
+                                                text: "Temporal API"
                                             }
                                         ],
                                         text: "Script Visuel"
@@ -175,7 +179,8 @@ export default defineConfig({
                     {
                         collapsed: true,
                         items: [
-                            { link: "/fr/guide/integrations/npm", text: "NPM" }
+                            { link: "/fr/guide/integrations/npm", text: "NPM" },
+                            { link: "/fr/guide/integrations/plugins", text: "Plugins" }
                         ],
                         text: "Intégrations"
                     },
@@ -227,9 +232,13 @@ export default defineConfig({
                             {
                                 link: "/fr/guide/plugins/deployment",
                                 text: "Déploiement"
+                            },
+                            {
+                                link: "/fr/guide/plugins/tokens",
+                                text: "Tokens"
                             }
                         ],
-                        text: "API Plugin"
+                        text: "Développer un plugin"
                     }
                 ]
             }
@@ -268,6 +277,10 @@ export default defineConfig({
                             {
                                 link: "/en/guide/getting-started/quick-start",
                                 text: "Quick Start"
+                            },
+                            {
+                                link: "/en/guide/getting-started/sidekick-settings",
+                                text: "Configure the Sidekick"
                             },
                             {
                                 link: "/en/guide/getting-started/find-help",
@@ -346,8 +359,8 @@ export default defineConfig({
                                                 text: "Flow Control"
                                             },
                                             {
-                                                link: "/en/guide/fundamentals/logic/visual-scripting/variables",
-                                                text: "Variables"
+                                                link: "/en/guide/fundamentals/logic/visual-scripting/temporal-api",
+                                                text: "Temporal API"
                                             }
                                         ],
                                         text: "Visual Scripting"
@@ -390,6 +403,10 @@ export default defineConfig({
                             {
                                 link: "/en/guide/integrations/npm",
                                 text: "NPM"
+                            },
+                            {
+                                link: "/en/guide/integrations/plugins",
+                                text: "Plugins"
                             }
                         ],
                         text: "Integrations"
@@ -442,9 +459,13 @@ export default defineConfig({
                             {
                                 link: "/en/guide/plugins/deployment",
                                 text: "Deployment"
+                            },
+                            {
+                                link: "/en/guide/plugins/tokens",
+                                text: "Tokens"
                             }
                         ],
-                        text: "Plugin API"
+                        text: "Develop a plugin"
                     }
                 ]
             }
