@@ -4,6 +4,7 @@ import Screen7 from "/assets/images/fundamentals/styling/screen7.png";
 import Screen8 from "/assets/images/fundamentals/styling/screen8.png";
 import Gif1 from "/assets/images/fundamentals/styling/gif1.gif";
 import Gif2 from "/assets/images/fundamentals/styling/gif2.gif";
+import ShadowPanel from "/assets/images/layout/styling/shadow-panel.png";
 </script>
 
 # Effets visuels
@@ -49,7 +50,7 @@ alt="Exemples de styles de bordures"
 | **Offset X/Y** | Décalage horizontal et vertical. |
 | **Color** | Couleur de l'ombre. |
 
-SCREEN_HERE: panneau de configuration des propriétés d'ombre dans l'éditeur Luna Park
+<DImage :src="ShadowPanel" alt="Panneau de configuration des propriétés d'ombre dans l'éditeur Luna Park" />
 
 ---
 

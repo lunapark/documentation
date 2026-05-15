@@ -2,11 +2,11 @@
 import Config from "/assets/images/plugins/basics/config.png";
 </script>
 
-# Plugin Basics
+# Plugin basics
 
-The `@luna-park/plugin` package provides essential helpers for creating plugins.
+The `@luna-park/plugin` package provides the tools needed to create plugins.
 
-Your plugin must export an object defined using the `makePlugin` function:
+A plugin exports an object defined with `makePlugin`:
 
 ```ts
 import { makePlugin } from '@luna-park/plugin';
@@ -19,23 +19,19 @@ export default makePlugin({
 });
 ```
 
-The following properties are required:
-- `id`: The plugin's unique identifier (must be unique across all plugins).
-- `name`: The display name of the plugin.
-- `icon`: The plugin's icon (can be a URL string or an SVG string).
+Required properties:
+- `id`: unique identifier across all plugins.
+- `name`: display name.
+- `icon`: URL string or SVG string.
 
 ## Configuration
 
-The `config` property allows you to define a configuration form for your plugin. This configuration appears on the plugin's settings page and the editor's top bar, and is saved alongside the plugin's data.
+The `config` property defines a form displayed in the plugin's settings and in the editor's top bar. Values are saved with the plugin's data.
 
-It is defined as a `LogicType` object. For more details, refer to the [Typing](./typing) section.
-
-Example:
+`config` is a `LogicType` (see [Typing](./typing)).
 
 ```ts
-import { makePlugin } from '@luna-park/plugin';
-
-export default({
+makePlugin({
     /* ... */
     config: LogicType.object({
         name: LogicType.string({ default: "Marty McFly" })
@@ -43,23 +39,19 @@ export default({
 });
 ```
 
-This creates a form with a single text field, defaulting to "Marty McFly".
-
 <DImage
 :src="Config"
 alt="Plugin configuration form"
 />
 
-The `config` object is available in your plugin's hooks and initialization functions. In this example, the `name` property can be accessed via `config.name`.
+The `config` object is available in hooks and initialization functions (e.g. `config.name`).
 
-## Internal State
+## Internal state
 
-Use the `internal` property to store data related to your plugin. This data is saved with the plugin but is not visible on the settings page. You must define a default value for the internal state.
+`internal` stores plugin data that is not exposed in the settings page. A default value is required.
 
 ```ts
-import { makePlugin } from '@luna-park/plugin';
-
-export default({
+makePlugin({
     /* ... */
     internal: {
         tutorial: true
@@ -67,33 +59,33 @@ export default({
 });
 ```
 
-The `internal` object is available in your plugin's hooks and initialization functions. In this example, the `tutorial` property can be accessed via `internal.tutorial`.
+Available like `config` in hooks and initialization functions (e.g. `internal.tutorial`).
 
+## Option format
 
-# Customization
+The options that follow (hooks, injections, windows, templates) accept either:
+- a direct object,
+- a function that returns the object (can be asynchronous).
 
-The following customization options can be defined as either:
-- A direct object.
-- A function that returns the object.
+When a function is used, it receives:
 
-If a function is used, it can be asynchronous and will receive the following arguments:
-- `config`: The current configuration.
-- `internal`: The current internal state.
-- `mode`: `build` or `editor`, depending on the environment.
-- `app`: The entire project application instance.
+| Argument   | Description                                  |
+|------------|----------------------------------------------|
+| `config`   | the current configuration                    |
+| `internal` | the current internal state                   |
+| `mode`     | `build` or `editor` depending on environment |
+| `app`      | the project's application instance           |
 
-You can modify these objects during the function's execution.
+These objects can be modified during execution.
 
-## Lifecycle Hooks
+## Lifecycle hooks
 
 ### Mount
 
-Called when the plugin is mounted in the editor, either upon installation or when the project loads.
+Called when the plugin is mounted in the editor (installation or project load).
 
 ```ts
-import { makePlugin } from '@luna-park/plugin';
-
-export default({
+makePlugin({
     lifecycle: {
         mount: () => { console.log("Plugin mounted!") }
     }
@@ -105,9 +97,7 @@ export default({
 Called when the plugin is uninstalled.
 
 ```ts
-import { makePlugin } from '@luna-park/plugin';
-
-export default({
+makePlugin({
     lifecycle: {
         unmount: () => { console.log("Goodbye!") }
     }
@@ -116,56 +106,39 @@ export default({
 
 ### Update
 
-Called whenever the plugin's configuration is updated.
+Called on every plugin configuration update.
 
 ```ts
-import { makePlugin } from '@luna-park/plugin';
-
-export default({
+makePlugin({
     lifecycle: {
-        update: ({config}) => { console.log("New config:", config) }
+        update: ({ config }) => { console.log("New config:", config) }
     }
 });
 ```
 
 ## Injections
 
-The `inject` property allows you to inject CSS or JavaScript into the editor.
-
-### CSS Injection
+`inject` injects CSS or JavaScript into the editor:
 
 ```ts
-import { makePlugin } from '@luna-park/plugin';
-
-export default({
+makePlugin({
     inject: {
-        css: `#app { background-color: red; }` // Note that this can be a function returning a string
+        css: `#app { background-color: red; }`,
+        js: `alert("Hey!");`
     }
 });
 ```
 
-### JavaScript Injection
+Each entry can be a string or a function that returns a string.
 
-```ts
-import { makePlugin } from '@luna-park/plugin';
+## Custom windows
 
-export default({
-    inject: {
-        js: `alert("Hey there!");` // Note that this can be a function returning a string
-    }
-});
-```
-
-## Custom Windows
-
-Plugins can define and open custom windows to extend the editor with custom user interface panels. Use the `LPluginWindow` component to dynamically load your plugin's windows.
-
-The `LPluginWindow` component loads windows via URL parameters, allowing your plugin to control the content and behavior of custom panels.
+A plugin can display floating windows in the editor via the `LPluginWindow` component. Its content and behavior are controlled by URL parameters.
 
 ```ts
 import { LPluginWindow } from '@luna-park/plugin';
 
-export default({
+makePlugin({
     /* ... */
     components: {
         MyWindow: LPluginWindow
@@ -173,31 +146,27 @@ export default({
 });
 ```
 
-You can then open a window from your plugin logic by passing the appropriate URL parameters. <!-- TODO: confirm API shape for opening windows and parameter passing --> Custom windows appear as floating panels in the editor and remain accessible throughout the work session.
+<!-- TODO: document opening a window and passing parameters -->
 
 ## Templates
 
-Plugins can provide template files that users can import into their projects. This allows plugins to offer starter layouts and components.
-
-Define your plugin's templates using the `templates` property:
+A plugin can provide templates importable into projects via the `templates` property:
 
 ```ts
-import { makePlugin } from '@luna-park/plugin';
-
-export default({
+makePlugin({
     /* ... */
     templates: [
-        /* Templates defined here */
+        /* ... */
     ]
 });
 ```
 
-<!-- TODO: confirm template structure and properties -->
+<!-- TODO: document template structure -->
 
-Once defined, templates appear in the editor's import interface. Users can select them to quickly create new components with the predefined layout and components offered by your plugin.
+Templates appear in the editor's import interface.
 
 ---
 
 :::info
-Components and logic nodes are covered in the following sections.
+Components and logic nodes are covered in the following pages.
 :::

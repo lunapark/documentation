@@ -14,7 +14,12 @@ The `Match editor` option allows you to apply the same colors to the editor inte
 
 ## Responsive strategy
 
-The responsive strategy can be configured from the style settings of the `palette`. It determines how your application adapts to different screen sizes.
+The palette also defines the **responsive strategy** of the application: `desktop first` or `mobile first`. It determines the direction of media queries applied in your styles.
+
+For a breakpoint set at `1024px`:
+
+- **Mobile first**: the rule applies to screens **≥ 1024**.
+- **Desktop first**: the rule applies to screens **≤ 1024**.
 
 <DImage
 :src="Screen3"

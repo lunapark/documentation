@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import CreateDuration from "/assets/images/temporal-api/create-duration.png";
+</script>
+
 # Temporal API
 
 Les nodes **Temporal** permettent de manipuler dates, heures et durées dans votre logique.
@@ -30,6 +34,4 @@ Les types **Time**, **DateTime** et **Duration** suivent la même convention de 
 
 Le node `Create Duration` se distingue : ses entrées sont optionnelles. Vous cochez les unités voulues (`years`, `months`, `weeks`, `days`, `hours`, `minutes`, `seconds`, `milliseconds`, `microseconds`, `nanoseconds`) et chaque case ajoute une entrée numérique sur le node. La sortie est une `Duration` ISO.
 
-SCREEN_HERE: nodes Temporal dans le menu d'insertion.
-
-SCREEN_HERE: node Create Duration avec quelques unités cochées et leurs entrées.
+<DImage :src="CreateDuration" alt="Node Create Duration avec quelques unités cochées et leurs entrées" />

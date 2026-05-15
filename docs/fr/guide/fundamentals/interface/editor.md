@@ -1,10 +1,11 @@
-<script setup>
+<script setup lang="ts">
 import Screen1 from '/assets/images/layout/editor/screen1.png';
 import Screen2 from '/assets/images/layout/editor/screen2.png';
 import Screen3 from '/assets/images/layout/editor/screen3.png';
 import Screen4 from '/assets/images/layout/editor/screen4.png';
 import Screen5 from '/assets/images/layout/editor/screen5.png';
 import Screen6 from '/assets/images/layout/editor/screen6.png';
+import ImmersiveMode from '/assets/images/layout/editor/immersive-mode.png';
 </script>
 
 # Éditeur
@@ -56,8 +57,6 @@ alt="Capture d'écran de l'éditeur Luna Park"
 
 Le panneau de la console peut être redimensionné verticalement pour adapter l'espace qu'il occupe à vos besoins. Pointez votre curseur sur la bordure du panneau (elle devient une poignée de redimensionnement) et faites-la glisser vers le haut ou vers le bas pour ajuster la hauteur.
 
-SCREEN_HERE: panneau de la console avec la poignée de redimensionnement visible sur sa bordure.
-
 ## La Vue Principale
 
 Enfin, la vue principale est la partie centrale de l'éditeur. Elle affiche une visualisation du fichier de travail. Dans ce cas, le mode constructeur d'un composant de mise en page est sélectionné, donc il affiche le constructeur visuel de la mise en page.
@@ -77,5 +76,5 @@ Une fois fermés, les panneaux apparaissent comme une fine barre avec leur nom s
 
 Le mode immersif est idéal lorsque vous travaillez sur des mises en page complexes ou que vous souhaitez une vue dégagée du canevas.
 
-SCREEN_HERE: éditeur en mode immersif avec panneaux cachés.
+<DImage :src="ImmersiveMode" alt="Éditeur en mode immersif avec panneaux cachés" />
 

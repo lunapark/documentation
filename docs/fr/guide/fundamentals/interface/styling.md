@@ -2,6 +2,7 @@
 import Screen1 from '/assets/images/layout/styling/screen1.png';
 import Screen2 from '/assets/images/layout/styling/screen2.png';
 import Screen3 from '/assets/images/layout/styling/screen3.png';
+import QuickStylePanels from '/assets/images/layout/styling/quick-style-panels.png';
 </script>
 
 # Stylisation
@@ -36,7 +37,7 @@ _Note : Toutes les règles de stylisation disponibles dans Luna Park corresponde
 
 Pour les modifications courantes, certaines catégories de style sont accessibles directement depuis le **layout builder**, sans passer par l'onglet style de l'inspecteur. Sélectionnez un élément pour faire apparaître les `quick style panels` (bordure, arrière-plan, taille, espacement, texte, ombre, etc.).
 
-SCREEN_HERE: quick style panels affichés à côté d'un élément sélectionné dans le layout builder.
+<DImage :src="QuickStylePanels" alt="Quick style panels affichés à côté d'un élément sélectionné dans le layout builder" />
 
 ## Tokens de design
 

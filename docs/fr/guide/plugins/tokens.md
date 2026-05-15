@@ -35,7 +35,3 @@ export default makePlugin({
     }
 });
 ```
-
-<!-- TODO: confirm exact API shape -->
-
-SCREEN_HERE: panneau de style avec les tokens du plugin groupés.

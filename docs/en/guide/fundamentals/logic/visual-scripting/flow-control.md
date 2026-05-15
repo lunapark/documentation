@@ -42,13 +42,13 @@ A conditional node has:
 
 ## Switch Node
 
-The **Switch** node routes execution based on the match between a value and multiple cases. Use it when you have multiple execution branches based on different values (string or number).
+The **Switch** node routes execution based on the value of an input, like a `switch` in JavaScript. For each declared case, a dedicated execution output is exposed; a `default` output catches unmatched values.
 
 A Switch node has:
 - An execution input (<DSchemaType :schema="LogicType.exec()" />)
 - A value input (<DSchemaType :schema="LogicType.union(LogicType.string(), LogicType.number())" />)
-- An output for each matching case (<DSchemaType :schema="LogicType.exec()" />)
-- A default output (<DSchemaType :schema="LogicType.exec()" />)
+- One execution output per declared case (<DSchemaType :schema="LogicType.exec()" />)
+- A `default` output (<DSchemaType :schema="LogicType.exec()" />)
 
 ## Loop Nodes (For, While)
 
@@ -73,3 +73,9 @@ A While loop node has:
 - A condition input (<DSchemaType :schema="LogicType.boolean()" />)
 - An execution output (<DSchemaType :schema="LogicType.exec()" />)
 - An end output (<DSchemaType :schema="LogicType.exec()" />)
+
+## Async operations
+
+The execution flow natively handles **async** operations. When a node has to wait for a result that takes time (API call, DB query, etc.), the flow pauses until that result is ready; it then resumes with the value available on the node's output.
+
+_For JavaScript developers: this is the equivalent of an `await` on a promise._
