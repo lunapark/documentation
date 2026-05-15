@@ -138,10 +138,6 @@ export default defineConfig({
                                                 text: "Contrôle de Flux"
                                             },
                                             {
-                                                link: "/fr/guide/fundamentals/logic/visual-scripting/variables",
-                                                text: "Variables"
-                                            },
-                                            {
                                                 link: "/fr/guide/fundamentals/logic/visual-scripting/temporal-api",
                                                 text: "Temporal API"
                                             }
@@ -361,10 +357,6 @@ export default defineConfig({
                                             {
                                                 link: "/en/guide/fundamentals/logic/visual-scripting/flow-control",
                                                 text: "Flow Control"
-                                            },
-                                            {
-                                                link: "/en/guide/fundamentals/logic/visual-scripting/variables",
-                                                text: "Variables"
                                             },
                                             {
                                                 link: "/en/guide/fundamentals/logic/visual-scripting/temporal-api",
