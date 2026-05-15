@@ -2,18 +2,6 @@ import path from "path";
 import { searchForWorkspaceRoot } from "vite";
 import { defineConfig } from "vitepress";
 
-import { importMapPlugin } from "./vite/importMap.plugin";
-
-const importMap = importMapPlugin({
-    imports: {
-        "@electric-sql/pglite": "https://cdn.jsdelivr.net/npm/@electric-sql/pglite/dist/index.js",
-        "@luna-park/design": "/.vitepress/vite/import-map/design",
-        "typescript": "https://esm.sh/typescript",
-        "vue": "/.vitepress/vite/import-map/vue",
-        "vue-router": "/.vitepress/vite/import-map/vue-router"
-    }
-});
-
 export default defineConfig({
     appearance: "force-dark",
     description: "Luna Park Documentation",
@@ -493,15 +481,7 @@ export default defineConfig({
         ]
     },
     title: "Luna Park",
-    transformHtml(code) {
-        return code.replace("</title>", `</title>\n<script type ="importmap">${ JSON.stringify({
-            imports: importMap.createImportMap()
-        }) }</script>`);
-    },
     vite: {
-        plugins: [
-            importMap
-        ],
         resolve: {
             alias: {
                 "@": path.resolve(__dirname, "src")

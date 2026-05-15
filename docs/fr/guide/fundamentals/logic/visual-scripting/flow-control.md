@@ -1,15 +1,12 @@
 <script setup lang="ts">
 import {LogicType} from "@luna-park/logicnodes";
-import {graphLogLog} from "/assets/examples/graphLogLog.ts";
-import {graphIf} from "/assets/examples/graphIf.ts";
-import {graphFor} from "/assets/examples/graphFor.ts";
 </script>
 
 # Contrôle de flux
 
 Le flux logique est l'ordre dans lequel vos nœuds sont exécutés. Habituellement, le flux commence sur un événement déclenché (nœud de lecture manuelle, nœud au chargement, fonction...). Ensuite, il suit le fil d'exécution représenté par un lien blanc en gras.
 
-<DExampleEditor graph="loglog" animation :zoomLevel="1"/>
+<DExampleEditor target="https://luna-park.app/editor/script?animation&clean&console=80px#N4IgxghgdgbhDOIBcoA2B7SAXAluqyoAHsgAwA0IAnmQL6UBe66AtsgIz0hToAmApohTh27AGYAWCQE4A7AFpp0gMwR5EgExiArPIBGe3gDZ5RsJFKkJY-hKPLCIXhCwRHAJ0H8syMRFTw-JRgAK7wWKwAKlQADoKOOFAA+uh6AFb8YD7CUBAs-MggqRlZILTllIlY-O65qAlQMSFYQqCJKemZ2SAA6ujuqLxlXBjYeATCJEgAHJQ0SPIaI+gA5jhghQJ6ISsA9BgrZcFmfuy8EuoQ0nrq-LJi8tPsGmDyynrsykbTvNrKGipHM5XB4vNk-AEguAwhEWNE4q0QO1il1HLl8oUUaVylwqjU6g0mi0Gh0St0ABL8VAYYaUUYucaOKbybRzZCLZZrDZIJz8bZ7A5HECyaSkXjKMR6aSKIxiDTqGT8eQQfjKaaLP56CTTD68XgAoEuNzCJLwHAMAqTDgUajICRcTyBcH+QLLMb4Jns9izW0LJZ01brTZ8na7GKoCA0CogADuOEdjg0-FIRnYEnOiwkEBMElIeleemm-2VsggpBeelIynY0ktoDE7lYjgA1vx5kVmkl+ERMiBKDwBIURWKJVKZXKFbXlar1RpNdrdfrpEKIi224V2t3e-2+JbwCcIGcLlnrrd7o9nq93p9vr9-oDo8pZOLrJ95JBtMfSOxXtMNBB5Q0UhJFzcwIG0CAJEcBsm2EVt23QTstw2HdBx5MADyPS5TwkO4HieF43g+L4fj+AEHC4Vc4PXHlNx7FDuF3QowFEEC5EUFQ1E0HR9EMEwzAsKwbDsCicSAA"/>
 
 Le contrôle de flux permet de définir l'**ordre d'exécution** des nœuds dans votre graphe et de gérer les **conditions** ou les **répétitions** des actions.
 
@@ -38,7 +35,7 @@ Un nœud conditionnel possède :
 - Une sortie vraie (<DSchemaType :schema="LogicType.exec()" />)
 - Une sortie fausse (<DSchemaType :schema="LogicType.exec()" />)
 
-<DExampleEditor graph="if" animation :zoomLevel="1"/>
+<DExampleEditor target="https://luna-park.app/editor/script?animation&clean&console=80px#N4IgxghgdgbhDOIBcoA2B7SAXAluqyoAHsgAwA0IAnmQL6UBe66AtsgIz0hToAmApohQgIAFjC9RAZikBOALT9SAdmXzRsqQCZ5AIzABWAGbypR2bN68wWrfyPLCIXhCwQnAJ0H8syIxFR4fkowAFd4LFYAFSoAB0EnHCgAfXRdACt+MF9hKAgWfmQQNMzskFoKyiSsfg881ESoWNCsIVAk1IysnJAAIXKuDGw8AmESJAAOShokTkoMAHMcMCKBXVCFgHpF8spSCYOIA10DeQMtIyl1XXYweQswE2VZMX2jfl5deycXNydk+A4BiFMYcCjUZCiLheII5fyBfiDTCuEZOcbydjKabIeRaJFLFZIZz8dZbWKoCA0LgANn40k0sju5y0d1EykM8iOulIuK0vGUpAMymkEBeP1c7mEMJ8fgCQS41Vq9UazVajWSYHwvBwuHwyCwHlCiKRwz1oKQZ2xFrx83QBKKRgwAHdNjgjLsQB8hfx2Lx2KZeAZTqIrBBOVJ9mdRBAuQY5B9dOK-lLvHC5cFwOFIiwYvE2iAOiVuk48gUikWyhUFVAanUAiqWvnC10ykSAIIDW2m0bEZBTCEWqG2+1EtYbbZ2zsgJ04GFOUi2KS3QPyUi6alh0T7XjyCb8CD+owuOwTOyCn1OIweVhOADW-BmxRayX4RCyIEoPAERX2h2Op3OS5rlue5GSeF4twmd5Pm+LhIjvB8ig6V930-PgQRAWl6TkJlbFZdlTi5HlbH5QVhSkUV3EqTDeCMMBTwmBRRH0YMtzDUV2H9TEIF0LRSF9UVRGpS9rzYYR70fdBn3YeEgg-bh0KKLC5Bws48PUAjOWOYi+QFIURTFOD0AQx9kLfFY0O-IkxAkaQ5EUFQ1A0bQ9EMEwzAsKwbDsBwp1IKR+HOMB9Hkal2SuLc43uUh+AUMBaQMX1lH4ZQDF4UgRJvcTEKJKSsGSUgDSNeSvww5SGVwlkNI5IjeVI-SKMMyh4Oy0yUhQiyFKsz1A2S31-SkQNg1DcNIwMaNY3jT4BgqIA"/>
 
 ## Nœud Switch
 
@@ -64,7 +61,7 @@ Un nœud de boucle For possède :
 - Une sortie d'index (<DSchemaType :schema="LogicType.number()" />)
 - Une sortie de fin (<DSchemaType :schema="LogicType.exec()" />)
 
-<DExampleEditor graph="for" animation :zoomLevel="1"/>
+<DExampleEditor target="https://luna-park.app/editor/script?animation&clean&console=80px#N4IgxghgdgbhDOIBcoA2B7SAXAluqyoAHsgAwA0IAnmQL6UBe66AtsgIz0hToAmApohTgAzAA5SvCGICcAWn6kIEOQBZ27VXLEAzAGxaARv3Y6A7L15nSYGQFZCIKVgiOAToP5ZkOiKnj8lGAArvBYrAAqVAAOgo44UAD66IYAVvxg3sJQECz8yCAp6ZkgtGWUCVj8bjmo8VDRwVhCoAnJaRlZIAAi+PwAhKVcGNh4BMIkSGKUNEiclBgA5jhgBQKGwYsA9EullIaqqtIiJnJ6AEwnaucQvNqGdiJyEKZ67OcyYIZ6hmKOzq5hB4AllfP5AuBQuEWFFYi0QG0ip1HDk8gUkSUysNMBBcPhHJNptRkGpsctVkgnPwNttdlwdOJZHoIOc1Kpzjo1NZ2HJDGBzjzDIZxOxeDIROxSHYdP9cYDQIl4DgGPkJhwKMSkKouMCvD4-AFsaN8WqkHJ2ETZnJzmSVmtqZsttFUBAaFwxGBrDp+AI5GZ2NK1FYwLzrCoIDIZIYA2Y9KQdDJVaAAe5PKCDfwuJVqrV6o1mvVEmB0MEoFkROUQCNcWMCSS9DMSTaFuhyQUdBgAO5bHToNxDSidnDAxzM9hmVQiCVyUhid5qDRiXmPOxyMAiUjnMTbqeyJMgHRuViOADW-FmhSaiXYCQEJEoPAEBQ9Xp9-D9Ac5qmDoaUz0j0Z2LG8aJnsIDhKe54FIiHQlA+fCqiABxHGIJw8hcVzsrc9yPM8rzvJ83y-AOSGGLwehgAIPI6PGS6TiIZhyFGhikH6qjfByMjnD8Mh6I4h7HsIZ4XiWWCJKQGDoNEIDwU+lIvvGb4foG35mCGhhhv+UYxnGCb5FwEFCVBlJtPwRAZDJ3AIQUyHHKcGHvlhdxiA8TwvPoBFfD8fyVuYYDsCxE4KJ8IaHDIWgyLcdzsIoAWKCx5xmH8wgCWwRkiVeZkWbJiEMtuvEsmyHJcqQgr8oKwpzmKEpSjKBnoJBF6meZqw5c+nqKb6-oqT+Gl-hG2lAbpoGVtytzmCoYhxoYbJmJyMg6JYTGqGYdjxmYZgsjIvD8UeaWgMJ6JXucZk4N4bXyR13pdZ+QZqb+4YATpIH6ZQhkHcZCJJFlrVWXJogSFIsgKEoKjqJo2j6EYJjmJY1i2A4WK0EAA"/>
 
 ### Boucle While
 

@@ -15,26 +15,13 @@
 
 <script setup lang="ts">
 import { LLoading } from "@luna-park/design";
-import { computed, ref } from "vue";
+import { ref } from "vue";
 
-const props = withDefaults(defineProps<{
-    animation?: boolean;
-    graph: unknown;
-    zoomLevel?: number;
-}>(), {
-    zoomLevel: 0
-});
+const props = defineProps<{
+    target: string;
+}>();
 
 const loaded = ref(false);
-
-const target = computed(() => {
-    const searchParams = new URLSearchParams();
-    searchParams.set("graph", props.graph);
-    searchParams.set("animation", props.animation ? "1" : "0");
-    searchParams.set("zoomLevel", props.zoomLevel.toString());
-
-    return `/editor?${ searchParams.toString() }`;
-});
 
 function onLoad() {
     loaded.value = true;
@@ -61,6 +48,7 @@ iframe {
     width: 100%;
     border: none;
     background: transparent;
+    border-radius: var(--length-m);
 
     &.loading {
         opacity: 0;
