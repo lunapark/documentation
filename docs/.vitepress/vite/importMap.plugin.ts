@@ -1,21 +1,32 @@
-import type { Plugin } from "vite";
 import path from "path";
+import type { Plugin } from "vite";
+import type { HeadConfig } from "vitepress";
 
 type TImportMapPluginOptions = {
     imports: Record<string, string>;
+};
+
+type TImportMapPlugin = Plugin & {
+    createImportMap: () => Record<string, string>;
 };
 
 const localImportPrefixes = ["./", "../", "/"];
 
 export function importMapPlugin({
     imports = {}
-}: TImportMapPluginOptions): Plugin {
+}: TImportMapPluginOptions): TImportMapPlugin {
     const chunkReferenceMap = new Map<string, string>();
     let base = "/";
     let root = process.cwd();
 
+    function createImportMap() {
+        return Object.fromEntries(Object.entries(imports).map(([key, value]) => [
+            key,
+            chunkReferenceMap.get(key) ?? value
+        ]));
+    }
+
     return {
-        name: "vite-import-map",
 
         async buildStart() {
             if (this.meta.watchMode) {
@@ -33,8 +44,8 @@ export function importMapPlugin({
 
                     const fileRef = this.emitFile({
                         id: resolvedImport.id,
-                        type: "chunk",
-                        preserveSignature: "strict"
+                        preserveSignature: "strict",
+                        type: "chunk"
                     });
                     chunkReferenceMap.set(key, fileRef);
                 }
@@ -45,33 +56,13 @@ export function importMapPlugin({
             base = config.base;
             root = config.root;
         },
+        createImportMap,
 
         generateBundle() {
             for (const [key, value] of chunkReferenceMap) {
                 chunkReferenceMap.set(key, base + this.getFileName(value));
             }
         },
-
-        transformIndexHtml() {
-            const importMap = Object.fromEntries(Object.entries(imports).map(([key, value]) => {
-                if (chunkReferenceMap.has(key)) {
-                    return [key, chunkReferenceMap.get(key)];
-                }
-                return [key, value];
-            }));
-
-            return [
-                {
-                    attrs: {
-                        type: "importmap"
-                    },
-                    children: JSON.stringify({
-                        imports: importMap
-                    }),
-                    injectTo: "head",
-                    tag: "script"
-                }
-            ];
-        }
+        name: "vite-import-map"
     };
 }
