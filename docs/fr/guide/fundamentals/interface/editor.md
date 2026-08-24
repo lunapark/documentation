@@ -1,3 +1,7 @@
+---
+description: "Découvrez les panneaux, mises en page et outils de logique visuelle de l'éditeur Luna Park."
+---
+
 <script setup lang="ts">
 import Screen1 from '/assets/images/layout/editor/screen1.png';
 import Screen2 from '/assets/images/layout/editor/screen2.png';

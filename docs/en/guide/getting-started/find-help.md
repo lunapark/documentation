@@ -1,3 +1,7 @@
+---
+description: "Find support, contact options, and ways to contribute to the Luna Park community."
+---
+
 # Getting Help
 
 Luna Park is growing rapidly, and we need your help to make it even better. If you have any questions, suggestions, or feedback, don't hesitate to contact us. We're here to help!

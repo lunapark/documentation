@@ -1,3 +1,7 @@
+---
+description: "Compare Luna Park with no-code app builders, layout editors, and JavaScript frameworks."
+---
+
 # How is Luna Park different from other app creators?
 
 ## Traditional no-code solutions

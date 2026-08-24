@@ -1,3 +1,7 @@
+---
+description: "Check the minimum system, storage, and browser requirements for using Luna Park."
+---
+
 # Prerequisites
 
 ## Minimum System Configuration

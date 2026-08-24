@@ -1,3 +1,7 @@
+---
+description: "Trouvez de l'aide, des moyens de contact et des façons de contribuer à la communauté Luna Park."
+---
+
 # Trouver de l'aide
 
 Luna Park est en pleine expansion et nous avons besoin de votre aide pour le faire grandir. Si vous avez des questions, des suggestions ou des commentaires, n'hésitez pas à nous contacter. Nous sommes là pour vous aider !

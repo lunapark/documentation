@@ -1,3 +1,7 @@
+---
+description: "Préparez votre IDE, le projet modèle et l'environnement de développement des plugins Luna Park."
+---
+
 <script setup lang="ts">
 import UrlInstall from "/assets/images/plugins/setup/url-install.png";
 </script>

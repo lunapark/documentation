@@ -1,3 +1,7 @@
+---
+description: "Configure the visual appearance of Luna Park applications with global styling controls."
+---
+
 <script setup lang="ts">
 import Screen1 from '/assets/images/layout/styling/screen1.png';
 import Screen2 from '/assets/images/layout/styling/screen2.png';

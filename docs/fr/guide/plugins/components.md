@@ -1,3 +1,7 @@
+---
+description: "Exposez des composants personnalisés depuis un plugin Luna Park pour créer des bibliothèques réutilisables."
+---
+
 # Composants personnalisés
 
 Vous pouvez exposer des composants personnalisés à l'éditeur, permettant la création de bibliothèques de composants.

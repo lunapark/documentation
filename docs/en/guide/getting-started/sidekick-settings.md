@@ -1,3 +1,7 @@
+---
+description: "Configure the Sidekick AI assistant and its provider settings in Luna Park."
+---
+
 <script setup lang="ts">
 import Popup from "/assets/images/getting-started/sidekick/popup.png";
 import ProviderConfig from "/assets/images/getting-started/sidekick/provider-config.png";

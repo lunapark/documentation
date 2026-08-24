@@ -1,3 +1,7 @@
+---
+description: "Configure application colors, generated shades, gradients, and editor color matching."
+---
+
 <script setup lang="ts">
 import Screen3 from '/assets/images/layout/styling/screen3.png';
 import {faPalette} from "@fortawesome/pro-solid-svg-icons";

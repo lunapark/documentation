@@ -1,3 +1,7 @@
+---
+description: "Utilisez le système de typage Luna Park pour définir et valider les valeurs de la logique des plugins."
+---
+
 # Système de typage
 
 Le système de typage de Luna Park est similaire à TypeBox ou Zod, mais avec quelques fonctionnalités uniques.

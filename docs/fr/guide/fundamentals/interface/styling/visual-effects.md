@@ -1,3 +1,7 @@
+---
+description: "Ajoutez profondeur et finition visuelle avec les rayons, ombres, bordures et autres effets."
+---
+
 <script setup lang="ts">
 import Screen6 from "/assets/images/fundamentals/styling/screen6.png";
 import Screen7 from "/assets/images/fundamentals/styling/screen7.png";

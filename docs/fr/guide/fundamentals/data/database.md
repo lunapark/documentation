@@ -1,3 +1,7 @@
+---
+description: "Utilisez la base PostgreSQL intégrée à Luna Park pour créer des tables, stocker des données et exécuter des requêtes."
+---
+
 <script setup lang="ts">
 import Panel from "/assets/images/data/panel.png";
 import FindNode from "/assets/images/data/find-node.png";

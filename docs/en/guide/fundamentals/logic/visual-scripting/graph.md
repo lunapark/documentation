@@ -1,3 +1,7 @@
+---
+description: "Understand the graph canvas and connect nodes to build visual logic."
+---
+
 <script setup lang="ts">
 import {LogicType} from "@luna-park/logicnodes";
 </script>

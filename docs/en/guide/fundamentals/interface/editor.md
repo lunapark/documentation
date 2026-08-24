@@ -1,3 +1,7 @@
+---
+description: "Learn how to use the Luna Park editor's panels, layouts, and visual logic tools."
+---
+
 <script setup lang="ts">
 import Screen1 from '/assets/images/layout/editor/screen1.png';
 import Screen2 from '/assets/images/layout/editor/screen2.png';

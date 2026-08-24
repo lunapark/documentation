@@ -1,3 +1,7 @@
+---
+description: "Planifiez et coordonnez des opérations différées ou asynchrones avec la Temporal API."
+---
+
 <script setup lang="ts">
 import CreateDuration from "/assets/images/temporal-api/create-duration.png";
 </script>

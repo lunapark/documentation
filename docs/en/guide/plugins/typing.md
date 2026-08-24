@@ -1,3 +1,7 @@
+---
+description: "Use Luna Park's typing system to define and validate values in plugin logic."
+---
+
 # Typing System
 
 The Luna Park typing system is similar to TypeBox or Zod, but with some unique features.

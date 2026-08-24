@@ -1,3 +1,7 @@
+---
+description: "Créez et utilisez des variables pour stocker et manipuler des données dans vos scripts visuels."
+---
+
 <script setup lang="ts">
 import {LogicType} from "@luna-park/logicnodes";
 

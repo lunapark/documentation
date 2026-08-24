@@ -1,6 +1,7 @@
 import path from "path";
 import { searchForWorkspaceRoot } from "vite";
 import { defineConfig } from "vitepress";
+import llmstxt from "vitepress-plugin-llms";
 
 export default defineConfig({
     appearance: "force-dark",
@@ -482,6 +483,9 @@ export default defineConfig({
     },
     title: "Luna Park",
     vite: {
+        plugins: [llmstxt({
+            ignoreFiles: ["fr/**"]
+        })],
         resolve: {
             alias: {
                 "@": path.resolve(__dirname, "src")

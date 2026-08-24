@@ -1,3 +1,7 @@
+---
+description: "Create Luna Park plugins that extend the editor with components, logic nodes, tokens, hooks, and more."
+---
+
 # Introduction
 
 This section covers creating plugins for Luna Park. If you are looking to install and use an existing plugin instead, see [Integrations > Plugins](/en/guide/integrations/plugins).

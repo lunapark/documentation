@@ -1,3 +1,7 @@
+---
+description: "Create reusable visual components for Luna Park application interfaces."
+---
+
 <script setup>
 import {faSquare} from "@fortawesome/pro-regular-svg-icons";
 import { faBolt, faBox, faGear, faPuzzlePiece, faQuoteLeft, faSprayCan, faCode } from "@fortawesome/pro-solid-svg-icons";

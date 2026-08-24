@@ -1,3 +1,7 @@
+---
+description: "Arrange interface elements with Luna Park's CSS-based layout and alignment controls."
+---
+
 <script setup>
 import screen2 from '/assets/images/fundamentals/styling/screen2.png';
 import screen3 from '/assets/images/fundamentals/styling/screen3.png';

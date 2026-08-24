@@ -1,3 +1,7 @@
+---
+description: "Learn how to export a Luna Park application as source code or deploy it for testing."
+---
+
 <script setup lang="ts">
 import {faLink, faGear, faHammer, faUpRightFromSquare} from "@fortawesome/pro-solid-svg-icons";
 </script>

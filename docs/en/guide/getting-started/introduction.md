@@ -1,3 +1,7 @@
+---
+description: "Understand what Luna Park is and how its visual programming framework builds fast, scalable web applications without code."
+---
+
 # What is Luna Park?
 
 Luna Park is a **visual programming framework**. It allows you to create **fast** and **scalable** web applications without having to write code.

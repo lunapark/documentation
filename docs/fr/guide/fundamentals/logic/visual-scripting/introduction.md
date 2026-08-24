@@ -1,3 +1,7 @@
+---
+description: "Découvrez les concepts du scripting visuel de Luna Park et la représentation graphique de la logique."
+---
+
 # Introduction
 
 Le **scripting visuel** (ou programmation visuelle) est une manière de développer de la logique sans code. Au lieu d'écrire du code traditionnel, vous connectez des blocs graphiques représentant des actions, des conditions ou des données.

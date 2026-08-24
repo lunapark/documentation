@@ -1,3 +1,7 @@
+---
+description: "Create custom logic nodes to extend the Luna Park visual scripting editor."
+---
+
 <script setup>
 import functionNode from '/assets/images/plugins/nodes/function.png';
 import operationNode from '/assets/images/plugins/nodes/operation.png';

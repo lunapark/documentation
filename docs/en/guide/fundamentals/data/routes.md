@@ -1,3 +1,7 @@
+---
+description: "Create HTTP endpoints in Luna Park to expose server-side logic to your interface."
+---
+
 <script setup lang="ts">
 import InputNode from "/assets/images/data/input-node.png";
 import OutputNode from "/assets/images/data/output-node.png";

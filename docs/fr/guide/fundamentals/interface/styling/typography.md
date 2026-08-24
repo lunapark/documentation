@@ -1,3 +1,7 @@
+---
+description: "Configurez les balises, polices, tailles, graisses, espacements et alignements du texte dans Luna Park."
+---
+
 <script setup lang="ts">
 import {faLink} from "@fortawesome/pro-solid-svg-icons";
 import Screen1 from "/assets/images/fundamentals/styling/screen1.png";

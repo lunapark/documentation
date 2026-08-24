@@ -1,3 +1,7 @@
+---
+description: "Découvrez la structure d'un plugin Luna Park et configurez ses métadonnées et fonctionnalités."
+---
+
 <script setup lang="ts">
 import Config from "/assets/images/plugins/basics/config.png";
 </script>

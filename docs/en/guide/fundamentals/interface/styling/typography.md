@@ -1,3 +1,7 @@
+---
+description: "Configure text tags, fonts, sizes, weights, spacing, and alignment in Luna Park."
+---
+
 <script setup lang="ts">
 import {faLink} from "@fortawesome/pro-solid-svg-icons";
 import screen1 from '/assets/images/fundamentals/styling/screen1.png';

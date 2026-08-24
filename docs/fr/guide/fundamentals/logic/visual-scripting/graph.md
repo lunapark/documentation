@@ -1,3 +1,7 @@
+---
+description: "Découvrez le canevas du graphe et connectez des nœuds pour construire votre logique visuelle."
+---
+
 <script setup lang="ts">
 import {LogicType} from "@luna-park/logicnodes";
 </script>

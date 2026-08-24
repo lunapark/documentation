@@ -1,3 +1,7 @@
+---
+description: "Découvrez si Luna Park convient aux utilisateurs no-code, développeurs et débutants."
+---
+
 # Est-ce que Luna Park est fait pour moi ?
 
 ## Pour les no-codeurs

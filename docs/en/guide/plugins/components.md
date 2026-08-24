@@ -1,3 +1,7 @@
+---
+description: "Expose custom components from a Luna Park plugin to build reusable component libraries."
+---
+
 # Custom components
 
 You can expose custom components to the editor, enabling the creation of component libraries.

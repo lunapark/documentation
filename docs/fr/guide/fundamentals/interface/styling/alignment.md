@@ -1,3 +1,7 @@
+---
+description: "Organisez les éléments d'interface avec les contrôles de disposition et d'alignement basés sur CSS."
+---
+
 <script setup lang="ts">
 import Screen2 from "/assets/images/fundamentals/styling/screen2.png";
 import Screen3 from "/assets/images/fundamentals/styling/screen3.png";

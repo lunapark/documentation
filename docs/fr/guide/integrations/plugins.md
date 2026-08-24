@@ -1,3 +1,7 @@
+---
+description: "Installez et utilisez des plugins Luna Park qui ajoutent composants, nœuds logiques, tokens et intégrations."
+---
+
 <script setup lang="ts">
 import Plugins from "/assets/images/plugins/introduction/plugins.png";
 import Install from "/assets/images/plugins/introduction/install.png";

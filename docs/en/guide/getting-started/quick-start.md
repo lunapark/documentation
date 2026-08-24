@@ -1,3 +1,7 @@
+---
+description: "Follow the Challenge, Academy, and cloud workflow to start building with Luna Park."
+---
+
 # Quick Start
 
 ## The Gamified Tutorial

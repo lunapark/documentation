@@ -1,3 +1,7 @@
+---
+description: "Decide whether Luna Park fits your experience as a no-code user, developer, or beginner."
+---
+
 # Is Luna Park right for me?
 
 ## For No-Coders

@@ -1,3 +1,7 @@
+---
+description: "Use reusable style tokens to keep colors, sizes, spacing, and typography consistent."
+---
+
 <script setup lang="ts">
 import Screen1 from '/assets/images/layout/styling/screen1.png';
 import Screen2 from '/assets/images/layout/styling/screen2.png';

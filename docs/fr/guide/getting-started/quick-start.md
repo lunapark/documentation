@@ -1,3 +1,7 @@
+---
+description: "Suivez le Challenge, l'Académie et le parcours cloud pour commencer à créer avec Luna Park."
+---
+
 # Démarrage rapide
 
 ## Le tutoriel gamifié

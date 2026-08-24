@@ -1,3 +1,7 @@
+---
+description: "Vérifiez les configurations système, l'espace disque et les navigateurs requis pour utiliser Luna Park."
+---
+
 # Prérequis
 
 ## Configuration système minimale

@@ -1,3 +1,7 @@
+---
+description: "Learn how to distribute Luna Park plugins for private and public use."
+---
+
 # Deployment
 
 :::warning

@@ -1,3 +1,7 @@
+---
+description: "Contrôlez les chemins d'exécution avec les conditions, boucles et autres nœuds de flux."
+---
+
 <script setup lang="ts">
 import {LogicType} from "@luna-park/logicnodes";
 </script>

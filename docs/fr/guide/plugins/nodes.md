@@ -1,3 +1,7 @@
+---
+description: "Créez des nœuds logiques personnalisés pour étendre l'éditeur de scripting visuel Luna Park."
+---
+
 <script setup lang="ts">
 import Function from "/assets/images/plugins/nodes/function.png";
 import Operation from "/assets/images/plugins/nodes/operation.png";

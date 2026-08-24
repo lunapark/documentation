@@ -1,3 +1,7 @@
+---
+description: "Exposez des design tokens réutilisables depuis un plugin Luna Park."
+---
+
 # Design tokens
 
 Un plugin peut exposer ses propres design tokens, en plus de ceux définis dans le projet. Une fois le plugin installé, ils apparaissent dans le panneau de style de l'éditeur, groupés par plugin, et s'utilisent comme [n'importe quel token](../fundamentals/interface/styling#tokens-de-design).

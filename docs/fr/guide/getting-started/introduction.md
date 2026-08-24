@@ -1,3 +1,7 @@
+---
+description: "Découvrez Luna Park et comment son framework de programmation visuelle crée des applications web rapides et évolutives sans code."
+---
+
 # Qu'est-ce que Luna Park ?
 
 Luna Park est un **framework de programmation visuelle** (ou **visual scripting**). Il vous permet de créer des applications web **rapides** et **évolutives**, sans avoir à écrire de code.

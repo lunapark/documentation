@@ -1,3 +1,7 @@
+---
+description: "Add depth and visual polish with radius, shadows, borders, and other effects."
+---
+
 <script setup lang="ts">
 import Screen6 from "/assets/images/fundamentals/styling/screen6.png";
 import Screen7 from "/assets/images/fundamentals/styling/screen7.png";

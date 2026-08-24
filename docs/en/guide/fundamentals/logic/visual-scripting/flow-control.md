@@ -1,3 +1,7 @@
+---
+description: "Control execution paths in visual scripts with conditions, loops, and other flow nodes."
+---
+
 <script setup lang="ts">
 import {LogicType} from "@luna-park/logicnodes";
 </script>

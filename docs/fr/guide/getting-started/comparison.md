@@ -1,3 +1,7 @@
+---
+description: "Comparez Luna Park aux outils no-code, éditeurs de mise en page et frameworks JavaScript."
+---
+
 # Quelles différences avec les autres outils no-code ?
 
 ## Les solutions no-code traditionnelles

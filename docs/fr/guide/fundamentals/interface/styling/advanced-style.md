@@ -1,3 +1,7 @@
+---
+description: "Utilisez les classes CSS et Tailwind pour aller au-delà du style visuel natif de Luna Park."
+---
+
 <script setup lang="ts">
 import {faPalette, faTowerCell} from "@fortawesome/pro-solid-svg-icons";
 import Screen9 from "/assets/images/fundamentals/styling/screen9.png";

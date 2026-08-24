@@ -1,3 +1,7 @@
+---
+description: "Learn the core concepts of Luna Park visual scripting and how graphical nodes represent logic."
+---
+
 # Introduction
 
 **Visual scripting** (or visual programming) is a way to develop logic without code. Instead of writing traditional code, you connect graphical blocks representing actions, conditions, or data.

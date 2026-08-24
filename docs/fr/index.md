@@ -1,6 +1,7 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
+description: "Documentation Luna Park pour créer des applications web rapides et évolutives avec le scripting visuel."
 
 hero:
   name: "Luna Park"

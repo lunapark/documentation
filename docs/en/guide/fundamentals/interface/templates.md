@@ -1,3 +1,7 @@
+---
+description: "Use conditional, repeated, and dynamic template elements in Luna Park interfaces."
+---
+
 <script setup lang="ts">
 import {LogicType} from "@luna-park/logicnodes";
 

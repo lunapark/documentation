@@ -1,3 +1,7 @@
+---
+description: "Point d'entrée de la documentation Luna Park."
+---
+
 <script setup lang="ts">
 import { useRouter } from 'vitepress';
 

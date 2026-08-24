@@ -1,3 +1,7 @@
+---
+description: "Set up an IDE, boilerplate project, and development environment for Luna Park plugin development."
+---
+
 <script setup>
 import urlInstall from '/assets/images/plugins/setup/url-install.png';
 </script>
