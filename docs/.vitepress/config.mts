@@ -3,17 +3,18 @@ import { searchForWorkspaceRoot } from "vite";
 import { defineConfig, type HeadConfig } from "vitepress";
 import llmstxt from "vitepress-plugin-llms";
 
-const hostname = "https://docs.luna-park.app";
+const hostname = "https://luna-park.app/docs";
 const ogLocales = { en: "en_US", fr: "fr_FR" };
 
 export default defineConfig({
     appearance: "force-dark",
+    base: "/docs/",
     cleanUrls: true,
     description: "Luna Park documentation: build fast, scalable web applications with visual scripting.",
     head: [
         ["link", { href: "https://fonts.googleapis.com", rel: "preconnect" }],
         ["link", { crossorigin: "", href: "https://fonts.gstatic.com", rel: "preconnect" }],
-        ["link", { href: "/favicon.png", rel: "icon", type: "image/png" }],
+        ["link", { href: "/docs/favicon.png", rel: "icon", type: "image/png" }],
         ["meta", { content: "#0b1a3a", name: "theme-color" }],
         ["meta", { content: "website", property: "og:type" }],
         ["meta", { content: "Luna Park Documentation", property: "og:site_name" }],
@@ -558,7 +559,7 @@ export default defineConfig({
         }
     },
     sitemap: {
-        hostname
+        hostname: `${ hostname }/`
     },
     themeConfig: {
         search: {
