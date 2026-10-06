@@ -39,7 +39,7 @@ Utilisez **Local** pour les préférences de l'utilisateur (thème, langue) et *
 
 ## Utiliser un store
 
-- **Dans une mise en page** : liez n'importe quel texte ou propriété à `stores.<store>.<champ>`, par exemple `{{stores.theme.darkMode}}`, ou une condition comme `stores.theme.darkMode`.
+- **Dans une mise en page** : liez n'importe quel texte ou propriété à `stores.<store>.<champ>`, par exemple <code v-pre>{{stores.theme.darkMode}}</code>, ou une condition comme `stores.theme.darkMode`.
 - **Dans la logique** : utilisez le nœud **Get** du store pour le lire, et modifiez ses champs comme n'importe quel objet. Un nœud **Reset** restaure la valeur par défaut.
 
 ## Fonctions du store

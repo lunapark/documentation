@@ -14,8 +14,8 @@ import Screen1 from '/assets/images/layout/components/screen1.png';
 Les fichiers de **composant** sont utilisés pour définir l'interface de votre application. Ils vous permettent de créer des éléments visuels réutilisables dans tout votre projet.
 
 <DImage
-:src="Screen1"
-alt="Capture d'écran de l'éditeur Luna Park"
+:src="Screen1" :width="1280" :height="720"
+alt="Éditeur avec le composant Layout ouvert : explorateur, arbre des éléments, aperçu et inspecteur"
 />
 
 ## Configuration des composants
@@ -48,4 +48,4 @@ Voici quelques options à votre disposition pour chaque élément de mise en pag
 
 Pour définir un composant comme une **page**, changez simplement son type dans l'inspecteur. Vous pouvez ensuite définir un chemin pour accéder à la page. La page principale de votre application sera toujours `/` (sans rien après).
 
-![Capture d'écran de l'éditeur Luna Park](/assets/images/layout/components/gif1.gif)
+![Changement du type d'un composant en Page dans l'inspecteur](/assets/images/layout/components/gif1.gif){width=391 height=504}

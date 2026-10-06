@@ -27,7 +27,7 @@ Chaque fichier **Database** est une table. Créez-en une dans l'**Explorer** ave
 
 Les colonnes `id`, `created_at` et `updated_at` sont ajoutées automatiquement à chaque table. `id` est un UUID.
 
-<DImage :src="Panel" alt="Éditeur de base de données avec une table et ses colonnes" />
+<DImage :src="Panel" :width="2560" :height="1440" alt="Éditeur de base de données avec une table et ses colonnes" />
 
 ### Types de colonnes
 
@@ -70,7 +70,7 @@ Luna Park fournit un node par opération courante. La configuration est visuelle
 
 Les paramètres se branchent sur les ancrages d'entrée : un id venant d'une variable, une valeur de filtre venant d'un input, etc.
 
-<DImage :src="FindNode" alt="Node DB Find configuré sur une table, avec ses paramètres et son ancrage de sortie" />
+<DImage :src="FindNode" :width="2560" :height="1440" alt="Node DB Find configuré sur une table, avec ses paramètres et son ancrage de sortie" />
 
 `DB Transaction` exécute d'un coup les opérations branchées sur sa sortie **Run** : si l'une échoue, aucune n'est enregistrée. **Then** s'exécute une fois les modifications enregistrées.
 
@@ -105,7 +105,7 @@ Comparaisons disponibles : égal, différent, supérieur/inférieur (ou égal), 
 
 Par exemple, pour récupérer les utilisateurs de moins de 30 ans : un `DB From` pointe sur la table, un `DB Where Condition` définit `age < 30`, un `DB Where` reçoit la query et la condition, et un `DB Query Select` exécute l'ensemble.
 
-<DImage :src="QueryBuilderGraph" alt="Graphe avec DB From, DB Where Condition, DB Where et DB Query Select chainés" />
+<DImage :src="QueryBuilderGraph" :width="2560" :height="1440" alt="Graphe avec DB From, DB Where Condition, DB Where et DB Query Select chainés" />
 
 ::: info Aperçu de la requête
 Pour voir le SQL réellement exécuté, sélectionnez le node `DB Query Select` et cliquez sur **Preview** dans sa config.
@@ -119,6 +119,6 @@ Pour suivre l'exemple guidé de la page [Routes](./routes), créez une table `ar
 2. Ajoutez une colonne `title` (texte).
 3. Insérez quelques lignes de test.
 
-<DImage :src="ArticlesTable" alt="Table articles avec ses colonnes et quelques lignes d'exemple" />
+<DImage :src="ArticlesTable" :width="2560" :height="1440" alt="Table articles avec ses colonnes et quelques lignes d'exemple" />
 
 La suite (exposer ces articles via une route et les afficher dans l'interface) est détaillée sur la page [Routes](./routes).

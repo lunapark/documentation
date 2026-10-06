@@ -1,5 +1,5 @@
 ---
-description: "Planifiez des tâches backend récurrentes dans Luna Park avec les fichiers cron."
+description: "Planifiez des tâches backend récurrentes dans Luna Park avec les fichiers cron : rapports quotidiens, nettoyages et synchronisations."
 ---
 
 # Cron

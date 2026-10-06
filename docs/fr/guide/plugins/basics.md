@@ -66,7 +66,7 @@ makePlugin({
 ```
 
 <DImage
-:src="Config"
+:src="Config" :width="295" :height="103"
 alt="Formulaire de configuration du plugin"
 />
 

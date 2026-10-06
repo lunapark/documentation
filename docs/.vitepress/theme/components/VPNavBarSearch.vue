@@ -12,7 +12,7 @@ import { useData } from "../composables/data";
 import VPNavBarSearchButton from "./VPNavBarSearchButton.vue";
 
 const VPLocalSearchBox = __VP_LOCAL_SEARCH__
-    ? defineAsyncComponent(() => import("./VPLocalSearchBox.vue"))
+    ? defineAsyncComponent(() => import("vitepress/dist/client/theme-default/components/VPLocalSearchBox.vue"))
     : () => null;
 
 const VPAlgoliaSearchBox = __ALGOLIA__

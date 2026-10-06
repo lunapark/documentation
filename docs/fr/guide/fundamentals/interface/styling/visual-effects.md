@@ -23,7 +23,7 @@ Ils influencent la perception des éléments sans modifier leur structure.
 | **Border Radius** | Définit le rayon de courbure des coins. Peut être appliqué uniformément ou individuellement (haut-gauche, haut-droit, etc.). |
 
 <DImage
-:src="Screen6"
+:src="Screen6" :width="1280" :height="720"
 alt="Exemple de coins arrondis sur différents éléments"
 />
 
@@ -39,7 +39,7 @@ alt="Exemple de coins arrondis sur différents éléments"
 | **Style** | Type de bordure (solid, dashed, dotted). |
 
 <DImage
-:src="Screen7"
+:src="Screen7" :width="1280" :height="720"
 alt="Exemples de styles de bordures"
 />
 
@@ -54,7 +54,7 @@ alt="Exemples de styles de bordures"
 | **Offset X/Y** | Décalage horizontal et vertical. |
 | **Color** | Couleur de l'ombre. |
 
-<DImage :src="ShadowPanel" alt="Panneau de configuration des propriétés d'ombre dans l'éditeur Luna Park" />
+<DImage :src="ShadowPanel" :width="227" :height="56" alt="Panneau de configuration des propriétés d'ombre dans l'éditeur Luna Park" />
 
 ---
 
@@ -65,7 +65,7 @@ alt="Exemples de styles de bordures"
 | **Opacity** | Définit la transparence de l'élément (de 0 à 100%). |
 
 <DImage
-:src="Screen8"
+:src="Screen8" :width="1280" :height="720"
 alt="Exemples de niveaux d'opacité"
 />
 
@@ -91,7 +91,7 @@ Pour activer le mode *hover*, cliquez sur l'icône en forme de **main** dans la 
 Un nouvel état de style apparaît alors, vous permettant de modifier librement les propriétés (couleur, ombre, opacité, etc.) appliquées uniquement au survol.
 
 <DImage
-:src="Gif2"
+:src="Gif2" :width="1090" :height="558"
 alt="Activation du style hover dans l'éditeur Luna Park"
 />
 
@@ -107,7 +107,7 @@ alt="Activation du style hover dans l'éditeur Luna Park"
 | **Delay** | Définit le délai avant le démarrage de l'effet. |
 
 <DImage
-:src="Gif1"
+:src="Gif1" :width="1090" :height="558"
 alt="Exemple de transition appliquée sur un bouton"
 />
 

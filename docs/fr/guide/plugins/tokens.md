@@ -1,5 +1,5 @@
 ---
-description: "Exposez des design tokens réutilisables depuis un plugin Luna Park."
+description: "Exposez des design tokens réutilisables depuis un plugin Luna Park pour les retrouver dans le panneau de style de l'éditeur."
 ---
 
 # Design tokens

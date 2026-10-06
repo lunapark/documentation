@@ -1,5 +1,6 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
+title: "Documentation Luna Park"
+titleTemplate: "Scripting visuel pour applications web"
 layout: home
 description: "Documentation Luna Park pour créer des applications web rapides et évolutives avec le scripting visuel."
 
@@ -10,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: Commencer
-      link: /fr/guide/getting-started/introduction.html
+      link: /fr/guide/getting-started/introduction
     - theme: alt
       text: Forum Communautaire
       link: https://forum.luna-park.app/

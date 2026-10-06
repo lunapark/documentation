@@ -2,8 +2,11 @@
     <div class="image">
         <img
             :alt="alt"
+            decoding="async"
+            :height="height"
             loading="lazy"
             :src="src"
+            :width="width"
             @click="openModal"
         >
     </div>
@@ -43,7 +46,9 @@ import { ref } from "vue";
 
 const props = defineProps<{
     alt: string;
+    height?: number;
     src: string;
+    width?: number;
 }>();
 
 const isModalOpen = ref(false);
@@ -66,7 +71,8 @@ const closeModal = () => {
         border-radius: var(--length-radius-m);
         border: 1px solid var(--color-background-3);
         box-shadow: 0 0 32px var(--color-background-litest);
-        max-width: 640px;
+        max-width: min(640px, 100%);
+        height: auto;
         cursor: zoom-in;
         transition: transform 0.2s ease, box-shadow 0.2s ease;
 

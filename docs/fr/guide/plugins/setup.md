@@ -46,7 +46,7 @@ Vous pouvez maintenant installer le plugin directement dans Luna Park. Ouvrez un
 Localisez le champ de saisie "Installer depuis une URL" en bas du panneau des plugins.
 
 <DImage
-:src="UrlInstall"
+:src="UrlInstall" :width="756" :height="80"
 alt="Installer depuis une URL"
 />
 

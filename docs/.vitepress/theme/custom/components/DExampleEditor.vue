@@ -7,7 +7,9 @@
         <iframe
             allowTransparency="true"
             :class="{loading: !loaded}"
+            loading="lazy"
             :src="target"
+            title="Luna Park example editor"
             @load="onLoad"
         />
     </div>

@@ -44,7 +44,7 @@ Vous récupérez ce dont vous avez besoin pour le passer aux nodes suivants. Par
 
 Les plugins peuvent ajouter des entrées : le [plugin Users](./auth) ajoute l'utilisateur connecté (`user`), par exemple.
 
-<DImage :src="InputNode" alt="Node d'input d'une route avec ses ancrages headers/body/query/params" />
+<DImage :src="InputNode" :width="241" :height="314" alt="Node d'input d'une route avec ses ancrages headers/body/query/params" />
 
 ### Output
 
@@ -52,7 +52,7 @@ Le node d'output reçoit ce que la route renvoie au caller. Tout ce que vous bra
 
 Une route peut avoir plusieurs nodes d'output, un par branche (trouvé / introuvable, par exemple).
 
-<DImage :src="OutputNode" alt="Node d'output d'une route branché sur le résultat d'un DB Find" />
+<DImage :src="OutputNode" :width="238" :height="146" alt="Node d'output d'une route branché sur le résultat d'un DB Find" />
 
 ### Erreurs
 
@@ -88,22 +88,22 @@ Cet exemple part d'une table `articles` (voir [Base de données](./database#prep
 4. Branchez la sortie du **DB Find** sur l'output de la route.
 5. Définissez la `Response` de l'output comme étant un `Array` d'`Object`.
 
-<DImage :src="GetArticlesGraph" alt="Graphe de la route get-articles avec le DB Find branché sur l'output" />
+<DImage :src="GetArticlesGraph" :width="2560" :height="1440" alt="Graphe de la route get-articles avec le DB Find branché sur l'output" />
 
 ### 2. Appeler la route depuis l'interface
 
 1. Dans la page, créez une variable `articles` de type `Array` d'`Object` avec un champ `title` (string). Cela permettra de n'afficher que les titres dans l'interface, sans `id`, `created_at` ni `updated_at`.
 
-   <DImage :src="ArticlesVariable" alt="Panneau des variables avec la variable articles définie comme Array d'Object avec le champ title" />
+   <DImage :src="ArticlesVariable" :width="240" :height="145" alt="Panneau des variables avec la variable articles définie comme Array d'Object avec le champ title" />
 
 2. Dans le graphe, ajoutez un node `On Mounted` pour déclencher l'appel au chargement de la page, puis ajoutez le node `get-articles` et branchez sa sortie sur `Set articles`.
 
-   <DImage :src="OnMountedGraph" alt="Graphe avec On Mounted branché sur get-articles, dont la sortie est branchée sur Set articles" />
+   <DImage :src="OnMountedGraph" :width="793" :height="275" alt="Graphe avec On Mounted branché sur get-articles, dont la sortie est branchée sur Set articles" />
 
 3. Ajoutez un composant `Template` (boucle `For`) dans l'interface et liez-le à la variable `articles`.
 
-   <DImage :src="TemplateComponent" alt="Composant Template dans l'interface, lié à la variable articles" />
+   <DImage :src="TemplateComponent" :width="231" :height="150" alt="Composant Template dans l'interface, lié à la variable articles" />
 
 4. À l'intérieur du template, créez un `Block` dans lequel vous allez mettre une variable que vous allez lier à `Template[].value.title` pour afficher le titre de chaque article.
 
-   <DImage :src="TemplateTitle" alt="Texte à l'intérieur du template lié à Template[].value.title, avec la liste des titres rendue" />
+   <DImage :src="TemplateTitle" :width="2560" :height="1440" alt="Texte à l'intérieur du template lié à Template[].value.title, avec la liste des titres rendue" />

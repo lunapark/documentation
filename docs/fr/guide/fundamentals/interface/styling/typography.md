@@ -20,7 +20,7 @@ Chaque élément de texte peut être rendu avec une balise HTML différente selo
 - `span` : texte en ligne, utilisé pour styliser une partie spécifique d'un texte.
 
 <DImage
-:src="Screen1"
+:src="Screen1" :width="236" :height="160"
 alt="Exemple d'utilisation de sémantique"
 />
 

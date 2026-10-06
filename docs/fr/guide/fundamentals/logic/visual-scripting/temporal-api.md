@@ -38,4 +38,4 @@ Les types **Time**, **DateTime** et **Duration** suivent la même convention de 
 
 Le node `Create Duration` se distingue : ses entrées sont optionnelles. Vous cochez les unités voulues (`years`, `months`, `weeks`, `days`, `hours`, `minutes`, `seconds`, `milliseconds`, `microseconds`, `nanoseconds`) et chaque case ajoute une entrée numérique sur le node. La sortie est une `Duration` ISO.
 
-<DImage :src="CreateDuration" alt="Node Create Duration avec quelques unités cochées et leurs entrées" />
+<DImage :src="CreateDuration" :width="593" :height="418" alt="Node Create Duration avec quelques unités cochées et leurs entrées" />

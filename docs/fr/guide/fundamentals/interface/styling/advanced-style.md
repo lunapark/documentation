@@ -48,7 +48,7 @@ Vérifiez que layout.css.at-scope.enabled est à `true` dans about:config
 Vous pouvez désormais utiliser votre classe dans n'importe quel composant!
 
 <DImage
-:src="Screen9"
+:src="Screen9" :width="1280" :height="720"
 alt="Exemple d'utilisation de classe CSS"
 />
 
@@ -80,6 +80,6 @@ scope({ from: '.fw-body' });
 Vous pouvez désormais utiliser Tailwind dans n'importe quel composant!
 
 <DImage
-:src="Screen10"
+:src="Screen10" :width="1280" :height="720"
 alt="Exemple d'utilisation de classe Tailwind"
 />

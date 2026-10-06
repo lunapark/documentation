@@ -22,7 +22,7 @@ Chaque élément agit comme un **bloc conteneur** (parent) pouvant organiser ses
 Les propriétés de disposition s’appliquent donc au **parent**, tandis que l’alignement influence la position des enfants à l’intérieur.
 
 <DImage
-:src="Screen2"
+:src="Screen2" :width="1280" :height="720"
 alt="Capture d'écran d'un conteneur avec plusieurs enfants"
 />
 
@@ -42,7 +42,7 @@ Vous pouvez définir le mode de disposition principal de l’élément :
 > Les modes *Flex* et *Grid* sont recommandés pour structurer les interfaces complexes.
 
 <DImage
-:src="Screen3"
+:src="Screen3" :width="1280" :height="720"
 alt="Sélection du mode Flex dans le panneau de style"
 />
 
@@ -61,7 +61,7 @@ Une fois un conteneur en mode Flex ou Grid, plusieurs propriétés contrôlent l
 | **Wrap** | Indique si les éléments doivent revenir à la ligne quand l’espace est insuffisant. |
 
 <DImage
-:src="Screen4"
+:src="Screen4" :width="1280" :height="720"
 alt="Conteneur en flex avec direction, justify et align"
 />
 
@@ -78,7 +78,7 @@ Pour les cas nécessitant un placement libre (overlays, badges, tooltips), vous 
 | **Z-index** | Gère la superposition entre éléments. |
 
 <DImage
-:src="Screen5"
+:src="Screen5" :width="1280" :height="720"
 alt="Exemple de positionnement absolu dans Luna Park"
 />
 

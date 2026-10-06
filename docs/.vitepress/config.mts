@@ -1,34 +1,46 @@
 import path from "path";
 import { searchForWorkspaceRoot } from "vite";
-import { defineConfig } from "vitepress";
+import { defineConfig, type HeadConfig } from "vitepress";
 import llmstxt from "vitepress-plugin-llms";
+
+const hostname = "https://docs.luna-park.app";
+const ogLocales = { en: "en_US", fr: "fr_FR" };
 
 export default defineConfig({
     appearance: "force-dark",
-    description: "Luna Park Documentation",
+    cleanUrls: true,
+    description: "Luna Park documentation: build fast, scalable web applications with visual scripting.",
     head: [
-        [
-            "link",
-            {
-                href: "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap",
-                rel: "stylesheet"
-            }
-        ],
-        [
-            "link",
-            {
-                href: "/favicon.png",
-                rel: "icon",
-                type: "image/png"
-            }
-        ]
+        ["link", { href: "https://fonts.googleapis.com", rel: "preconnect" }],
+        ["link", { crossorigin: "", href: "https://fonts.gstatic.com", rel: "preconnect" }],
+        ["link", { href: "/favicon.png", rel: "icon", type: "image/png" }],
+        ["meta", { content: "#0b1a3a", name: "theme-color" }],
+        ["meta", { content: "website", property: "og:type" }],
+        ["meta", { content: "Luna Park Documentation", property: "og:site_name" }],
+        ["meta", { content: `${ hostname }/og-image.jpg`, property: "og:image" }],
+        ["meta", { content: "1200", property: "og:image:width" }],
+        ["meta", { content: "630", property: "og:image:height" }],
+        ["meta", { content: "summary_large_image", name: "twitter:card" }],
+        ["meta", { content: `${ hostname }/og-image.jpg`, name: "twitter:image" }]
     ],
+    lastUpdated: true,
     locales: {
         fr: {
+            description: "Documentation Luna Park : créez des applications web rapides et évolutives avec le scripting visuel.",
             label: "Français",
             lang: "fr",
             link: "/fr/",
             themeConfig: {
+                docFooter: {
+                    next: "Page suivante",
+                    prev: "Page précédente"
+                },
+                lastUpdated: {
+                    text: "Mis à jour le"
+                },
+                outline: {
+                    label: "Sur cette page"
+                },
                 nav: [
                     {
                         link: "/fr/",
@@ -279,17 +291,18 @@ export default defineConfig({
             }
         },
         root: {
+            description: "Luna Park documentation: build fast, scalable web applications with visual scripting.",
             label: "English",
             lang: "en",
-            link: "/en/",
+            link: "/",
             themeConfig: {
                 nav: [
                     {
-                        link: "/en/",
+                        link: "/",
                         text: "Home"
                     },
                     {
-                        link: "/en/guide/getting-started/introduction",
+                        link: "/guide/getting-started/introduction",
                         text: "Get Started"
                     }
                 ],
@@ -298,31 +311,31 @@ export default defineConfig({
                         collapsed: true,
                         items: [
                             {
-                                link: "/en/guide/getting-started/introduction",
+                                link: "/guide/getting-started/introduction",
                                 text: "Introduction"
                             },
                             {
-                                link: "/en/guide/getting-started/comparison",
+                                link: "/guide/getting-started/comparison",
                                 text: "Comparison"
                             },
                             {
-                                link: "/en/guide/getting-started/target-users",
+                                link: "/guide/getting-started/target-users",
                                 text: "Target Users"
                             },
                             {
-                                link: "/en/guide/getting-started/quick-start",
+                                link: "/guide/getting-started/quick-start",
                                 text: "Quick Start"
                             },
                             {
-                                link: "/en/guide/getting-started/desktop-app",
+                                link: "/guide/getting-started/desktop-app",
                                 text: "Desktop App"
                             },
                             {
-                                link: "/en/guide/getting-started/sidekick-settings",
+                                link: "/guide/getting-started/sidekick-settings",
                                 text: "Sidekick"
                             },
                             {
-                                link: "/en/guide/getting-started/find-help",
+                                link: "/guide/getting-started/find-help",
                                 text: "Get Help"
                             }
                         ],
@@ -332,50 +345,50 @@ export default defineConfig({
                         collapsed: true,
                         items: [
                             {
-                                link: "/en/guide/fundamentals/project-files",
+                                link: "/guide/fundamentals/project-files",
                                 text: "Project Files"
                             },
                             {
                                 collapsed: true,
                                 items: [
                                     {
-                                        link: "/en/guide/fundamentals/interface/editor",
+                                        link: "/guide/fundamentals/interface/editor",
                                         text: "Editor"
                                     },
                                     {
-                                        link: "/en/guide/fundamentals/interface/components",
+                                        link: "/guide/fundamentals/interface/components",
                                         text: "Components"
                                     },
                                     {
-                                        link: "/en/guide/fundamentals/interface/templates",
+                                        link: "/guide/fundamentals/interface/templates",
                                         text: "Conditions and Loops"
                                     },
                                     {
                                         collapsed: true,
-                                        link: "/en/guide/fundamentals/interface/styling",
+                                        link: "/guide/fundamentals/interface/styling",
                                         items: [
                                             {
-                                                link: "/en/guide/fundamentals/interface/styling/palette",
+                                                link: "/guide/fundamentals/interface/styling/palette",
                                                 text: "Palette"
                                             },
                                             {
-                                                link: "/en/guide/fundamentals/interface/styling/tokens",
+                                                link: "/guide/fundamentals/interface/styling/tokens",
                                                 text: "Tokens"
                                             },
                                             {
-                                                link: "/en/guide/fundamentals/interface/styling/typography",
+                                                link: "/guide/fundamentals/interface/styling/typography",
                                                 text: "Typography"
                                             },
                                             {
-                                                link: "/en/guide/fundamentals/interface/styling/alignment",
+                                                link: "/guide/fundamentals/interface/styling/alignment",
                                                 text: "Alignment"
                                             },
                                             {
-                                                link: "/en/guide/fundamentals/interface/styling/visual-effects",
+                                                link: "/guide/fundamentals/interface/styling/visual-effects",
                                                 text: "Visual Effects"
                                             },
                                             {
-                                                link: "/en/guide/fundamentals/interface/styling/advanced-style",
+                                                link: "/guide/fundamentals/interface/styling/advanced-style",
                                                 text: "Advanced Styling"
                                             }
                                         ],
@@ -391,38 +404,38 @@ export default defineConfig({
                                         collapsed: true,
                                         items: [
                                             {
-                                                link: "/en/guide/fundamentals/logic/visual-scripting/introduction",
+                                                link: "/guide/fundamentals/logic/visual-scripting/introduction",
                                                 text: "Introduction"
                                             },
                                             {
-                                                link: "/en/guide/fundamentals/logic/visual-scripting/graph",
+                                                link: "/guide/fundamentals/logic/visual-scripting/graph",
                                                 text: "The Graph"
                                             },
                                             {
-                                                link: "/en/guide/fundamentals/logic/visual-scripting/flow-control",
+                                                link: "/guide/fundamentals/logic/visual-scripting/flow-control",
                                                 text: "Flow Control"
                                             },
                                             {
-                                                link: "/en/guide/fundamentals/logic/visual-scripting/libraries",
+                                                link: "/guide/fundamentals/logic/visual-scripting/libraries",
                                                 text: "Node Libraries"
                                             },
                                             {
-                                                link: "/en/guide/fundamentals/logic/visual-scripting/temporal-api",
+                                                link: "/guide/fundamentals/logic/visual-scripting/temporal-api",
                                                 text: "Temporal API"
                                             }
                                         ],
                                         text: "Visual Scripting"
                                     },
                                     {
-                                        link: "/en/guide/fundamentals/logic/store",
+                                        link: "/guide/fundamentals/logic/store",
                                         text: "Store"
                                     },
                                     {
-                                        link: "/en/guide/fundamentals/logic/variables",
+                                        link: "/guide/fundamentals/logic/variables",
                                         text: "Variables"
                                     },
                                     {
-                                        link: "/en/guide/fundamentals/logic/scripts",
+                                        link: "/guide/fundamentals/logic/scripts",
                                         text: "Scripts and Functions"
                                     }
                                 ],
@@ -432,19 +445,19 @@ export default defineConfig({
                                 collapsed: true,
                                 items: [
                                     {
-                                        link: "/en/guide/fundamentals/data/database",
+                                        link: "/guide/fundamentals/data/database",
                                         text: "Database"
                                     },
                                     {
-                                        link: "/en/guide/fundamentals/data/routes",
+                                        link: "/guide/fundamentals/data/routes",
                                         text: "Routes"
                                     },
                                     {
-                                        link: "/en/guide/fundamentals/data/cron",
+                                        link: "/guide/fundamentals/data/cron",
                                         text: "Cron"
                                     },
                                     {
-                                        link: "/en/guide/fundamentals/data/auth",
+                                        link: "/guide/fundamentals/data/auth",
                                         text: "Auth"
                                     }
                                 ],
@@ -457,15 +470,15 @@ export default defineConfig({
                         collapsed: true,
                         items: [
                             {
-                                link: "/en/guide/integrations/npm",
+                                link: "/guide/integrations/npm",
                                 text: "NPM"
                             },
                             {
-                                link: "/en/guide/integrations/plugins",
+                                link: "/guide/integrations/plugins",
                                 text: "Plugins"
                             },
                             {
-                                link: "/en/guide/integrations/ai-agents",
+                                link: "/guide/integrations/ai-agents",
                                 text: "AI Agents (MCP)"
                             }
                         ],
@@ -475,19 +488,19 @@ export default defineConfig({
                         collapsed: true,
                         items: [
                             {
-                                link: "/en/guide/deployment/compilation",
+                                link: "/guide/deployment/compilation",
                                 text: "Compilation"
                             },
                             {
-                                link: "/en/guide/deployment/native-apps",
+                                link: "/guide/deployment/native-apps",
                                 text: "Native Apps"
                             },
                             {
-                                link: "/en/guide/deployment/prerequisites",
+                                link: "/guide/deployment/prerequisites",
                                 text: "Prerequisites"
                             },
                             {
-                                link: "/en/guide/deployment/deployment",
+                                link: "/guide/deployment/deployment",
                                 text: "Self-hosting"
                             }
                         ],
@@ -497,39 +510,39 @@ export default defineConfig({
                         collapsed: true,
                         items: [
                             {
-                                link: "/en/guide/plugins/introduction",
+                                link: "/guide/plugins/introduction",
                                 text: "Introduction"
                             },
                             {
-                                link: "/en/guide/plugins/setup",
+                                link: "/guide/plugins/setup",
                                 text: "Environment setup"
                             },
                             {
-                                link: "/en/guide/plugins/basics",
+                                link: "/guide/plugins/basics",
                                 text: "Basics"
                             },
                             {
-                                link: "/en/guide/plugins/typing",
+                                link: "/guide/plugins/typing",
                                 text: "Typing"
                             },
                             {
-                                link: "/en/guide/plugins/components",
+                                link: "/guide/plugins/components",
                                 text: "Custom components"
                             },
                             {
-                                link: "/en/guide/plugins/nodes",
+                                link: "/guide/plugins/nodes",
                                 text: "Custom nodes"
                             },
                             {
-                                link: "/en/guide/plugins/tokens",
+                                link: "/guide/plugins/tokens",
                                 text: "Tokens"
                             },
                             {
-                                link: "/en/guide/plugins/backend",
+                                link: "/guide/plugins/backend",
                                 text: "Backend and Build"
                             },
                             {
-                                link: "/en/guide/plugins/deployment",
+                                link: "/guide/plugins/deployment",
                                 text: "Deployment"
                             }
                         ],
@@ -539,7 +552,41 @@ export default defineConfig({
             }
         }
     },
+    markdown: {
+        image: {
+            lazyLoading: true
+        }
+    },
+    sitemap: {
+        hostname
+    },
     themeConfig: {
+        search: {
+            options: {
+                locales: {
+                    fr: {
+                        translations: {
+                            button: {
+                                buttonAriaLabel: "Rechercher",
+                                buttonText: "Rechercher"
+                            },
+                            modal: {
+                                backButtonTitle: "Fermer la recherche",
+                                displayDetails: "Afficher la liste détaillée",
+                                footer: {
+                                    closeText: "fermer",
+                                    navigateText: "naviguer",
+                                    selectText: "sélectionner"
+                                },
+                                noResultsText: "Aucun résultat pour",
+                                resetButtonTitle: "Réinitialiser la recherche"
+                            }
+                        }
+                    }
+                }
+            },
+            provider: "local"
+        },
         socialLinks: [
             {
                 icon: "github",
@@ -548,6 +595,71 @@ export default defineConfig({
         ]
     },
     title: "Luna Park",
+    transformHead({ description, pageData, title }) {
+        if (pageData.isNotFound) {
+            return [];
+        }
+
+        const pagePath = pageData.relativePath.replace(/(^|\/)index\.md$/, "$1").replace(/\.md$/, "");
+        const lang = pagePath.startsWith("fr/") ? "fr" : "en";
+        const enPath = lang === "fr" ? pagePath.slice(3) : pagePath;
+        const url = `${ hostname }/${ pagePath }`;
+        const enUrl = `${ hostname }/${ enPath }`;
+        const frUrl = `${ hostname }/fr/${ enPath }`;
+        const isHome = enPath === "";
+
+        const head: HeadConfig[] = [
+            ["link", { href: url, rel: "canonical" }],
+            ["link", { href: enUrl, hreflang: "en", rel: "alternate" }],
+            ["link", { href: frUrl, hreflang: "fr", rel: "alternate" }],
+            ["link", { href: enUrl, hreflang: "x-default", rel: "alternate" }],
+            ["meta", { content: url, property: "og:url" }],
+            ["meta", { content: title, property: "og:title" }],
+            ["meta", { content: description, property: "og:description" }],
+            ["meta", { content: ogLocales[lang], property: "og:locale" }],
+            ["meta", { content: ogLocales[lang === "fr" ? "en" : "fr"], property: "og:locale:alternate" }]
+        ];
+
+        const jsonLd = isHome
+            ? {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                description,
+                inLanguage: lang,
+                name: title,
+                publisher: {
+                    "@type": "Organization",
+                    logo: `${ hostname }/favicon.png`,
+                    name: "Luna Park",
+                    url: "https://luna-park.app"
+                },
+                url
+            }
+            : {
+                "@context": "https://schema.org",
+                "@type": "TechArticle",
+                dateModified: pageData.lastUpdated ? new Date(pageData.lastUpdated).toISOString() : undefined,
+                description,
+                headline: pageData.title,
+                image: `${ hostname }/og-image.jpg`,
+                inLanguage: lang,
+                isPartOf: {
+                    "@type": "WebSite",
+                    name: "Luna Park Documentation",
+                    url: lang === "fr" ? `${ hostname }/fr/` : `${ hostname }/`
+                },
+                publisher: {
+                    "@type": "Organization",
+                    name: "Luna Park",
+                    url: "https://luna-park.app"
+                },
+                url
+            };
+
+        head.push(["script", { type: "application/ld+json" }, JSON.stringify(jsonLd)]);
+
+        return head;
+    },
     vite: {
         plugins: [llmstxt({
             ignoreFiles: ["fr/**"]

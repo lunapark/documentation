@@ -26,8 +26,8 @@ Pour un breakpoint posé à `1024px` :
 - **Desktop first** : la règle s'applique aux écrans **≤ 1024**.
 
 <DImage
-:src="Screen3"
-alt="Capture d'écran de l'éditeur Luna Park"
+:src="Screen3" :width="1280" :height="720"
+alt="Réglages de la palette avec les valeurs de chroma et de teinte appliquées à l'aperçu"
 />
 
 _Note : La palette sert de base à vos tokens de couleur : toute modification globale s'y répercute automatiquement._

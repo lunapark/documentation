@@ -17,7 +17,7 @@ import ImmersiveMode from '/assets/images/layout/editor/immersive-mode.png';
 L'éditeur vous permet de construire votre application en utilisant des mises en page et une logique visuelle. Il se compose de plusieurs panneaux qui servent différents objectifs. Chaque panneau est redimensionnable, et sa taille est mémorisée.
 
 <DImage
-:src="Screen1"
+:src="Screen1" :width="1280" :height="720"
 alt="Vue d'ensemble de l'éditeur Luna Park"
 />
 
@@ -28,7 +28,7 @@ L'explorateur est situé en haut à gauche de l'éditeur. Il liste les [fichiers
 Le bouton de tri bascule entre un tri par type et un tri par nom.
 
 <DImage
-:src="Screen2"
+:src="Screen2" :width="1280" :height="720"
 alt="Panneau de l'explorateur avec les fichiers du projet"
 />
 
@@ -40,7 +40,7 @@ Le panneau des options est situé en bas à gauche de l'éditeur. Son contenu d�
 - pour un script, une route ou un store, il liste ses variables locales (**Local Variables**) et ses fonctions (**Functions**).
 
 <DImage
-:src="Screen3"
+:src="Screen3" :width="1280" :height="720"
 alt="Panneau des options affichant l'arborescence d'un composant"
 />
 
@@ -53,7 +53,7 @@ Chaque fichier ouvert a un onglet au-dessus de la vue principale. Faites un clic
 L'inspecteur est situé sur le côté droit de l'éditeur. Il affiche les informations de l'élément sélectionné (un fichier, un élément de mise en page, un nœud logique, etc.). Utilisez le bouton d'épingle pour le garder sur l'élément courant pendant que vous en sélectionnez d'autres.
 
 <DImage
-:src="Screen4"
+:src="Screen4" :width="1280" :height="720"
 alt="Inspecteur affichant les propriétés d'un élément de mise en page"
 />
 
@@ -66,7 +66,7 @@ Le panneau du bas a un second onglet, **Templates**, qui liste les blocs prêts 
 Pointez votre curseur sur la bordure du panneau et faites-la glisser pour le redimensionner, ou utilisez le bouton de bascule pour le masquer.
 
 <DImage
-:src="Screen5"
+:src="Screen5" :width="1280" :height="720"
 alt="Panneau de la console avec des valeurs affichées"
 />
 
@@ -83,7 +83,7 @@ La vue principale est la partie centrale de l'éditeur. Elle affiche le fichier 
 D'autres options permettent d'ouvrir l'aperçu dans une nouvelle fenêtre (**Open preview in new window**), de bloquer les interactions (**Block interactions**), de verrouiller le mode aperçu (**Lock preview mode**) et d'afficher ou masquer le mode insertion.
 
 <DImage
-:src="Screen6"
+:src="Screen6" :width="1280" :height="720"
 alt="Vue principale en mode builder"
 />
 
@@ -144,4 +144,4 @@ Une fois fermés, les panneaux apparaissent comme une fine barre avec leur nom s
 
 Le mode immersif est idéal lorsque vous travaillez sur des mises en page complexes ou que vous souhaitez une vue dégagée du canevas.
 
-<DImage :src="ImmersiveMode" alt="Éditeur en mode immersif avec panneaux cachés" />
+<DImage :src="ImmersiveMode" :width="2560" :height="1440" alt="Éditeur en mode immersif avec panneaux cachés" />

@@ -18,14 +18,14 @@ Contrairement à un package [NPM](./npm) classique, un plugin est conçu spécif
 Ouvrez **Libraries** dans la barre supérieure, puis **Install plugins**. L'onglet **Plugins** cherche parmi les plugins disponibles ; l'onglet **Installed** liste les plugins du projet.
 
 <DImage
-:src="Plugins"
+:src="Plugins" :width="623" :height="411"
 alt="Liste des plugins disponibles"
 />
 
 Sélectionnez un plugin et cliquez sur `Install plugin`.
 
 <DImage
-:src="Install"
+:src="Install" :width="744" :height="382"
 alt="Installation d'un plugin"
 />
 

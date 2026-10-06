@@ -19,7 +19,7 @@ import ProviderConfig from "/assets/images/getting-started/sidekick/provider-con
 
 Sidekick s'ouvre dans un espace redimensionnable à droite de l'éditeur. Son en-tête permet de démarrer une nouvelle conversation (**New chat**), de parcourir l'historique (**Conversation history**) et de fermer le panneau.
 
-<DImage :src="Popup" alt="Navigator ouvert sur l'onglet Sidekick" />
+<DImage :src="Popup" :width="757" :height="388" alt="Navigator ouvert sur l'onglet Sidekick" />
 
 ## Modes
 
@@ -57,7 +57,7 @@ Ouvrez le bouton **Sidekick AI** de la barre supérieure. Dans **Hosted provider
 2. Choisissez le modèle.
 3. Renseignez votre `API Key` (et l'`API URL` si nécessaire).
 
-<DImage :src="ProviderConfig" alt="Configuration d'un fournisseur avec API Key et choix du modèle" />
+<DImage :src="ProviderConfig" :width="762" :height="392" alt="Configuration d'un fournisseur avec API Key et choix du modèle" />
 
 Fournisseurs hébergés supportés :
 

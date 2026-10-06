@@ -49,7 +49,7 @@ Notez que chaque clé d'entrée doit commencer par `in_`, et chaque clé de sort
 
 Ce nœud sera affiché comme ceci :
 <DImage
-:src="Function"
+:src="Function" :width="293" :height="159"
 alt="Nœud de fonction"
 />
 
@@ -83,7 +83,7 @@ export const myOperationNode = makeLogicNode({
 
 Ce nœud sera affiché comme ceci :
 <DImage
-:src="Operation"
+:src="Operation" :width="295" :height="138"
 alt="Nœud d'opération"
 />
 

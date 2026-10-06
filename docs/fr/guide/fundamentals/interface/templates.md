@@ -28,7 +28,7 @@ Dans cet exemple, nous allons afficher un message "Vous avez gagné" lorsque le 
 2. Dans le panneau **Inspecteur**, ajoutez une variable `Computed` appelée `afficherVictoire`.
 3. Définissez-la comme un **booléen** (vrai ou faux).
 
-![Capture d'écran de l'éditeur Luna Park](/assets/images/layout/templates/screen1.png)
+![Inspecteur avec une variable score de type Number et une variable calculée displayWin de type Boolean](/assets/images/layout/templates/screen1.png){width=405 height=469}
 
 ### 2. Utiliser la Variable `Computed` dans l'Interface
 
@@ -39,8 +39,8 @@ Dans cet exemple, nous allons afficher un message "Vous avez gagné" lorsque le 
     - Si `afficherVictoire` est faux, le message ne sera pas affiché.
 
 <DImage
-:src="Screen2"
-alt="Capture d'écran de l'éditeur Luna Park"
+:src="Screen2" :width="1216" :height="684"
+alt="Élément Template avec une logique If liée à displayWin, contenant le texte You win"
 />
 
 ### 3. Définir la Logique pour la Variable Calculée
@@ -50,8 +50,8 @@ alt="Capture d'écran de l'éditeur Luna Park"
 3. Connectez le résultat de cette condition à la **variable `Computed` afficherVictoire**.
 
 <DImage
-:src="Screen3"
-alt="Capture d'écran de l'éditeur Luna Park"
+:src="Screen3" :width="693" :height="351"
+alt="Graphe de la variable calculée displayWin comparant le score à 10 avec un nœud A ≥ B"
 />
 
 ### 4. Tester Votre Logique
@@ -59,7 +59,7 @@ alt="Capture d'écran de l'éditeur Luna Park"
 - Modifiez le score en utilisant les boutons de l'interface.
 - Lorsque le score atteint ou dépasse `10`, le message "Vous avez gagné" devrait apparaître automatiquement.
 
-![Capture d'écran de l'éditeur Luna Park](/assets/images/layout/templates/gif1.gif)
+![Mode aperçu : le score augmente jusqu'à l'apparition du message You win](/assets/images/layout/templates/gif1.gif){width=1265 height=607}
 
 ## Template For
 
@@ -73,7 +73,7 @@ Exemple : Afficher une liste d'articles
 2. Dans le panneau **Inspecteur**, ajoutez une variable de type **Tableau** (array) appelée `articles`.
 3. Remplissez cette variable avec des valeurs, par exemple : <br/> <DSchemaValue :value='["sushi", "onigiri", "takoyaki", "tsukune"]'/>.
 
-![Capture d'écran de l'éditeur Luna Park](/assets/images/layout/templates/screen4.png)
+![Variable articles de type Array contenant sushi, onigiri, takoyaki et tsukune](/assets/images/layout/templates/screen4.png){width=417 height=505}
 
 ### 2. Configurer la Logique de Boucle
 
@@ -82,7 +82,7 @@ Exemple : Afficher une liste d'articles
 3. La logique For permet d'itérer sur chaque élément du tableau `articles`.
 4. Le `Template` exécutera son contenu une fois pour chaque article.
 
-![Capture d'écran de l'éditeur Luna Park](/assets/images/layout/templates/screen5.png)
+![Inspecteur d'un élément Template avec une logique For itérant sur articles](/assets/images/layout/templates/screen5.png){width=401 height=264}
 
 ### 3. Afficher les Éléments dans l'Interface
 
@@ -92,6 +92,6 @@ Exemple : Afficher une liste d'articles
 4. Maintenant, lorsque vous visualisez la page **Articles** dans l'interface, vous verrez chaque élément du tableau `articles` affiché dans un nouveau bloc.
 
 <DImage
-:src="Screen6"
-alt="Capture d'écran de l'éditeur Luna Park"
+:src="Screen6" :width="1216" :height="684"
+alt="Élément Variable lié à Template[].value, affichant chaque article dans l'aperçu"
 />

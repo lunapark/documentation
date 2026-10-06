@@ -17,8 +17,8 @@ Ils garantissent **la cohérence des styles** et permettent de modifier l'appare
 Par exemple, si vous modifiez le token `primary-color`, toutes les zones qui l'utilisent seront mises à jour instantanément.
 
 <DImage
-:src="Screen1"
-alt="Capture d'écran de l'éditeur Luna Park"
+:src="Screen1" :width="1280" :height="720"
+alt="Panneau du thème avec les couleurs primaire et de contenu, la bordure et l'arrondi"
 />
 
 
@@ -29,7 +29,7 @@ alt="Capture d'écran de l'éditeur Luna Park"
 3. Sélectionnez le token de design que vous souhaitez utiliser.
 
 <DImage
-:src="Gif1"
+:src="Gif1" :width="990" :height="369"
 alt="Exemple d'utilisation de token"
 />
 
@@ -48,7 +48,7 @@ Contrairement aux tokens, qui sont statiques et globaux, les variables sont **co
 3. Sélectionnez la variable que vous souhaitez utiliser.
 
 <DImage
-:src="Gif2"
+:src="Gif2" :width="990" :height="504"
 alt="Exemple d'utilisation de token"
 />
 

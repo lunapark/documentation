@@ -48,8 +48,8 @@ Une variable peut aussi être **calculée** : sa valeur est recalculée automati
 4. Donnez-lui une valeur initiale dans la section **Défaut** (par exemple, `0`).
 
 <DImage
-:src="Screen1"
-alt="Capture d'écran de l'éditeur Luna Park"
+:src="Screen1" :width="1216" :height="684"
+alt="Inspecteur avec une variable score de type Number et une valeur par défaut de 0"
 />
 
 ### 2. Ajouter un élément d'affichage
@@ -58,8 +58,8 @@ alt="Capture d'écran de l'éditeur Luna Park"
 2. Sélectionnez cet élément et liez-le à une variable dans le panneau d'inspection.
 
 <DImage
-:src="Screen2"
-alt="Capture d'écran de l'éditeur Luna Park"
+:src="Screen2" :width="1216" :height="684"
+alt="Élément Variable lié à la variable score dans l'inspecteur"
 />
 
 ### 3. Ajouter des boutons pour modifier la variable
@@ -68,8 +68,8 @@ alt="Capture d'écran de l'éditeur Luna Park"
 2. Configurez les boutons pour déclencher un événement **On Click**.
 
 <DImage
-:src="Gif1"
-alt="Capture d'écran de l'éditeur Luna Park"
+:src="Gif1" :width="995" :height="537"
+alt="Ajout des boutons plus et moins autour du score et configuration de leur événement On Click"
 />
 
 ### 4. Créer la logique pour mettre à jour la variable
@@ -82,8 +82,8 @@ alt="Capture d'écran de l'éditeur Luna Park"
 3. Répétez le processus pour le bouton `-`, mais utilisez le nœud `Subtract (-)` au lieu de `Add (+)`.
 
 <DImage
-:src="Screen3"
-alt="Capture d'écran de l'éditeur Luna Park"
+:src="Screen3" :width="765" :height="380"
+alt="On Click sur le bouton plus définit score à score + 1"
 />
 
 ### 5. Tester et vérifier
@@ -92,7 +92,7 @@ alt="Capture d'écran de l'éditeur Luna Park"
 - Cliquez sur les boutons `+` et `-` dans l'interface.
 - Vous devriez voir la valeur de la variable se mettre à jour en temps réel.
 
-![Capture d'écran de l'éditeur Luna Park](/assets/images/visual-scripting/variables/gif2.gif)
+![Mode aperçu : les boutons plus et moins mettent à jour le score](/assets/images/visual-scripting/variables/gif2.gif){width=1265 height=607}
 
 ## Réactivité des variables
 
