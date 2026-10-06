@@ -39,7 +39,9 @@ pnpm run dev
 pnpm run preview 
 ```
 
-You can now install the plugin directly in Luna Park. Open a project or the [playground editor](https://luna-park.app/editor), then navigate to `Libraries > Plugins > Install Plugins`.
+The `preview` script runs `luna-preview`, a small server provided by `@luna-park/plugin`. It serves your build on port `2084` and resolves its npm imports through [esm.sh](https://esm.sh), like the editor does for published plugins.
+
+You can now install the plugin directly in Luna Park. Open a project or the [playground editor](https://luna-park.app/editor), then click `Libraries > Install plugins`.
 
 Locate the "Install from URL" input field at the bottom of the plugins panel.
 

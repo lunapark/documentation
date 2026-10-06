@@ -15,6 +15,18 @@ Veuillez vous assurer que votre système répond aux spécifications minimales e
 | Espace disque | 3.5 GB pour l'installation, 5 GB pour les mises à jour | N/A |
 
 
+## Exécuter un projet
+
+Générer et lancer un projet avec l'[application desktop](../getting-started/desktop-app), ou [auto-héberger](./deployment) le code exporté, nécessite :
+
+| Outil | Version |
+|---|---|
+| Node.js | 24 à 26 |
+| pnpm | 12 ou plus |
+| PostgreSQL | Pour les applications qui utilisent une base de données (code exporté uniquement) |
+
+Les [applications natives](./native-apps) ont leurs propres prérequis (Rust, Android Studio, Xcode...), listés par l'éditeur.
+
 ## Compatibilité avec les navigateurs
 
 Pour garantir des performances optimales, assurez-vous d'utiliser une version à jour de votre navigateur.

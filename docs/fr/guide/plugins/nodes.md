@@ -86,3 +86,64 @@ Ce nœud sera affiché comme ceci :
 :src="Operation"
 alt="Nœud d'opération"
 />
+
+## Enregistrer les nœuds
+
+Ajoutez vos nœuds à `editor.nodes` dans le plugin :
+
+```ts
+makePlugin({
+    /* ... */
+    editor: {
+        nodes: [myFunctionNode, myOperationNode]
+    }
+});
+```
+
+Comme les autres options, `nodes` peut être une fonction qui reçoit l'[environnement](./basics#format-des-options), pour générer des nœuds à partir de la configuration du plugin.
+
+## Scope et documentation
+
+`display.config.scope` limite où le nœud peut être utilisé : `ELogicScope.Frontend`, `ELogicScope.Backend` ou `ELogicScope.Shared`. Un nœud backend, par exemple, n'apparaît que dans les routes, les crons et les scripts backend.
+
+`documentation.description` est affichée dans l'éditeur et transmise à Sidekick et aux agents IA.
+
+```ts
+import { ELogicScope, LogicType, makeLogicNode } from "@luna-park/plugin";
+
+export const sendNode = makeLogicNode({
+    name: "my-plugin/send",
+    /* inputs, outputs, methods */
+    display: {
+        name: "Send",
+        config: { scope: ELogicScope.Backend }
+    },
+    documentation: {
+        description: "Envoie un message au service."
+    }
+});
+```
+
+## Code compilé
+
+À la compilation de l'application, la méthode du nœud est copiée dans le code généré. Elle doit donc être autonome : elle ne peut pas utiliser les variables ou imports de votre fichier de plugin.
+
+Pour appeler votre propre code, fournissez `build` :
+
+- `generate` : renvoie le code de la méthode, sous forme de string ;
+- `imports` : les fonctions à importer dans le fichier généré, avec le package d'où elles viennent.
+
+```ts
+makeLogicNode({
+    /* ... */
+    build: {
+        generate: () => `async function () {
+            this.out_result = await send(this.in_message);
+            await this.out_exec();
+        }`,
+        imports: [{ name: "send", target: "my-plugin/server" }]
+    }
+});
+```
+
+Le package importé doit être ajouté aux dépendances de l'application avec `build.frontImports` ou `build.backImports` (voir [Backend et build](./backend#dependances)).

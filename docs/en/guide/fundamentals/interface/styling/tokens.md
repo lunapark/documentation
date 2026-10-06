@@ -4,8 +4,6 @@ description: "Use reusable style tokens to keep colors, sizes, spacing, and typo
 
 <script setup lang="ts">
 import Screen1 from '/assets/images/layout/styling/screen1.png';
-import Screen2 from '/assets/images/layout/styling/screen2.png';
-import Screen3 from '/assets/images/layout/styling/screen3.png';
 import {faLink, faBolt} from "@fortawesome/pro-solid-svg-icons";
 import gif1 from '/assets/images/layout/styling/gif1.gif';
 import gif2 from '/assets/images/layout/styling/gif2.gif';

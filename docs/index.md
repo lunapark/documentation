@@ -1,5 +1,5 @@
 ---
-description: "Point d'entrée de la documentation Luna Park."
+description: "Entry point of the Luna Park documentation."
 ---
 
 <script setup lang="ts">

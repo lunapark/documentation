@@ -13,7 +13,7 @@ import QuickStylePanels from '/assets/images/layout/styling/quick-style-panels.p
 
 ## Stylisation Globale
 
-La stylisation globale de votre application est accessible depuis le bouton `Palette` de la barre supérieure de l'éditeur. Vous pouvez mettre à jour les couleurs primaires et de contenu, les nuances seront automatiquement générées.
+La stylisation globale de votre application est accessible depuis le bouton `Palette` de la barre supérieure de l'éditeur. Vous pouvez mettre à jour les couleurs primaire, secondaire et de contenu, les nuances seront automatiquement générées.
 
 Notez que vous pouvez faire correspondre les couleurs de l'éditeur avec celles de votre application en utilisant l'option de correspondance de l'éditeur. Cela peut rendre la construction plus confortable pour vos yeux.
 

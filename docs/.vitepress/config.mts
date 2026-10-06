@@ -60,8 +60,12 @@ export default defineConfig({
                                 text: "Démarrage Rapide"
                             },
                             {
+                                link: "/fr/guide/getting-started/desktop-app",
+                                text: "Application Desktop"
+                            },
+                            {
                                 link: "/fr/guide/getting-started/sidekick-settings",
-                                text: "Configurer le Sidekick"
+                                text: "Sidekick"
                             },
                             {
                                 link: "/fr/guide/getting-started/find-help",
@@ -73,6 +77,10 @@ export default defineConfig({
                     {
                         collapsed: true,
                         items: [
+                            {
+                                link: "/fr/guide/fundamentals/project-files",
+                                text: "Fichiers du projet"
+                            },
                             {
                                 collapsed: true,
                                 items: [
@@ -90,6 +98,7 @@ export default defineConfig({
                                     },
                                     {
                                         collapsed: true,
+                                        link: "/fr/guide/fundamentals/interface/styling",
                                         items: [
                                             {
                                                 link: "/fr/guide/fundamentals/interface/styling/palette",
@@ -140,6 +149,10 @@ export default defineConfig({
                                                 text: "Contrôle de Flux"
                                             },
                                             {
+                                                link: "/fr/guide/fundamentals/logic/visual-scripting/libraries",
+                                                text: "Bibliothèques de nœuds"
+                                            },
+                                            {
                                                 link: "/fr/guide/fundamentals/logic/visual-scripting/temporal-api",
                                                 text: "Temporal API"
                                             }
@@ -153,6 +166,10 @@ export default defineConfig({
                                     {
                                         link: "/fr/guide/fundamentals/logic/variables",
                                         text: "Variables"
+                                    },
+                                    {
+                                        link: "/fr/guide/fundamentals/logic/scripts",
+                                        text: "Scripts et fonctions"
                                     }
                                 ],
                                 text: "Logique"
@@ -169,6 +186,10 @@ export default defineConfig({
                                         text: "Routes"
                                     },
                                     {
+                                        link: "/fr/guide/fundamentals/data/cron",
+                                        text: "Cron"
+                                    },
+                                    {
                                         link: "/fr/guide/fundamentals/data/auth",
                                         text: "Auth"
                                     }
@@ -182,7 +203,11 @@ export default defineConfig({
                         collapsed: true,
                         items: [
                             { link: "/fr/guide/integrations/npm", text: "NPM" },
-                            { link: "/fr/guide/integrations/plugins", text: "Plugins" }
+                            { link: "/fr/guide/integrations/plugins", text: "Plugins" },
+                            {
+                                link: "/fr/guide/integrations/ai-agents",
+                                text: "Agents IA (MCP)"
+                            }
                         ],
                         text: "Intégrations"
                     },
@@ -194,12 +219,16 @@ export default defineConfig({
                                 text: "Compilation"
                             },
                             {
+                                link: "/fr/guide/deployment/native-apps",
+                                text: "Applications natives"
+                            },
+                            {
                                 link: "/fr/guide/deployment/prerequisites",
                                 text: "Prérequis"
                             },
                             {
                                 link: "/fr/guide/deployment/deployment",
-                                text: "Déploiement"
+                                text: "Auto-hébergement"
                             }
                         ],
                         text: "Déploiement & Exportation"
@@ -232,12 +261,16 @@ export default defineConfig({
                                 text: "Nœuds personnalisés"
                             },
                             {
-                                link: "/fr/guide/plugins/deployment",
-                                text: "Déploiement"
-                            },
-                            {
                                 link: "/fr/guide/plugins/tokens",
                                 text: "Tokens"
+                            },
+                            {
+                                link: "/fr/guide/plugins/backend",
+                                text: "Backend et build"
+                            },
+                            {
+                                link: "/fr/guide/plugins/deployment",
+                                text: "Déploiement"
                             }
                         ],
                         text: "Développer un plugin"
@@ -281,8 +314,12 @@ export default defineConfig({
                                 text: "Quick Start"
                             },
                             {
+                                link: "/en/guide/getting-started/desktop-app",
+                                text: "Desktop App"
+                            },
+                            {
                                 link: "/en/guide/getting-started/sidekick-settings",
-                                text: "Configure the Sidekick"
+                                text: "Sidekick"
                             },
                             {
                                 link: "/en/guide/getting-started/find-help",
@@ -294,6 +331,10 @@ export default defineConfig({
                     {
                         collapsed: true,
                         items: [
+                            {
+                                link: "/en/guide/fundamentals/project-files",
+                                text: "Project Files"
+                            },
                             {
                                 collapsed: true,
                                 items: [
@@ -311,6 +352,7 @@ export default defineConfig({
                                     },
                                     {
                                         collapsed: true,
+                                        link: "/en/guide/fundamentals/interface/styling",
                                         items: [
                                             {
                                                 link: "/en/guide/fundamentals/interface/styling/palette",
@@ -361,6 +403,10 @@ export default defineConfig({
                                                 text: "Flow Control"
                                             },
                                             {
+                                                link: "/en/guide/fundamentals/logic/visual-scripting/libraries",
+                                                text: "Node Libraries"
+                                            },
+                                            {
                                                 link: "/en/guide/fundamentals/logic/visual-scripting/temporal-api",
                                                 text: "Temporal API"
                                             }
@@ -374,6 +420,10 @@ export default defineConfig({
                                     {
                                         link: "/en/guide/fundamentals/logic/variables",
                                         text: "Variables"
+                                    },
+                                    {
+                                        link: "/en/guide/fundamentals/logic/scripts",
+                                        text: "Scripts and Functions"
                                     }
                                 ],
                                 text: "Logic"
@@ -388,6 +438,10 @@ export default defineConfig({
                                     {
                                         link: "/en/guide/fundamentals/data/routes",
                                         text: "Routes"
+                                    },
+                                    {
+                                        link: "/en/guide/fundamentals/data/cron",
+                                        text: "Cron"
                                     },
                                     {
                                         link: "/en/guide/fundamentals/data/auth",
@@ -409,6 +463,10 @@ export default defineConfig({
                             {
                                 link: "/en/guide/integrations/plugins",
                                 text: "Plugins"
+                            },
+                            {
+                                link: "/en/guide/integrations/ai-agents",
+                                text: "AI Agents (MCP)"
                             }
                         ],
                         text: "Integrations"
@@ -421,12 +479,16 @@ export default defineConfig({
                                 text: "Compilation"
                             },
                             {
+                                link: "/en/guide/deployment/native-apps",
+                                text: "Native Apps"
+                            },
+                            {
                                 link: "/en/guide/deployment/prerequisites",
                                 text: "Prerequisites"
                             },
                             {
                                 link: "/en/guide/deployment/deployment",
-                                text: "Deployment"
+                                text: "Self-hosting"
                             }
                         ],
                         text: "Deployment & Export"
@@ -459,12 +521,16 @@ export default defineConfig({
                                 text: "Custom nodes"
                             },
                             {
-                                link: "/en/guide/plugins/deployment",
-                                text: "Deployment"
-                            },
-                            {
                                 link: "/en/guide/plugins/tokens",
                                 text: "Tokens"
+                            },
+                            {
+                                link: "/en/guide/plugins/backend",
+                                text: "Backend and Build"
+                            },
+                            {
+                                link: "/en/guide/plugins/deployment",
+                                text: "Deployment"
                             }
                         ],
                         text: "Develop a plugin"

@@ -3,7 +3,6 @@ description: "Utilisez des éléments de template conditionnels, répétés et d
 ---
 
 <script setup lang="ts">
-import {LogicType} from "@luna-park/logicnodes";
 
 import Screen2 from '/assets/images/layout/templates/screen2.png';
 import Screen3 from '/assets/images/layout/templates/screen3.png';
@@ -87,7 +86,7 @@ Exemple : Afficher une liste d'articles
 
 ### 3. Afficher les Éléments dans l'Interface
 
-1. À l'intérieur du `Template`, ajoutez un `Bloc`.
+1. À l'intérieur du `Template`, ajoutez un `Block`.
 2. Insérez un composant `Variable` dans ce `Block`.
 3. Liez cette variable à `Template[].Value`, qui correspond à chaque élément du tableau itéré.
 4. Maintenant, lorsque vous visualisez la page **Articles** dans l'interface, vous verrez chaque élément du tableau `articles` affiché dans un nouveau bloc.

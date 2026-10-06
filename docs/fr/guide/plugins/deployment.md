@@ -4,18 +4,28 @@ description: "Découvrez comment distribuer des plugins Luna Park en privé ou p
 
 # Déploiement
 
-:::warning
-Le système de compilation de Luna Park ne supporte pas encore les plugins. Bien que vous puissiez utiliser des plugins pendant la phase de développement, le support complet de la compilation sera bientôt disponible.
-:::
-
-:::warning
-Les plugins non officiels ne seront disponibles que pour les builds sur la version de bureau de Luna Park.
-:::
+Construisez votre plugin avec `pnpm run build`. L'éditeur charge les plugins comme modules ES depuis [esm.sh](https://esm.sh), en gardant `vue`, `vue-router` et `@luna-park/design` externes : déclarez-les comme peer dependencies.
 
 ## Distribution restreinte
 
-Si vous souhaitez distribuer votre plugin de manière privée, vous pouvez l'héberger sur GitHub et utiliser un service comme [pkg.pr.new](https://pkg.pr.new/). Les utilisateurs devront saisir manuellement l'URL de votre plugin dans le champ "Installer depuis une URL".
+Si vous souhaitez distribuer votre plugin de manière privée, vous pouvez l'héberger sur GitHub et utiliser un service comme [pkg.pr.new](https://pkg.pr.new/). Les utilisateurs devront saisir manuellement l'URL de votre plugin dans le champ **Install from URL**.
 
 ## Distribution publique
 
-Pour rendre votre plugin découvrable dans la page de recherche de Luna Park, publiez-le sur npm avec les tags `luna-park` et `plugin`. Cela le rendra disponible pour une installation publique.
+Pour rendre votre plugin découvrable dans la recherche de plugins de Luna Park, publiez-le sur npm avec les mots-clés `luna-park` et `plugin` dans son `package.json` :
+
+```json
+{
+    "keywords": ["luna-park", "plugin"]
+}
+```
+
+Les plugins publiés hors du scope `@luna-park/` affichent une confirmation avant d'être installés.
+
+## Dans les applications compilées
+
+À la compilation d'un projet, les options `build` du plugin sont appliquées : dépendances, variables d'environnement et injections de code (voir [Backend et build](./backend#build)). Vérifiez que chaque nœud, composant et guard que les utilisateurs peuvent ajouter a ce qu'il faut pour fonctionner hors de l'éditeur :
+
+- nœuds : une méthode autonome ou `build.generate` (voir [Nœuds personnalisés](./nodes#code-compile)) ;
+- composants : `build.imports` (voir [Composants personnalisés](./components#application-compilee)) ;
+- guards : `build.generate`.

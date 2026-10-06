@@ -19,19 +19,18 @@ hero:
 features:
   - title: 🎨 Éditeur de frontend
     details: Créez des interfaces utilisateur dynamiques et réactives avec un éditeur visuel intuitif.
-  - title: ✨ Réactivité temps réel
-    details: Exploitez la puissance des frameworks JS modernes sans écrire de code.
-  - title: ⚙️ Création de backend
-    details: Développez des API et services backend sans coder, via une interface visuelle.
   - title: ⚡ Scripting visuel
-    details: Concevez des logiques complexes sans code grâce à un éditeur de scripting visuel.
-  - title: ⏱️ Gestion des CRONs
-    details: Planifiez et gérez facilement les tâches récurrentes avec une interface visuelle.
+    details: Concevez des logiques complexes sans code, compilées en JavaScript natif.
+  - title: ⚙️ Création de backend
+    details: Créez des routes d'API et des tâches CRON planifiées via une interface visuelle.
   - title: 💽 Base de données
-    details: Gérez vos données sans configurer de serveur, grâce à une interface intégrée.
+    details: Gérez vos données avec une base PostgreSQL intégrée, sans configurer de serveur.
+  - title: 🤖 Assistant IA
+    details: Laissez Sidekick ou votre propre agent de code construire et tester des fonctionnalités pour vous.
+  - title: 🧩 Plugins & packages
+    details: Étendez votre application avec les plugins officiels et n'importe quel package npm.
   - title: 💾 Export de code
-    details: Exportez votre projet en code source pour un déploiement externe.
-  - title: 🚀 Performance
-    details: Bénéficiez de performances optimales grâce à une architecture moderne.
+    details: Le code vous appartient. Exportez-le et hébergez-le où vous voulez.
+  - title: 📱 Applications natives
+    details: Créez des applications desktop, Android et iOS à partir du même projet.
 ---
-

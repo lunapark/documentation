@@ -9,13 +9,13 @@ import Install from "/assets/images/plugins/introduction/install.png";
 
 # Plugins
 
-A plugin adds new components, logic nodes, design tokens, or integrations with external services to Luna Park.
+A plugin adds new components, logic nodes, design tokens, route guards, or integrations with external services to Luna Park.
 
-Unlike a regular [NPM](./npm) package, a plugin is built specifically for Luna Park: what it exposes plugs directly into the editor (components in the palette, nodes in the graph, tokens in the style panel, configuration tabs in the settings).
+Unlike a regular [NPM](./npm) package, a plugin is built specifically for Luna Park: what it exposes plugs directly into the editor (components in the palette, nodes in the graph, tokens in the style panel, settings in the top bar) and into the exported app.
 
 ## Install a plugin
 
-The list of available plugins lives in `Libraries > Plugins > Install Plugins`.
+Open **Libraries** in the top bar, then **Install plugins**. The **Plugins** tab searches the available plugins; the **Installed** tab lists the project's plugins.
 
 <DImage
 :src="Plugins"
@@ -29,14 +29,22 @@ Select a plugin and click `Install plugin`.
 alt="Installing a plugin"
 />
 
+Installing a plugin outside the `@luna-park/` scope asks for confirmation: a plugin runs code in the editor and in your app, so only install plugins you trust.
+
+### Install from a URL
+
+To install a plugin that is not published (a plugin you are developing, for example), paste its URL in the **Install from URL** field at the bottom of the plugins panel.
+
+## Configure a plugin
+
+Each installed plugin adds a button to the top bar. It opens the plugin's **Config** form and its **Settings** tabs.
+
 ## Official plugins
 
 ### Ferris Wheel
-`@luna-park/plugin-ferris-wheel`
+`@ferris-wheel/plugin`
 
-Luna Park's design system. Provides the base component library and auto-generates color variants from the palette (primary, content, etc.).
-
-<!-- TODO: confirm package name for ferris-wheel -->
+Luna Park's design system. Provides the base component library and design tokens, and generates color variants from its configuration (primary and content colors, border and radius, light/dark/auto theme). Preinstalled in the Ferris Wheel and Frontend project templates.
 
 ### Nuxt UI
 `@luna-park/plugin-nuxt-ui`
@@ -46,14 +54,17 @@ Integrates the [Nuxt UI](https://ui.nuxt.com/) component collection into Luna Pa
 ### Tailwind
 `@luna-park/plugin-tailwind`
 
-Enables [Tailwind CSS](https://tailwindcss.com/) classes inside component style properties once the plugin is installed.
-
-<!-- TODO: confirm package name for tailwind -->
+Enables [Tailwind CSS](https://tailwindcss.com/) classes in the **Classes** field of components.
 
 ### Users
 `@luna-park/plugin-users`
 
-User account management: sign-up, sign-in, sessions, OAuth2 (Google, GitHub, etc.), and roles with permissions. Adds dedicated graph nodes (`user/connect`, `user/disconnect`, `oauth/connect`, `roles/has-permission`, `roles/assert-permission`, `hash/hash-argon2`, `hash/verify-argon2`) and two configuration tabs (general, OAuth2). Passwords hashed with Argon2id, users and sessions databases initialized automatically.
+User accounts: sign-up, sign-in, sessions, OAuth2 (Google, GitHub, Discord, Microsoft, GitLab...), and roles with permissions. Adds route guards and dedicated nodes. See [Authentication](../fundamentals/data/auth).
+
+### Mail
+`@luna-park/plugin-mail`
+
+Sends emails from the backend through any SMTP server (Gmail, Mailgun, Postmark, Amazon SES, Brevo...). Configure the host, port, TLS, credentials, and default sender in its **SMTP** settings, then use the `mail/send` node in backend logic. In the editor, emails are logged to the console instead of being sent. The SMTP password goes to the exported app's `.env` file as `MAIL_SMTP_PASSWORD`.
 
 ---
 

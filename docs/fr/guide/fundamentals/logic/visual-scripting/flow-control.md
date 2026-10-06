@@ -23,12 +23,14 @@ Le contrôle de flux est divisé en trois catégories principales :
 
 Les nœuds déclencheurs démarrent l'exécution de la logique lorsqu'un événement spécifique se produit.
 
-Exemple : **Déclencher l'incrémentation d'un score**
+Exemple : **Afficher un message au clic**
 
 1. Ajoutez un nœud **On Click** connecté à un bouton dans votre interface.
 2. Connectez-le à un nœud **Log**.
 
 Lorsque l'utilisateur clique sur le bouton, le nœud **On Click** déclenche l'exécution de la logique, et le nœud **Log** affiche un message dans la console.
+
+D'autres déclencheurs existent, comme **On Mounted**, **On Load** et le nœud d'entrée des fonctions, routes et crons. Voir [Bibliothèques de nœuds](./libraries#evenements).
 
 ## Nœuds conditionnels (If)
 
@@ -51,13 +53,19 @@ Un nœud Switch possède :
 - Une sortie d'exécution par cas déclaré (<DSchemaType :schema="LogicType.exec()" />)
 - Une sortie `default` (<DSchemaType :schema="LogicType.exec()" />)
 
-## Nœuds de boucle (For, While)
+## Nœuds de boucle (For, For Each, While)
 
 Les nœuds de boucle permettent de répéter une action plusieurs fois en fonction d'une condition ou d'une liste.
 
+Les boucles ont un mode **async** : quand il est activé, chaque itération attend la fin de la précédente avant de démarrer.
+
 ### Boucle For
 
-Un nœud de boucle For possède :
+Le nœud **For** exécute sa sortie de boucle une fois pour chaque index de `0` à `count - 1`, puis exécute sa sortie de fin.
+
+### Boucle For Each
+
+Le nœud **For Each** exécute sa sortie de boucle pour chaque élément d'un tableau. Un nœud For Each possède :
 - Une entrée d'exécution (<DSchemaType :schema="LogicType.exec()" />)
 - Une entrée de tableau (<DSchemaType :schema="LogicType.array(LogicType.unknown())" />)
 - Une sortie d'exécution (<DSchemaType :schema="LogicType.exec()" />)
@@ -74,6 +82,23 @@ Un nœud de boucle While possède :
 - Une entrée de condition (<DSchemaType :schema="LogicType.boolean()" />)
 - Une sortie d'exécution (<DSchemaType :schema="LogicType.exec()" />)
 - Une sortie de fin (<DSchemaType :schema="LogicType.exec()" />)
+
+## Séquence et parallèle
+
+- **Then** exécute ses sorties l'une après l'autre : `Out 0`, puis `Out 1`, puis `Out 2`... Utile pour découper un long flux en étapes lisibles.
+- **Parallel** exécute toutes ses sorties en même temps et attend qu'elles soient toutes terminées avant d'exécuter `Done`. Utile pour lancer plusieurs appels API ou requêtes à la fois.
+
+## Temporisation
+
+| Nœud | Description |
+|---|---|
+| **Sleep** | Attend `time` millisecondes, puis continue. Le flux est en pause. |
+| **Timeout** | Exécute sa sortie après `time` millisecondes, sans mettre le flux en pause. |
+| **Debounce** | Retarde l'exécution de `time` millisecondes. Chaque nouveau déclenchement relance le minuteur : seul le dernier continue. Utile pour les champs de recherche. |
+
+## Erreurs
+
+Le nœud **Try** exécute sa branche `try`. Si un nœud y lève une erreur, la branche `catch` s'exécute avec le message d'erreur. La branche `finally` s'exécute dans les deux cas. **Throw** lève une erreur vous-même. Voir [Bibliothèques de nœuds](./libraries#erreurs).
 
 ## Opérations asynchrones
 

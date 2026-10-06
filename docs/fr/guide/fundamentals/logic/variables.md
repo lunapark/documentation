@@ -36,9 +36,7 @@ Voici les types de données que vous pouvez utiliser :
 - **Objet** (<DSchemaType :schema="LogicType.object({name: LogicType.string(), age: LogicType.number()})" />), un ensemble de propriétés et de valeurs<br>
   exemple : <DSchemaValue :value="{ name: 'John', age: 30 }" />
 
-### Variables calculées
-
-Les variables **calculées** sont des variables dont la valeur est automatiquement recalculée en fonction d'autres variables ou conditions. Elles sont également **réactives**.
+Une variable peut aussi être **calculée** : sa valeur est recalculée automatiquement (voir [plus bas](#variables-calculees)).
 
 ## Définir, afficher et mettre à jour une variable
 
@@ -114,3 +112,7 @@ Comment cela fonctionne :
 Imaginez que vous avez une variable `score` et que vous souhaitez afficher le double de ce score dans l'interface. Vous pouvez créer une variable **calculée** qui double la valeur de `score`.
 
 Si `score` est `10`, la variable **calculée** affichera `20`. Si `score` change à `15`, la variable **calculée** affichera automatiquement `30`.
+
+::: tip Partager des données entre composants
+Une variable appartient à son composant. Pour partager des données entre pages et composants, utilisez un [store](./store).
+:::

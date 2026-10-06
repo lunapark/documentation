@@ -29,7 +29,7 @@ Pour chaque type, un ensemble de nodes couvre les opérations courantes. Exemple
 | `Date From` | Parse une date depuis une chaîne. |
 | `Date Now` | Date courante. |
 | `Date Add` | Ajoute une `Duration` à la date. |
-| `Substract` | Soustrait une `Duration`. |
+| `Date Subtract` | Soustrait une `Duration`. |
 | `Compare` | Compare deux dates. |
 | `Since` / `Until` | Calcule la durée entre deux dates. |
 | `To Date Time` | Convertit la date en `DateTime`. |

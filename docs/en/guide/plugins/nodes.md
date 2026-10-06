@@ -85,3 +85,64 @@ This node will be displayed like this:
   :src="operationNode"
   alt="Operation node"
 />
+
+## Registering nodes
+
+Add your nodes to the plugin's `editor.nodes`:
+
+```ts
+makePlugin({
+    /* ... */
+    editor: {
+        nodes: [myFunctionNode, myOperationNode]
+    }
+});
+```
+
+Like the other options, `nodes` can be a function receiving the [environment](./basics#option-format), to generate nodes from the plugin's configuration.
+
+## Scope and documentation
+
+`display.config.scope` restricts where the node can be used: `ELogicScope.Frontend`, `ELogicScope.Backend`, or `ELogicScope.Shared`. A backend node, for example, only appears in routes, crons, and backend scripts.
+
+`documentation.description` is shown in the editor and given to Sidekick and AI agents.
+
+```ts
+import { ELogicScope, LogicType, makeLogicNode } from "@luna-park/plugin";
+
+export const sendNode = makeLogicNode({
+    name: "my-plugin/send",
+    /* inputs, outputs, methods */
+    display: {
+        name: "Send",
+        config: { scope: ELogicScope.Backend }
+    },
+    documentation: {
+        description: "Send a message to the service."
+    }
+});
+```
+
+## Compiled code
+
+When the app is compiled, the node's method is copied into the generated code. It must therefore be self-contained: it can't use variables or imports from your plugin file.
+
+To call your own code instead, provide `build`:
+
+- `generate`: returns the code of the method, as a string;
+- `imports`: the functions to import in the generated file, with the package they come from.
+
+```ts
+makeLogicNode({
+    /* ... */
+    build: {
+        generate: () => `async function () {
+            this.out_result = await send(this.in_message);
+            await this.out_exec();
+        }`,
+        imports: [{ name: "send", target: "my-plugin/server" }]
+    }
+});
+```
+
+The imported package must be added to the app's dependencies with `build.frontImports` or `build.backImports` (see [Backend and Build](./backend#dependencies)).

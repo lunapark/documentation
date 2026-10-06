@@ -57,6 +57,10 @@ You can now use your class in any component!
 
 ## Tailwind
 
+::: tip Tailwind plugin
+The simplest way to use Tailwind is the official [Tailwind plugin](../../../integrations/plugins#tailwind): install it and use Tailwind classes directly. The manual method below works without the plugin.
+:::
+
 ### What is it for
 
 - Use the Tailwind utility library for declarative styling via classes (e.g., `p-4`, `text-sm`, `bg-blue-500`).

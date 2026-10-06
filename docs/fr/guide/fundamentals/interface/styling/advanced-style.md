@@ -57,6 +57,10 @@ alt="Exemple d'utilisation de classe CSS"
 
 ## Tailwind
 
+::: tip Plugin Tailwind
+Le plus simple pour utiliser Tailwind est le [plugin Tailwind](../../../integrations/plugins#tailwind) officiel : installez-le et utilisez directement les classes Tailwind. La méthode manuelle ci-dessous fonctionne sans le plugin.
+:::
+
 ### À quoi ça sert
 
 - Utiliser la bibliothèque utilitaire Tailwind pour style déclaratif via classes (ex. `p-4`, `text-sm`, `bg-blue-500`).

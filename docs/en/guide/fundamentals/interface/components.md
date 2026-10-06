@@ -37,7 +37,7 @@ Here are a few options at your disposal for each layout element, here are the mo
 
 - <LIcon :icon="faSquare" /> **Block** - Most basic element type, it's just a box that can have children.
 - <LIcon :icon="faSprayCan" /> **UI Library** - Pre-made UI elements to speed up the building of your app.
-- <LIcon :icon="faBox" /> **Component** - Use one the custom components you created.
+- <LIcon :icon="faBox" /> **Component** - Use one of the custom components you created.
 - <LIcon :icon="faPuzzlePiece" /> **Slot** - Indicate where the children of this component should go.
 - <LIcon :icon="faGear" /> **Template** - This allows you to do conditional or loop rendering.
 - <LIcon :icon="faQuoteLeft" /> **Custom text** - Write markdown text.

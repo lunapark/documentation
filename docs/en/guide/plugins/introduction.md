@@ -16,7 +16,10 @@ A plugin can expose:
 - **Lifecycle hooks**: code that runs on mount, update, or unmount of the plugin.
 - **Injections**: CSS or JavaScript injected into the editor.
 - **Custom windows**: tailored UI panels opened from your plugin.
+- **Settings tabs**: custom configuration screens in the editor.
 - **Templates**: ready-made compositions that users can import into their projects.
+- **Route guards and backend hooks**: access rules for routes, request context, and database row filters.
+- **Build options**: npm dependencies, environment variables, and code injected into the compiled app.
 
 ## Prerequisites
 
@@ -27,4 +30,4 @@ A plugin can expose:
 
 1. [Environment setup](./setup) to initialize a plugin project.
 2. [Basics](./basics) for the structure of a plugin (id, config, internal state, hooks).
-3. The following sections cover components, nodes, tokens, and deployment.
+3. The following sections cover components, nodes, tokens, backend features, and deployment.

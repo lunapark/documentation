@@ -13,7 +13,7 @@ import QuickStylePanels from '/assets/images/layout/styling/quick-style-panels.p
 
 ## Global Styling
 
-The global styling of your application is accessible from the `Palette` button on the top bar of the editor. You can update the primary and content colors; the shades will automatically be generated.
+The global styling of your application is accessible from the `Palette` button on the top bar of the editor. You can update the primary, secondary, and content colors; the shades will automatically be generated.
 
 Note that you can match the editor colors with your app colors using the match editor option. This can make building easier on your eyes.
 

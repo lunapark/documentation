@@ -16,18 +16,35 @@ Each level presents you with a challenge on a particular aspect of Luna Park. Co
 
 Once the challenge is passed, we advise you to go to the [Academy](https://luna-park.app/academy) tab and discover a practical case step by step.
 
+## Try without an account
+
+The [playground editor](https://luna-park.app/editor) works without signing in. Saving stores the whole project in the page URL, so you can share it by copying the link.
+
 ## The Cloud Version
 
-Luna Park is available in a cloud version. You can sign up directly on the [homepage](https://luna-park.app/) and start using Luna Park directly in your browser.
+Sign up on the [homepage](https://luna-park.app/) to use Luna Park in your browser. Your dashboard lists your projects.
 
-Purchasing a license will allow you to benefit from all the features of the framework. You can also use Luna Park for free, but with certain limitations (no commercial use).
+### Create a project
 
-## The Software Version
+Click **Create a new project**, pick an emoji, a title, and a template:
 
-::: warning Warning
-The software version of Luna Park is not yet fully stable (notably the MacOS version). Use this version with caution. Also note that the software version is a few versions behind the cloud version.
-:::
+| Template | Content |
+|---|---|
+| Empty project | No files and no plugins. |
+| Ferris Wheel project | The Ferris Wheel plugin installed and themed, ready to use its components. |
+| Frontend project | Ferris Wheel with a basic layout and a component showing props and reactivity. |
+| Nuxt project | The Nuxt UI plugin installed and configured. |
+| Testing project | A minimal project using reactivity, the backend, the database, and cookies. |
 
-The download of the software version is temporarily unavailable. This functionality will be restored in a future version.
+### Plans
 
-You can meanwhile use Luna Park in its cloud version on the [homepage](https://luna-park.app/).
+| Plan | For | Main limits |
+|---|---|---|
+| Free | Community | No commercial use, "Made with" badge on exports, no source code download, no desktop editor. |
+| Pro | Individuals | Everything. |
+| Org | Organizations | Everything. |
+| Edu | Education | Everything. |
+
+## The Desktop Version
+
+Luna Park also exists as a desktop application (in beta), for working on local project folders, running projects locally, and building native apps. See [Desktop App](./desktop-app).

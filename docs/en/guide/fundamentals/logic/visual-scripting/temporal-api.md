@@ -29,7 +29,7 @@ For each type, a set of nodes covers the common operations. Example for **Date**
 | `Date From` | Parses a date from a string. |
 | `Date Now` | Current date. |
 | `Date Add` | Adds a `Duration` to the date. |
-| `Substract` | Subtracts a `Duration`. |
+| `Date Subtract` | Subtracts a `Duration`. |
 | `Compare` | Compares two dates. |
 | `Since` / `Until` | Computes the duration between two dates. |
 | `To Date Time` | Converts the date to a `DateTime`. |

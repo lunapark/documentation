@@ -1,5 +1,5 @@
 ---
-description: "Use Luna Park's built-in PostgreSQL-compatible database to create tables, store data, and run queries."
+description: "Use Luna Park's built-in PostgreSQL database to create tables, store data, and run queries."
 ---
 
 <script setup lang="ts">
@@ -13,57 +13,95 @@ import ArticlesTable from "/assets/images/data/articles-table.png";
 
 Luna Park ships a SQL database inside the editor. No server, no setup: you create tables, store rows, and query them from the graph.
 
-::: info pglite
-The DB is a **pglite** instance (Postgres compiled to WebAssembly). All standard Postgres SQL works: types, constraints, joins, subqueries, CTEs.
+::: info PostgreSQL everywhere
+In the editor, the database is a **PGlite** instance (PostgreSQL compiled to WebAssembly) running in your browser. In the exported app, the same tables run on a real **PostgreSQL** server, set with the `DATABASE_URL` variable (see [Self-hosting](../../deployment/deployment)). The rows you create in the editor are inserted as initial data on first launch.
 :::
 
 ## Tables
 
-A table holds rows typed by columns. The **Database** panel lets you:
+Each **Database** file is a table. Create one in the **Explorer** with **New > Database**, then open it to:
 
-- create a table and define its columns (name, type, constraints);
-- add, edit, or delete rows manually;
+- define its columns (name and type) in the **Columns** section of the Inspector;
+- add, edit, delete, and search rows;
 - inspect the contents in real time.
 
-The `id`, `created_at`, and `updated_at` columns are added automatically to every table.
+The `id`, `created_at`, and `updated_at` columns are added automatically to every table. `id` is a UUID.
 
-<DImage :src="Panel" alt="Database panel showing a table with its columns" />
+<DImage :src="Panel" alt="Database editor showing a table with its columns" />
+
+### Column types
+
+| Type | Stored as |
+|---|---|
+| Text | `text` |
+| Number | `numeric` |
+| Boolean | `bool` |
+| Date | `timestamptz` |
+| Object | `jsonb` |
+| Array | a PostgreSQL array |
+| Reference to another table | `uuid` (foreign key) |
+
+### Constraints
+
+The **Constraints** section of the Inspector sets, for each column:
+
+| Constraint | Effect |
+|---|---|
+| **Required** | The column can't be empty. |
+| **Unique** | Two rows can't share the same value. |
+| **Index** | Speeds up searches and sorting on this column. |
+
+A column that references another table also defines what happens when the referenced row is deleted: **Block** (default), **Restrict**, **Delete rows too**, or **Set to empty**.
 
 ## Querying the database
 
-Database nodes are used **inside a route's graph** (see [Routes](./routes)), not directly in a frontend component's graph. The route wraps the query and exposes it to the interface.
+Database nodes are used **inside backend logic**: [routes](./routes), [crons](./cron), and backend [scripts](../logic/scripts). The interface calls a route, which runs the query and returns the result.
 
 ### Specialized nodes
 
-Luna Park provides one node per common SQL operation. Configuration is visual (table, parameters, filters), and the SQL is generated behind the scenes.
+Luna Park provides one node per common operation. Configuration is visual (table, parameters, filters), and the SQL is generated behind the scenes.
 
-| Category    | Nodes                                                |
-|-------------|------------------------------------------------------|
-| **Read**    | `DB Find`, `DB Find by Id`, `DB Group By`, `DB Join` |
-| **Write**   | `DB Insert`, `DB Update`                             |
-| **Delete**  | `DB Delete`, `DB Delete by Id`                       |
+| Category | Nodes |
+|---|---|
+| **Read** | `DB Find`, `DB Find By Id` |
+| **Write** | `DB Insert`, `DB Update`, `DB Update By Id` |
+| **Delete** | `DB Delete`, `DB Delete By Id` |
+| **Transaction** | `DB Transaction` |
 
 Parameters plug into the input anchors: an id coming from a variable, a filter value coming from an input, etc.
 
 <DImage :src="FindNode" alt="DB Find node configured on a table, with its parameters and output anchor" />
 
+`DB Transaction` runs the operations wired to its **Run** output all at once: if one fails, none is saved. **Then** runs after the changes are saved.
+
 ### Build a query
 
-For more precise queries, Luna Park provides nodes that chain together: each node represents a SQL operation and exposes a **Query** output that the next one can consume.
+For more precise queries, Luna Park provides nodes that chain together: each node adds a SQL clause and exposes a **Query** output that the next one consumes.
 
-The starting point is always `DB From`, which selects the table. You then plug in the nodes you need:
+The starting point is always `DB From`, which selects the table. You then plug in the nodes you need, and finish with an execution node.
 
 | Node | Role |
 |---|---|
-| `DB From` | Selects the source table |
-| `DB Where` | Filters rows based on one or more conditions |
-| `DB Where Condition` | Defines a condition (field, operator, target value) |
-| `DB Order` | Sorts the results |
-| `DB Group By` | Groups rows by value |
-| `DB Join` | Joins another table |
-| `DB Aggregate` | Computes an aggregation (COUNT, SUM, AVG...) |
-| `DB Create Query` | Combines multiple conditions with a logical operator (`AND`, `OR`, `NOT`) |
-| `DB Query Select` | Executes the query and returns the results |
+| `DB From` | Selects the source table. |
+| `DB Select` | Chooses the returned columns (all by default). |
+| `DB Where` | Filters rows with one or more conditions. |
+| `DB Where Condition` | Compares a column with a value or another column. |
+| `DB Where Conditions` | Combines conditions with `AND` or `OR`. |
+| `DB Join` / `DB Join Condition` | Joins another table (`inner`, `left`, `right`, `full`). |
+| `DB Order` / `DB Order Direction` | Sorts the results. |
+| `DB Group By` | Groups rows by value. |
+| `DB Aggregate` | Computes `count`, `sum`, `avg`, `min`, or `max`, optionally on distinct values. |
+
+Execution nodes:
+
+| Node | Role |
+|---|---|
+| `DB Query Select` | Runs the query and returns the rows. |
+| `DB Query Update` | Updates the matching rows. |
+| `DB Query Delete` | Deletes the matching rows. |
+| `DB Query Explain` | Shows how PostgreSQL plans to run the query. |
+
+Available comparisons: equals, not equals, greater/less than (or equal), in, is null, like, ilike, contains.
 
 For example, to fetch users under 30: a `DB From` points to the table, a `DB Where Condition` defines `age < 30`, a `DB Where` receives the query and the condition, and a `DB Query Select` runs the whole thing.
 
@@ -77,8 +115,8 @@ To see the SQL that actually runs, select the `DB Query Select` node and click *
 
 To follow the guided example on the [Routes](./routes) page, create an `articles` table:
 
-1. Open the **Database** panel.
-2. Create an `articles` table with a `title` column (text).
+1. Create a **Database** file named `articles`.
+2. Add a `title` column (text).
 3. Insert a few test rows.
 
 <DImage :src="ArticlesTable" alt="articles table with its columns and a few example rows" />

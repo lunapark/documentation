@@ -14,6 +14,18 @@ Please ensure that your system meets the following minimum and recommended speci
 | RAM | 4 GB | 8 GB |
 | Disk Space | 3.5 GB for installation, 5 GB for updates | N/A |
 
+## Running a Project
+
+Generating and running a project with the [desktop app](../getting-started/desktop-app), or [self-hosting](./deployment) the exported code, requires:
+
+| Tool | Version |
+|---|---|
+| Node.js | 24 to 26 |
+| pnpm | 12 or newer |
+| PostgreSQL | For apps that use a database (exported code only) |
+
+[Native apps](./native-apps) have their own requirements (Rust, Android Studio, Xcode...), listed by the editor.
+
 ## Browser Compatibility
 
 To ensure optimal performance, make sure you are using an up-to-date version of your browser.

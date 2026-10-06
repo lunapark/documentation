@@ -1,66 +1,55 @@
 ---
-description: "Découvrez comment exporter une application Luna Park en code source ou la déployer pour la tester."
+description: "Compilez une application Luna Park : déployez-la pour la tester, téléchargez son code ou lancez-la en local avec l'application desktop."
 ---
 
 <script setup lang="ts">
-import {faLink, faGear, faHammer, faUpRightFromSquare} from "@fortawesome/pro-solid-svg-icons";
+import {faGear, faHammer, faUpRightFromSquare} from "@fortawesome/pro-solid-svg-icons";
 </script>
 
-# Exporter pour le web
+# Compilation
 
-Pour exporter pour le web, cliquez simplement sur l'icône <LIcon :icon="faHammer"/> (Compiler) dans la barre supérieure.
+Luna Park compile votre projet en une application web standard : un frontend **Vue** et un backend **Node.js** (Fastify et PostgreSQL). Le code généré vous appartient et peut être hébergé n'importe où.
 
-Ensuite, cliquez soit sur `Télécharger` pour obtenir le code source ou le code d'export de votre application que vous pouvez héberger n'importe où, soit sur `Déployer` pour rendre votre application accessible via un lien Luna Park (uniquement pour tester le frontend).
+## Compiler dans la version cloud
 
-Pour accéder à votre application déployée sur Luna Park, cliquez simplement sur l'icône <LIcon :icon="faUpRightFromSquare" /> à côté du bouton `Déployer`.
+Cliquez sur le bouton <LIcon :icon="faHammer"/> **Compile** de la barre supérieure. La section **Web** propose trois options.
+
+### Hébergement
+
+Cliquez sur `Deploy` pour publier le frontend de votre application sur un lien Luna Park, puis sur l'icône <LIcon :icon="faUpRightFromSquare" /> à côté pour l'ouvrir. C'est fait pour tester et partager : le backend (routes, base de données, crons) n'est pas hébergé.
 
 ### Code source
 
-Le code source est le projet npm complet de votre application. Il contient notamment les fichiers sources de votre interface (Luna Park génère des fichiers `.vue` pour chaque composant de votre application).
+`Download` le code source lisible de votre application : le projet npm avec un fichier `.vue` pour chaque composant et le TypeScript de votre logique. Il doit être compilé avant d'être déployé. Non disponible avec l'offre Free.
 
 ### Code d'export
 
-Le code d'export est le résultat de la compilation de votre application. Il contient tous les fichiers nécessaires pour exécuter votre application, mais pas les fichiers sources. Il est optimisé pour être déployé sur un serveur web.
+`Download` l'application compilée, prête à déployer : le frontend construit (HTML, CSS, JS), le backend et les outils pour les lancer. Voir [Auto-hébergement](./deployment) pour la mettre en ligne.
 
-### Paramètres
+## Compiler dans l'application desktop
 
-Les paramètres sont disponibles dans l'onglet `Paramètres généraux` du panneau d'inspection (icône <LIcon :icon="faGear"/> dans la barre supérieure). Vous pouvez y modifier le nom de votre application, ainsi que définir si vous souhaitez qu'elle soit une PWA (Progressive Web App). Cela signifie que votre application peut être installée directement sur les navigateurs compatibles.
+Dans l'[application desktop](../getting-started/desktop-app), le bouton <LIcon :icon="faHammer"/> **Compile** travaille sur votre machine :
+
+| Section | Action | Description |
+|---|---|---|
+| Build | **Generate** | Génère le code de l'application dans le dossier du projet. Un bouton ouvre le dossier. |
+| Server | **Watch** | Lance un serveur de développement avec rechargement à chaud sur `http://127.0.0.1:1980`. Régénérez le code et le serveur se met à jour. |
+| Server | **Production** | Lance un serveur avec le build final (ce que vous déploieriez) sur `http://127.0.0.1:3080`. |
+
+Ces actions nécessitent Node.js 24 à 26 et pnpm 12 ou plus (voir [Prérequis](./prerequisites)). Pour créer des applications desktop ou mobiles, voir [Applications natives](./native-apps).
+
+## Paramètres
+
+Les paramètres sont disponibles dans le bouton <LIcon :icon="faGear"/> **General Settings** de la barre supérieure. Vous pouvez y modifier le nom de votre application et choisir le mode d'historique :
+
+- **Hash Mode** (par défaut) : Génère des liens de type `monApp.com/#/accueil/tableau-de-bord`. Ce mode fonctionne dans la plupart des cas mais n'est pas optimal pour le SEO et ne fonctionne pas avec les ancres de page.
+- **Web Mode** : Génère des liens de type `monApp.com/accueil/tableau-de-bord`. Ce mode est meilleur pour le SEO mais nécessite de configurer le serveur pour rediriger toutes les erreurs 404 vers le fichier `index`.
+- **Memory Mode** : Génère des liens de type `monApp.com/` (le chemin est caché). Ce mode fonctionne dans toutes les conditions mais n'est pas optimal pour le SEO.
+
+Les applications natives utilisent toujours le Hash Mode.
 
 ::: warning PWA non disponible
-Le mode PWA n'est pas encore prêt.
+L'option **PWA** (installer l'application depuis le navigateur) n'est pas encore prête.
 :::
 
-Vous pouvez également choisir le mode d'historique parmi ces types :
-
-- **Mode Hash** (par défaut) : Génère des liens comme `monApp.com/#/accueil/dashboard`. Ce mode fonctionne dans la plupart des cas, mais n'est pas optimal pour le SEO et ne fonctionne pas avec les ancres de page.
-- **Mode Web** : Génère des liens comme `monApp.com/accueil/dashboard`. Ce mode est meilleur pour le SEO mais nécessite une configuration sur votre serveur pour rediriger toutes les 404 vers le fichier `index`.
-- **Mode Mémoire** : Génère des liens comme `monApp.com/` (le chemin est caché). Ce mode fonctionne dans toutes les conditions mais n'est pas optimal pour le SEO.
-
-## Exporter une application de bureau
-
-Pour exporter une application de bureau, cliquez simplement sur l'icône <LIcon :icon="faHammer"/> (Compiler) dans la barre supérieure. Ensuite, choisissez l'OS sur lequel vous souhaitez exporter (Windows, Linux ou Mac) dans la section `portable` ou `installateur`.
-
-- **Portable** : Génère un exécutable unique qui peut être lancé directement. Utile pour des tests rapides, mais n'est pas recommandé pour la distribution.
-- **Installateur** : Génère un installateur qui peut être distribué. Il est recommandé pour la distribution de votre application.
-
-::: warning Compilation MacOS non disponible
-L'exportation pour MacOS n'est pas encore prête.
-:::
-
-### Paramètres
-
-Les paramètres sont disponibles dans l'onglet `Paramètres bureau` du panneau d'inspection (icône <LIcon :icon="faGear"/> dans la barre supérieure).
-
-- **Nom du package** : Utilisé pour les mises à jour, il doit rester le même. Il est actuellement généré automatiquement à partir du nom de votre application.
-- **Version** : Utilisée pour les mises à jour, suivez le format semver (ex : 1.0.0).
-- **Dimensions** : Taille par défaut de la fenêtre de votre application.
-- **Redimensionnable** : Indique si la fenêtre peut être redimensionnée ou non.
-- **Plein écran** : Indique si la fenêtre doit être en plein écran par défaut.
-
-## Exporter pour le mobile
-
-<br/>
-
-::: warning Exportation mobile non disponible
-L'exportation pour mobile n'est pas encore prête.
-:::
+Le bouton **Backend Settings** définit un **Proxy** sortant pour le backend et le **Cookie salt** utilisé pour signer les cookies.

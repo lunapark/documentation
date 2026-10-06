@@ -3,7 +3,6 @@ description: "Use conditional, repeated, and dynamic template elements in Luna P
 ---
 
 <script setup lang="ts">
-import {LogicType} from "@luna-park/logicnodes";
 
 import Screen2 from '/assets/images/layout/templates/screen2.png';
 import Screen3 from '/assets/images/layout/templates/screen3.png';
@@ -87,7 +86,7 @@ Example: Display a list of items
 
 ### 3. Display the Elements in the Interface
 
-1. Inside the Template, add a **Div**.
+1. Inside the Template, add a **Block**.
 2. Insert a **Variable** component into this div.
 3. Link this variable to `Template[].Value`, which corresponds to each element of the iterated array.
 4. Now, when you view the **Articles** page in the interface, you will see each element of the `articles` array displayed in a new block.

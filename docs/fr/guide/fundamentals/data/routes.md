@@ -18,10 +18,12 @@ Une **route** est un endpoint HTTP défini dans Luna Park. Elle encapsule de la 
 
 ## Création d'une route
 
-Dans l'**Explorer**, faites un clic droit puis **New → Route**. Deux propriétés principales :
+Dans l'**Explorer**, faites un clic droit puis **New → Route**. Ses réglages sont dans l'**Inspector** :
 
-- **Méthode HTTP** : `GET`, `POST`, `PUT`, `DELETE`, `PATCH`.
-- **Path** : le chemin de l'endpoint. Par défaut, il reprend le nom de la route (une route `get-articles` est exposée sur `/api/get-articles`).
+- **Method** : `GET`, `POST`, `PUT` ou `DELETE`.
+- **Path** : le chemin de l'endpoint. Par défaut, il reprend le nom de la route (une route `get-articles` est exposée sur `/api/get-articles`). Ajoutez des paramètres avec `:`, par exemple `/articles/:id`.
+- **Route Input** et **Route Output** : les types des données reçues et renvoyées.
+- **Guards** : des règles d'accès vérifiées avant l'exécution de la route (voir [plus bas](#guards)).
 
 ## Anatomie d'une route
 
@@ -29,22 +31,46 @@ Le graphe d'une route va d'un node d'**input** à un node d'**output**. Entre le
 
 ### Input
 
-Le node d'input expose les données reçues par la route, sur quatre ancrages optionnels :
+Le node d'input expose les données reçues par la route, sur des ancrages optionnels :
 
 - `headers` : entêtes HTTP (auth, content-type...).
-- `body` : corps de la requête (typique pour `POST`, `PUT`, `PATCH`).
+- `body` : corps de la requête (typique pour `POST` et `PUT`).
 - `query` : paramètres de query string (`?id=5&limit=10`).
 - `params` : paramètres de chemin (`/articles/:id`).
 
-Vous récupérez ce dont vous avez besoin pour le passer aux nodes suivants. Par exemple, un `id` venant de `params` peut alimenter un `DB Find by Id`.
+Définissez la forme de `headers`, `body` et `query` dans **Route Input**. `params` suit le chemin.
+
+Vous récupérez ce dont vous avez besoin pour le passer aux nodes suivants. Par exemple, un `id` venant de `params` peut alimenter un `DB Find By Id`.
+
+Les plugins peuvent ajouter des entrées : le [plugin Users](./auth) ajoute l'utilisateur connecté (`user`), par exemple.
 
 <DImage :src="InputNode" alt="Node d'input d'une route avec ses ancrages headers/body/query/params" />
 
 ### Output
 
-Le node d'output reçoit ce que la route renvoie au caller. Tout ce que vous branchez sur son ancrage devient le corps de la réponse HTTP.
+Le node d'output reçoit ce que la route renvoie au caller. Tout ce que vous branchez sur son ancrage devient le corps de la réponse HTTP. Son type se règle dans **Route Output**.
+
+Une route peut avoir plusieurs nodes d'output, un par branche (trouvé / introuvable, par exemple).
 
 <DImage :src="OutputNode" alt="Node d'output d'une route branché sur le résultat d'un DB Find" />
+
+### Erreurs
+
+Pour répondre avec une erreur HTTP, utilisez le node `Error` : choisissez un code (`400` Bad Request, `401` Unauthorized, `404` Not Found...) et un message. L'exécution s'arrête là.
+
+### Cookies
+
+Lisez et écrivez des cookies avec les nodes `Get Cookie`, `Set Cookie` et `Clear Cookie`. Les cookies sont signés avec le **Cookie salt** des **Backend Settings**.
+
+## Guards
+
+Les routes sont publiques par défaut. Un **guard** vérifie chaque requête avant l'exécution de la route et rejette celles qui ne sont pas autorisées. Ajoutez-en un dans la section **Guards** de l'Inspector.
+
+Les guards sont fournis par les plugins. Le [plugin Users](./auth) fournit **Authenticated** (utilisateurs connectés uniquement) et **Permission** (utilisateurs dont les rôles donnent une permission).
+
+## Tester une route
+
+Les routes s'exécutent dans l'éditeur : quand l'interface en appelle une en mode **Preview**, la route tourne sur la base de données de l'éditeur, et ses logs apparaissent dans la console.
 
 ## Appeler une route depuis l'interface
 
@@ -52,7 +78,7 @@ Le node d'output reçoit ce que la route renvoie au caller. Tout ce que vous bra
 
 ## Exemple guidé : afficher une liste d'articles
 
-Cet exemple part d'une table `articles` (voir [Base de données](./database#préparer-la-table-articles) pour la créer), crée une route `get-articles` qui la lit, et affiche les résultats dans l'interface.
+Cet exemple part d'une table `articles` (voir [Base de données](./database#preparer-la-table-articles) pour la créer), crée une route `get-articles` qui la lit, et affiche les résultats dans l'interface.
 
 ### 1. Créer la route `get-articles`
 

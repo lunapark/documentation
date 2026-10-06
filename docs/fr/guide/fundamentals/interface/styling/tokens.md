@@ -4,8 +4,6 @@ description: "Utilisez des tokens de style réutilisables pour garder une appare
 
 <script setup lang="ts">
 import Screen1 from '/assets/images/layout/styling/screen1.png';
-import Screen2 from '/assets/images/layout/styling/screen2.png';
-import Screen3 from '/assets/images/layout/styling/screen3.png';
 import Gif1 from '/assets/images/layout/styling/gif1.gif';
 import Gif2 from '/assets/images/layout/styling/gif2.gif';
 import {faLink, faBolt} from "@fortawesome/pro-solid-svg-icons";

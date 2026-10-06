@@ -23,12 +23,14 @@ Flow control is divided into three main categories:
 
 Trigger nodes start the execution of logic when a specific event occurs.
 
-Example: **Trigger the increment of a score**
+Example: **Log a message on click**
 
 1. Add an **On Click** node connected to a button in your interface.
 2. Connect it to a **Log** node.
 
 When the user clicks the button, the **On Click** node triggers the execution of the logic, and the **Log** node displays a message in the console.
+
+Other triggers include **On Mounted**, **On Load**, and the input node of functions, routes, and crons. See [Node Libraries](./libraries#events).
 
 ## Conditional Nodes (If)
 
@@ -51,13 +53,19 @@ A Switch node has:
 - One execution output per declared case (<DSchemaType :schema="LogicType.exec()" />)
 - A `default` output (<DSchemaType :schema="LogicType.exec()" />)
 
-## Loop Nodes (For, While)
+## Loop Nodes (For, For Each, While)
 
 Loop nodes allow you to repeat an action multiple times based on a condition or a list.
 
+Loops have an **async** mode: when enabled, each iteration waits for the previous one to finish before starting.
+
 ### For Loop
 
-A For loop node has:
+The **For** node runs its loop output once for each index from `0` to `count - 1`, then runs its end output.
+
+### For Each Loop
+
+The **For Each** node runs its loop output for each element of an array. A For Each node has:
 - An execution input (<DSchemaType :schema="LogicType.exec()" />)
 - An array input (<DSchemaType :schema="LogicType.array(LogicType.unknown())" />)
 - An execution output (<DSchemaType :schema="LogicType.exec()" />)
@@ -74,6 +82,23 @@ A While loop node has:
 - A condition input (<DSchemaType :schema="LogicType.boolean()" />)
 - An execution output (<DSchemaType :schema="LogicType.exec()" />)
 - An end output (<DSchemaType :schema="LogicType.exec()" />)
+
+## Sequence and Parallel
+
+- **Then** runs its outputs one after the other: `Out 0`, then `Out 1`, then `Out 2`... Use it to split a long flow into readable steps.
+- **Parallel** runs all its outputs at the same time and waits for all of them to finish before running `Done`. Use it to run several API calls or queries at once.
+
+## Timing
+
+| Node | Description |
+|---|---|
+| **Sleep** | Waits `time` milliseconds, then continues. The flow is paused. |
+| **Timeout** | Runs its output after `time` milliseconds, without pausing the flow. |
+| **Debounce** | Delays execution by `time` milliseconds. Each new trigger resets the timer, so only the latest one continues. Useful for search inputs. |
+
+## Errors
+
+The **Try** node runs its `try` branch. If a node in it throws an error, the `catch` branch runs with the error message. The `finally` branch runs in both cases. **Throw** raises an error yourself. See [Node Libraries](./libraries#errors).
 
 ## Async operations
 

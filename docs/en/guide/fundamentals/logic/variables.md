@@ -36,9 +36,7 @@ Here are the data types you can use:
 - **Object** (<DSchemaType :schema="LogicType.object({name: LogicType.string(), age: LogicType.number()})" />), a set of properties and values<br>
   example: <DSchemaValue :value="{ name: 'John', age: 30 }" />
 
-### Computed Variables
-
-**Computed** variables are variables whose value is automatically recalculated based on other variables or conditions. They are also **reactive**.
+A variable can also be **computed**: its value is recalculated automatically (see [below](#computed-variables)).
 
 ## Defining, Displaying, and Updating a Variable
 
@@ -115,3 +113,6 @@ Imagine you have a variable `score` and you want to display double this score in
 
 If `score` is `10`, the **computed** variable will display `20`. If `score` changes to `15`, the **computed** variable will automatically display `30`.
 
+::: tip Sharing data between components
+A variable belongs to its component. To share data across pages and components, use a [store](./store).
+:::

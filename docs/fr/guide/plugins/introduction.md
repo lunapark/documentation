@@ -16,7 +16,10 @@ Un plugin peut exposer :
 - **Hooks de cycle de vie** : du code qui s'exécute au montage, à la mise à jour ou au démontage du plugin.
 - **Injections** : du CSS ou du JavaScript injecté dans l'éditeur.
 - **Fenêtres personnalisées** : des panneaux d'interface sur mesure ouverts depuis votre plugin.
+- **Onglets de réglages** : des écrans de configuration sur mesure dans l'éditeur.
 - **Templates** : des compositions prêtes à l'emploi que les utilisateurs peuvent importer dans leurs projets.
+- **Guards de route et hooks backend** : des règles d'accès aux routes, un contexte de requête et des filtres de lignes en base.
+- **Options de build** : des dépendances npm, des variables d'environnement et du code injecté dans l'application compilée.
 
 ## Prérequis
 
@@ -27,4 +30,4 @@ Un plugin peut exposer :
 
 1. [Configuration de l'environnement](./setup) pour initialiser un projet de plugin.
 2. [Bases](./basics) pour la structure d'un plugin (id, config, état interne, hooks).
-3. Les sections suivantes couvrent les composants, nœuds, tokens, et le déploiement.
+3. Les sections suivantes couvrent les composants, nœuds, tokens, les fonctionnalités backend et le déploiement.
