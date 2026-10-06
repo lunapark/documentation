@@ -4,7 +4,7 @@ description: "Créez des plugins Luna Park qui étendent l'éditeur avec composa
 
 # Introduction
 
-Cette section couvre la création de plugins pour Luna Park. Si vous cherchez plutôt à installer et utiliser un plugin existant, voir [Intégrations > Plugins](/fr/guide/integrations/plugins).
+Cette section couvre la création de plugins pour Luna Park. Si vous cherchez plutôt à installer et utiliser un plugin existant, voir [Intégrations > Plugins](/fr/integrations/plugins).
 
 ## Ce qu'un plugin peut étendre
 

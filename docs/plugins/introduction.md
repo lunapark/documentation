@@ -4,7 +4,7 @@ description: "Create Luna Park plugins that extend the editor with components, l
 
 # Introduction
 
-This section covers creating plugins for Luna Park. If you are looking to install and use an existing plugin instead, see [Integrations > Plugins](/guide/integrations/plugins).
+This section covers creating plugins for Luna Park. If you are looking to install and use an existing plugin instead, see [Integrations > Plugins](/integrations/plugins).
 
 ## What a plugin can extend
 

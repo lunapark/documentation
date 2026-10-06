@@ -48,7 +48,7 @@ export default defineConfig({
                         text: "Accueil"
                     },
                     {
-                        link: "/fr/guide/getting-started/introduction",
+                        link: "/fr/getting-started/introduction",
                         text: "Commencer"
                     }
                 ],
@@ -57,31 +57,31 @@ export default defineConfig({
                         collapsed: true,
                         items: [
                             {
-                                link: "/fr/guide/getting-started/introduction",
+                                link: "/fr/getting-started/introduction",
                                 text: "Introduction"
                             },
                             {
-                                link: "/fr/guide/getting-started/comparison",
+                                link: "/fr/getting-started/comparison",
                                 text: "Comparaison aux autres outils"
                             },
                             {
-                                link: "/fr/guide/getting-started/target-users",
+                                link: "/fr/getting-started/target-users",
                                 text: "Utilisateurs cible"
                             },
                             {
-                                link: "/fr/guide/getting-started/quick-start",
+                                link: "/fr/getting-started/quick-start",
                                 text: "Démarrage Rapide"
                             },
                             {
-                                link: "/fr/guide/getting-started/desktop-app",
+                                link: "/fr/getting-started/desktop-app",
                                 text: "Application Desktop"
                             },
                             {
-                                link: "/fr/guide/getting-started/sidekick-settings",
+                                link: "/fr/getting-started/sidekick-settings",
                                 text: "Sidekick"
                             },
                             {
-                                link: "/fr/guide/getting-started/find-help",
+                                link: "/fr/getting-started/find-help",
                                 text: "Obtenir de l'aide"
                             }
                         ],
@@ -91,50 +91,50 @@ export default defineConfig({
                         collapsed: true,
                         items: [
                             {
-                                link: "/fr/guide/fundamentals/project-files",
+                                link: "/fr/fundamentals/project-files",
                                 text: "Fichiers du projet"
                             },
                             {
                                 collapsed: true,
                                 items: [
                                     {
-                                        link: "/fr/guide/fundamentals/interface/editor",
+                                        link: "/fr/fundamentals/interface/editor",
                                         text: "Éditeur"
                                     },
                                     {
-                                        link: "/fr/guide/fundamentals/interface/components",
+                                        link: "/fr/fundamentals/interface/components",
                                         text: "Composants"
                                     },
                                     {
-                                        link: "/fr/guide/fundamentals/interface/templates",
+                                        link: "/fr/fundamentals/interface/templates",
                                         text: "Conditions et boucles"
                                     },
                                     {
                                         collapsed: true,
-                                        link: "/fr/guide/fundamentals/interface/styling",
+                                        link: "/fr/fundamentals/interface/styling",
                                         items: [
                                             {
-                                                link: "/fr/guide/fundamentals/interface/styling/palette",
+                                                link: "/fr/fundamentals/interface/styling/palette",
                                                 text: "Palette et couleurs globales"
                                             },
                                             {
-                                                link: "/fr/guide/fundamentals/interface/styling/tokens",
+                                                link: "/fr/fundamentals/interface/styling/tokens",
                                                 text: "Tokens et variables de style"
                                             },
                                             {
-                                                link: "/fr/guide/fundamentals/interface/styling/typography",
+                                                link: "/fr/fundamentals/interface/styling/typography",
                                                 text: "Typographie"
                                             },
                                             {
-                                                link: "/fr/guide/fundamentals/interface/styling/alignment",
+                                                link: "/fr/fundamentals/interface/styling/alignment",
                                                 text: "Disposition et alignement"
                                             },
                                             {
-                                                link: "/fr/guide/fundamentals/interface/styling/visual-effects",
+                                                link: "/fr/fundamentals/interface/styling/visual-effects",
                                                 text: "Effets visuels"
                                             },
                                             {
-                                                link: "/fr/guide/fundamentals/interface/styling/advanced-style",
+                                                link: "/fr/fundamentals/interface/styling/advanced-style",
                                                 text: "Style avancé (Classes CSS & Tailwind)"
                                             }
                                         ],
@@ -150,38 +150,38 @@ export default defineConfig({
                                         collapsed: true,
                                         items: [
                                             {
-                                                link: "/fr/guide/fundamentals/logic/visual-scripting/introduction",
+                                                link: "/fr/fundamentals/logic/visual-scripting/introduction",
                                                 text: "Introduction"
                                             },
                                             {
-                                                link: "/fr/guide/fundamentals/logic/visual-scripting/graph",
+                                                link: "/fr/fundamentals/logic/visual-scripting/graph",
                                                 text: "Le Graphe"
                                             },
                                             {
-                                                link: "/fr/guide/fundamentals/logic/visual-scripting/flow-control",
+                                                link: "/fr/fundamentals/logic/visual-scripting/flow-control",
                                                 text: "Contrôle de Flux"
                                             },
                                             {
-                                                link: "/fr/guide/fundamentals/logic/visual-scripting/libraries",
+                                                link: "/fr/fundamentals/logic/visual-scripting/libraries",
                                                 text: "Bibliothèques de nœuds"
                                             },
                                             {
-                                                link: "/fr/guide/fundamentals/logic/visual-scripting/temporal-api",
+                                                link: "/fr/fundamentals/logic/visual-scripting/temporal-api",
                                                 text: "Temporal API"
                                             }
                                         ],
                                         text: "Script Visuel"
                                     },
                                     {
-                                        link: "/fr/guide/fundamentals/logic/store",
+                                        link: "/fr/fundamentals/logic/store",
                                         text: "Store"
                                     },
                                     {
-                                        link: "/fr/guide/fundamentals/logic/variables",
+                                        link: "/fr/fundamentals/logic/variables",
                                         text: "Variables"
                                     },
                                     {
-                                        link: "/fr/guide/fundamentals/logic/scripts",
+                                        link: "/fr/fundamentals/logic/scripts",
                                         text: "Scripts et fonctions"
                                     }
                                 ],
@@ -191,19 +191,19 @@ export default defineConfig({
                                 collapsed: true,
                                 items: [
                                     {
-                                        link: "/fr/guide/fundamentals/data/database",
+                                        link: "/fr/fundamentals/data/database",
                                         text: "BDD"
                                     },
                                     {
-                                        link: "/fr/guide/fundamentals/data/routes",
+                                        link: "/fr/fundamentals/data/routes",
                                         text: "Routes"
                                     },
                                     {
-                                        link: "/fr/guide/fundamentals/data/cron",
+                                        link: "/fr/fundamentals/data/cron",
                                         text: "Cron"
                                     },
                                     {
-                                        link: "/fr/guide/fundamentals/data/auth",
+                                        link: "/fr/fundamentals/data/auth",
                                         text: "Auth"
                                     }
                                 ],
@@ -215,10 +215,10 @@ export default defineConfig({
                     {
                         collapsed: true,
                         items: [
-                            { link: "/fr/guide/integrations/npm", text: "NPM" },
-                            { link: "/fr/guide/integrations/plugins", text: "Plugins" },
+                            { link: "/fr/integrations/npm", text: "NPM" },
+                            { link: "/fr/integrations/plugins", text: "Plugins" },
                             {
-                                link: "/fr/guide/integrations/ai-agents",
+                                link: "/fr/integrations/ai-agents",
                                 text: "Agents IA (MCP)"
                             }
                         ],
@@ -228,19 +228,19 @@ export default defineConfig({
                         collapsed: true,
                         items: [
                             {
-                                link: "/fr/guide/deployment/compilation",
+                                link: "/fr/deployment/compilation",
                                 text: "Compilation"
                             },
                             {
-                                link: "/fr/guide/deployment/native-apps",
+                                link: "/fr/deployment/native-apps",
                                 text: "Applications natives"
                             },
                             {
-                                link: "/fr/guide/deployment/prerequisites",
+                                link: "/fr/deployment/prerequisites",
                                 text: "Prérequis"
                             },
                             {
-                                link: "/fr/guide/deployment/deployment",
+                                link: "/fr/deployment/deployment",
                                 text: "Auto-hébergement"
                             }
                         ],
@@ -250,39 +250,39 @@ export default defineConfig({
                         collapsed: true,
                         items: [
                             {
-                                link: "/fr/guide/plugins/introduction",
+                                link: "/fr/plugins/introduction",
                                 text: "Introduction"
                             },
                             {
-                                link: "/fr/guide/plugins/setup",
+                                link: "/fr/plugins/setup",
                                 text: "Configuration de l'environnement"
                             },
                             {
-                                link: "/fr/guide/plugins/basics",
+                                link: "/fr/plugins/basics",
                                 text: "Bases"
                             },
                             {
-                                link: "/fr/guide/plugins/typing",
+                                link: "/fr/plugins/typing",
                                 text: "Typage"
                             },
                             {
-                                link: "/fr/guide/plugins/components",
+                                link: "/fr/plugins/components",
                                 text: "Composants personnalisés"
                             },
                             {
-                                link: "/fr/guide/plugins/nodes",
+                                link: "/fr/plugins/nodes",
                                 text: "Nœuds personnalisés"
                             },
                             {
-                                link: "/fr/guide/plugins/tokens",
+                                link: "/fr/plugins/tokens",
                                 text: "Tokens"
                             },
                             {
-                                link: "/fr/guide/plugins/backend",
+                                link: "/fr/plugins/backend",
                                 text: "Backend et build"
                             },
                             {
-                                link: "/fr/guide/plugins/deployment",
+                                link: "/fr/plugins/deployment",
                                 text: "Déploiement"
                             }
                         ],
@@ -303,7 +303,7 @@ export default defineConfig({
                         text: "Home"
                     },
                     {
-                        link: "/guide/getting-started/introduction",
+                        link: "/getting-started/introduction",
                         text: "Get Started"
                     }
                 ],
@@ -312,31 +312,31 @@ export default defineConfig({
                         collapsed: true,
                         items: [
                             {
-                                link: "/guide/getting-started/introduction",
+                                link: "/getting-started/introduction",
                                 text: "Introduction"
                             },
                             {
-                                link: "/guide/getting-started/comparison",
+                                link: "/getting-started/comparison",
                                 text: "Comparison"
                             },
                             {
-                                link: "/guide/getting-started/target-users",
+                                link: "/getting-started/target-users",
                                 text: "Target Users"
                             },
                             {
-                                link: "/guide/getting-started/quick-start",
+                                link: "/getting-started/quick-start",
                                 text: "Quick Start"
                             },
                             {
-                                link: "/guide/getting-started/desktop-app",
+                                link: "/getting-started/desktop-app",
                                 text: "Desktop App"
                             },
                             {
-                                link: "/guide/getting-started/sidekick-settings",
+                                link: "/getting-started/sidekick-settings",
                                 text: "Sidekick"
                             },
                             {
-                                link: "/guide/getting-started/find-help",
+                                link: "/getting-started/find-help",
                                 text: "Get Help"
                             }
                         ],
@@ -346,50 +346,50 @@ export default defineConfig({
                         collapsed: true,
                         items: [
                             {
-                                link: "/guide/fundamentals/project-files",
+                                link: "/fundamentals/project-files",
                                 text: "Project Files"
                             },
                             {
                                 collapsed: true,
                                 items: [
                                     {
-                                        link: "/guide/fundamentals/interface/editor",
+                                        link: "/fundamentals/interface/editor",
                                         text: "Editor"
                                     },
                                     {
-                                        link: "/guide/fundamentals/interface/components",
+                                        link: "/fundamentals/interface/components",
                                         text: "Components"
                                     },
                                     {
-                                        link: "/guide/fundamentals/interface/templates",
+                                        link: "/fundamentals/interface/templates",
                                         text: "Conditions and Loops"
                                     },
                                     {
                                         collapsed: true,
-                                        link: "/guide/fundamentals/interface/styling",
+                                        link: "/fundamentals/interface/styling",
                                         items: [
                                             {
-                                                link: "/guide/fundamentals/interface/styling/palette",
+                                                link: "/fundamentals/interface/styling/palette",
                                                 text: "Palette"
                                             },
                                             {
-                                                link: "/guide/fundamentals/interface/styling/tokens",
+                                                link: "/fundamentals/interface/styling/tokens",
                                                 text: "Tokens"
                                             },
                                             {
-                                                link: "/guide/fundamentals/interface/styling/typography",
+                                                link: "/fundamentals/interface/styling/typography",
                                                 text: "Typography"
                                             },
                                             {
-                                                link: "/guide/fundamentals/interface/styling/alignment",
+                                                link: "/fundamentals/interface/styling/alignment",
                                                 text: "Alignment"
                                             },
                                             {
-                                                link: "/guide/fundamentals/interface/styling/visual-effects",
+                                                link: "/fundamentals/interface/styling/visual-effects",
                                                 text: "Visual Effects"
                                             },
                                             {
-                                                link: "/guide/fundamentals/interface/styling/advanced-style",
+                                                link: "/fundamentals/interface/styling/advanced-style",
                                                 text: "Advanced Styling"
                                             }
                                         ],
@@ -405,38 +405,38 @@ export default defineConfig({
                                         collapsed: true,
                                         items: [
                                             {
-                                                link: "/guide/fundamentals/logic/visual-scripting/introduction",
+                                                link: "/fundamentals/logic/visual-scripting/introduction",
                                                 text: "Introduction"
                                             },
                                             {
-                                                link: "/guide/fundamentals/logic/visual-scripting/graph",
+                                                link: "/fundamentals/logic/visual-scripting/graph",
                                                 text: "The Graph"
                                             },
                                             {
-                                                link: "/guide/fundamentals/logic/visual-scripting/flow-control",
+                                                link: "/fundamentals/logic/visual-scripting/flow-control",
                                                 text: "Flow Control"
                                             },
                                             {
-                                                link: "/guide/fundamentals/logic/visual-scripting/libraries",
+                                                link: "/fundamentals/logic/visual-scripting/libraries",
                                                 text: "Node Libraries"
                                             },
                                             {
-                                                link: "/guide/fundamentals/logic/visual-scripting/temporal-api",
+                                                link: "/fundamentals/logic/visual-scripting/temporal-api",
                                                 text: "Temporal API"
                                             }
                                         ],
                                         text: "Visual Scripting"
                                     },
                                     {
-                                        link: "/guide/fundamentals/logic/store",
+                                        link: "/fundamentals/logic/store",
                                         text: "Store"
                                     },
                                     {
-                                        link: "/guide/fundamentals/logic/variables",
+                                        link: "/fundamentals/logic/variables",
                                         text: "Variables"
                                     },
                                     {
-                                        link: "/guide/fundamentals/logic/scripts",
+                                        link: "/fundamentals/logic/scripts",
                                         text: "Scripts and Functions"
                                     }
                                 ],
@@ -446,19 +446,19 @@ export default defineConfig({
                                 collapsed: true,
                                 items: [
                                     {
-                                        link: "/guide/fundamentals/data/database",
+                                        link: "/fundamentals/data/database",
                                         text: "Database"
                                     },
                                     {
-                                        link: "/guide/fundamentals/data/routes",
+                                        link: "/fundamentals/data/routes",
                                         text: "Routes"
                                     },
                                     {
-                                        link: "/guide/fundamentals/data/cron",
+                                        link: "/fundamentals/data/cron",
                                         text: "Cron"
                                     },
                                     {
-                                        link: "/guide/fundamentals/data/auth",
+                                        link: "/fundamentals/data/auth",
                                         text: "Auth"
                                     }
                                 ],
@@ -471,15 +471,15 @@ export default defineConfig({
                         collapsed: true,
                         items: [
                             {
-                                link: "/guide/integrations/npm",
+                                link: "/integrations/npm",
                                 text: "NPM"
                             },
                             {
-                                link: "/guide/integrations/plugins",
+                                link: "/integrations/plugins",
                                 text: "Plugins"
                             },
                             {
-                                link: "/guide/integrations/ai-agents",
+                                link: "/integrations/ai-agents",
                                 text: "AI Agents (MCP)"
                             }
                         ],
@@ -489,19 +489,19 @@ export default defineConfig({
                         collapsed: true,
                         items: [
                             {
-                                link: "/guide/deployment/compilation",
+                                link: "/deployment/compilation",
                                 text: "Compilation"
                             },
                             {
-                                link: "/guide/deployment/native-apps",
+                                link: "/deployment/native-apps",
                                 text: "Native Apps"
                             },
                             {
-                                link: "/guide/deployment/prerequisites",
+                                link: "/deployment/prerequisites",
                                 text: "Prerequisites"
                             },
                             {
-                                link: "/guide/deployment/deployment",
+                                link: "/deployment/deployment",
                                 text: "Self-hosting"
                             }
                         ],
@@ -511,39 +511,39 @@ export default defineConfig({
                         collapsed: true,
                         items: [
                             {
-                                link: "/guide/plugins/introduction",
+                                link: "/plugins/introduction",
                                 text: "Introduction"
                             },
                             {
-                                link: "/guide/plugins/setup",
+                                link: "/plugins/setup",
                                 text: "Environment setup"
                             },
                             {
-                                link: "/guide/plugins/basics",
+                                link: "/plugins/basics",
                                 text: "Basics"
                             },
                             {
-                                link: "/guide/plugins/typing",
+                                link: "/plugins/typing",
                                 text: "Typing"
                             },
                             {
-                                link: "/guide/plugins/components",
+                                link: "/plugins/components",
                                 text: "Custom components"
                             },
                             {
-                                link: "/guide/plugins/nodes",
+                                link: "/plugins/nodes",
                                 text: "Custom nodes"
                             },
                             {
-                                link: "/guide/plugins/tokens",
+                                link: "/plugins/tokens",
                                 text: "Tokens"
                             },
                             {
-                                link: "/guide/plugins/backend",
+                                link: "/plugins/backend",
                                 text: "Backend and Build"
                             },
                             {
-                                link: "/guide/plugins/deployment",
+                                link: "/plugins/deployment",
                                 text: "Deployment"
                             }
                         ],

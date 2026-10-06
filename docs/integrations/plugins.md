@@ -69,5 +69,5 @@ Sends emails from the backend through any SMTP server (Gmail, Mailgun, Postmark,
 ---
 
 :::info Build your own plugin
-If you're comfortable with TypeScript (and Vue for components), you can write your own plugins. See [Develop a plugin](/guide/plugins/introduction).
+If you're comfortable with TypeScript (and Vue for components), you can write your own plugins. See [Develop a plugin](/plugins/introduction).
 :::

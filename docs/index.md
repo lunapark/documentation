@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /guide/getting-started/introduction
+      link: /getting-started/introduction
     - theme: alt
       text: Community Forum
       link: https://forum.luna-park.app/

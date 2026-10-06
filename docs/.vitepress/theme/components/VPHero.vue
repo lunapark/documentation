@@ -38,7 +38,7 @@
                     >
                         <LButton
                             big
-                            :href="action.link"
+                            :href="normalizeLink(action.link)"
                             :primary="action.theme === 'brand'"
                             :rel="action.rel"
                             :target="action.target"
@@ -74,6 +74,7 @@ import { inject, type Ref } from "vue";
 import type { DefaultTheme } from "vitepress/theme";
 import VPImage from "./VPImage.vue";
 import { LButton } from "@luna-park/design";
+import { normalizeLink } from "../support/utils";
 
 export interface HeroAction {
     link: string

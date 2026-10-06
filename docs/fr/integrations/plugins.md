@@ -69,5 +69,5 @@ Envoie des emails depuis le backend via n'importe quel serveur SMTP (Gmail, Mail
 ---
 
 :::info Créer votre propre plugin
-Si vous êtes à l'aise avec TypeScript (et Vue pour les composants), vous pouvez écrire vos propres plugins. Voir [Développer un plugin](/fr/guide/plugins/introduction).
+Si vous êtes à l'aise avec TypeScript (et Vue pour les composants), vous pouvez écrire vos propres plugins. Voir [Développer un plugin](/fr/plugins/introduction).
 :::
