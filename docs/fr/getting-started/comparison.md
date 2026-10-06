@@ -52,3 +52,37 @@ infoPairs: [
 }
 ]"
 />
+
+## Luna Park et les outils populaires
+
+Chaque outil fait des choix différents. Le tableau ci-dessous résume les principaux. Chaque outil a sa propre page avec une comparaison détaillée.
+
+| | Luna Park | Bubble | WeWeb | FlutterFlow | Webflow | Constructeurs IA |
+|---|---|---|---|---|---|---|
+| **Usage principal** | Applications web et natives full-stack | Applications web full-stack | Applications web | Applications mobiles | Sites web et CMS | Applications générées par prompt |
+| **Logique** | Visual scripting, compilé en JavaScript | Workflows | Workflows et formules | Action flows, code Dart personnalisé | Interactions, code personnalisé | Code écrit par l'IA |
+| **Exécution** | Code généré | Moteur de Bubble | Moteur de workflows de WeWeb | Code Flutter généré | Pages statiques | Code généré |
+| **Backend** | Intégré (routes, PostgreSQL, crons) | Intégré | Intégré, ou Xano, Supabase... | Firebase ou Supabase | CMS uniquement | Supabase ou celui de la plateforme |
+| **Export du code** | Application complète (Vue + Node.js) | Non | Frontend Vue (offres payantes) | Code Flutter (offres payantes) | HTML/CSS statique (sans CMS) | Oui (React) |
+| **Hébergement** | Où vous voulez | Bubble uniquement | WeWeb Cloud ou frontend auto-hébergé | Au choix | Webflow | Plateforme ou au choix |
+| **Modèle de prix** | Abonnement fixe | Offres + usage (workload units) | Sièges + offre d'hébergement par app | Sièges | Offres site + espace de travail | Crédits par message IA |
+| **Plateformes** | Web, PWA, desktop, mobile | Web, mobile | Web, PWA | Mobile d'abord, web, desktop | Web | Surtout web |
+
+::: info
+Cette comparaison reflète notre compréhension de chaque outil en octobre 2026. Ces produits évoluent vite : consultez leurs sites pour les fonctionnalités et prix actuels.
+:::
+
+- [**Luna Park vs Bubble**](./comparison/bubble) : l'alternative no-code la plus proche. La propriété du code, les coûts et les performances font la différence.
+- [**Luna Park vs WeWeb**](./comparison/weweb) : les deux génèrent du code Vue. Luna Park construit le frontend et le backend dans un seul projet.
+- [**Luna Park vs FlutterFlow**](./comparison/flutterflow) : mobile d'abord contre web d'abord.
+- [**Luna Park vs Webflow**](./comparison/webflow) : sites web contre applications.
+- [**Luna Park vs constructeurs IA**](./comparison/ai-app-builders) : Lovable, Bolt, et la différence entre code généré et logique visuelle.
+
+## Quand Luna Park n'est pas le meilleur choix
+
+Pour être honnêtes, d'autres outils sont plus adaptés si :
+
+- vous voulez une plateforme **entièrement gérée** : Luna Park peut déployer votre frontend pour le tester, mais vous hébergez le backend vous-même (voir [Auto-hébergement](../deployment/deployment)) ;
+- vous avez besoin dès aujourd'hui d'un **large écosystème** de templates et de plugins prêts à l'emploi : Luna Park est plus jeune et sa communauté plus petite ;
+- vous créez un **site de contenu** (blog, landing page) plutôt qu'une application ;
+- vous voulez un résultat en **quelques heures** sans apprendre de notions de logique.

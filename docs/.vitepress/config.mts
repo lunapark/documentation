@@ -61,6 +61,29 @@ export default defineConfig({
                                 text: "Introduction"
                             },
                             {
+                                collapsed: true,
+                                items: [
+                                    {
+                                        link: "/fr/getting-started/comparison/bubble",
+                                        text: "Bubble"
+                                    },
+                                    {
+                                        link: "/fr/getting-started/comparison/weweb",
+                                        text: "WeWeb"
+                                    },
+                                    {
+                                        link: "/fr/getting-started/comparison/flutterflow",
+                                        text: "FlutterFlow"
+                                    },
+                                    {
+                                        link: "/fr/getting-started/comparison/webflow",
+                                        text: "Webflow"
+                                    },
+                                    {
+                                        link: "/fr/getting-started/comparison/ai-app-builders",
+                                        text: "Constructeurs IA"
+                                    }
+                                ],
                                 link: "/fr/getting-started/comparison",
                                 text: "Comparaison aux autres outils"
                             },
@@ -232,8 +255,16 @@ export default defineConfig({
                                 text: "Compilation"
                             },
                             {
-                                link: "/fr/deployment/native-apps",
-                                text: "Applications natives"
+                                link: "/fr/deployment/web",
+                                text: "Application web"
+                            },
+                            {
+                                link: "/fr/deployment/desktop",
+                                text: "Applications desktop"
+                            },
+                            {
+                                link: "/fr/deployment/mobile",
+                                text: "Applications mobiles"
                             },
                             {
                                 link: "/fr/deployment/prerequisites",
@@ -316,6 +347,29 @@ export default defineConfig({
                                 text: "Introduction"
                             },
                             {
+                                collapsed: true,
+                                items: [
+                                    {
+                                        link: "/getting-started/comparison/bubble",
+                                        text: "Bubble"
+                                    },
+                                    {
+                                        link: "/getting-started/comparison/weweb",
+                                        text: "WeWeb"
+                                    },
+                                    {
+                                        link: "/getting-started/comparison/flutterflow",
+                                        text: "FlutterFlow"
+                                    },
+                                    {
+                                        link: "/getting-started/comparison/webflow",
+                                        text: "Webflow"
+                                    },
+                                    {
+                                        link: "/getting-started/comparison/ai-app-builders",
+                                        text: "AI app builders"
+                                    }
+                                ],
                                 link: "/getting-started/comparison",
                                 text: "Comparison"
                             },
@@ -493,8 +547,16 @@ export default defineConfig({
                                 text: "Compilation"
                             },
                             {
-                                link: "/deployment/native-apps",
-                                text: "Native Apps"
+                                link: "/deployment/web",
+                                text: "Web App"
+                            },
+                            {
+                                link: "/deployment/desktop",
+                                text: "Desktop Apps"
+                            },
+                            {
+                                link: "/deployment/mobile",
+                                text: "Mobile Apps"
                             },
                             {
                                 link: "/deployment/prerequisites",
@@ -554,6 +616,10 @@ export default defineConfig({
         }
     },
     markdown: {
+        config: (md) => {
+            md.renderer.rules.table_open = () => "<div class=\"table-wrapper\"><table>\n";
+            md.renderer.rules.table_close = () => "</table></div>\n";
+        },
         image: {
             lazyLoading: true
         }

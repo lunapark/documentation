@@ -164,11 +164,14 @@
  * Table
  * -------------------------------------------------------------------------- */
 
-.vp-doc table {
-    display: block;
-    border-collapse: collapse;
+.vp-doc .table-wrapper {
     margin: 20px 0;
     overflow-x: auto;
+}
+
+.vp-doc table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
 .vp-doc tr {

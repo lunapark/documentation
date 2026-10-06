@@ -29,9 +29,9 @@
   --vp-c-bg-elv: var(--color-background-dark);
   --vp-c-bg-soft: var(--color-background-0-liter);
 
-  --vp-c-border: var(--color-primary-litest);
-  --vp-c-divider: var(--color-primary-soft);
-  --vp-c-gutter: var(--color-primary-soft);
+  --vp-c-border: var(--color-soft);
+  --vp-c-divider: var(--color-soft-lite);
+  --vp-c-gutter: var(--color-soft-lite);
 
   --vp-nav-bg-color: transparent;
   --vp-nav-screen-bg-color: var(--color-background-darkest);
@@ -44,7 +44,7 @@
 
   --vp-local-search-bg: var(--color-background-dark);
   --vp-local-search-result-bg: var(--color-background-0);
-  --vp-local-search-result-border: var(--color-primary-soft);
+  --vp-local-search-result-border: var(--color-soft-lite);
   --vp-local-search-result-selected-bg: var(--color-primary-softer);
   --vp-local-search-result-selected-border: var(--color-primary-liter);
 
@@ -71,7 +71,7 @@
   --vp-custom-block-danger-text: var(--color-content-lite);
   --vp-custom-block-danger-code-bg: var(--vp-c-danger-soft);
 
-  --vp-custom-block-details-border: var(--color-primary-litest);
+  --vp-custom-block-details-border: var(--color-soft);
   --vp-custom-block-details-bg: var(--color-background-0-liter);
 }
 
@@ -95,7 +95,7 @@
 
   div[class*='language-'],
   .vp-code-group .tabs {
-    border: 1px solid var(--color-primary-soft);
+    border: 1px solid var(--color-soft-lite);
   }
 
   .vp-code-group .tabs {
@@ -107,7 +107,7 @@
   }
 
   table {
-    border: 1px solid var(--color-primary-litest);
+    border: 1px solid var(--color-soft);
     border-radius: var(--length-radius-s);
     border-collapse: separate;
     border-spacing: 0;
@@ -127,7 +127,7 @@
   th,
   td {
     border: none;
-    border-bottom: 1px solid var(--color-primary-soft);
+    border-bottom: 1px solid var(--color-soft-lite);
   }
 
   tbody tr:last-child td {

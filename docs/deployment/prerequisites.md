@@ -24,7 +24,7 @@ Generating and running a project with the [desktop app](../getting-started/deskt
 | pnpm | 12 or newer |
 | PostgreSQL | For apps that use a database (exported code only) |
 
-[Native apps](./native-apps) have their own requirements (Rust, Android Studio, Xcode...), listed by the editor.
+[Desktop](./desktop#requirements) and [mobile](./mobile) apps have their own requirements (Rust, Android Studio, Xcode...), listed by the editor.
 
 ## Browser Compatibility
 

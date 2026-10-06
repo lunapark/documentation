@@ -25,7 +25,7 @@ Générer et lancer un projet avec l'[application desktop](../getting-started/de
 | pnpm | 12 ou plus |
 | PostgreSQL | Pour les applications qui utilisent une base de données (code exporté uniquement) |
 
-Les [applications natives](./native-apps) ont leurs propres prérequis (Rust, Android Studio, Xcode...), listés par l'éditeur.
+Les applications [desktop](./desktop#prerequis) et [mobiles](./mobile) ont leurs propres prérequis (Rust, Android Studio, Xcode...), listés par l'éditeur.
 
 ## Compatibilité avec les navigateurs
 

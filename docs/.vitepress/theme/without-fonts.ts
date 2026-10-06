@@ -20,6 +20,7 @@ import DSchemaType from "./custom/components/DSchemaType.vue";
 import DSchemaValue from "./custom/components/DSchemaValue.vue";
 import DImage from "./custom/components/DImage.vue";
 import DExampleEditor from "./custom/components/DExampleEditor.vue";
+import DTable from "./custom/components/DTable.vue";
 
 export { default as VPBadge } from "./components/VPBadge.vue";
 export { default as VPButton } from "./components/VPButton.vue";
@@ -57,6 +58,7 @@ const theme: Theme = {
         app.component("DSchemaValue", DSchemaValue);
         app.component("DImage", DImage);
         app.component("DExampleEditor", DExampleEditor);
+        app.component("DTable", DTable);
     },
     Layout
 };

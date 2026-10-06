@@ -1,14 +1,27 @@
 ---
-description: "Compilez une application Luna Park : déployez-la pour la tester, téléchargez son code ou lancez-la en local avec l'application desktop."
+description: "Compilez une application Luna Park pour le web, le desktop ou le mobile, depuis la version cloud ou l'application desktop."
 ---
 
 <script setup lang="ts">
-import {faGear, faHammer, faUpRightFromSquare} from "@fortawesome/pro-solid-svg-icons";
+import {faHammer, faUpRightFromSquare, faWindow} from "@fortawesome/pro-solid-svg-icons";
 </script>
 
 # Compilation
 
-Luna Park compile votre projet en une application web standard : un frontend **Vue** et un backend **Node.js** (Fastify et PostgreSQL). Le code généré vous appartient et peut être hébergé n'importe où.
+Luna Park compile votre projet en une application standard : un frontend **Vue** et un backend **Node.js** (Fastify et PostgreSQL). Le code généré vous appartient et peut être hébergé n'importe où.
+
+## Cibles
+
+À partir du même projet, vous pouvez créer :
+
+| Cible | Résultat | Disponible dans | En savoir plus |
+|---|---|---|---|
+| **Application web** | Une application monopage et son backend | Version cloud et application desktop | [Application web](./web) |
+| **PWA** | Une application web que les utilisateurs installent depuis leur navigateur | Version cloud et application desktop | [Progressive Web App](./web#progressive-web-app) |
+| **Application desktop** | Des installeurs pour Windows, macOS et Linux | Application desktop uniquement | [Applications desktop](./desktop) |
+| **Application mobile** | APK et AAB pour Android, IPA pour iOS | Application desktop uniquement | [Applications mobiles](./mobile) |
+
+Les applications desktop et mobiles contiennent le frontend de votre projet. Si votre application utilise un backend (routes, base de données, crons), il tourne sur un serveur : voir [Auto-hébergement](./deployment).
 
 ## Compiler dans la version cloud
 
@@ -26,6 +39,10 @@ Cliquez sur `Deploy` pour publier le frontend de votre application sur un lien L
 
 `Download` l'application compilée, prête à déployer : le frontend construit (HTML, CSS, JS), le backend et les outils pour les lancer. Voir [Auto-hébergement](./deployment) pour la mettre en ligne.
 
+::: info Applications desktop et mobiles
+Les builds desktop et mobiles s'exécutent sur votre propre machine : ils ne sont disponibles que dans l'[application desktop](../getting-started/desktop-app).
+:::
+
 ## Compiler dans l'application desktop
 
 Dans l'[application desktop](../getting-started/desktop-app), le bouton <LIcon :icon="faHammer"/> **Compile** travaille sur votre machine :
@@ -36,20 +53,6 @@ Dans l'[application desktop](../getting-started/desktop-app), le bouton <LIcon :
 | Server | **Watch** | Lance un serveur de développement avec rechargement à chaud sur `http://127.0.0.1:1980`. Régénérez le code et le serveur se met à jour. |
 | Server | **Production** | Lance un serveur avec le build final (ce que vous déploieriez) sur `http://127.0.0.1:3080`. |
 
-Ces actions nécessitent Node.js 24 à 26 et pnpm 12 ou plus (voir [Prérequis](./prerequisites)). Pour créer des applications desktop ou mobiles, voir [Applications natives](./native-apps).
+Ces actions nécessitent Node.js 24 à 26 et pnpm 12 ou plus (voir [Prérequis](./prerequisites)).
 
-## Paramètres
-
-Les paramètres sont disponibles dans le bouton <LIcon :icon="faGear"/> **General Settings** de la barre supérieure. Vous pouvez y modifier le nom de votre application et choisir le mode d'historique :
-
-- **Hash Mode** (par défaut) : Génère des liens de type `monApp.com/#/accueil/tableau-de-bord`. Ce mode fonctionne dans la plupart des cas mais n'est pas optimal pour le SEO et ne fonctionne pas avec les ancres de page.
-- **Web Mode** : Génère des liens de type `monApp.com/accueil/tableau-de-bord`. Ce mode est meilleur pour le SEO mais nécessite de configurer le serveur pour rediriger toutes les erreurs 404 vers le fichier `index`.
-- **Memory Mode** : Génère des liens de type `monApp.com/` (le chemin est caché). Ce mode fonctionne dans toutes les conditions mais n'est pas optimal pour le SEO.
-
-Les applications natives utilisent toujours le Hash Mode.
-
-::: warning PWA non disponible
-L'option **PWA** (installer l'application depuis le navigateur) n'est pas encore prête.
-:::
-
-Le bouton **Backend Settings** définit un **Proxy** sortant pour le backend et le **Cookie salt** utilisé pour signer les cookies.
+Le bouton <LIcon :icon="faWindow"/> **Native app** crée les applications [desktop](./desktop) et [mobiles](./mobile).
