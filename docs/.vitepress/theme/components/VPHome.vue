@@ -1,6 +1,6 @@
 <template>
     <component :is="'style'">
-        :root { --color-chroma: 15%; }
+        :root { --color-chroma: 20%; }
     </component>
     <div
         class="VPHome"
@@ -56,17 +56,19 @@ const { frontmatter, theme } = useData();
 <style scoped>
 .VPHome {
     position: relative;
+    isolation: isolate;
     padding-bottom: 96px;
     min-height: 100dvh;
 
     background: radial-gradient(ellipse 75vw 80vh at center 35vh,
     oklch(50% 60% var(--primary-hue)) 0%,
-    oklch(30% calc(1.5 * var(--color-chroma)) var(--primary-hue)) 50%,
-    oklch(20% calc(0.75 * var(--color-chroma)) var(--color-hue)) 90%
+    oklch(25% calc(1.5 * var(--color-chroma)) var(--primary-hue)) 50%,
+    oklch(15% calc(0.75 * var(--color-chroma)) var(--color-hue)) 90%
     );
 
     .background {
         height: 100vh;
+        z-index: -1;
         mask-image: linear-gradient(180deg,
         transparent 0%,
         black 25%,
@@ -76,6 +78,8 @@ const { frontmatter, theme } = useData();
 
     .grid {
         height: 100%;
+        z-index: -1;
+        pointer-events: none;
     }
 }
 

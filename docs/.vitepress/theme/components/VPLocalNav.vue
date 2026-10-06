@@ -89,6 +89,7 @@ const classes = computed(() => {
   padding-top: var(--vp-layout-top-height, 0px);
   width: 100%;
   background-color: var(--vp-local-nav-bg-color);
+  backdrop-filter: blur(16px);
 }
 
 .VPLocalNav.fixed {

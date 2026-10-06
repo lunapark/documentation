@@ -75,15 +75,26 @@ defineProps<{
 
     display: flex;
     align-items: center;
-    backdrop-filter: blur(8px);
+    background: var(--color-background-litest);
+    backdrop-filter: blur(16px);
     flex: 1 1 0;
     border: 1px solid var(--color-primary-litest);
     border-radius: var(--length-radius-m);
     box-shadow: 0 16px 32px var(--color-background-litest);
+    transition: background var(--duration-fast), border-color var(--duration-fast);
+
+    &:hover {
+        background: var(--color-background-liter);
+        border-color: var(--color-primary-liter);
+
+        .details {
+            color: var(--color-content-lite);
+        }
+    }
 }
 
 .VPFeature.link:hover {
-    border-color: var(--vp-c-brand-1);
+    border-color: var(--color-primary-lite);
 }
 
 .box {
@@ -112,16 +123,18 @@ defineProps<{
 
 .title {
     line-height: 24px;
-    font-size: 16px;
+    font-size: var(--font-size-l);
     font-weight: 600;
+    color: var(--color-content);
 }
 
 .details {
     flex-grow: 1;
-    padding-top: 8px;
+    padding-top: var(--length-xs);
     line-height: 24px;
-    font-size: 14px;
+    font-size: var(--font-size-m);
     color: var(--color-content-liter);
+    transition: color var(--duration-fast);
 }
 
 .link-text {

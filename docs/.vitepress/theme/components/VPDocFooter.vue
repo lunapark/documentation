@@ -156,16 +156,20 @@ const showFooter = computed(
 
 .pager-link {
   display: block;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 8px;
+  border: 1px solid var(--color-primary-litest);
+  border-radius: var(--length-radius-m);
   padding: 11px 16px 13px;
   width: 100%;
   height: 100%;
-  transition: border-color 0.25s;
+  background: var(--color-background-litest);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 16px 32px var(--color-background-litest);
+  transition: border-color var(--duration-fast), background var(--duration-fast);
 }
 
 .pager-link:hover {
-  border-color: var(--vp-c-brand-1);
+  border-color: var(--color-primary-liter);
+  background: var(--color-background-liter);
 }
 
 .pager-link.next {

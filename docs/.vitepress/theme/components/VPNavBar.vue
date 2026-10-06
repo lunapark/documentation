@@ -84,27 +84,21 @@ watchPostEffect(() => {
   height: var(--vp-nav-height);
   pointer-events: none;
   white-space: nowrap;
-  transition: background-color 0.25s;
+  background: var(--color-background-0-liter);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--vp-c-gutter);
+  transition: background var(--duration-slow), backdrop-filter var(--duration-slow), border-color var(--duration-slow);
+}
+
+.VPNavBar.home.top:not(.screen-open) {
+  background: transparent;
+  backdrop-filter: none;
+  border-bottom-color: transparent;
 }
 
 .VPNavBar.screen-open {
   transition: none;
-  background-color: var(--color-background-dark);
-  border-bottom: 1px solid var(--vp-c-divider);
-}
-
-.VPNavBar:not(.home) {
-  background-color: var(--color-background-dark);
-}
-
-@media (min-width: 960px) {
-  .VPNavBar:not(.home) {
-    background-color: transparent;
-  }
-
-  .VPNavBar:not(.has-sidebar):not(.home.top) {
-    background-color: var(--color-background-dark);
-  }
+  background: var(--color-background-darkest);
 }
 
 .wrapper {
@@ -201,17 +195,6 @@ watchPostEffect(() => {
   transition: background-color 0.5s;
 }
 
-@media (min-width: 960px) {
-  .VPNavBar:not(.home.top) .content-body {
-    position: relative;
-    background-color: var(--vp-nav-bg-color);
-  }
-
-  .VPNavBar:not(.has-sidebar):not(.home.top) .content-body {
-    background-color: transparent;
-  }
-}
-
 @media (max-width: 767px) {
   .content-body {
     column-gap: 0.5rem;
@@ -267,17 +250,4 @@ watchPostEffect(() => {
   transition: background-color 0.5s;
 }
 
-.VPNavBar:not(.home) .divider-line {
-  background-color: var(--vp-c-gutter);
-}
-
-@media (min-width: 960px) {
-  .VPNavBar:not(.home.top) .divider-line {
-    background-color: var(--vp-c-gutter);
-  }
-
-  .VPNavBar:not(.has-sidebar):not(.home.top) .divider {
-    background-color: var(--vp-c-gutter);
-  }
-}
 </style>

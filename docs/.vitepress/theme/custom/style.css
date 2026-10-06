@@ -1,140 +1,166 @@
-/**
- * Customize default theme styling by overriding CSS variables:
- * https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css
- */
+:root {
+  --vp-c-default-1: var(--color-background-3);
+  --vp-c-default-2: var(--color-background-2);
+  --vp-c-default-3: var(--color-background-1);
+  --vp-c-default-soft: var(--color-soft-lite);
 
-/**
- * Colors
- *
- * Each colors have exact same color scale system with 3 levels of solid
- * colors with different brightness, and 1 soft color.
- * 
- * - `XXX-1`: The most solid color used mainly for colored text. It must
- *   satisfy the contrast ratio against when used on top of `XXX-soft`.
- *
- * - `XXX-2`: The color used mainly for hover state of the button.
- *
- * - `XXX-3`: The color for solid background, such as bg color of the button.
- *   It must satisfy the contrast ratio with pure white (#ffffff) text on
- *   top of it.
- *
- * - `XXX-soft`: The color used for subtle background such as custom container
- *   or badges. It must satisfy the contrast ratio when putting `XXX-1` colors
- *   on top of it.
- *
- *   The soft color must be semi transparent alpha channel. This is crucial
- *   because it allows adding multiple "soft" colors on top of each other
- *   to create a accent, such as when having inline code block inside
- *   custom containers.
- *
- * - `default`: The color used purely for subtle indication without any
- *   special meanings attched to it such as bg color for menu hover state.
- *
- * - `brand`: Used for primary brand colors, such as link text, button with
- *   brand theme, etc.
- *
- * - `tip`: Used to indicate useful information. The default theme uses the
- *   brand color for this by default.
- *
- * - `warning`: Used to indicate warning to the users. Used in custom
- *   container, badges, etc.
- *
- * - `danger`: Used to show error, or dangerous message to the users. Used
- *   in custom container, badges, etc.
- * -------------------------------------------------------------------------- */
-
- :root {
-  --vp-c-default-1: var(--vp-c-gray-1);
-  --vp-c-default-2: var(--vp-c-gray-2);
-  --vp-c-default-3: var(--vp-c-gray-3);
-  --vp-c-default-soft: var(--vp-c-gray-soft);
-
-  --vp-c-brand-1: var(--color-primary);
-  --vp-c-brand-2: var(--vp-c-indigo-2);
-  --vp-c-brand-3: var(--vp-c-indigo-3);
-  --vp-c-brand-soft: var(--vp-c-indigo-soft);
+  --vp-c-brand-1: var(--color-primary-content-lite);
+  --vp-c-brand-2: var(--color-primary);
+  --vp-c-brand-3: var(--color-primary-dark);
+  --vp-c-brand-soft: var(--color-primary-soft);
 
   --vp-c-tip-1: var(--vp-c-brand-1);
   --vp-c-tip-2: var(--vp-c-brand-2);
   --vp-c-tip-3: var(--vp-c-brand-3);
-  --vp-c-tip-soft: var(--vp-c-brand-soft);
+  --vp-c-tip-soft: var(--color-primary-softer);
 
-  --vp-c-warning-1: var(--vp-c-yellow-1);
-  --vp-c-warning-2: var(--vp-c-yellow-2);
-  --vp-c-warning-3: var(--vp-c-yellow-3);
-  --vp-c-warning-soft: var(--vp-c-yellow-soft);
+  --vp-c-warning-1: var(--color-warning-content);
+  --vp-c-warning-2: var(--color-warning);
+  --vp-c-warning-3: var(--color-warning);
+  --vp-c-warning-soft: var(--color-warning-soft);
 
-  --vp-c-danger-1: var(--vp-c-red-1);
-  --vp-c-danger-2: var(--vp-c-red-2);
-  --vp-c-danger-3: var(--vp-c-red-3);
-  --vp-c-danger-soft: var(--vp-c-red-soft);
-}
+  --vp-c-danger-1: var(--color-error-content);
+  --vp-c-danger-2: var(--color-error);
+  --vp-c-danger-3: var(--color-error);
+  --vp-c-danger-soft: color-mix(in oklab, var(--color-error) 15%, transparent);
 
-/**
- * Component: Button
- * -------------------------------------------------------------------------- */
+  --vp-c-bg: var(--color-background-darkest);
+  --vp-c-bg-alt: var(--color-background-0-liter);
+  --vp-c-bg-elv: var(--color-background-dark);
+  --vp-c-bg-soft: var(--color-background-0-liter);
 
-:root {
-  --vp-button-brand-border: transparent;
-  --vp-button-brand-text: var(--vp-c-white);
-  --vp-button-brand-bg: var(--vp-c-brand-3);
-  --vp-button-brand-hover-border: transparent;
-  --vp-button-brand-hover-text: var(--vp-c-white);
-  --vp-button-brand-hover-bg: var(--vp-c-brand-2);
-  --vp-button-brand-active-border: transparent;
-  --vp-button-brand-active-text: var(--vp-c-white);
-  --vp-button-brand-active-bg: var(--vp-c-brand-1);
-}
+  --vp-c-border: var(--color-primary-litest);
+  --vp-c-divider: var(--color-primary-soft);
+  --vp-c-gutter: var(--color-primary-soft);
 
-/**
- * Component: Home
- * -------------------------------------------------------------------------- */
+  --vp-nav-bg-color: transparent;
+  --vp-nav-screen-bg-color: var(--color-background-darkest);
+  --vp-local-nav-bg-color: var(--color-background-0-liter);
+  --vp-sidebar-bg-color: var(--color-background-darker);
 
-:root {
-  --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: -webkit-linear-gradient(
-    120deg,
-    #bd34fe 30%,
-    #41d1ff
-  );
+  --vp-code-block-bg: var(--color-background-0-liter);
+  --vp-code-copy-code-bg: var(--color-background-0);
+  --vp-code-copy-code-hover-bg: var(--color-background-1);
 
-  --vp-home-hero-image-background-image: linear-gradient(
-    -45deg,
-    #bd34fe 50%,
-    #47caff 50%
-  );
-  --vp-home-hero-image-filter: blur(44px);
-}
+  --vp-local-search-bg: var(--color-background-dark);
+  --vp-local-search-result-bg: var(--color-background-0);
+  --vp-local-search-result-border: var(--color-primary-soft);
+  --vp-local-search-result-selected-bg: var(--color-primary-softer);
+  --vp-local-search-result-selected-border: var(--color-primary-liter);
 
-@media (min-width: 640px) {
-  :root {
-    --vp-home-hero-image-filter: blur(56px);
-  }
-}
+  --vp-custom-block-info-border: var(--color-soft);
+  --vp-custom-block-info-text: var(--color-content-lite);
+  --vp-custom-block-info-bg: var(--color-background-0-liter);
+  --vp-custom-block-info-code-bg: var(--color-soft-lite);
 
-@media (min-width: 960px) {
-  :root {
-    --vp-home-hero-image-filter: blur(68px);
-  }
-}
+  --vp-custom-block-note-border: var(--color-soft);
+  --vp-custom-block-note-text: var(--color-content-lite);
+  --vp-custom-block-note-bg: var(--color-background-0-liter);
+  --vp-custom-block-note-code-bg: var(--color-soft-lite);
 
-/**
- * Component: Custom Block
- * -------------------------------------------------------------------------- */
-
-:root {
-  --vp-custom-block-tip-border: transparent;
+  --vp-custom-block-tip-border: var(--color-primary-litest);
   --vp-custom-block-tip-text: var(--color-content-lite);
-  --vp-custom-block-tip-bg: var(--vp-c-brand-soft);
-  --vp-custom-block-tip-code-bg: var(--vp-c-brand-soft);
+  --vp-custom-block-tip-bg: var(--color-primary-softer);
+  --vp-custom-block-tip-code-bg: var(--color-primary-soft);
+
+  --vp-custom-block-warning-border: var(--color-warning-litest);
+  --vp-custom-block-warning-text: var(--color-content-lite);
+  --vp-custom-block-warning-code-bg: var(--color-warning-soft);
+
+  --vp-custom-block-danger-border: color-mix(in oklab, var(--color-error-content) 35%, transparent);
+  --vp-custom-block-danger-text: var(--color-content-lite);
+  --vp-custom-block-danger-code-bg: var(--vp-c-danger-soft);
+
+  --vp-custom-block-details-border: var(--color-primary-litest);
+  --vp-custom-block-details-bg: var(--color-background-0-liter);
 }
 
-/**
- * Component: Algolia
- * -------------------------------------------------------------------------- */
+.vp-doc {
+  h1 {
+    color: var(--color-content);
+    text-shadow: 0 0 32px var(--color-primary-darker);
+  }
+
+  h2 {
+    color: var(--color-content);
+  }
+
+  a {
+    text-decoration-color: var(--color-primary-liter);
+
+    &:hover {
+      text-decoration-color: var(--color-primary);
+    }
+  }
+
+  div[class*='language-'],
+  .vp-code-group .tabs {
+    border: 1px solid var(--color-primary-soft);
+  }
+
+  .vp-code-group .tabs {
+    border-bottom: none;
+  }
+
+  .vp-code-group div[class*='language-'] {
+    border-top: none;
+  }
+
+  table {
+    border: 1px solid var(--color-primary-litest);
+    border-radius: var(--length-radius-s);
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: var(--color-background-0-liter);
+  }
+
+  tr,
+  tr:nth-child(2n) {
+    background-color: transparent;
+    border-top: none;
+  }
+
+  tr:hover {
+    background-color: var(--color-primary-softest);
+  }
+
+  th,
+  td {
+    border: none;
+    border-bottom: 1px solid var(--color-primary-soft);
+  }
+
+  tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  th {
+    color: var(--color-content-lite);
+    background-color: var(--color-primary-softest);
+  }
+
+  .custom-block {
+    border-radius: var(--length-radius-s);
+    backdrop-filter: blur(16px);
+
+    .custom-block-title {
+      color: var(--color-content);
+    }
+  }
+
+  .custom-block.tip .custom-block-title {
+    color: var(--color-primary-content-lite);
+  }
+
+  .custom-block.warning .custom-block-title {
+    color: var(--color-warning-content);
+  }
+
+  .custom-block.danger .custom-block-title {
+    color: var(--color-error-content);
+  }
+}
 
 .DocSearch {
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
-
-

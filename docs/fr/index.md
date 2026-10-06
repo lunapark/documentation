@@ -6,8 +6,8 @@ description: "Documentation Luna Park pour créer des applications web rapides e
 
 hero:
   name: "Luna Park"
-  text: "L'éditeur de scripting visuel"
-  tagline: Créez des applications web rapides et évolutives sans code.
+  text: 'La programmation, rendue <span class="strong">visuelle</span>'
+  tagline: Frontend, backend, base de données, APIs... La syntaxe part, la logique reste.
   actions:
     - theme: brand
       text: Commencer

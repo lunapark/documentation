@@ -31,9 +31,9 @@ const { hasSidebar } = useSidebar();
 .VPFooter {
   position: relative;
   z-index: var(--vp-z-index-footer);
-  border-top: 1px solid var(--vp-c-gutter);
+  border-top: 1px solid var(--color-background-0-liter);
   padding: 32px 24px;
-  background-color: var(--color-background-0);
+  background-color: var(--color-background-0-litest);
 }
 
 .VPFooter.has-sidebar {
@@ -47,7 +47,7 @@ const { hasSidebar } = useSidebar();
 }
 
 .VPFooter :deep(a:hover) {
-  color: var(--color-content-lite);
+  color: var(--color-primary);
 }
 
 @media (min-width: 768px) {

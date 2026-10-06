@@ -81,7 +81,7 @@ watch(
     padding: 32px 32px 96px;
     width: calc(100vw - 64px);
     max-width: 320px;
-    background-color: var(--color-background-darker);
+    background-color: var(--color-background-darkest);
     opacity: 0;
     box-shadow: var(--vp-c-shadow-3);
     overflow-x: hidden;
@@ -112,6 +112,8 @@ watch(
         visibility: visible;
         box-shadow: none;
         transform: translateX(0);
+        background-color: var(--color-background-darker);
+        border-right: 1px solid var(--vp-c-gutter);
     }
 }
 

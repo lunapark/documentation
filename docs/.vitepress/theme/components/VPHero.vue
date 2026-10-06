@@ -36,10 +36,21 @@
                         :key="action.link"
                         class="action"
                     >
-                        <LButton
+                        <DCtaButton
+                            v-if="action.theme === 'brand'"
                             big
                             :href="normalizeLink(action.link)"
-                            :primary="action.theme === 'brand'"
+                            :rel="action.rel"
+                            :target="action.target"
+                        >
+                            {{ action.text }}
+                        </DCtaButton>
+                        <LButton
+                            v-else
+                            big
+                            border
+                            class="alt-button"
+                            :href="normalizeLink(action.link)"
                             :rel="action.rel"
                             :target="action.target"
                         >
@@ -75,6 +86,7 @@ import type { DefaultTheme } from "vitepress/theme";
 import VPImage from "./VPImage.vue";
 import { LButton } from "@luna-park/design";
 import { normalizeLink } from "../support/utils";
+import DCtaButton from "../custom/components/DCtaButton.vue";
 
 export interface HeroAction {
     link: string
@@ -156,20 +168,40 @@ const heroImageSlotExists = inject("hero-image-slot-exists") as Ref<boolean>;
 }
 
 .heading {
+    --hero-font-size: 32px;
     display: flex;
     flex-direction: column;
+    gap: var(--length-xs);
+}
+
+.VPHero:not(.has-image) {
+    .main {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .heading {
+        align-items: center;
+    }
+
+    .actions {
+        justify-content: center;
+    }
 }
 
 .name,
 .text {
     width: fit-content;
     letter-spacing: -0.4px;
-    line-height: 40px;
-    font-size: 32px;
+    line-height: 1.2;
+    font-size: var(--hero-font-size);
     font-weight: 600;
     white-space: pre-wrap;
-    color: var(--color-content-lite);
-    text-shadow: 0 0 32px var(--color-primary);
+    color: var(--color-content);
+    text-shadow: 0 0 32px var(--color-primary-darker);
 }
 
 .VPHero.has-image .name,
@@ -177,24 +209,25 @@ const heroImageSlotExists = inject("hero-image-slot-exists") as Ref<boolean>;
     margin: 0 auto;
 }
 
-.name {
-    color: var(--color-content);
+.text {
+    font-size: calc(var(--hero-font-size) * 0.7);
+}
+
+.name,
+.text :deep(.strong) {
+    text-shadow: 0 0 64px var(--color-content-liter), 0 0 32px var(--color-primary), 0 0 16px var(--color-primary);
 }
 
 
 @media (min-width: 640px) {
-    .name,
-    .text {
-        line-height: 56px;
-        font-size: 48px;
+    .heading {
+        --hero-font-size: 48px;
     }
 }
 
 @media (min-width: 960px) {
-    .name,
-    .text {
-        line-height: 64px;
-        font-size: 56px;
+    .heading {
+        --hero-font-size: 64px;
     }
 
     .VPHero.has-image .name,
@@ -261,6 +294,17 @@ const heroImageSlotExists = inject("hero-image-slot-exists") as Ref<boolean>;
 .action {
     flex-shrink: 0;
     padding: 6px;
+
+    .alt-button {
+        --button-background: var(--color-background-litest);
+        --button-background-hover: var(--color-background-liter);
+        --button-border: var(--color-primary-liter);
+        backdrop-filter: blur(16px);
+
+        &:hover {
+            --button-border: var(--color-primary-lite);
+        }
+    }
 }
 
 .image {

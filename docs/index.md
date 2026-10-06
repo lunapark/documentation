@@ -6,8 +6,8 @@ description: "Luna Park documentation for building fast, scalable web applicatio
 
 hero:
   name: "Luna Park"
-  text: "The visual scripting editor"
-  tagline: Create fast and scalable web applications without code.
+  text: 'Programming, made <span class="strong">visual</span>'
+  tagline: Frontend, backend, database, APIs... Syntax goes, logic stays.
   actions:
     - theme: brand
       text: Get Started
