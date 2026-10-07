@@ -1,8 +1,11 @@
 ---
-description: "Compare Luna Park and FlutterFlow: web and mobile targets, logic, backend, code export, and pricing model."
+title: "FlutterFlow alternative for web apps: Luna Park vs FlutterFlow"
+description: "Looking for a FlutterFlow alternative for web-first apps? Compare Luna Park and FlutterFlow: web and mobile targets, logic, backend, code export, and pricing."
 ---
 
 # Luna Park vs FlutterFlow
+
+Looking for a **FlutterFlow alternative** for a web-first app, with the backend built in? Luna Park generates a standard Vue and Node.js application with a PostgreSQL database, and also exports it as desktop and mobile apps.
 
 FlutterFlow is a visual builder for **Flutter**, Google's framework for mobile apps. Luna Park is built on the **web** stack (Vue and Node.js). Both generate code you can export, and both produce native apps: the main question is which platform comes first in your project.
 
@@ -41,9 +44,9 @@ FlutterFlow is a visual builder for **Flutter**, Google's framework for mobile a
 
 | | Luna Park | FlutterFlow |
 |---|---|---|
-| **Code export** | Readable source code (paid plans) | Flutter code (paid plans) |
+| **Code export** | Readable source code (paid plans) | Flutter code ([paid plans](https://www.flutterflow.io/pricing), [docs](https://docs.flutterflow.io/flutterflow-cli/exporting)) |
 | **Hosting** | Anywhere | App stores, FlutterFlow web hosting, or your choice |
-| **Pricing model** | Fixed subscription | Seats |
+| **Pricing model** | Fixed subscription | Seats ([source](https://www.flutterflow.io/pricing)) |
 | **Platforms** | Web (single-page app, PWA), desktop (Windows, macOS, Linux), mobile (Android, iOS) | Mobile (Android, iOS), web, desktop |
 
 </DTable>
@@ -63,7 +66,7 @@ This comparison reflects our understanding of FlutterFlow as of October 2026. Fl
 
 ### Built for the web
 
-Flutter web apps draw on a canvas instead of producing HTML. This affects search engine indexing, initial load size, text selection, and accessibility. Luna Park generates a regular Vue application: HTML and CSS that browsers, search engines, and assistive technologies understand natively, and that stays light.
+Flutter web apps [render to a canvas](https://docs.flutter.dev/platform-integration/web/renderers) instead of producing regular HTML elements. This affects search engine indexing, initial load size, text selection, and accessibility. Luna Park generates a regular Vue application: HTML and CSS that browsers, search engines, and assistive technologies understand natively, and that stays light.
 
 ### Backend included
 

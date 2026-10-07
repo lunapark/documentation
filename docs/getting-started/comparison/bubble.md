@@ -1,8 +1,11 @@
 ---
-description: "Compare Luna Park and Bubble: logic, backend, code ownership, hosting, pricing model, performance, and mobile apps."
+title: "Bubble alternative with code export: Luna Park vs Bubble"
+description: "Looking for a Bubble alternative? Compare Luna Park and Bubble: code export, hosting, pricing model, logic, backend, and mobile apps."
 ---
 
 # Luna Park vs Bubble
+
+Looking for a **Bubble alternative** with code export? Luna Park is a visual editor that builds the interface, the logic, and the backend of your app, and compiles it into a standard Vue and Node.js application that you own and host where you want.
 
 Bubble is the most established full-stack no-code platform. Like Luna Park, it lets you build the interface, the logic, and the data of an application without writing code. The two tools differ mostly in **what you get at the end**: Bubble runs your app on its own platform, while Luna Park generates a standard application that you own.
 
@@ -42,9 +45,9 @@ Bubble is the most established full-stack no-code platform. Like Luna Park, it l
 
 | | Luna Park | Bubble |
 |---|---|---|
-| **Code export** | Readable Vue + Node.js code | No |
-| **Hosting** | Anywhere | Bubble's servers only |
-| **Pricing model** | Fixed subscription | Plan + usage (workload units) |
+| **Code export** | Readable Vue + Node.js code | No ([source](https://manual.bubble.io/account-and-marketplace/application-and-data-ownership)) |
+| **Hosting** | Anywhere | Bubble's infrastructure only |
+| **Pricing model** | Fixed subscription | Plan + usage ([workload units](https://manual.bubble.io/help-guides/workload/understanding-workload)) |
 | **Platforms** | Web (single-page app, PWA), desktop (Windows, macOS, Linux), mobile (Android, iOS) | Web, mobile (Android, iOS) |
 | **Ecosystem** | Young, growing community | Very large community, agencies, templates |
 
@@ -64,21 +67,19 @@ This comparison reflects our understanding of Bubble as of October 2026. Bubble 
 
 ### You own your application
 
-Bubble apps only run on Bubble: if you leave, you rebuild. Luna Park [compiles](../../deployment/compilation) your project into a standard Vue frontend and a Node.js backend (Fastify and PostgreSQL). You can download the readable source code, host it where you want, and hand it to a development team if your project outgrows no-code.
+According to [Bubble's documentation](https://manual.bubble.io/account-and-marketplace/application-and-data-ownership), Bubble apps can only run on the Bubble platform and cannot be exported as code: if you leave, you rebuild the logic. Luna Park [compiles](../../deployment/compilation) your project into a standard Vue frontend and a Node.js backend (Fastify and PostgreSQL). You can download the readable source code, host it where you want, and hand it to a development team if your project outgrows no-code.
 
 ### Predictable costs
 
-Bubble bills part of its plans on **workload units**: every database query, workflow step, or API call consumes some. A traffic spike or an inefficient workflow increases the bill. With Luna Park, you pay a fixed subscription for the editor. Your app runs on your own server, at the price of that server, however many users you have.
+Bubble bills part of its plans on [**workload units**](https://manual.bubble.io/help-guides/workload/understanding-workload), which measure the server activity of your app: database queries, workflows, API calls, file uploads. Usage beyond your plan's allowance is billed separately (see [Bubble's pricing](https://bubble.io/pricing)), so the cost follows your traffic and how your workflows are built. With Luna Park, you pay a fixed subscription for the editor. Your app runs on your own server, at the price of that server, however many users you have.
 
-### Real code, not a runtime
+### Compiled code you can host
 
-Like most no-code tools, Bubble stores your app as a description and runs it with a large generic engine: a state machine loaded on every page, that reads your workflows and decides at each step what to do. Every action goes through this layer.
-
-Luna Park is a **compiler**. Each node of a graph becomes a line of JavaScript, and each component becomes a regular Vue component. Nothing interprets your app at runtime: pages load less code, and your logic runs at the speed of hand-written code.
+Bubble applications run on Bubble's managed infrastructure, executed by the Bubble platform. Luna Park is a **compiler**: each node of a graph becomes a line of JavaScript, and each component becomes a regular Vue component. The result is a conventional Vue and Node.js application, with no Luna Park runtime, that you can host, profile, and optimize like any other web app.
 
 ### Logic without limits
 
-Bubble workflows are a list of actions triggered by an event. Complex logic (nested loops, data transformations, algorithms) often needs workarounds, plugins, or custom JavaScript. Luna Park's [visual scripting](../../fundamentals/logic/visual-scripting/introduction) covers what code can do: loops, conditions, functions, typed data, async calls, and the functions of any [npm package](../../integrations/npm), each available as a node.
+Bubble workflows are a list of actions triggered by an event. Complex logic (nested loops, data transformations, algorithms) is usually handled with backend workflows, plugins, or custom JavaScript. Luna Park's [visual scripting](../../fundamentals/logic/visual-scripting/introduction) covers what code can do: loops, conditions, functions, typed data, async calls, and the functions of any [npm package](../../integrations/npm), each available as a node.
 
 ### A real SQL database
 
@@ -88,7 +89,7 @@ In production, your data sits in your own PostgreSQL database, which any standar
 
 ### Every platform from the same project
 
-From a single project, Luna Park exports a standard single-page web app, a PWA that users install from their browser, and, with the [desktop app](../desktop-app), native apps for Windows, macOS, Linux ([desktop](../../deployment/desktop)), Android, and iOS ([mobile](../../deployment/mobile)). Bubble's native mobile editor targets Android and iOS, with mobile screens built separately from the web pages.
+From a single project, Luna Park exports a standard single-page web app, a PWA that users install from their browser, and, with the [desktop app](../desktop-app), native apps for Windows, macOS, Linux ([desktop](../../deployment/desktop)), Android, and iOS ([mobile](../../deployment/mobile)). Bubble's [native mobile editor](https://manual.bubble.io/help-guides/getting-started/building-for.../native-ios-and-android) targets Android and iOS, with mobile screens built separately from the web pages.
 
 ## Things to know before switching
 
@@ -121,4 +122,4 @@ From a single project, Luna Park exports a standard single-page web app, a PWA t
 
 **Choose Bubble** if you want to launch quickly without ever thinking about servers, if your logic stays simple, and if being tied to one platform is acceptable for your project.
 
-**Choose Luna Park** if you are building a product meant to last and grow: you keep the code, control your costs, get native performance, and can go as deep as your logic requires.
+**Choose Luna Park** if you are building a product meant to last and grow: you keep the code, control your costs, run standard compiled code, and can go as deep as your logic requires.

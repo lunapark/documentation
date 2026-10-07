@@ -1,24 +1,27 @@
 ---
-description: "Comparez Luna Park aux outils no-code, éditeurs de mise en page et frameworks JavaScript."
+title: "Alternatives no-code avec export du code : Luna Park comparé"
+description: "Vous cherchez une alternative à Bubble, WeWeb, FlutterFlow, Retool, Noodl, Lovable ou Bolt ? Comparez Luna Park aux outils no-code, aux constructeurs IA et aux frameworks JavaScript."
 ---
 
 # Quelles différences avec les autres outils no-code ?
 
+Vous cherchez une alternative à **Bubble, WeWeb, FlutterFlow, Retool, Noodl, Lovable ou Bolt** ? Cette page explique ce qui distingue Luna Park, avec une page détaillée pour chaque outil.
+
 ## Les solutions no-code traditionnelles
 
-Les solutions no-code sont généralement des **sociétés d'hébergement**, ce qui signifie qu'elles hébergent votre projet et vous payez selon l'utilisation de leurs serveurs.
+Beaucoup de solutions no-code sont aussi des **plateformes d'hébergement** : elles font tourner votre projet sur leur propre infrastructure, et une partie du prix dépend de l'usage de votre application.
 
-Leur motivation est de vous garder sur leur plateforme, ce qui signifie que vous êtes lié à leurs serveurs et à leurs limitations. Ils sont incités à ne pas générer d'applications trop performantes pour vous vendre des serveurs plus puissants.
+C'est pratique, car il n'y a aucun serveur à gérer. Cela signifie aussi que votre application dépend de cette plateforme : quand elle ne peut pas être exportée en code, changer d'outil veut dire la reconstruire.
 
 ## Notre solution, Luna Park
 
 Luna Park, quant à lui, est un **environnement de développement** (IDE). Vous payez un montant fixe, quel que soit votre projet. Le code généré vous appartient, vous pouvez donc l’héberger où vous voulez sans aucune contrainte.
 
-Notre motivation est de vous permettre de créer des applications **performantes et évolutives**, de manière **rapide** et **efficace**. Nous sommes incités à vous fournir le meilleur outil pour créer vos applications.
+Le prix ne dépend pas de l'usage de votre application : la faire tourner coûte le prix de votre propre serveur, et vous pouvez l'optimiser comme n'importe quelle application web standard.
 
 ## La contrepartie
 
-Luna Park est un outil plus bas niveau que les autres solutions no-code. Cela signifie qu'il est un peu moins simple à apprendre, mais permet de **faire beaucoup plus** et offre des **performances natives**.
+Luna Park est un outil plus bas niveau que les autres solutions no-code. Cela signifie qu'il est un peu moins simple à apprendre, mais permet de **faire beaucoup plus** et produit du **code compilé standard**.
 
 <DInfoCard
 :cards="[
@@ -28,7 +31,7 @@ infoPairs: [
 { label: 'Apprentissage', value: 'Quelques heures', styleClass: 'success' },
 { label: 'Création', value: 'Quelques heures', styleClass: 'success' },
 { label: 'Fonctionnalités', value: 'Statique', styleClass: 'danger' },
-{ label: 'Performance', value: 'Mauvaise', styleClass: 'danger' }
+{ label: 'Résultat', value: 'Tourne sur la plateforme', styleClass: 'danger' }
 ]
 },
 {
@@ -38,7 +41,7 @@ infoPairs: [
 { label: 'Apprentissage', value: 'Quelques jours', styleClass: 'info' },
 { label: 'Création', value: 'Quelques jours', styleClass: 'info' },
 { label: 'Fonctionnalités', value: 'Réactivité moderne', styleClass: 'success' },
-{ label: 'Performance', value: 'Native', styleClass: 'success' }
+{ label: 'Résultat', value: 'Code compilé', styleClass: 'success' }
 ]
 },
 {
@@ -47,7 +50,7 @@ infoPairs: [
 { label: 'Apprentissage', value: 'Quelques mois', styleClass: 'danger' },
 { label: 'Création', value: 'Quelques mois', styleClass: 'danger' },
 { label: 'Fonctionnalités', value: 'Réactivité moderne', styleClass: 'success' },
-{ label: 'Performance', value: 'Native', styleClass: 'success' }
+{ label: 'Résultat', value: 'Code écrit à la main', styleClass: 'success' }
 ]
 }
 ]"
@@ -72,11 +75,13 @@ Chaque outil fait des choix différents. Le tableau ci-dessous résume les princ
 Cette comparaison reflète notre compréhension de chaque outil en octobre 2026. Ces produits évoluent vite : consultez leurs sites pour les fonctionnalités et prix actuels.
 :::
 
-- [**Luna Park vs Bubble**](./comparison/bubble) : l'alternative no-code la plus proche. La propriété du code, les coûts et les performances font la différence.
-- [**Luna Park vs WeWeb**](./comparison/weweb) : les deux génèrent du code Vue. Luna Park construit le frontend et le backend dans un seul projet.
-- [**Luna Park vs FlutterFlow**](./comparison/flutterflow) : mobile d'abord contre web d'abord.
+- [**Alternative à Bubble**](./comparison/bubble) : Luna Park vs Bubble. La propriété du code, l'hébergement et le modèle de prix font la différence.
+- [**Alternative à WeWeb**](./comparison/weweb) : Luna Park vs WeWeb. Les deux génèrent du code Vue ; Luna Park construit le frontend et le backend dans un seul projet.
+- [**Alternative à FlutterFlow**](./comparison/flutterflow) : Luna Park vs FlutterFlow. Web d'abord contre mobile d'abord.
+- [**Alternative à Retool**](./comparison/retool) : Luna Park vs Retool. Outils internes sur des données existantes contre applications complètes qui vous appartiennent.
+- [**Alternative à Noodl**](./comparison/noodl) : Luna Park vs Noodl et Fluxscape. Les deux utilisent des graphes de nœuds ; Luna Park les compile en code.
+- [**Alternative à Lovable et Bolt**](./comparison/ai-app-builders) : Luna Park vs constructeurs IA. Logique visuelle contre code généré.
 - [**Luna Park vs Webflow**](./comparison/webflow) : sites web contre applications.
-- [**Luna Park vs constructeurs IA**](./comparison/ai-app-builders) : Lovable, Bolt, et la différence entre code généré et logique visuelle.
 
 ## Quand Luna Park n'est pas le meilleur choix
 

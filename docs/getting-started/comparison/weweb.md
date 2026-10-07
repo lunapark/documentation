@@ -1,8 +1,11 @@
 ---
-description: "Compare Luna Park and WeWeb: frontend and backend, logic, code export, hosting, pricing model, and native apps."
+title: "WeWeb alternative with full-stack export: Luna Park vs WeWeb"
+description: "Looking for a WeWeb alternative? Compare Luna Park and WeWeb: frontend and backend, logic, code export, hosting, pricing model, and native apps."
 ---
 
 # Luna Park vs WeWeb
+
+Looking for a **WeWeb alternative** that exports the backend too? Luna Park builds the interface, the logic, the routes, and the PostgreSQL database in one project, and exports the complete Vue and Node.js application.
 
 WeWeb started as a frontend builder that plugs into backends such as Xano or Supabase, and added its own backend in 2026. Like Luna Park, it generates **Vue.js** code that you can export. The differences lie in how logic is built, how the backend fits in, and where your app runs.
 
@@ -40,9 +43,9 @@ WeWeb started as a frontend builder that plugs into backends such as Xano or Sup
 
 | | Luna Park | WeWeb |
 |---|---|---|
-| **Code export** | Full application: frontend and backend | Frontend single-page application (paid plans) |
+| **Code export** | Full application: frontend and backend | Frontend single-page application ([paid plans](https://docs.weweb.io/settings-billing-code-export/pricing.html)) |
 | **Hosting** | Anywhere | WeWeb Cloud, or self-hosted frontend |
-| **Pricing model** | Fixed subscription | Seats + hosting plan per app on WeWeb Cloud |
+| **Pricing model** | Fixed subscription | Seats + hosting plan per app on WeWeb Cloud ([source](https://docs.weweb.io/settings-billing-code-export/pricing.html)) |
 | **Platforms** | Web (single-page app, PWA), desktop (Windows, macOS, Linux), mobile (Android, iOS) | Web, PWA |
 
 </DTable>
@@ -74,9 +77,9 @@ When WeWeb is connected to Supabase or Xano, your app reaches the data through a
 
 In Luna Park, a [route](../../fundamentals/data/routes) runs on the same server as PostgreSQL and talks to it directly. One call from the interface can run several queries, with joins, aggregates, and [transactions](../../fundamentals/data/database#specialized-nodes), and your logic in between. Fewer round trips mean faster pages, and the whole query stays visual.
 
-### Real code, not a runtime
+### Logic compiled to JavaScript
 
-WeWeb exports a Vue application, but your workflows and formulas are stored as data and executed by WeWeb's engine, shipped with your app. In Luna Park, the logic itself is compiled: each node becomes a line of JavaScript. Nothing interprets your app at runtime, so it loads less code and runs at the speed of hand-written code.
+In WeWeb, workflows and formulas are configured in the editor and run by WeWeb's workflow engine in the published app. In Luna Park, the logic itself is compiled: each node becomes a line of JavaScript, in the frontend and in the backend. The exported code contains your logic as plain functions, readable by any developer.
 
 ### Export the full application
 
@@ -84,7 +87,7 @@ WeWeb's code export is the frontend single-page application. Luna Park's [export
 
 ### Cost that doesn't grow with your apps
 
-On WeWeb Cloud, each published app needs its own hosting plan on top of the editor seats. With Luna Park, the subscription covers the editor, and you host as many apps as you want on your own servers.
+On WeWeb Cloud, each published app needs its own hosting plan on top of the editor seats (see [WeWeb's pricing](https://docs.weweb.io/settings-billing-code-export/pricing.html)). With Luna Park, the subscription covers the editor, and you host as many apps as you want on your own servers.
 
 ### Every platform from the same project
 

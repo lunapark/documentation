@@ -1,8 +1,11 @@
 ---
-description: "Comparez Luna Park aux constructeurs d'applications IA comme Lovable et Bolt : contrôle, maintenance, backend, propriété du code et modèle de prix."
+title: "Alternative à Lovable et Bolt : Luna Park vs constructeurs IA"
+description: "Vous cherchez une alternative à Lovable ou Bolt ? Comparez Luna Park aux constructeurs d'applications IA : contrôle, maintenance, backend, propriété du code et modèle de prix."
 ---
 
 # Luna Park vs constructeurs d'applications IA
+
+Vous cherchez une **alternative à Lovable** ou une **alternative à Bolt** qui vous laisse le contrôle de votre application ? Luna Park utilise l'IA pour construire une logique visuelle que vous pouvez lire et modifier, dans une application Vue et Node.js full-stack qui vous appartient.
 
 Les constructeurs d'applications IA comme **Lovable** ou **Bolt** génèrent une application complète à partir d'une conversation. Vous décrivez ce que vous voulez, l'IA écrit le code (en général du React avec un backend Supabase ou équivalent), et vous voyez le résultat en quelques minutes.
 
@@ -42,7 +45,7 @@ Luna Park utilise aussi l'IA, mais différemment : l'IA construit **une logique 
 |---|---|---|
 | **Propriété du code** | Code Vue + Node.js lisible | Oui, souvent synchronisé avec GitHub |
 | **Hébergement** | Où vous voulez | La plateforme, ou au choix |
-| **Modèle de prix** | Abonnement fixe, IA avec votre propre clé ou modèles locaux (desktop) | Crédits consommés à chaque message IA |
+| **Modèle de prix** | Abonnement fixe, IA avec votre propre clé ou modèles locaux (desktop) | Crédits ou tokens consommés par l'IA ([Lovable](https://docs.lovable.dev/introduction/plans-and-credits), [Bolt](https://support.bolt.new/best-practices/maximizing-token-efficiency)) |
 | **Plateformes** | Web (application monopage, PWA), desktop (Windows, macOS, Linux), mobile (Android, iOS) | Surtout web |
 
 </DTable>
@@ -77,7 +80,7 @@ Dans Luna Park, une [route](../../fundamentals/data/routes) tourne sur le même 
 
 ### Votre IA, vos coûts
 
-Les constructeurs IA facturent chaque message en crédits, et les gros projets les consomment vite. Dans Luna Park, vous connectez le fournisseur et le modèle d'IA de votre choix avec votre propre clé, utilisez un modèle local dans l'application desktop, ou laissez votre propre agent de code (Claude Code, Codex, Cursor...) travailler sur le projet via [MCP](../../integrations/ai-agents). Et quand vous n'avez pas besoin de l'IA, éditer ne coûte rien : vous utilisez simplement l'éditeur.
+Les constructeurs IA facturent l'usage de l'IA : Lovable [compte des crédits par message](https://docs.lovable.dev/introduction/plans-and-credits), et Bolt [compte des tokens](https://support.bolt.new/best-practices/maximizing-token-efficiency), qui couvrent aussi la lecture de votre projet par l'IA. Dans Luna Park, vous connectez le fournisseur et le modèle d'IA de votre choix avec votre propre clé, utilisez un modèle local dans l'application desktop, ou laissez votre propre agent de code (Claude Code, Codex, Cursor...) travailler sur le projet via [MCP](../../integrations/ai-agents). Et quand vous n'avez pas besoin de l'IA, éditer ne coûte rien : vous utilisez simplement l'éditeur.
 
 ### Pensé pour être maintenu
 

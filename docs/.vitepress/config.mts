@@ -76,6 +76,14 @@ export default defineConfig({
                                         text: "FlutterFlow"
                                     },
                                     {
+                                        link: "/fr/getting-started/comparison/retool",
+                                        text: "Retool"
+                                    },
+                                    {
+                                        link: "/fr/getting-started/comparison/noodl",
+                                        text: "Noodl / Fluxscape"
+                                    },
+                                    {
                                         link: "/fr/getting-started/comparison/webflow",
                                         text: "Webflow"
                                     },
@@ -360,6 +368,14 @@ export default defineConfig({
                                     {
                                         link: "/getting-started/comparison/flutterflow",
                                         text: "FlutterFlow"
+                                    },
+                                    {
+                                        link: "/getting-started/comparison/retool",
+                                        text: "Retool"
+                                    },
+                                    {
+                                        link: "/getting-started/comparison/noodl",
+                                        text: "Noodl / Fluxscape"
                                     },
                                     {
                                         link: "/getting-started/comparison/webflow",

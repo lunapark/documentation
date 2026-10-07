@@ -1,8 +1,11 @@
 ---
-description: "Comparez Luna Park et WeWeb : frontend et backend, logique, export du code, hébergement, modèle de prix et applications natives."
+title: "Alternative à WeWeb avec export full-stack : Luna Park vs WeWeb"
+description: "Vous cherchez une alternative à WeWeb ? Comparez Luna Park et WeWeb : frontend et backend, logique, export du code, hébergement, modèle de prix et applications natives."
 ---
 
 # Luna Park vs WeWeb
+
+Vous cherchez une **alternative à WeWeb** qui exporte aussi le backend ? Luna Park construit l'interface, la logique, les routes et la base PostgreSQL dans un seul projet, et exporte l'application Vue et Node.js complète.
 
 WeWeb a commencé comme un constructeur de frontend qui se branche sur des backends comme Xano ou Supabase, et a ajouté son propre backend en 2026. Comme Luna Park, il génère du code **Vue.js** exportable. Les différences tiennent à la façon de construire la logique, à la place du backend, et à l'endroit où tourne votre application.
 
@@ -40,9 +43,9 @@ WeWeb a commencé comme un constructeur de frontend qui se branche sur des backe
 
 | | Luna Park | WeWeb |
 |---|---|---|
-| **Export du code** | Application complète : frontend et backend | Application monopage du frontend (offres payantes) |
+| **Export du code** | Application complète : frontend et backend | Application monopage du frontend ([offres payantes](https://docs.weweb.io/settings-billing-code-export/pricing.html)) |
 | **Hébergement** | Où vous voulez | WeWeb Cloud, ou frontend auto-hébergé |
-| **Modèle de prix** | Abonnement fixe | Sièges + offre d'hébergement par application sur WeWeb Cloud |
+| **Modèle de prix** | Abonnement fixe | Sièges + offre d'hébergement par application sur WeWeb Cloud ([source](https://docs.weweb.io/settings-billing-code-export/pricing.html)) |
 | **Plateformes** | Web (application monopage, PWA), desktop (Windows, macOS, Linux), mobile (Android, iOS) | Web, PWA |
 
 </DTable>
@@ -74,9 +77,9 @@ Quand WeWeb est connecté à Supabase ou Xano, votre application accède aux don
 
 Dans Luna Park, une [route](../../fundamentals/data/routes) tourne sur le même serveur que PostgreSQL et lui parle directement. Un seul appel depuis l'interface peut exécuter plusieurs requêtes, avec jointures, agrégats et [transactions](../../fundamentals/data/database#nodes-specialises), et votre logique entre les deux. Moins d'allers-retours, c'est des pages plus rapides, et toute la requête reste visuelle.
 
-### Du vrai code, pas un moteur d'exécution
+### Une logique compilée en JavaScript
 
-WeWeb exporte une application Vue, mais vos workflows et formules sont stockés sous forme de données et exécutés par le moteur de WeWeb, livré avec votre application. Dans Luna Park, la logique elle-même est compilée : chaque nœud devient une ligne de JavaScript. Rien n'interprète votre application à l'exécution : elle charge moins de code et tourne à la vitesse d'un code écrit à la main.
+Dans WeWeb, les workflows et formules sont configurés dans l'éditeur et exécutés par le moteur de workflows de WeWeb dans l'application publiée. Dans Luna Park, la logique elle-même est compilée : chaque nœud devient une ligne de JavaScript, dans le frontend comme dans le backend. Le code exporté contient votre logique sous forme de fonctions classiques, lisibles par n'importe quel développeur.
 
 ### Exporter l'application complète
 
@@ -84,7 +87,7 @@ L'export de code de WeWeb est l'application monopage du frontend. L'[export](../
 
 ### Un coût qui ne grandit pas avec vos applications
 
-Sur WeWeb Cloud, chaque application publiée demande sa propre offre d'hébergement en plus des sièges de l'éditeur. Avec Luna Park, l'abonnement couvre l'éditeur, et vous hébergez autant d'applications que vous voulez sur vos propres serveurs.
+Sur WeWeb Cloud, chaque application publiée demande sa propre offre d'hébergement en plus des sièges de l'éditeur (voir les [tarifs de WeWeb](https://docs.weweb.io/settings-billing-code-export/pricing.html)). Avec Luna Park, l'abonnement couvre l'éditeur, et vous hébergez autant d'applications que vous voulez sur vos propres serveurs.
 
 ### Toutes les plateformes depuis le même projet
 

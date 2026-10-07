@@ -1,8 +1,11 @@
 ---
-description: "Comparez Luna Park et Bubble : logique, backend, propriété du code, hébergement, modèle de prix, performances et applications mobiles."
+title: "Alternative à Bubble avec export du code : Luna Park vs Bubble"
+description: "Vous cherchez une alternative à Bubble ? Comparez Luna Park et Bubble : export du code, hébergement, modèle de prix, logique, backend et applications mobiles."
 ---
 
 # Luna Park vs Bubble
+
+Vous cherchez une **alternative à Bubble** avec export du code ? Luna Park est un éditeur visuel qui construit l'interface, la logique et le backend de votre application, et la compile en une application Vue et Node.js standard, qui vous appartient et que vous hébergez où vous voulez.
 
 Bubble est la plateforme no-code full-stack la plus établie. Comme Luna Park, elle permet de créer l'interface, la logique et les données d'une application sans écrire de code. Les deux outils diffèrent surtout par **ce que vous obtenez à la fin** : Bubble fait tourner votre application sur sa propre plateforme, alors que Luna Park génère une application standard qui vous appartient.
 
@@ -42,9 +45,9 @@ Bubble est la plateforme no-code full-stack la plus établie. Comme Luna Park, e
 
 | | Luna Park | Bubble |
 |---|---|---|
-| **Export du code** | Code Vue + Node.js lisible | Non |
-| **Hébergement** | Où vous voulez | Serveurs de Bubble uniquement |
-| **Modèle de prix** | Abonnement fixe | Offre + usage (workload units) |
+| **Export du code** | Code Vue + Node.js lisible | Non ([source](https://manual.bubble.io/account-and-marketplace/application-and-data-ownership)) |
+| **Hébergement** | Où vous voulez | Infrastructure de Bubble uniquement |
+| **Modèle de prix** | Abonnement fixe | Offre + usage ([workload units](https://manual.bubble.io/help-guides/workload/understanding-workload)) |
 | **Plateformes** | Web (application monopage, PWA), desktop (Windows, macOS, Linux), mobile (Android, iOS) | Web, mobile (Android, iOS) |
 | **Écosystème** | Communauté jeune et en croissance | Très grande communauté, agences, templates |
 
@@ -64,21 +67,19 @@ Cette comparaison reflète notre compréhension de Bubble en octobre 2026. Bubbl
 
 ### Votre application vous appartient
 
-Les applications Bubble ne tournent que sur Bubble : si vous partez, vous reconstruisez tout. Luna Park [compile](../../deployment/compilation) votre projet en un frontend Vue et un backend Node.js (Fastify et PostgreSQL) standards. Vous pouvez télécharger le code source lisible, l'héberger où vous voulez, et le confier à une équipe de développement si votre projet dépasse le no-code.
+D'après la [documentation de Bubble](https://manual.bubble.io/account-and-marketplace/application-and-data-ownership), les applications Bubble ne peuvent tourner que sur la plateforme Bubble et ne peuvent pas être exportées en code : si vous partez, vous reconstruisez la logique. Luna Park [compile](../../deployment/compilation) votre projet en un frontend Vue et un backend Node.js (Fastify et PostgreSQL) standards. Vous pouvez télécharger le code source lisible, l'héberger où vous voulez, et le confier à une équipe de développement si votre projet dépasse le no-code.
 
 ### Des coûts prévisibles
 
-Bubble facture une partie de ses offres en **workload units** : chaque requête en base, étape de workflow ou appel d'API en consomme. Un pic de trafic ou un workflow peu optimisé augmente la facture. Avec Luna Park, vous payez un abonnement fixe pour l'éditeur. Votre application tourne sur votre propre serveur, au prix de ce serveur, quel que soit le nombre d'utilisateurs.
+Bubble facture une partie de ses offres en [**workload units**](https://manual.bubble.io/help-guides/workload/understanding-workload), qui mesurent l'activité serveur de votre application : requêtes en base, workflows, appels d'API, envois de fichiers. L'usage au-delà du quota de votre offre est facturé en plus (voir les [tarifs de Bubble](https://bubble.io/pricing)) : le coût suit votre trafic et la façon dont vos workflows sont construits. Avec Luna Park, vous payez un abonnement fixe pour l'éditeur. Votre application tourne sur votre propre serveur, au prix de ce serveur, quel que soit le nombre d'utilisateurs.
 
-### Du vrai code, pas un moteur d'exécution
+### Du code compilé que vous hébergez
 
-Comme la plupart des outils no-code, Bubble stocke votre application sous forme de description et l'exécute avec un gros moteur générique : une machine à états chargée sur chaque page, qui lit vos workflows et décide à chaque étape quoi faire. Chaque action passe par cette couche.
-
-Luna Park est un **compilateur**. Chaque nœud d'un graphe devient une ligne de JavaScript, et chaque composant devient un composant Vue classique. Rien n'interprète votre application à l'exécution : les pages chargent moins de code, et votre logique tourne à la vitesse d'un code écrit à la main.
+Les applications Bubble tournent sur l'infrastructure gérée de Bubble, exécutées par la plateforme Bubble. Luna Park est un **compilateur** : chaque nœud d'un graphe devient une ligne de JavaScript, et chaque composant devient un composant Vue classique. Le résultat est une application Vue et Node.js classique, sans moteur Luna Park, que vous pouvez héberger, profiler et optimiser comme n'importe quelle application web.
 
 ### Une logique sans limites
 
-Les workflows Bubble sont une liste d'actions déclenchées par un événement. La logique complexe (boucles imbriquées, transformations de données, algorithmes) demande souvent des contournements, des plugins ou du JavaScript personnalisé. Le [visual scripting](../../fundamentals/logic/visual-scripting/introduction) de Luna Park couvre ce que le code permet : boucles, conditions, fonctions, données typées, appels asynchrones, et les fonctions de n'importe quel [paquet npm](../../integrations/npm), chacune disponible sous forme de nœud.
+Les workflows Bubble sont une liste d'actions déclenchées par un événement. La logique complexe (boucles imbriquées, transformations de données, algorithmes) passe en général par des backend workflows, des plugins ou du JavaScript personnalisé. Le [visual scripting](../../fundamentals/logic/visual-scripting/introduction) de Luna Park couvre ce que le code permet : boucles, conditions, fonctions, données typées, appels asynchrones, et les fonctions de n'importe quel [paquet npm](../../integrations/npm), chacune disponible sous forme de nœud.
 
 ### Une vraie base de données SQL
 
@@ -88,7 +89,7 @@ En production, vos données sont dans votre propre base PostgreSQL, lisible par 
 
 ### Toutes les plateformes depuis le même projet
 
-À partir d'un seul projet, Luna Park exporte une application web monopage standard, une PWA que les utilisateurs installent depuis leur navigateur et, avec l'[application desktop](../desktop-app), des applications natives pour Windows, macOS, Linux ([desktop](../../deployment/desktop)), Android et iOS ([mobile](../../deployment/mobile)). L'éditeur mobile natif de Bubble cible Android et iOS, avec des écrans mobiles construits séparément des pages web.
+À partir d'un seul projet, Luna Park exporte une application web monopage standard, une PWA que les utilisateurs installent depuis leur navigateur et, avec l'[application desktop](../desktop-app), des applications natives pour Windows, macOS, Linux ([desktop](../../deployment/desktop)), Android et iOS ([mobile](../../deployment/mobile)). L'[éditeur mobile natif](https://manual.bubble.io/help-guides/getting-started/building-for.../native-ios-and-android) de Bubble cible Android et iOS, avec des écrans mobiles construits séparément des pages web.
 
 ## À savoir avant de changer
 
@@ -121,4 +122,4 @@ En production, vos données sont dans votre propre base PostgreSQL, lisible par 
 
 **Choisissez Bubble** si vous voulez lancer vite sans jamais penser aux serveurs, si votre logique reste simple, et si dépendre d'une seule plateforme est acceptable pour votre projet.
 
-**Choisissez Luna Park** si vous construisez un produit fait pour durer et grandir : vous gardez le code, maîtrisez vos coûts, obtenez des performances natives, et pouvez aller aussi loin que votre logique l'exige.
+**Choisissez Luna Park** si vous construisez un produit fait pour durer et grandir : vous gardez le code, maîtrisez vos coûts, faites tourner du code compilé standard, et pouvez aller aussi loin que votre logique l'exige.
