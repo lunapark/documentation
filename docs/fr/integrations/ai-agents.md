@@ -4,7 +4,7 @@ description: "Connectez Claude Code, Codex ou n'importe quel agent de code compa
 
 # Agents IA (MCP)
 
-En plus du [Sidekick](../getting-started/sidekick-settings) intégré, vous pouvez laisser un agent de code externe (Claude Code, Codex, Cursor, Gemini CLI...) construire votre application. L'[application desktop](../getting-started/desktop-app) expose un **serveur MCP** (Model Context Protocol) qui apprend à l'agent les formats de fichiers de Luna Park et lui permet de tester son travail.
+En plus du [Sidekick](../workspace/sidekick) intégré, vous pouvez laisser un agent de code externe (Claude Code, Codex, Cursor, Gemini CLI...) construire votre application. L'[application desktop](../getting-started/desktop-app) expose un **serveur MCP** (Model Context Protocol) qui apprend à l'agent les formats de fichiers de Luna Park et lui permet de tester son travail.
 
 ::: info Desktop uniquement
 Le serveur MCP n'est disponible que dans l'application desktop, où les projets sont des dossiers que l'agent peut modifier.
@@ -12,7 +12,7 @@ Le serveur MCP n'est disponible que dans l'application desktop, où les projets 
 
 ## Fonctionnement
 
-1. L'agent modifie directement les fichiers du projet sur le disque (voir [Fichiers du projet](../fundamentals/project-files#format-sur-disque)).
+1. L'agent modifie directement les fichiers du projet sur le disque (voir [Fichiers du projet](../workspace/project-files#format-sur-disque)).
 2. Il utilise le serveur MCP de Luna Park pour lire la documentation, lister les nœuds et composants disponibles, et vérifier ses fichiers.
 3. L'éditeur recharge en direct les fichiers modifiés. Les fichiers invalides sont signalés et ne sont pas chargés.
 
@@ -64,4 +64,4 @@ La méthode recommandée, décrite dans `AGENTS.md` : lire la `documentation`, c
 
 ## Agents dans Sidekick
 
-Vous pouvez aussi lancer un agent local depuis Luna Park : dans les connexions de Sidekick, la section **Coding agents** liste les agents compatibles ACP installés sur votre machine. Le serveur MCP est alors connecté pour vous. Voir [Sidekick](../getting-started/sidekick-settings#agents-de-code).
+Vous pouvez aussi lancer un agent local depuis Luna Park : dans les connexions de Sidekick, la section **Coding agents** liste les agents compatibles ACP installés sur votre machine. Le serveur MCP est alors connecté pour vous. Voir [Sidekick](../workspace/sidekick#agents-de-code).

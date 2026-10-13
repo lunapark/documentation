@@ -4,11 +4,11 @@ description: "Étendez le backend des applications Luna Park depuis un plugin : 
 
 # Backend et build
 
-En plus des fonctionnalités de l'éditeur, un plugin peut étendre le backend des applications qui l'utilisent et modifier leur compilation. Le [plugin Users](../fundamentals/data/auth) en est un exemple complet : il ajoute des tables, des guards, un contexte de requête et des endpoints serveur.
+En plus des fonctionnalités de l'éditeur, un plugin peut étendre le backend des applications qui l'utilisent et modifier leur compilation. Le [plugin Users](../backend-data/auth) en est un exemple complet : il ajoute des tables, des guards, un contexte de requête et des endpoints serveur.
 
 ## Guards de route
 
-Un guard vérifie une requête avant l'exécution d'une [route](../fundamentals/data/routes). Les utilisateurs ajoutent des guards dans la section **Guards** de l'Inspector d'une route.
+Un guard vérifie une requête avant l'exécution d'une [route](../backend-data/routes). Les utilisateurs ajoutent des guards dans la section **Guards** de l'Inspector d'une route.
 
 ```ts
 import { LogicType, makePlugin, type TRouteGuard } from '@luna-park/plugin';
@@ -132,4 +132,4 @@ makePlugin({
 
 ## Instructions pour l'IA
 
-La propriété `llm` d'un plugin (et de chaque composant) est transmise à [Sidekick](../getting-started/sidekick-settings) et aux [agents IA](../integrations/ai-agents). Expliquez-y comment votre plugin doit être utilisé : quels nœuds combiner, quels réglages comptent, les pièges courants.
+La propriété `llm` d'un plugin (et de chaque composant) est transmise à [Sidekick](../workspace/sidekick) et aux [agents IA](../integrations/ai-agents). Expliquez-y comment votre plugin doit être utilisé : quels nœuds combiner, quels réglages comptent, les pièges courants.

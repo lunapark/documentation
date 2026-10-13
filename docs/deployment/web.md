@@ -12,7 +12,7 @@ The web version of your application is a **single-page application** (Vue, built
 
 ## General settings
 
-The settings are available in the **General** section of the <LIcon :icon="faCog"/> **Settings** [workspace](../fundamentals/interface/editor#the-workspace). You can change the name of your application there, and choose the history mode:
+The settings are available in the **General** section of the <LIcon :icon="faCog"/> **Settings** [workspace](../workspace/editor#the-workspace). You can change the name of your application there, and choose the history mode:
 
 - **Hash Mode** (default): Generates links like `myApp.com/#/home/dashboard`. This mode works in most cases but is not optimal for SEO and does not work with page anchors.
 - **Web Mode**: Generates links like `myApp.com/home/dashboard`. This mode is better for SEO but requires server configuration to redirect all 404 errors to the `index` file.

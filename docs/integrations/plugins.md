@@ -11,11 +11,11 @@ import {faShelves, faDownload, faEllipsis} from "@fortawesome/pro-solid-svg-icon
 
 A plugin adds new components, logic nodes, design tokens, route guards, or integrations with external services to Luna Park.
 
-Unlike a regular [NPM](./npm) package, a plugin is built specifically for Luna Park: what it exposes plugs directly into the editor (components in the palette, nodes in the graph, tokens in the [Tokens workspace](../fundamentals/interface/styling/tokens), settings in the top bar) and into the exported app.
+Unlike a regular [NPM](./npm) package, a plugin is built specifically for Luna Park: what it exposes plugs directly into the editor (components in the palette, nodes in the graph, tokens in the [Tokens workspace](../styling/tokens), settings in the top bar) and into the exported app.
 
 ## Install a plugin
 
-Open the <LIcon :icon="faShelves" /> **Libraries** [workspace](../fundamentals/interface/editor#the-workspace), and go to the **Plugins** section. **Installed** lists the project's plugins; **Available** lists the published plugins, official ones first. Use the **Search plugins...** field to filter them.
+Open the <LIcon :icon="faShelves" /> **Libraries** [workspace](../workspace/editor#the-workspace), and go to the **Plugins** section. **Installed** lists the project's plugins; **Available** lists the published plugins, official ones first. Use the **Search plugins...** field to filter them.
 
 Click the <LIcon :icon="faDownload" /> button of a plugin to install it. Or click the plugin to read its details on the side, then click **Install plugin**.
 
@@ -56,7 +56,7 @@ Enables [Tailwind CSS](https://tailwindcss.com/) classes in the **Classes** fiel
 ### Users
 `@luna-park/plugin-users`
 
-User accounts: sign-up, sign-in, sessions, OAuth2 (Google, GitHub, Discord, Microsoft, GitLab...), and roles with permissions. Adds route guards and dedicated nodes. See [Authentication](../fundamentals/data/auth).
+User accounts: sign-up, sign-in, sessions, OAuth2 (Google, GitHub, Discord, Microsoft, GitLab...), and roles with permissions. Adds route guards and dedicated nodes. See [Authentication](../backend-data/auth).
 
 ### Mail
 `@luna-park/plugin-mail`

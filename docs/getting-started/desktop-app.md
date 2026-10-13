@@ -14,10 +14,10 @@ The desktop app is in beta. Keep a backup or a Git history of important projects
 
 | Feature | Description |
 |---|---|
-| Local projects | Projects are plain folders on disk (see [Project files](../fundamentals/project-files#on-disk-format)). |
+| Local projects | Projects are plain folders on disk (see [Project files](../workspace/project-files#on-disk-format)). |
 | Local servers | Generate the project and run it locally, with hot reload (see [Compilation](../deployment/compilation#compile-in-the-desktop-app)). |
 | Native apps | Build desktop, Android, and iOS apps (see [Desktop Apps](../deployment/desktop) and [Mobile Apps](../deployment/mobile)). |
-| Local AI | Use local models or local coding agents in the [Sidekick](./sidekick-settings#connect-an-ai). |
+| Local AI | Use local models or local coding agents in the [Sidekick](../workspace/sidekick#connect-an-ai). |
 | MCP server | Let an external agent such as Claude Code work on the project (see [AI Agents](../integrations/ai-agents)). |
 
 ## Supported systems

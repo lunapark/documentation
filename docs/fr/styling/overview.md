@@ -1,0 +1,70 @@
+---
+description: "Configurez l'apparence visuelle des applications Luna Park avec les contrôles de style globaux."
+---
+
+<script setup lang="ts">
+import TokensWorkspace from '/assets/images/layout/styling/tokens-workspace.png';
+import Screen2 from '/assets/images/layout/styling/screen2.png';
+import QuickStylePanels from '/assets/images/layout/styling/quick-style-panels.png';
+</script>
+
+# Stylisation
+
+## Stylisation Globale
+
+Les couleurs globales de votre application (couleurs primaire et de contenu, nuances générées, thème clair et sombre) sont définies par votre plugin de design system. Avec [Ferris Wheel](../integrations/plugins#ferris-wheel), ouvrez son bouton dans la barre supérieure pour modifier sa palette. [Nuxt UI](../integrations/plugins#nuxt-ui) a ses propres réglages de couleurs.
+
+Les valeurs réutilisables partagées entre vos composants sont des [tokens](#tokens-de-design).
+
+## Stylisation des Éléments
+
+Chaque élément de votre projet peut être stylisé individuellement dans l'inspecteur, sous l'onglet **style**. Cela vous permet de personnaliser l'apparence de chaque composant de votre application, comme le texte, les images ou les boutons.
+
+Pour ajouter une catégorie de style (par exemple, couleur, typographie, taille), cliquez simplement sur le bouton **+** dans l'onglet style. Vous pouvez activer ou désactiver chaque propriété en cliquant sur son nom.
+
+<DImage
+:src="Screen2" :width="1280" :height="720"
+alt="Section Style de l'inspecteur pour un élément texte sélectionné"
+/>
+
+Certaines propriétés acceptent deux valeurs, comme la translation (X/Y) ou l'espacement (horizontal/vertical). Luna Park affiche alors deux champs d'entrée, chacun avec son menu d'unité, modifiables indépendamment.
+
+_Note : Toutes les règles de stylisation disponibles dans Luna Park correspondent aux règles CSS trouvées dans les standards du web._
+
+## Quick style panels
+
+Pour les modifications courantes, certaines catégories de style sont accessibles directement depuis le **layout builder**, sans passer par l'onglet style de l'inspecteur. Sélectionnez un élément pour faire apparaître les `quick style panels` (bordure, arrière-plan, taille, espacement, texte, ombre, etc.).
+
+<DImage :src="QuickStylePanels" :width="236" :height="178" alt="Quick style panels affichés à côté d'un élément sélectionné dans le layout builder" />
+
+## Tokens de design
+
+Luna Park permet également l'utilisation de tokens de design. Ce sont des valeurs réutilisables qui garantissent un style cohérent dans toute l'application. Par exemple, vous pouvez définir une couleur principale et l'utiliser partout dans votre application. Cela facilite la gestion des styles et permet des modifications globales rapides. Gérez-les dans le [workspace](../workspace/editor#le-workspace) **Tokens**, voir [Tokens](./tokens).
+
+<DImage
+:src="TokensWorkspace" :width="1280" :height="720"
+alt="Workspace Tokens avec les tokens de couleur, et le token sélectionné dans l'inspecteur"
+/>
+
+
+Pour utiliser un token de design :
+
+1. Passez la souris sur la valeur que vous souhaitez modifier.
+2. Cliquez sur l'icône de lien pour passer en mode de sélection de token de design.
+3. Sélectionnez le token de design que vous souhaitez utiliser.
+
+![Liaison d'une propriété de style à un design token depuis l'inspecteur](/assets/images/layout/styling/gif1.gif){width=990 height=369}
+
+## Variables de style
+
+Il est également possible d'utiliser des variables pour styliser vos composants. Ces variables peuvent être utilisées dans les propriétés de style de vos composants. Cela vous permet de créer des styles dynamiques qui changent en fonction de l'état de votre application.
+
+Pour utiliser une variable dans une propriété de votre composant :
+
+1. Passez la souris sur la valeur que vous souhaitez lier à une variable.
+2. Cliquez sur l'icône d'éclair pour passer en mode de sélection de variable.
+3. Sélectionnez la variable que vous souhaitez utiliser.
+
+![Liaison d'une propriété de style à une variable avec l'icône éclair](/assets/images/layout/styling/gif2.gif){width=990 height=504}
+
+_Note : Seules les variables correspondant au type attendu pour cette propriété seront disponibles dans la liste. Par exemple, une variable numérique n'apparaîtra que pour une propriété attendue comme étant un nombre._

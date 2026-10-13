@@ -13,7 +13,7 @@ Luna Park can use packages from the [npm](https://www.npmjs.com/) registry, the 
 
 ## Install a package
 
-1. Open the <LIcon :icon="faShelves" /> **Libraries** [workspace](../fundamentals/interface/editor#the-workspace), and go to the **Packages** section.
+1. Open the <LIcon :icon="faShelves" /> **Libraries** [workspace](../workspace/editor#the-workspace), and go to the **Packages** section.
 2. Search for a package by name in the **Search NPM packages...** field. Each result shows its monthly downloads and latest version.
 3. Click the <LIcon :icon="faDownload" /> button of a result to scan and install it right away.
 

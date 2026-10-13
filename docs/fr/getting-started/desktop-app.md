@@ -14,10 +14,10 @@ L'application desktop est en bêta. Gardez une sauvegarde ou un historique Git d
 
 | Fonctionnalité | Description |
 |---|---|
-| Projets locaux | Les projets sont de simples dossiers sur le disque (voir [Fichiers du projet](../fundamentals/project-files#format-sur-disque)). |
+| Projets locaux | Les projets sont de simples dossiers sur le disque (voir [Fichiers du projet](../workspace/project-files#format-sur-disque)). |
 | Serveurs locaux | Générez le projet et lancez-le en local, avec rechargement à chaud (voir [Compilation](../deployment/compilation#compiler-dans-l-application-desktop)). |
 | Applications natives | Créez des applications desktop, Android et iOS (voir [Applications desktop](../deployment/desktop) et [Applications mobiles](../deployment/mobile)). |
-| IA locale | Utilisez des modèles ou des agents de code locaux dans le [Sidekick](./sidekick-settings#connecter-une-ia). |
+| IA locale | Utilisez des modèles ou des agents de code locaux dans le [Sidekick](../workspace/sidekick#connecter-une-ia). |
 | Serveur MCP | Laissez un agent externe comme Claude Code travailler sur le projet (voir [Agents IA](../integrations/ai-agents)). |
 
 ## Systèmes supportés

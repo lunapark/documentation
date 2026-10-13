@@ -36,7 +36,7 @@ La page s'ouvre en mode **Builder** : le canevas au milieu, l'**arborescence de 
 alt="Liste des éléments de l'arborescence ouverte sur Nuxt UI, Element, Button"
 />
 
-Voir [Builder](../fundamentals/interface/builder) pour les autres façons d'insérer des éléments.
+Voir [Builder](../interface/builder) pour les autres façons d'insérer des éléments.
 
 ## 3. Ajouter un événement Click
 
@@ -73,6 +73,6 @@ alt="Mode Preview : la console affiche Hello! après un clic sur le bouton"
 
 ## Aller plus loin
 
-- **Afficher la position de la souris** : connectez la sortie **Mouse Event** du nœud d'événement à un nœud `Get Property` avec le chemin `clientX`, et affichez sa valeur. Voir [Événements](../fundamentals/interface/events) pour tous les événements et leurs sorties.
-- **Compter les clics** : ajoutez une variable `count` à la page, puis enchaînez `Set count` (avec `count + 1`) avant **Log**. C'est l'exemple du [Graphe](../fundamentals/logic/visual-scripting/graph#exemple-de-logique-dans-le-graphe). Pour partager le compteur entre les pages, utilisez un [store](../fundamentals/logic/store).
+- **Afficher la position de la souris** : connectez la sortie **Mouse Event** du nœud d'événement à un nœud `Get Property` avec le chemin `clientX`, et affichez sa valeur. Voir [Événements](../interface/events) pour tous les événements et leurs sorties.
+- **Compter les clics** : ajoutez une variable `count` à la page, puis enchaînez `Set count` (avec `count + 1`) avant **Log**. C'est l'exemple du [Graphe](../visual-scripting/graph#exemple-de-logique-dans-le-graphe). Pour partager le compteur entre les pages, utilisez un [store](../logic/store).
 - **Afficher la valeur** : ajoutez un élément **Variable** lié à `count` pour la voir se mettre à jour sur la page.

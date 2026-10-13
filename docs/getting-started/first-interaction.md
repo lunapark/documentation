@@ -36,7 +36,7 @@ The page opens in **Builder** mode: the canvas in the middle, the **layout tree*
 alt="Element list of the layout tree open on Nuxt UI, Element, Button"
 />
 
-See [Builder](../fundamentals/interface/builder) for the other ways to insert elements.
+See [Builder](../interface/builder) for the other ways to insert elements.
 
 ## 3. Add a Click event
 
@@ -73,6 +73,6 @@ alt="Preview mode: the Console shows Hello! after clicking the button"
 
 ## Going further
 
-- **Log the mouse position**: connect the **Mouse Event** output of the event node to a `Get Property` node with the path `clientX`, and log its value. See [Events](../fundamentals/interface/events) for every event and its outputs.
-- **Count the clicks**: add a `count` variable to the page, then chain `Set count` (with `count + 1`) before **Log**. This is the example of [The Graph](../fundamentals/logic/visual-scripting/graph#example-of-logic-in-the-graph). To share the counter between pages, use a [store](../fundamentals/logic/store).
+- **Log the mouse position**: connect the **Mouse Event** output of the event node to a `Get Property` node with the path `clientX`, and log its value. See [Events](../interface/events) for every event and its outputs.
+- **Count the clicks**: add a `count` variable to the page, then chain `Set count` (with `count + 1`) before **Log**. This is the example of [The Graph](../visual-scripting/graph#example-of-logic-in-the-graph). To share the counter between pages, use a [store](../logic/store).
 - **Display the value**: add a **Variable** element bound to `count` to see it update on the page.

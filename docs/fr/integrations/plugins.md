@@ -11,11 +11,11 @@ import {faShelves, faDownload, faEllipsis} from "@fortawesome/pro-solid-svg-icon
 
 Un plugin ajoute à Luna Park de nouveaux composants, nœuds logiques, design tokens, guards de route ou intégrations avec des services externes.
 
-Contrairement à un package [NPM](./npm) classique, un plugin est conçu spécifiquement pour Luna Park : ce qu'il expose s'intègre directement dans l'éditeur (composants dans la palette, nœuds dans le graphe, tokens dans le [workspace Tokens](../fundamentals/interface/styling/tokens), réglages dans la barre supérieure) et dans l'application exportée.
+Contrairement à un package [NPM](./npm) classique, un plugin est conçu spécifiquement pour Luna Park : ce qu'il expose s'intègre directement dans l'éditeur (composants dans la palette, nœuds dans le graphe, tokens dans le [workspace Tokens](../styling/tokens), réglages dans la barre supérieure) et dans l'application exportée.
 
 ## Installer un plugin
 
-Ouvrez le [workspace](../fundamentals/interface/editor#le-workspace) <LIcon :icon="faShelves" /> **Libraries** et allez à la section **Plugins**. **Installed** liste les plugins du projet ; **Available** liste les plugins publiés, les officiels en premier. Utilisez le champ **Search plugins...** pour les filtrer.
+Ouvrez le [workspace](../workspace/editor#le-workspace) <LIcon :icon="faShelves" /> **Libraries** et allez à la section **Plugins**. **Installed** liste les plugins du projet ; **Available** liste les plugins publiés, les officiels en premier. Utilisez le champ **Search plugins...** pour les filtrer.
 
 Cliquez sur le bouton <LIcon :icon="faDownload" /> d'un plugin pour l'installer. Ou cliquez sur le plugin pour lire ses détails sur le côté, puis cliquez sur **Install plugin**.
 
@@ -56,7 +56,7 @@ Active les classes [Tailwind CSS](https://tailwindcss.com/) dans le champ **Clas
 ### Users
 `@luna-park/plugin-users`
 
-Comptes utilisateurs : inscription, connexion, sessions, OAuth2 (Google, GitHub, Discord, Microsoft, GitLab...) et rôles avec permissions. Ajoute des guards de route et des nœuds dédiés. Voir [Authentification](../fundamentals/data/auth).
+Comptes utilisateurs : inscription, connexion, sessions, OAuth2 (Google, GitHub, Discord, Microsoft, GitLab...) et rôles avec permissions. Ajoute des guards de route et des nœuds dédiés. Voir [Authentification](../backend-data/auth).
 
 ### Mail
 `@luna-park/plugin-mail`

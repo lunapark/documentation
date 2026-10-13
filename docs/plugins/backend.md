@@ -4,11 +4,11 @@ description: "Extend the backend of Luna Park apps from a plugin: route guards, 
 
 # Backend and Build
 
-Besides editor features, a plugin can extend the backend of the apps that use it, and change how they are compiled. The [Users plugin](../fundamentals/data/auth) is a complete example: it adds tables, guards, a request context, and server endpoints.
+Besides editor features, a plugin can extend the backend of the apps that use it, and change how they are compiled. The [Users plugin](../backend-data/auth) is a complete example: it adds tables, guards, a request context, and server endpoints.
 
 ## Route guards
 
-A guard checks a request before a [route](../fundamentals/data/routes) runs. Users add guards in the **Guards** section of a route's Inspector.
+A guard checks a request before a [route](../backend-data/routes) runs. Users add guards in the **Guards** section of a route's Inspector.
 
 ```ts
 import { LogicType, makePlugin, type TRouteGuard } from '@luna-park/plugin';
@@ -132,4 +132,4 @@ makePlugin({
 
 ## Instructions for AI
 
-The `llm` property of a plugin (and of each component) is given to [Sidekick](../getting-started/sidekick-settings) and [AI agents](../integrations/ai-agents). Explain there how your plugin is meant to be used: which nodes to combine, which settings matter, common pitfalls.
+The `llm` property of a plugin (and of each component) is given to [Sidekick](../workspace/sidekick) and [AI agents](../integrations/ai-agents). Explain there how your plugin is meant to be used: which nodes to combine, which settings matter, common pitfalls.

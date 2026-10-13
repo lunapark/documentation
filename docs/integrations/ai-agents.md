@@ -4,7 +4,7 @@ description: "Connect Claude Code, Codex, or any MCP-compatible coding agent to 
 
 # AI Agents (MCP)
 
-Besides the built-in [Sidekick](../getting-started/sidekick-settings), you can let an external coding agent (Claude Code, Codex, Cursor, Gemini CLI...) build your app. The [desktop app](../getting-started/desktop-app) exposes an **MCP server** (Model Context Protocol) that teaches the agent Luna Park's file formats and lets it test its work.
+Besides the built-in [Sidekick](../workspace/sidekick), you can let an external coding agent (Claude Code, Codex, Cursor, Gemini CLI...) build your app. The [desktop app](../getting-started/desktop-app) exposes an **MCP server** (Model Context Protocol) that teaches the agent Luna Park's file formats and lets it test its work.
 
 ::: info Desktop only
 The MCP server is only available in the desktop app, where projects are folders the agent can edit.
@@ -12,7 +12,7 @@ The MCP server is only available in the desktop app, where projects are folders 
 
 ## How it works
 
-1. The agent edits the project files directly on disk (see [Project Files](../fundamentals/project-files#on-disk-format)).
+1. The agent edits the project files directly on disk (see [Project Files](../workspace/project-files#on-disk-format)).
 2. It uses the Luna Park MCP server to read the documentation, list the available nodes and components, and check its files.
 3. The editor reloads the changed files live. Invalid files are reported and not loaded.
 
@@ -64,4 +64,4 @@ The recommended workflow, described in `AGENTS.md`: read the `documentation`, lo
 
 ## Agents inside Sidekick
 
-You can also run a local agent from within Luna Park: in the Sidekick connections, the **Coding agents** section lists the ACP-compatible agents installed on your machine. The MCP server is then connected for you. See [Sidekick](../getting-started/sidekick-settings#coding-agents).
+You can also run a local agent from within Luna Park: in the Sidekick connections, the **Coding agents** section lists the ACP-compatible agents installed on your machine. The MCP server is then connected for you. See [Sidekick](../workspace/sidekick#coding-agents).

@@ -12,7 +12,7 @@ La version web de votre application est une **application monopage** (Vue, const
 
 ## Paramètres généraux
 
-Les paramètres sont disponibles dans la section **General** du [workspace](../fundamentals/interface/editor#le-workspace) <LIcon :icon="faCog"/> **Settings**. Vous pouvez y modifier le nom de votre application et choisir le mode d'historique :
+Les paramètres sont disponibles dans la section **General** du [workspace](../workspace/editor#le-workspace) <LIcon :icon="faCog"/> **Settings**. Vous pouvez y modifier le nom de votre application et choisir le mode d'historique :
 
 - **Hash Mode** (par défaut) : Génère des liens de type `monApp.com/#/accueil/tableau-de-bord`. Ce mode fonctionne dans la plupart des cas mais n'est pas optimal pour le SEO et ne fonctionne pas avec les ancres de page.
 - **Web Mode** : Génère des liens de type `monApp.com/accueil/tableau-de-bord`. Ce mode est meilleur pour le SEO mais nécessite de configurer le serveur pour rediriger toutes les erreurs 404 vers le fichier `index`.
