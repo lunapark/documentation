@@ -99,7 +99,7 @@ In this example, we have a simple logic built with nodes and links in the graph.
 ### Step-by-Step
 
 1. **Trigger: "On Click (widget)"**
-   - This node represents an event that starts execution when a user clicks on an element in your interface (e.g., a button).
+   - This node represents an event that starts execution when a user clicks on an element in your interface (e.g., a button). It is created from the element's **Events** panel, see [Events](../../interface/events).
    - The white link (execution flow) starts from this node and triggers the following actions.
 2. **Reading Set score**
    - This function node updates a value called `score`.

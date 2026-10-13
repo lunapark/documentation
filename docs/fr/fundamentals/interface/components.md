@@ -31,7 +31,7 @@ Lorsque vous sélectionnez un fichier de composant, vous obtenez quelques option
 
 ## Arborescence de la mise en page
 
-L'arborescence de la mise en page accessible dans le panneau des options vous permet de construire l'architecture de votre composant. Pour ajouter un élément à l'arborescence, cliquez simplement sur le bouton. Certains éléments peuvent avoir des enfants. Ces emplacements pour les enfants sont appelés slots.
+L'arborescence de la mise en page accessible dans le panneau des options vous permet de construire l'architecture de votre composant. Pour ajouter un élément à l'arborescence, cliquez simplement sur le bouton (voir [Builder](./builder) pour toutes les façons d'insérer des éléments). Certains éléments peuvent avoir des enfants. Ces emplacements pour les enfants sont appelés slots.
 
 Voici quelques options à votre disposition pour chaque élément de mise en page, voici les plus courantes :
 

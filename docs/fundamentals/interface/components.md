@@ -31,7 +31,7 @@ When selecting a component file, you'll get a few configuration options in the i
 
 ## Layout tree
 
-The layout tree accessible in the options panel allows you to build the architecture of your component. To add an element to the tree, simply click on the button. Some elements can have children. These slots for children are called slots.
+The layout tree accessible in the options panel allows you to build the architecture of your component. To add an element to the tree, simply click on the button (see [Builder](./builder) for every way to insert elements). Some elements can have children. These slots for children are called slots.
 
 Here are a few options at your disposal for each layout element, here are the most common ones:
 

@@ -104,6 +104,10 @@ export default defineConfig({
                                 text: "Démarrage Rapide"
                             },
                             {
+                                link: "/fr/getting-started/first-interaction",
+                                text: "Votre première interaction"
+                            },
+                            {
                                 link: "/fr/getting-started/desktop-app",
                                 text: "Application Desktop"
                             },
@@ -131,6 +135,14 @@ export default defineConfig({
                                     {
                                         link: "/fr/fundamentals/interface/editor",
                                         text: "Éditeur"
+                                    },
+                                    {
+                                        link: "/fr/fundamentals/interface/builder",
+                                        text: "Builder"
+                                    },
+                                    {
+                                        link: "/fr/fundamentals/interface/events",
+                                        text: "Événements"
                                     },
                                     {
                                         link: "/fr/fundamentals/interface/components",
@@ -398,6 +410,10 @@ export default defineConfig({
                                 text: "Quick Start"
                             },
                             {
+                                link: "/getting-started/first-interaction",
+                                text: "Your First Interaction"
+                            },
+                            {
                                 link: "/getting-started/desktop-app",
                                 text: "Desktop App"
                             },
@@ -425,6 +441,14 @@ export default defineConfig({
                                     {
                                         link: "/fundamentals/interface/editor",
                                         text: "Editor"
+                                    },
+                                    {
+                                        link: "/fundamentals/interface/builder",
+                                        text: "Builder"
+                                    },
+                                    {
+                                        link: "/fundamentals/interface/events",
+                                        text: "Events"
                                     },
                                     {
                                         link: "/fundamentals/interface/components",

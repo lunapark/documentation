@@ -37,7 +37,7 @@ Events start the execution of a graph.
 | `On Mounted` | The component is displayed. |
 | `On Unmounted` | The component is removed. |
 | `On Load` | The logic is loaded. |
-| `On Click`, `On Key Down`, `On Mouse Enter`... | The user interacts with a layout element (create them from the element's **Events** panel). |
+| `On Click`, `On Key Down`, `On Mouse Enter`... | The user interacts with a layout element (create them from the element's **Events** panel, see [Events](../../interface/events)). |
 | `Manual Play` | You click it in the editor (useful for testing). |
 
 ## HTTP requests

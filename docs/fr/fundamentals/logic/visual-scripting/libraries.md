@@ -37,7 +37,7 @@ Les événements démarrent l'exécution d'un graphe.
 | `On Mounted` | Le composant est affiché. |
 | `On Unmounted` | Le composant est retiré. |
 | `On Load` | La logique est chargée. |
-| `On Click`, `On Key Down`, `On Mouse Enter`... | L'utilisateur interagit avec un élément de mise en page (créez-les depuis le panneau **Events** de l'élément). |
+| `On Click`, `On Key Down`, `On Mouse Enter`... | L'utilisateur interagit avec un élément de mise en page (créez-les depuis le panneau **Events** de l'élément, voir [Événements](../../interface/events)). |
 | `Manual Play` | Vous cliquez dessus dans l'éditeur (utile pour tester). |
 
 ## Requêtes HTTP

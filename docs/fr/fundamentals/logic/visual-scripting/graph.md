@@ -99,7 +99,7 @@ Dans cet exemple, nous avons une logique simple construite avec des nœuds et de
 ### Étape par étape
 
 1. **Déclencheur : "On Click (widget)"**
-   - Ce nœud représente un événement qui démarre l'exécution lorsqu'un utilisateur clique sur un élément de votre interface (par exemple, un bouton).
+   - Ce nœud représente un événement qui démarre l'exécution lorsqu'un utilisateur clique sur un élément de votre interface (par exemple, un bouton). Il est créé depuis le panneau **Events** de l'élément, voir [Événements](../../interface/events).
    - Le fil blanc (flux d'exécution) commence à partir de ce nœud et déclenche les actions suivantes.
 2. **Lecture Set score**
    - Ce nœud de fonction met à jour une valeur appelée `score`.

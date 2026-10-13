@@ -36,7 +36,7 @@ alt="Explorer panel with the project files"
 
 The options panel is located at the bottom left of the editor. Its content depends on the open file:
 
-- for a page or component, it displays the **layout tree** (use **Collapse layout** to fold it);
+- for a page or component, it displays the **layout tree** (use **Collapse layout** to fold it), see [Builder](./builder#the-layout-tree);
 - for a script, a route, or a store, it lists its **Local Variables** and **Functions**.
 
 <DImage
@@ -76,11 +76,11 @@ The main view is the central part of the editor. It displays the working file. F
 
 | Mode | Description |
 |---|---|
-| **Builder** | Edit the layout visually. Side panels give access to **Quick style**, **Properties**, **Events**, **Rendering**, **Classes**, **Style**, **Media query**, and **Hover**. |
+| **Builder** | Edit the layout visually. Side panels give access to **Quick style**, **Properties**, **Events**, **Rendering**, **Classes**, **Style**, **Media query**, and **Hover**. See [Builder](./builder) to add elements and [Events](./events) to react to clicks. |
 | **Preview** | Use the component as in the final app. |
 | **Logic** | Edit the component's visual scripting graph. |
 
-Other options let you **Open preview in new window**, **Block interactions**, **Lock preview mode**, and show or hide the insert mode.
+Other options let you **Open preview in new window**, **Block interactions**, **Lock preview mode**, and show or hide the [insert mode](./builder#with-insert-mode).
 
 <DImage
 :src="Screen6" :width="1280" :height="720"

@@ -20,6 +20,10 @@ Once the challenge is passed, we advise you to go to the [Academy](https://luna-
 
 The [playground editor](https://luna-park.app/editor) works without signing in. Saving stores the whole project in the page URL, so you can share it by copying the link.
 
+## Your first interaction
+
+Ready to build? [Your First Interaction](./first-interaction) walks you through a button that logs a message, in 5 steps.
+
 ## The Cloud Version
 
 Sign up on the [homepage](https://luna-park.app/) to use Luna Park in your browser. Your dashboard lists your projects.

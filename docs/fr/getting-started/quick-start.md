@@ -20,6 +20,10 @@ Une fois le challenge passé, nous vous conseillons de passer dans l'onglet [Aca
 
 L'[éditeur playground](https://luna-park.app/editor) fonctionne sans connexion. La sauvegarde enregistre tout le projet dans l'URL de la page : vous pouvez le partager en copiant le lien.
 
+## Votre première interaction
+
+Prêt à construire ? [Votre première interaction](./first-interaction) vous guide pas à pas pour créer un bouton qui affiche un message, en 5 étapes.
+
 ## La version cloud
 
 Inscrivez-vous sur la [page d'accueil](https://luna-park.app/) pour utiliser Luna Park dans votre navigateur. Votre tableau de bord liste vos projets.

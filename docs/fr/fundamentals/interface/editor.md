@@ -36,7 +36,7 @@ alt="Panneau de l'explorateur avec les fichiers du projet"
 
 Le panneau des options est situé en bas à gauche de l'éditeur. Son contenu dépend du fichier ouvert :
 
-- pour une page ou un composant, il affiche l'**arborescence de mise en page** (utilisez **Collapse layout** pour la replier) ;
+- pour une page ou un composant, il affiche l'**arborescence de mise en page** (utilisez **Collapse layout** pour la replier), voir [Builder](./builder#l-arborescence-de-mise-en-page) ;
 - pour un script, une route ou un store, il liste ses variables locales (**Local Variables**) et ses fonctions (**Functions**).
 
 <DImage
@@ -76,11 +76,11 @@ La vue principale est la partie centrale de l'éditeur. Elle affiche le fichier 
 
 | Mode | Description |
 |---|---|
-| **Builder** | Modifiez la mise en page visuellement. Des panneaux latéraux donnent accès à **Quick style**, **Properties**, **Events**, **Rendering**, **Classes**, **Style**, **Media query** et **Hover**. |
+| **Builder** | Modifiez la mise en page visuellement. Des panneaux latéraux donnent accès à **Quick style**, **Properties**, **Events**, **Rendering**, **Classes**, **Style**, **Media query** et **Hover**. Voir [Builder](./builder) pour ajouter des éléments et [Événements](./events) pour réagir aux clics. |
 | **Preview** | Utilisez le composant comme dans l'application finale. |
 | **Logic** | Modifiez le graphe de script visuel du composant. |
 
-D'autres options permettent d'ouvrir l'aperçu dans une nouvelle fenêtre (**Open preview in new window**), de bloquer les interactions (**Block interactions**), de verrouiller le mode aperçu (**Lock preview mode**) et d'afficher ou masquer le mode insertion.
+D'autres options permettent d'ouvrir l'aperçu dans une nouvelle fenêtre (**Open preview in new window**), de bloquer les interactions (**Block interactions**), de verrouiller le mode aperçu (**Lock preview mode**) et d'afficher ou masquer le [mode insertion](./builder#avec-le-mode-insertion).
 
 <DImage
 :src="Screen6" :width="1280" :height="720"
