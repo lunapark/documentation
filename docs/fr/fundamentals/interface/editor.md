@@ -105,7 +105,7 @@ Appuyez deux fois sur `Shift` pour ouvrir le **Navigator** :
 | **Palette** | Les design [tokens](./styling/tokens) (couleurs, longueurs, polices), l'injection de code et la stratégie responsive. Voir [Palette](./styling/palette). |
 | **Stores** | Réinitialiser tous les [stores](../logic/store), ou effacer leurs valeurs enregistrées dans le navigateur. |
 | **Libraries** | Activer des [bibliothèques de nœuds](../logic/visual-scripting/libraries), installer des [plugins](../../integrations/plugins) et des [packages npm](../../integrations/npm). |
-| **Sidekick AI** | Ouvrir [Sidekick](../../getting-started/sidekick-settings) et configurer son fournisseur. |
+| **Sidekick AI** | Ouvrir ou fermer [Sidekick](../../getting-started/sidekick-settings), l'assistant IA. |
 | **General Settings** | Nom de l'application, mode d'historique et PWA (voir [Application web](../../deployment/web)). |
 | **Backend Settings** | **Proxy** sortant, **Cookie salt** et cookies stockés par le backend de l'éditeur. |
 | **Compile** | Déployer ou exporter l'application (voir [Compilation](../../deployment/compilation)). |

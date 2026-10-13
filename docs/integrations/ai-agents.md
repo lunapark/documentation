@@ -64,4 +64,4 @@ The recommended workflow, described in `AGENTS.md`: read the `documentation`, lo
 
 ## Agents inside Sidekick
 
-You can also run a local agent from within Luna Park: in the Sidekick settings, the **Local agents** section lists the ACP-compatible agents installed on your machine. The MCP server is then connected for you. See [Sidekick](../getting-started/sidekick-settings#local-agents).
+You can also run a local agent from within Luna Park: in the Sidekick connections, the **Coding agents** section lists the ACP-compatible agents installed on your machine. The MCP server is then connected for you. See [Sidekick](../getting-started/sidekick-settings#coding-agents).

@@ -90,7 +90,7 @@ Generated code tends to grow in every direction with each prompt. Luna Park proj
 
 - **Getting started takes longer.** You need to learn the editor and the basics of visual scripting (see [Is Luna Park right for me?](../target-users)).
 - **You host the backend.** Routes, database, and crons run on your own server (see [Self-hosting](../../deployment/deployment)).
-- **AI needs a provider.** Sidekick uses your own API key or a local model (see [Sidekick](../sidekick-settings#configure-a-provider)).
+- **AI needs a provider.** Sidekick uses your own API key or a local model (see [Sidekick](../sidekick-settings#connect-an-ai)).
 
 ## Which one to choose?
 

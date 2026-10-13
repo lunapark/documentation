@@ -90,7 +90,7 @@ Le code généré a tendance à grandir dans tous les sens à chaque prompt. Les
 
 - **La prise en main est plus longue.** Il faut apprendre l'éditeur et les bases du visual scripting (voir [Est-ce que Luna Park est fait pour moi ?](../target-users)).
 - **Vous hébergez le backend.** Les routes, la base de données et les crons tournent sur votre propre serveur (voir [Auto-hébergement](../../deployment/deployment)).
-- **L'IA demande un fournisseur.** Sidekick utilise votre propre clé d'API ou un modèle local (voir [Sidekick](../sidekick-settings#configurer-un-fournisseur)).
+- **L'IA demande un fournisseur.** Sidekick utilise votre propre clé d'API ou un modèle local (voir [Sidekick](../sidekick-settings#connecter-une-ia)).
 
 ## Lequel choisir ?
 
