@@ -33,6 +33,8 @@ Le fichier `.env` à la racine du projet contient la configuration :
 | `STATIC` | `frontend/dist` | Dossier du frontend construit, servi par le backend. Laissez vide pour héberger le frontend ailleurs. |
 | `COOKIE_SECRET` | généré | Secret utilisé pour signer les cookies. Gardez-le privé. |
 | `PROXY` | | Proxy optionnel pour les requêtes sortantes. |
+| `UPLOAD_MAX_SIZE` | `10` | Taille maximale d'un fichier envoyé, en Mo. |
+| `UPLOAD_MAX_FILES` | `10` | Nombre maximal de fichiers par requête. |
 
 Les plugins peuvent ajouter leurs propres variables (secrets OAuth ou SMTP, par exemple).
 

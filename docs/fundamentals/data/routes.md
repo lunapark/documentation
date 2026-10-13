@@ -62,6 +62,14 @@ To answer with an HTTP error, use the `Error` node: pick a code (`400` Bad Reque
 
 Read and write cookies with the `Get Cookie`, `Set Cookie`, and `Clear Cookie` nodes. Cookies are signed with the **Cookie salt** of **Backend Settings**.
 
+### Files
+
+A route can receive files sent by the user. In **Route Input**, give a `body` property the `File` type (or an `Array` of `File`).
+
+In the interface, the `Pick Files` node opens the file picker and outputs the chosen files. Put them in the route's `body` like any other value: a route whose `body` type contains a `File` is called with `multipart/form-data`. Other routes don't accept uploads (they answer `415`).
+
+In the route, a file has a name, a size and a type (`File Info`), and its content can be read as text (`Read File Text`). In the exported app, the maximum size and number of files are set with `UPLOAD_MAX_SIZE` and `UPLOAD_MAX_FILES` (see [Self-hosting](../../deployment/deployment)).
+
 ## Guards
 
 Routes are public by default. A **guard** checks each request before the route runs and rejects the unauthorized ones. Add one in the **Guards** section of the Inspector.

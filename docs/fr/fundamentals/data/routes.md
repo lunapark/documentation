@@ -62,6 +62,14 @@ Pour répondre avec une erreur HTTP, utilisez le node `Error` : choisissez un co
 
 Lisez et écrivez des cookies avec les nodes `Get Cookie`, `Set Cookie` et `Clear Cookie`. Les cookies sont signés avec le **Cookie salt** des **Backend Settings**.
 
+### Fichiers
+
+Une route peut recevoir des fichiers envoyés par l'utilisateur. Dans **Route Input**, donnez le type `File` (ou un `Array` de `File`) à une propriété du `body`.
+
+Dans l'interface, le node `Pick Files` ouvre le sélecteur de fichiers et renvoie les fichiers choisis. Placez-les dans le `body` de la route comme n'importe quelle valeur : une route dont le type du `body` contient un `File` est appelée en `multipart/form-data`. Les autres routes refusent les envois de fichiers (elles répondent `415`).
+
+Dans la route, un fichier a un nom, une taille et un type (`File Info`), et son contenu peut être lu comme texte (`Read File Text`). Dans l'application exportée, la taille maximale et le nombre de fichiers se règlent avec `UPLOAD_MAX_SIZE` et `UPLOAD_MAX_FILES` (voir [Auto-hébergement](../../deployment/deployment)).
+
 ## Guards
 
 Les routes sont publiques par défaut. Un **guard** vérifie chaque requête avant l'exécution de la route et rejette celles qui ne sont pas autorisées. Ajoutez-en un dans la section **Guards** de l'Inspector.
