@@ -60,7 +60,7 @@ To answer with an HTTP error, use the `Error` node: pick a code (`400` Bad Reque
 
 ### Cookies
 
-Read and write cookies with the `Get Cookie`, `Set Cookie`, and `Clear Cookie` nodes. Cookies are signed with the **Cookie salt** of **Backend Settings**.
+Read and write cookies with the `Get Cookie`, `Set Cookie`, and `Clear Cookie` nodes. Cookies are signed with the **Cookie salt** of the [Backend settings](../../deployment/web#backend-settings).
 
 ### Files
 

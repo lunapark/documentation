@@ -10,6 +10,8 @@ import Screen4 from '/assets/images/layout/editor/screen4.png';
 import Screen5 from '/assets/images/layout/editor/screen5.png';
 import Screen6 from '/assets/images/layout/editor/screen6.png';
 import ImmersiveMode from '/assets/images/layout/editor/immersive-mode.png';
+import Workspace from '/assets/images/layout/editor/workspace.png';
+import {faSwatchbook, faShelves, faCog, faTowerCell} from "@fortawesome/pro-solid-svg-icons";
 </script>
 
 # Editor
@@ -21,9 +23,27 @@ The editor lets you build your application using layouts and visual logic. It co
 alt="Overview of the Luna Park editor"
 />
 
+## The Workspace
+
+The **Workspace** buttons, at the top left of the editor, open the views that apply to the whole project. Each view opens as a tab in the main view, next to your files.
+
+<DImage
+:src="Workspace" :width="1280" :height="720"
+alt="Workspace buttons above the explorer, with the Tokens workspace open in the main view"
+/>
+
+| Workspace | Content |
+|---|---|
+| <LIcon :icon="faSwatchbook" /> **Tokens** | Design [tokens](./styling/tokens) (colors, fonts, lengths) and the responsive strategy. |
+| <LIcon :icon="faShelves" /> **Libraries** | Built-in [node libraries](../logic/visual-scripting/libraries), [plugins](../../integrations/plugins), and [npm packages](../../integrations/npm). |
+| <LIcon :icon="faCog" /> **Settings** | **General** (app name, history mode), **Progressive Web App** (see [Web App](../../deployment/web)), **Backend** (proxy, cookie salt), the **Cookies** set in the editor, and the **Stores** (reset them, or clear their [persisted values](../logic/store#reset-stores)). |
+| <LIcon :icon="faTowerCell" /> **Injection** | Code injected in the app: **Head**, **Body**, **Script**, and **Style** (see [Advanced Style](./styling/advanced-style)). |
+
+Each workspace is split into sections: the toolbar at its top jumps to a section.
+
 ## The Explorer
 
-The explorer is located at the top left of the editor. It lists the [files of your project](../project-files). Create a new file with a `right-click`, open it with a `double-click`, rename it with `F2`, and delete it with the `Del` key. You can create folders to better organize your project, but the structure does not affect the logic of your application.
+The explorer is located at the top left of the editor, below the Workspace. It lists the [files of your project](../project-files). Create a new file with a `right-click`, open it with a `double-click`, rename it with `F2`, and delete it with the `Del` key. You can create folders to better organize your project, but the structure does not affect the logic of your application.
 
 The sort button switches between sorting by type and by name.
 
@@ -98,16 +118,13 @@ Press `Shift` twice to open the **Navigator**:
 
 ## The Top Bar
 
+Project-wide views (tokens, libraries, settings, injection) are in the [Workspace](#the-workspace).
+
 | Button | Content |
 |---|---|
 | Save / Auto-save | Save the project, or toggle automatic saving. |
 | Undo / Redo | Undo or redo the last change. |
-| **Palette** | Design [tokens](./styling/tokens) (colors, lengths, fonts), code injection, and the responsive strategy. See [Palette](./styling/palette). |
-| **Stores** | Reset all [stores](../logic/store), or clear their saved values in browser storage. |
-| **Libraries** | Enable [node libraries](../logic/visual-scripting/libraries), install [plugins](../../integrations/plugins) and [npm packages](../../integrations/npm). |
 | **Sidekick AI** | Open or close [Sidekick](../../getting-started/sidekick-settings), the AI assistant. |
-| **General Settings** | App name, history mode, and PWA (see [Web App](../../deployment/web)). |
-| **Backend Settings** | Outgoing **Proxy**, **Cookie salt**, and the cookies stored by the editor's backend. |
 | **Compile** | Deploy or export the app (see [Compilation](../../deployment/compilation)). |
 | Plugins | One button per installed plugin, with its **Config** and **Settings**. |
 | **History** | Local undo snapshots of the current file. They are not saved. |

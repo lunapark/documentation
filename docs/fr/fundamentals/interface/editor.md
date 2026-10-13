@@ -10,6 +10,8 @@ import Screen4 from '/assets/images/layout/editor/screen4.png';
 import Screen5 from '/assets/images/layout/editor/screen5.png';
 import Screen6 from '/assets/images/layout/editor/screen6.png';
 import ImmersiveMode from '/assets/images/layout/editor/immersive-mode.png';
+import Workspace from '/assets/images/layout/editor/workspace.png';
+import {faSwatchbook, faShelves, faCog, faTowerCell} from "@fortawesome/pro-solid-svg-icons";
 </script>
 
 # Éditeur
@@ -21,9 +23,27 @@ L'éditeur vous permet de construire votre application en utilisant des mises en
 alt="Vue d'ensemble de l'éditeur Luna Park"
 />
 
+## Le Workspace
+
+Les boutons du **Workspace**, en haut à gauche de l'éditeur, ouvrent les vues qui concernent tout le projet. Chaque vue s'ouvre dans un onglet de la vue principale, à côté de vos fichiers.
+
+<DImage
+:src="Workspace" :width="1280" :height="720"
+alt="Boutons du Workspace au-dessus de l'explorateur, avec le workspace Tokens ouvert dans la vue principale"
+/>
+
+| Workspace | Contenu |
+|---|---|
+| <LIcon :icon="faSwatchbook" /> **Tokens** | Les design [tokens](./styling/tokens) (couleurs, polices, longueurs) et la stratégie responsive. |
+| <LIcon :icon="faShelves" /> **Libraries** | Les [bibliothèques de nœuds](../logic/visual-scripting/libraries) intégrées, les [plugins](../../integrations/plugins) et les [packages npm](../../integrations/npm). |
+| <LIcon :icon="faCog" /> **Settings** | **General** (nom de l'application, mode d'historique), **Progressive Web App** (voir [Application web](../../deployment/web)), **Backend** (proxy, cookie salt), les **Cookies** définis dans l'éditeur et les **Stores** (les réinitialiser, ou effacer leurs [valeurs persistées](../logic/store#reinitialiser-les-stores)). |
+| <LIcon :icon="faTowerCell" /> **Injection** | Le code injecté dans l'application : **Head**, **Body**, **Script** et **Style** (voir [Style avancé](./styling/advanced-style)). |
+
+Chaque workspace est divisé en sections : la barre d'outils en haut permet d'aller à une section.
+
 ## L'Explorateur
 
-L'explorateur est situé en haut à gauche de l'éditeur. Il liste les [fichiers de votre projet](../project-files). Créez un nouveau fichier avec un `clic droit`, ouvrez-le avec un `double-clic`, renommez-le avec `F2` et supprimez-le avec la touche `Suppr`. Vous pouvez créer des dossiers pour mieux organiser votre projet, mais la structure n'affecte pas la logique de votre application.
+L'explorateur est situé en haut à gauche de l'éditeur, sous le Workspace. Il liste les [fichiers de votre projet](../project-files). Créez un nouveau fichier avec un `clic droit`, ouvrez-le avec un `double-clic`, renommez-le avec `F2` et supprimez-le avec la touche `Suppr`. Vous pouvez créer des dossiers pour mieux organiser votre projet, mais la structure n'affecte pas la logique de votre application.
 
 Le bouton de tri bascule entre un tri par type et un tri par nom.
 
@@ -98,16 +118,13 @@ Appuyez deux fois sur `Shift` pour ouvrir le **Navigator** :
 
 ## La Barre Supérieure
 
+Les vues qui concernent tout le projet (tokens, bibliothèques, réglages, injection) sont dans le [Workspace](#le-workspace).
+
 | Bouton | Contenu |
 |---|---|
 | Save / Auto-save | Sauvegarder le projet, ou activer la sauvegarde automatique. |
 | Undo / Redo | Annuler ou rétablir la dernière modification. |
-| **Palette** | Les design [tokens](./styling/tokens) (couleurs, longueurs, polices), l'injection de code et la stratégie responsive. Voir [Palette](./styling/palette). |
-| **Stores** | Réinitialiser tous les [stores](../logic/store), ou effacer leurs valeurs enregistrées dans le navigateur. |
-| **Libraries** | Activer des [bibliothèques de nœuds](../logic/visual-scripting/libraries), installer des [plugins](../../integrations/plugins) et des [packages npm](../../integrations/npm). |
 | **Sidekick AI** | Ouvrir ou fermer [Sidekick](../../getting-started/sidekick-settings), l'assistant IA. |
-| **General Settings** | Nom de l'application, mode d'historique et PWA (voir [Application web](../../deployment/web)). |
-| **Backend Settings** | **Proxy** sortant, **Cookie salt** et cookies stockés par le backend de l'éditeur. |
 | **Compile** | Déployer ou exporter l'application (voir [Compilation](../../deployment/compilation)). |
 | Plugins | Un bouton par plugin installé, avec sa configuration (**Config**) et ses réglages (**Settings**). |
 | **History** | Instantanés locaux du fichier courant. Ils ne sont pas sauvegardés. |

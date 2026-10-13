@@ -8,7 +8,7 @@ L'authentification est fournie par le plugin officiel **Users** (`@luna-park/plu
 
 ## Installer le plugin
 
-1. Ouvrez **Libraries > Plugins > Install plugins**.
+1. Ouvrez le [workspace](../interface/editor#le-workspace) **Libraries**, dans la section **Plugins**.
 2. Cherchez **Users** et installez-le.
 
 Le plugin crée :

@@ -3,7 +3,7 @@ description: "Configurez la version web d'une application Luna Park : nom de l'a
 ---
 
 <script setup lang="ts">
-import {faGear} from "@fortawesome/pro-solid-svg-icons";
+import {faCog} from "@fortawesome/pro-solid-svg-icons";
 </script>
 
 # Application web
@@ -12,7 +12,7 @@ La version web de votre application est une **application monopage** (Vue, const
 
 ## Paramètres généraux
 
-Les paramètres sont disponibles dans le bouton <LIcon :icon="faGear"/> **General Settings** de la barre supérieure. Vous pouvez y modifier le nom de votre application et choisir le mode d'historique :
+Les paramètres sont disponibles dans la section **General** du [workspace](../fundamentals/interface/editor#le-workspace) <LIcon :icon="faCog"/> **Settings**. Vous pouvez y modifier le nom de votre application et choisir le mode d'historique :
 
 - **Hash Mode** (par défaut) : Génère des liens de type `monApp.com/#/accueil/tableau-de-bord`. Ce mode fonctionne dans la plupart des cas mais n'est pas optimal pour le SEO et ne fonctionne pas avec les ancres de page.
 - **Web Mode** : Génère des liens de type `monApp.com/accueil/tableau-de-bord`. Ce mode est meilleur pour le SEO mais nécessite de configurer le serveur pour rediriger toutes les erreurs 404 vers le fichier `index`.
@@ -24,7 +24,7 @@ Les applications [desktop](./desktop) et [mobiles](./mobile) utilisent toujours 
 
 Une Progressive Web App (PWA) s'installe depuis le navigateur, sur un ordinateur ou un téléphone : elle obtient une icône, s'ouvre dans sa propre fenêtre, et charge son interface sans réseau une fois installée.
 
-Activez-la dans la section **Progressive Web App** des <LIcon :icon="faGear"/> **General Settings** :
+Activez-la avec la case à cocher de la section **Progressive Web App** du workspace <LIcon :icon="faCog"/> **Settings** :
 
 | Paramètre | Par défaut | Description |
 |---|---|---|
@@ -47,4 +47,4 @@ L'application compilée contient alors un manifeste d'application web et un serv
 
 ## Réglages du backend
 
-Le bouton **Backend Settings** définit un **Proxy** sortant pour le backend et le **Cookie salt** utilisé pour signer les cookies.
+La section **Backend** du workspace **Settings** définit un **Proxy** sortant pour le backend et le **Cookie salt** utilisé pour signer les cookies. Renouveler le salt invalide les sessions existantes.

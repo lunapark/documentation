@@ -3,9 +3,8 @@ description: "Configure the visual appearance of Luna Park applications with glo
 ---
 
 <script setup lang="ts">
-import Screen1 from '/assets/images/layout/styling/screen1.png';
+import TokensWorkspace from '/assets/images/layout/styling/tokens-workspace.png';
 import Screen2 from '/assets/images/layout/styling/screen2.png';
-import Screen3 from '/assets/images/layout/styling/screen3.png';
 import QuickStylePanels from '/assets/images/layout/styling/quick-style-panels.png';
 </script>
 
@@ -13,14 +12,9 @@ import QuickStylePanels from '/assets/images/layout/styling/quick-style-panels.p
 
 ## Global Styling
 
-The global styling of your application is accessible from the `Palette` button on the top bar of the editor. You can update the primary, secondary, and content colors; the shades will automatically be generated.
+The global colors of your application (primary and content colors, generated shades, light and dark theme) are set by your design system plugin. With [Ferris Wheel](../../integrations/plugins#ferris-wheel), open its button in the top bar to edit its palette. [Nuxt UI](../../integrations/plugins#nuxt-ui) has its own color settings.
 
-Note that you can match the editor colors with your app colors using the match editor option. This can make building easier on your eyes.
-
-<DImage
-:src="Screen3" :width="1280" :height="720"
-alt="Palette settings with chroma and hue values applied to the editor preview"
-/>
+Reusable values shared across your components are [tokens](#design-tokens).
 
 ## Element Styling
 
@@ -45,11 +39,11 @@ For common edits, some style categories are accessible directly from the **layou
 
 ## Design Tokens
 
-Luna Park also allows the use of design tokens. These are reusable values that ensure a consistent style throughout the application. For example, you can define a primary color and use it everywhere in your application. This makes style management easier and allows for quick global changes.
+Luna Park also allows the use of design tokens. These are reusable values that ensure a consistent style throughout the application. For example, you can define a primary color and use it everywhere in your application. This makes style management easier and allows for quick global changes. Manage them in the **Tokens** [workspace](./editor#the-workspace), see [Tokens](./styling/tokens).
 
 <DImage
-:src="Screen1" :width="1280" :height="720"
-alt="Theme panel with the primary and content colors, border and radius settings"
+:src="TokensWorkspace" :width="1280" :height="720"
+alt="Tokens workspace with the color tokens, and the selected token in the inspector"
 />
 
 

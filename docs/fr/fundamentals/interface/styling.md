@@ -3,9 +3,8 @@ description: "Configurez l'apparence visuelle des applications Luna Park avec le
 ---
 
 <script setup lang="ts">
-import Screen1 from '/assets/images/layout/styling/screen1.png';
+import TokensWorkspace from '/assets/images/layout/styling/tokens-workspace.png';
 import Screen2 from '/assets/images/layout/styling/screen2.png';
-import Screen3 from '/assets/images/layout/styling/screen3.png';
 import QuickStylePanels from '/assets/images/layout/styling/quick-style-panels.png';
 </script>
 
@@ -13,14 +12,9 @@ import QuickStylePanels from '/assets/images/layout/styling/quick-style-panels.p
 
 ## Stylisation Globale
 
-La stylisation globale de votre application est accessible depuis le bouton `Palette` de la barre supérieure de l'éditeur. Vous pouvez mettre à jour les couleurs primaire, secondaire et de contenu, les nuances seront automatiquement générées.
+Les couleurs globales de votre application (couleurs primaire et de contenu, nuances générées, thème clair et sombre) sont définies par votre plugin de design system. Avec [Ferris Wheel](../../integrations/plugins#ferris-wheel), ouvrez son bouton dans la barre supérieure pour modifier sa palette. [Nuxt UI](../../integrations/plugins#nuxt-ui) a ses propres réglages de couleurs.
 
-Notez que vous pouvez faire correspondre les couleurs de l'éditeur avec celles de votre application en utilisant l'option de correspondance de l'éditeur. Cela peut rendre la construction plus confortable pour vos yeux.
-
-<DImage
-:src="Screen3" :width="1280" :height="720"
-alt="Réglages de la palette avec les valeurs de chroma et de teinte appliquées à l'aperçu"
-/>
+Les valeurs réutilisables partagées entre vos composants sont des [tokens](#tokens-de-design).
 
 ## Stylisation des Éléments
 
@@ -45,11 +39,11 @@ Pour les modifications courantes, certaines catégories de style sont accessible
 
 ## Tokens de design
 
-Luna Park permet également l'utilisation de tokens de design. Ce sont des valeurs réutilisables qui garantissent un style cohérent dans toute l'application. Par exemple, vous pouvez définir une couleur principale et l'utiliser partout dans votre application. Cela facilite la gestion des styles et permet des modifications globales rapides.
+Luna Park permet également l'utilisation de tokens de design. Ce sont des valeurs réutilisables qui garantissent un style cohérent dans toute l'application. Par exemple, vous pouvez définir une couleur principale et l'utiliser partout dans votre application. Cela facilite la gestion des styles et permet des modifications globales rapides. Gérez-les dans le [workspace](./editor#le-workspace) **Tokens**, voir [Tokens](./styling/tokens).
 
 <DImage
-:src="Screen1" :width="1280" :height="720"
-alt="Panneau du thème avec les couleurs primaire et de contenu, la bordure et l'arrondi"
+:src="TokensWorkspace" :width="1280" :height="720"
+alt="Workspace Tokens avec les tokens de couleur, et le token sélectionné dans l'inspecteur"
 />
 
 

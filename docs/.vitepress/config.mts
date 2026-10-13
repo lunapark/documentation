@@ -157,10 +157,6 @@ export default defineConfig({
                                         link: "/fr/fundamentals/interface/styling",
                                         items: [
                                             {
-                                                link: "/fr/fundamentals/interface/styling/palette",
-                                                text: "Palette et couleurs globales"
-                                            },
-                                            {
                                                 link: "/fr/fundamentals/interface/styling/tokens",
                                                 text: "Tokens et variables de style"
                                             },
@@ -462,10 +458,6 @@ export default defineConfig({
                                         collapsed: true,
                                         link: "/fundamentals/interface/styling",
                                         items: [
-                                            {
-                                                link: "/fundamentals/interface/styling/palette",
-                                                text: "Palette"
-                                            },
                                             {
                                                 link: "/fundamentals/interface/styling/tokens",
                                                 text: "Tokens"

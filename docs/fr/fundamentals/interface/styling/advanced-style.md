@@ -3,7 +3,7 @@ description: "Utilisez les classes CSS et Tailwind pour aller au-delà du style 
 ---
 
 <script setup lang="ts">
-import {faPalette, faTowerCell} from "@fortawesome/pro-solid-svg-icons";
+import {faTowerCell} from "@fortawesome/pro-solid-svg-icons";
 import Screen9 from "/assets/images/fundamentals/styling/screen9.png";
 import Screen10 from "/assets/images/fundamentals/styling/screen10.png";
 </script>
@@ -23,7 +23,7 @@ L'utilisation des classes CSS et de Tailwind nécessite d'injecter du code (CSS 
 - Implémenter des patterns visuels non pris en charge nativement par l'UI.
 
 ### Comment faire (exemple)
-- **<LIcon :icon="faPalette" />** Palette => **update tokens** =>  **<LIcon :icon="faTowerCell" />** Inject => **CSS Injection**
+- **<LIcon :icon="faTowerCell" />** Injection workspace => **Style**
 - Collez le code ci-dessous
 
 ::: warning Pour les utilisateurs de Firefox
@@ -68,7 +68,7 @@ Le plus simple pour utiliser Tailwind est le [plugin Tailwind](../../../integrat
 
 ### Comment faire (exemple)
 
-- **<LIcon :icon="faPalette" />** Palette => **update tokens** =>  **<LIcon :icon="faTowerCell" />** Inject => **JS Injection**
+- **<LIcon :icon="faTowerCell" />** Injection workspace => **Script**
 - Collez le code ci-dessous
 
 ```js

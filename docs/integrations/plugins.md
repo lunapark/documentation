@@ -3,37 +3,34 @@ description: "Install and use Luna Park plugins that add components, logic nodes
 ---
 
 <script setup lang="ts">
-import Plugins from "/assets/images/plugins/introduction/plugins.png";
-import Install from "/assets/images/plugins/introduction/install.png";
+import Workspace from "/assets/images/integrations/plugins/workspace.png";
+import {faShelves, faDownload, faEllipsis} from "@fortawesome/pro-solid-svg-icons";
 </script>
 
 # Plugins
 
 A plugin adds new components, logic nodes, design tokens, route guards, or integrations with external services to Luna Park.
 
-Unlike a regular [NPM](./npm) package, a plugin is built specifically for Luna Park: what it exposes plugs directly into the editor (components in the palette, nodes in the graph, tokens in the style panel, settings in the top bar) and into the exported app.
+Unlike a regular [NPM](./npm) package, a plugin is built specifically for Luna Park: what it exposes plugs directly into the editor (components in the palette, nodes in the graph, tokens in the [Tokens workspace](../fundamentals/interface/styling/tokens), settings in the top bar) and into the exported app.
 
 ## Install a plugin
 
-Open **Libraries** in the top bar, then **Install plugins**. The **Plugins** tab searches the available plugins; the **Installed** tab lists the project's plugins.
+Open the <LIcon :icon="faShelves" /> **Libraries** [workspace](../fundamentals/interface/editor#the-workspace), and go to the **Plugins** section. **Installed** lists the project's plugins; **Available** lists the published plugins, official ones first. Use the **Search plugins...** field to filter them.
+
+Click the <LIcon :icon="faDownload" /> button of a plugin to install it. Or click the plugin to read its details on the side, then click **Install plugin**.
 
 <DImage
-:src="Plugins" :width="623" :height="411"
-alt="List of available plugins"
-/>
-
-Select a plugin and click `Install plugin`.
-
-<DImage
-:src="Install" :width="744" :height="382"
-alt="Installing a plugin"
+:src="Workspace" :width="1280" :height="720"
+alt="Plugins section of the Libraries workspace, with the details of the Nuxt UI plugin on the side"
 />
 
 Installing a plugin outside the `@luna-park/` scope asks for confirmation: a plugin runs code in the editor and in your app, so only install plugins you trust.
 
 ### Install from a URL
 
-To install a plugin that is not published (a plugin you are developing, for example), paste its URL in the **Install from URL** field at the bottom of the plugins panel.
+To install a plugin that is not published (a plugin you are developing, for example), click the <LIcon :icon="faEllipsis" /> button next to the search field and paste its URL in **Install from URL**.
+
+To remove a plugin, click its trash icon in the **Installed** list, or **Remove plugin** in its details.
 
 ## Configure a plugin
 

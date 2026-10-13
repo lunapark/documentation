@@ -48,7 +48,7 @@ Un store peut contenir des [fonctions](./scripts#fonctions), listées dans le pa
 
 ## Réinitialiser les stores
 
-Le bouton **Stores** de la barre supérieure permet de :
+La section **Stores** du [workspace](../interface/editor#le-workspace) **Settings** permet de :
 
-- réinitialiser tous les stores à leur valeur par défaut (**Reset all**) ;
-- effacer (**Clear**) les valeurs enregistrées dans le navigateur par les stores Session et Local.
+- réinitialiser tous les stores à leur valeur par défaut (**Reset stores**) ;
+- effacer le stockage persisté (**Persisted storage**) : les valeurs enregistrées dans le navigateur par les stores Session et Local.

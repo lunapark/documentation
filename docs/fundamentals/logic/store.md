@@ -48,7 +48,7 @@ A store can contain [functions](./scripts#functions), listed in the options pane
 
 ## Reset stores
 
-The **Stores** button in the top bar lets you:
+The **Stores** section of the **Settings** [workspace](../interface/editor#the-workspace) lets you:
 
-- **Reset all** stores to their default values;
-- **Clear** the values saved in browser storage by Session and Local stores.
+- **Reset stores**: restore every store to its default values;
+- clear the **Persisted storage**: remove the values saved in browser storage by Session and Local stores.

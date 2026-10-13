@@ -60,7 +60,7 @@ Pour répondre avec une erreur HTTP, utilisez le node `Error` : choisissez un co
 
 ### Cookies
 
-Lisez et écrivez des cookies avec les nodes `Get Cookie`, `Set Cookie` et `Clear Cookie`. Les cookies sont signés avec le **Cookie salt** des **Backend Settings**.
+Lisez et écrivez des cookies avec les nodes `Get Cookie`, `Set Cookie` et `Clear Cookie`. Les cookies sont signés avec le **Cookie salt** des [réglages Backend](../../deployment/web#reglages-du-backend).
 
 ### Fichiers
 

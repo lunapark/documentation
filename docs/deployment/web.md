@@ -3,7 +3,7 @@ description: "Configure the web version of a Luna Park application: app name, hi
 ---
 
 <script setup lang="ts">
-import {faGear} from "@fortawesome/pro-solid-svg-icons";
+import {faCog} from "@fortawesome/pro-solid-svg-icons";
 </script>
 
 # Web App
@@ -12,7 +12,7 @@ The web version of your application is a **single-page application** (Vue, built
 
 ## General settings
 
-The settings are available in the <LIcon :icon="faGear"/> **General Settings** button of the top bar. You can change the name of your application there, and choose the history mode:
+The settings are available in the **General** section of the <LIcon :icon="faCog"/> **Settings** [workspace](../fundamentals/interface/editor#the-workspace). You can change the name of your application there, and choose the history mode:
 
 - **Hash Mode** (default): Generates links like `myApp.com/#/home/dashboard`. This mode works in most cases but is not optimal for SEO and does not work with page anchors.
 - **Web Mode**: Generates links like `myApp.com/home/dashboard`. This mode is better for SEO but requires server configuration to redirect all 404 errors to the `index` file.
@@ -24,7 +24,7 @@ The settings are available in the <LIcon :icon="faGear"/> **General Settings** b
 
 A Progressive Web App (PWA) can be installed from the browser, on a computer or a phone: it gets an icon, opens in its own window, and loads its interface without the network once installed.
 
-Enable it in the **Progressive Web App** section of the <LIcon :icon="faGear"/> **General Settings**:
+Enable it with the checkbox of the **Progressive Web App** section of the <LIcon :icon="faCog"/> **Settings** workspace:
 
 | Setting | Default | Description |
 |---|---|---|
@@ -47,4 +47,4 @@ The compiled app then includes a web app manifest and a service worker. The serv
 
 ## Backend settings
 
-The **Backend Settings** button sets an outgoing **Proxy** for the backend and the **Cookie salt** used to sign cookies.
+The **Backend** section of the **Settings** workspace sets an outgoing **Proxy** for the backend and the **Cookie salt** used to sign cookies. Refreshing the salt invalidates existing sessions.

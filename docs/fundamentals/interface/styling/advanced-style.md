@@ -3,7 +3,7 @@ description: "Use CSS classes and Tailwind to extend Luna Park styling beyond na
 ---
 
 <script setup lang="ts">
-import {faPalette, faTowerCell} from "@fortawesome/pro-solid-svg-icons";
+import {faTowerCell} from "@fortawesome/pro-solid-svg-icons";
 import screen9 from '/assets/images/fundamentals/styling/screen9.png';
 import screen10 from '/assets/images/fundamentals/styling/screen10.png';
 </script>
@@ -23,7 +23,7 @@ Using CSS classes and Tailwind requires injecting code (CSS or JS) into the appl
 - Implement visual patterns not natively supported by the UI.
 
 ### How to do it (example)
-- **<LIcon :icon="faPalette" />** Palette => **update tokens** =>  **<LIcon :icon="faTowerCell" />** Inject => **CSS Injection**
+- **<LIcon :icon="faTowerCell" />** Injection workspace => **Style**
 - Paste the code below
 
 ::: warning For Firefox users
@@ -68,7 +68,7 @@ The simplest way to use Tailwind is the official [Tailwind plugin](../../../inte
 
 ### How to do it (example)
 
-- **<LIcon :icon="faPalette" />** Palette => **update tokens** =>  **<LIcon :icon="faTowerCell" />** Inject => **JS Injection**
+- **<LIcon :icon="faTowerCell" />** Injection workspace => **Script**
 - Paste the code below
 
 ```js

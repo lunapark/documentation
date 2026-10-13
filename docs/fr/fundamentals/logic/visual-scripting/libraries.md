@@ -2,9 +2,19 @@
 description: "Activez les bibliothèques de nœuds de Luna Park et découvrez les nœuds les plus utiles : événements, HTTP, cookies, erreurs et utilitaires."
 ---
 
+<script setup lang="ts">
+import Builtin from '/assets/images/visual-scripting/libraries/builtin.png';
+import {faShelves} from "@fortawesome/pro-solid-svg-icons";
+</script>
+
 # Bibliothèques de nœuds
 
-Les nœuds sont regroupés en **bibliothèques**. Activez-les ou désactivez-les par projet avec le bouton **Libraries** de la barre supérieure. Les bibliothèques désactivées n'apparaissent pas dans la recherche de nœuds.
+Les nœuds sont regroupés en **bibliothèques**. Activez-les ou désactivez-les par projet dans le [workspace](../../interface/editor#le-workspace) <LIcon :icon="faShelves" /> **Libraries** : cliquez sur une bibliothèque de la section **Built-in** pour la basculer. Les bibliothèques désactivées n'apparaissent pas dans la recherche de nœuds.
+
+<DImage
+:src="Builtin" :width="1280" :height="720"
+alt="Section Built-in du workspace Libraries, avec les bibliothèques activées en surbrillance"
+/>
 
 Faites un clic droit sur le graphe pour chercher un nœud par son nom.
 
@@ -61,7 +71,7 @@ Pour appeler votre propre backend, utilisez plutôt le nœud généré pour chaq
 
 ## Cookies
 
-Nœuds backend de la bibliothèque **Misc** : `Get Cookie`, `Set Cookie` et `Clear Cookie`. Les cookies sont signés avec le **Cookie salt** défini dans **Backend Settings**.
+Nœuds backend de la bibliothèque **Misc** : `Get Cookie`, `Set Cookie` et `Clear Cookie`. Les cookies sont signés avec le **Cookie salt** défini dans les [réglages Backend](../../../deployment/web#reglages-du-backend).
 
 ## Navigation
 
