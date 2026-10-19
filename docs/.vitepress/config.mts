@@ -100,6 +100,7 @@ export default defineConfig({
                             { link: "/fr/interface/builder", text: "Builder" },
                             { link: "/fr/interface/components", text: "Composants" },
                             { link: "/fr/interface/events", text: "Événements" },
+                            { link: "/fr/interface/navigation", text: "Pages et navigation" },
                             { link: "/fr/interface/templates", text: "Conditions et boucles" }
                         ],
                         text: "Créer des interfaces"
@@ -249,6 +250,7 @@ export default defineConfig({
                             { link: "/interface/builder", text: "Builder" },
                             { link: "/interface/components", text: "Components" },
                             { link: "/interface/events", text: "Events" },
+                            { link: "/interface/navigation", text: "Pages and Navigation" },
                             { link: "/interface/templates", text: "Conditions and Loops" }
                         ],
                         text: "Building Interfaces"

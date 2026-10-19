@@ -46,6 +46,6 @@ Here are a few options at your disposal for each layout element, here are the mo
 
 ## Pages
 
-To define a component as a **page**, simply change its type in the inspector. You can then define a path to access the page. The main page of your application will always be `/` (with nothing following).
+To define a component as a **page**, simply change its type in the inspector. You can then define a path to access the page. The main page of your application will always be `/` (with nothing following). See [Pages and Navigation](./navigation) for paths, dynamic segments, and links between pages.
 
 ![Changing a component's type to Page in the inspector](/assets/images/layout/components/gif1.gif){width=391 height=504}

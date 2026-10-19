@@ -46,6 +46,6 @@ Voici quelques options à votre disposition pour chaque élément de mise en pag
 
 ## Pages
 
-Pour définir un composant comme une **page**, changez simplement son type dans l'inspecteur. Vous pouvez ensuite définir un chemin pour accéder à la page. La page principale de votre application sera toujours `/` (sans rien après).
+Pour définir un composant comme une **page**, changez simplement son type dans l'inspecteur. Vous pouvez ensuite définir un chemin pour accéder à la page. La page principale de votre application sera toujours `/` (sans rien après). Voir [Pages et navigation](./navigation) pour les chemins, les segments dynamiques et les liens entre pages.
 
 ![Changement du type d'un composant en Page dans l'inspecteur](/assets/images/layout/components/gif1.gif){width=391 height=504}

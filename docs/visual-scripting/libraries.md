@@ -75,7 +75,7 @@ Backend nodes from the **Misc** library: `Get Cookie`, `Set Cookie`, and `Clear 
 
 ## Navigation
 
-`Navigate` opens another page of your app. `Get Router` gives access to the router (current route, parameters).
+`Navigate` opens another page of your app. `Get Router` gives access to the router (current route, parameters). See [Pages and Navigation](../interface/navigation).
 
 ## Utilities
 

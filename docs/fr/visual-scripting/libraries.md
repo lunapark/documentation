@@ -75,7 +75,7 @@ Nœuds backend de la bibliothèque **Misc** : `Get Cookie`, `Set Cookie` et `Cle
 
 ## Navigation
 
-`Navigate` ouvre une autre page de votre application. `Get Router` donne accès au routeur (route courante, paramètres).
+`Navigate` ouvre une autre page de votre application. `Get Router` donne accès au routeur (route courante, paramètres). Voir [Pages et navigation](../interface/navigation).
 
 ## Utilitaires
 
