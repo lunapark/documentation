@@ -161,6 +161,7 @@ export default defineConfig({
                         items: [
                             { link: "/fr/deployment/compilation", text: "Compilation" },
                             { link: "/fr/deployment/web", text: "Application web" },
+                            { link: "/fr/deployment/seo", text: "SEO" },
                             { link: "/fr/deployment/desktop", text: "Applications desktop" },
                             { link: "/fr/deployment/mobile", text: "Applications mobiles" },
                             { link: "/fr/deployment/prerequisites", text: "Prérequis" },
@@ -311,6 +312,7 @@ export default defineConfig({
                         items: [
                             { link: "/deployment/compilation", text: "Compilation" },
                             { link: "/deployment/web", text: "Web App" },
+                            { link: "/deployment/seo", text: "SEO" },
                             { link: "/deployment/desktop", text: "Desktop Apps" },
                             { link: "/deployment/mobile", text: "Mobile Apps" },
                             { link: "/deployment/prerequisites", text: "Prerequisites" },

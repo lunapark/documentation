@@ -73,7 +73,7 @@ L'export de code de Webflow laisse de côté tout ce qui est dynamique : contenu
 ## À savoir avant de changer
 
 - **Luna Park n'est pas un CMS.** Pour un blog ou un site marketing, Webflow reste un meilleur outil.
-- **SEO** : Luna Park génère une application monopage. Utilisez le mode d'historique **Web** pour des URL propres (voir [Application web](../../deployment/web#parametres-generaux)). Pour des sites riches en contenu qui dépendent du trafic des moteurs de recherche, un constructeur de sites comme Webflow est plus adapté.
+- **SEO** : Luna Park définit le titre, la description et l'image de partage de chaque page, depuis une route pour les pages comme `/blog/:slug`, et sert un sitemap (voir [SEO](../../deployment/seo)). Le contenu des pages reste rendu dans le navigateur : pour des sites riches en contenu qui dépendent du trafic des moteurs de recherche, un constructeur de sites comme Webflow est plus adapté.
 - **Utilisez les deux** : beaucoup de produits ont un site marketing sous Webflow et une application construite avec un autre outil. Luna Park trouve naturellement sa place derrière votre bouton « Se connecter ».
 
 ## Lequel choisir ?

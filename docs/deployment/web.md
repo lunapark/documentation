@@ -1,5 +1,5 @@
 ---
-description: "Configure the web version of a Luna Park application: app name, history mode, Progressive Web App, and backend settings."
+description: "Configure the web version of a Luna Park application: app name, history mode, SEO, Progressive Web App, and backend settings."
 ---
 
 <script setup lang="ts">
@@ -14,11 +14,13 @@ The web version of your application is a **single-page application** (Vue, built
 
 The settings are available in the **General** section of the <LIcon :icon="faCog"/> **Settings** [workspace](../workspace/editor#the-workspace). You can change the name of your application there, and choose the history mode:
 
-- **Hash Mode** (default): Generates links like `myApp.com/#/home/dashboard`. This mode works in most cases but is not optimal for SEO and does not work with page anchors.
-- **Web Mode**: Generates links like `myApp.com/home/dashboard`. This mode is better for SEO but requires server configuration to redirect all 404 errors to the `index` file.
-- **Memory Mode**: Generates links like `myApp.com/` (the path is hidden). This mode works in all conditions but is not optimal for SEO.
+- **Web Mode** (default): Generates links like `myApp.com/home/dashboard`. This mode is required for [SEO](./seo). The backend of the exported app answers every page path with the app; on a static host, redirect the paths that match no file to the `index.html` file.
+- **Hash Mode**: Generates links like `myApp.com/#/home/dashboard`. This mode works on any static host without configuration, but is not suited for SEO and does not work with page anchors.
+- **Memory Mode**: Generates links like `myApp.com/` (the path is hidden). This mode works in all conditions but is not suited for SEO.
 
 [Desktop](./desktop) and [mobile](./mobile) apps always use Hash Mode.
+
+The title, description, and social image of the pages are set in the **SEO** section, see [SEO](./seo).
 
 ## Progressive Web App
 

@@ -1,5 +1,5 @@
 ---
-description: "Configurez la version web d'une application Luna Park : nom de l'application, mode d'historique, Progressive Web App et réglages du backend."
+description: "Configurez la version web d'une application Luna Park : nom de l'application, mode d'historique, SEO, Progressive Web App et réglages du backend."
 ---
 
 <script setup lang="ts">
@@ -14,11 +14,13 @@ La version web de votre application est une **application monopage** (Vue, const
 
 Les paramètres sont disponibles dans la section **General** du [workspace](../workspace/editor#le-workspace) <LIcon :icon="faCog"/> **Settings**. Vous pouvez y modifier le nom de votre application et choisir le mode d'historique :
 
-- **Hash Mode** (par défaut) : Génère des liens de type `monApp.com/#/accueil/tableau-de-bord`. Ce mode fonctionne dans la plupart des cas mais n'est pas optimal pour le SEO et ne fonctionne pas avec les ancres de page.
-- **Web Mode** : Génère des liens de type `monApp.com/accueil/tableau-de-bord`. Ce mode est meilleur pour le SEO mais nécessite de configurer le serveur pour rediriger toutes les erreurs 404 vers le fichier `index`.
-- **Memory Mode** : Génère des liens de type `monApp.com/` (le chemin est caché). Ce mode fonctionne dans toutes les conditions mais n'est pas optimal pour le SEO.
+- **Web Mode** (par défaut) : Génère des liens de type `monApp.com/accueil/tableau-de-bord`. Ce mode est nécessaire pour le [SEO](./seo). Le backend de l'application exportée répond à chaque chemin de page avec l'application ; sur un hébergeur statique, redirigez les chemins qui ne correspondent à aucun fichier vers le fichier `index.html`.
+- **Hash Mode** : Génère des liens de type `monApp.com/#/accueil/tableau-de-bord`. Ce mode fonctionne sur n'importe quel hébergeur statique sans configuration, mais n'est pas adapté au SEO et ne fonctionne pas avec les ancres de page.
+- **Memory Mode** : Génère des liens de type `monApp.com/` (le chemin est caché). Ce mode fonctionne dans toutes les conditions mais n'est pas adapté au SEO.
 
 Les applications [desktop](./desktop) et [mobiles](./mobile) utilisent toujours le Hash Mode.
+
+Le titre, la description et l'image de partage des pages se règlent dans la section **SEO**, voir [SEO](./seo).
 
 ## Progressive Web App
 
