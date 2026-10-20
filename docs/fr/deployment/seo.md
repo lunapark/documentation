@@ -34,7 +34,7 @@ alt="Section SEO du workspace Settings avec les champs URL du site, modèle de t
 | Réglage | Par défaut | Description |
 |---|---|---|
 | **Site URL** | Vide | L'adresse publique du site, comme `https://example.com`. Utilisée pour les liens canoniques, les URL absolues des images et le sitemap. |
-| **Title template** | `%s` | Le titre des pages, où `%s` est le titre de la page. Par exemple `%s · Mattis Studio`. Les pages sans titre utilisent le nom de l'application. |
+| **Title template** | `%s` | Le titre des pages, où `%s` est le titre de la page. Par exemple `%s · Luna Café`. Les pages sans titre utilisent le nom de l'application. |
 | **Description** | Vide | La description des pages qui n'ont pas la leur. |
 | **Social image** | Vide | L'image affichée dans les aperçus de liens, idéalement en 1200×630. Un chemin commençant par `/` est complété avec l'URL du site. |
 | **Language** | `en` | La langue du contenu, placée sur la balise `<html>`. |
@@ -90,9 +90,9 @@ La route **Metadata** renvoie les balises d'une URL. Elle reçoit les paramètre
 
 ```json
 {
-    "title": "Écrire une landing page qui convertit",
-    "description": "Cinq changements de structure qui augmentent les inscriptions.",
-    "image": "/covers/landing-page.png",
+    "title": "Comment nous torréfions nos grains",
+    "description": "Du grain vert à votre tasse, en cinq étapes.",
+    "image": "/covers/roasting.png",
     "noindex": false
 }
 ```
@@ -106,7 +106,7 @@ Quand le backend construit le HTML, il appelle la route sans les cookies du visi
 La route **Sitemap** liste les URL de la page pour `/sitemap.xml`. Elle renvoie un tableau avec une entrée par URL : un objet avec une propriété par paramètre, ou une simple valeur quand le chemin n'a qu'un paramètre.
 
 ```json
-[{ "slug": "pourquoi-les-refontes-echouent" }, { "slug": "landing-page-qui-convertit" }]
+[{ "slug": "nos-nouvelles-patisseries" }, { "slug": "comment-nous-torrefions-nos-grains" }]
 ```
 
 Sans route de sitemap, une page dynamique n'apparaît pas dans le sitemap.
@@ -116,15 +116,15 @@ Sans route de sitemap, une page dynamique n'apparaît pas dans le sitemap.
 Le backend répond à chaque URL de page avec le HTML de l'application, et remplit son `<head>` :
 
 ```html
-<title>Écrire une landing page qui convertit · Mattis Studio</title>
-<meta name="description" content="Cinq changements de structure qui augmentent les inscriptions.">
-<link rel="canonical" href="https://mattis.studio/blog/landing-page-qui-convertit">
+<title>Comment nous torréfions nos grains · Luna Café</title>
+<meta name="description" content="Du grain vert à votre tasse, en cinq étapes.">
+<link rel="canonical" href="https://example.com/blog/comment-nous-torrefions-nos-grains">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Mattis Studio">
-<meta property="og:title" content="Écrire une landing page qui convertit · Mattis Studio">
-<meta property="og:description" content="Cinq changements de structure qui augmentent les inscriptions.">
-<meta property="og:url" content="https://mattis.studio/blog/landing-page-qui-convertit">
-<meta property="og:image" content="https://mattis.studio/covers/landing-page.png">
+<meta property="og:site_name" content="Luna Café">
+<meta property="og:title" content="Comment nous torréfions nos grains · Luna Café">
+<meta property="og:description" content="Du grain vert à votre tasse, en cinq étapes.">
+<meta property="og:url" content="https://example.com/blog/comment-nous-torrefions-nos-grains">
+<meta property="og:image" content="https://example.com/covers/roasting.png">
 <meta name="twitter:card" content="summary_large_image">
 ```
 

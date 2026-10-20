@@ -34,7 +34,7 @@ alt="SEO section of the Settings workspace with the site URL, title template, de
 | Setting | Default | Description |
 |---|---|---|
 | **Site URL** | Empty | The public address of the site, such as `https://example.com`. Used for canonical links, absolute image URLs, and the sitemap. |
-| **Title template** | `%s` | The title of the pages, where `%s` is the page title. For example `%s · Mattis Studio`. Pages without a title use the app name. |
+| **Title template** | `%s` | The title of the pages, where `%s` is the page title. For example `%s · Luna Café`. Pages without a title use the app name. |
 | **Description** | Empty | The description of the pages without their own. |
 | **Social image** | Empty | The image shown in link previews, ideally 1200×630. A path starting with `/` is made absolute with the site URL. |
 | **Language** | `en` | The language of the content, set on the `<html>` tag. |
@@ -90,9 +90,9 @@ The **Metadata** route returns the tags of one URL. It receives the parameters o
 
 ```json
 {
-    "title": "How to write a landing page that converts",
-    "description": "Five structural changes that lift sign-ups.",
-    "image": "/covers/landing-page.png",
+    "title": "How we roast our beans",
+    "description": "From green beans to your cup, in five steps.",
+    "image": "/covers/roasting.png",
     "noindex": false
 }
 ```
@@ -106,7 +106,7 @@ When the backend builds the HTML, it calls the route without the visitor's cooki
 The **Sitemap** route lists the URLs of the page for `/sitemap.xml`. It returns an array with one entry per URL: an object with one property per parameter, or a single value when the path has one parameter.
 
 ```json
-[{ "slug": "why-redesigns-fail" }, { "slug": "landing-page-that-converts" }]
+[{ "slug": "our-new-pastries" }, { "slug": "how-we-roast-our-beans" }]
 ```
 
 Without a sitemap route, a dynamic page is left out of the sitemap.
@@ -116,15 +116,15 @@ Without a sitemap route, a dynamic page is left out of the sitemap.
 The backend answers every page URL with the HTML of the app, and fills its `<head>`:
 
 ```html
-<title>How to write a landing page that converts · Mattis Studio</title>
-<meta name="description" content="Five structural changes that lift sign-ups.">
-<link rel="canonical" href="https://mattis.studio/blog/landing-page-that-converts">
+<title>How we roast our beans · Luna Café</title>
+<meta name="description" content="From green beans to your cup, in five steps.">
+<link rel="canonical" href="https://example.com/blog/how-we-roast-our-beans">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Mattis Studio">
-<meta property="og:title" content="How to write a landing page that converts · Mattis Studio">
-<meta property="og:description" content="Five structural changes that lift sign-ups.">
-<meta property="og:url" content="https://mattis.studio/blog/landing-page-that-converts">
-<meta property="og:image" content="https://mattis.studio/covers/landing-page.png">
+<meta property="og:site_name" content="Luna Café">
+<meta property="og:title" content="How we roast our beans · Luna Café">
+<meta property="og:description" content="From green beans to your cup, in five steps.">
+<meta property="og:url" content="https://example.com/blog/how-we-roast-our-beans">
+<meta property="og:image" content="https://example.com/covers/roasting.png">
 <meta name="twitter:card" content="summary_large_image">
 ```
 
