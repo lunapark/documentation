@@ -68,20 +68,7 @@ export default defineConfig({
                         collapsed: true,
                         items: [
                             { link: "/fr/why-luna-park/target-users", text: "Utilisateurs cible" },
-                            {
-                                collapsed: true,
-                                items: [
-                                    { link: "/fr/why-luna-park/comparison/bubble", text: "Bubble" },
-                                    { link: "/fr/why-luna-park/comparison/weweb", text: "WeWeb" },
-                                    { link: "/fr/why-luna-park/comparison/flutterflow", text: "FlutterFlow" },
-                                    { link: "/fr/why-luna-park/comparison/retool", text: "Retool" },
-                                    { link: "/fr/why-luna-park/comparison/noodl", text: "Noodl / Fluxscape" },
-                                    { link: "/fr/why-luna-park/comparison/webflow", text: "Webflow" },
-                                    { link: "/fr/why-luna-park/comparison/ai-app-builders", text: "Constructeurs IA" }
-                                ],
-                                link: "/fr/why-luna-park/comparison",
-                                text: "Comparaison aux autres outils"
-                            }
+                            { link: "https://luna-park.app/fr/compare", text: "Comparaison aux autres outils" }
                         ],
                         text: "Pourquoi Luna Park"
                     },
@@ -219,20 +206,7 @@ export default defineConfig({
                         collapsed: true,
                         items: [
                             { link: "/why-luna-park/target-users", text: "Target Users" },
-                            {
-                                collapsed: true,
-                                items: [
-                                    { link: "/why-luna-park/comparison/bubble", text: "Bubble" },
-                                    { link: "/why-luna-park/comparison/weweb", text: "WeWeb" },
-                                    { link: "/why-luna-park/comparison/flutterflow", text: "FlutterFlow" },
-                                    { link: "/why-luna-park/comparison/retool", text: "Retool" },
-                                    { link: "/why-luna-park/comparison/noodl", text: "Noodl / Fluxscape" },
-                                    { link: "/why-luna-park/comparison/webflow", text: "Webflow" },
-                                    { link: "/why-luna-park/comparison/ai-app-builders", text: "AI app builders" }
-                                ],
-                                link: "/why-luna-park/comparison",
-                                text: "Comparison"
-                            }
+                            { link: "https://luna-park.app/compare", text: "Comparison" }
                         ],
                         text: "Why Luna Park"
                     },
