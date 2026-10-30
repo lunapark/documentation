@@ -110,6 +110,7 @@ export default defineConfig({
                             { link: "/fr/visual-scripting/introduction", text: "Introduction" },
                             { link: "/fr/visual-scripting/graph", text: "Le Graphe" },
                             { link: "/fr/visual-scripting/flow-control", text: "Contrôle de Flux" },
+                            { link: "/fr/visual-scripting/debugging", text: "Débogage" },
                             { link: "/fr/visual-scripting/libraries", text: "Bibliothèques de nœuds" },
                             { link: "/fr/visual-scripting/temporal-api", text: "Temporal API" }
                         ],
@@ -248,6 +249,7 @@ export default defineConfig({
                             { link: "/visual-scripting/introduction", text: "Introduction" },
                             { link: "/visual-scripting/graph", text: "The Graph" },
                             { link: "/visual-scripting/flow-control", text: "Flow Control" },
+                            { link: "/visual-scripting/debugging", text: "Debugging" },
                             { link: "/visual-scripting/libraries", text: "Node Libraries" },
                             { link: "/visual-scripting/temporal-api", text: "Temporal API" }
                         ],
