@@ -21,8 +21,8 @@ Select a function to edit it in the **Inspector**:
 | Setting | Description |
 |---|---|
 | **Name** | The name of the function and of its node. |
-| **Type** | **Pure**: a visual scripting graph (default). **Code**: write the function in TypeScript. |
-| **Export** | Makes the function callable from other files. |
+| **Type** | **Pure**: a visual scripting graph (default). **Macro**: a graph inlined where it is called, which can have several execution inputs and outputs; a macro cannot call itself. **Code**: write the function in TypeScript. |
+| **Export** | Makes the function callable from other files. Only available for functions in scripts and stores. |
 | **Async** | Allows async nodes (fetch, database, sleep...) inside the function. |
 
 ::: tip

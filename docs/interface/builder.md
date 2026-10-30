@@ -50,7 +50,7 @@ Under the children of each element, the layout tree shows two buttons:
 
 Right-click an element in the tree to **Create before**, **Create after**, or **Create inside** it. The new element is a **Block**; change its type from the **Element** panel of the inspector.
 
-The same menu can **Wrap in component** (turn the selection into a new component file), **Unwrap and delete** (remove an element but keep its children), and copy or paste a style.
+The same menu can **Wrap in component** (wrap the selection in a new **Block**), **Unwrap and delete** (remove an element but keep its children), and copy or paste a style.
 
 <DImage
 :src="ContextMenu" :width="1280" :height="720"
@@ -97,7 +97,7 @@ alt="Element list of the layout tree open on Nuxt UI, Element, Button"
 
 Prefer a plugin component when you want a styled, accessible widget (buttons, modals, selects, tables...). Prefer native elements when you want full control over the markup and the style.
 
-Plugins can also provide **templates**: ready-made blocks listed in the **Templates** tab of the bottom panel. Drag one into the layout to use it.
+Plugins can also provide **templates**: ready-made components listed in the **Templates** tab of the bottom panel. Drag one into the **Explorer** to add it to your project as a new file.
 
 ## Selecting an element
 

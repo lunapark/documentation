@@ -195,7 +195,7 @@ Une fenêtre est accessible à l'adresse `https://luna-park.app/plugin?plugin=<p
 
 ## Templates
 
-Un plugin peut fournir des blocs de mise en page prêts à l'emploi. Ils apparaissent dans l'onglet **Templates** du panneau du bas de l'éditeur, et les utilisateurs les glissent dans leurs mises en page.
+Un plugin peut fournir des composants prêts à l'emploi. Ils apparaissent dans l'onglet **Templates** du panneau du bas de l'éditeur, et les utilisateurs les glissent dans l'Explorer pour les ajouter à leur projet comme nouveaux fichiers.
 
 ```ts
 makePlugin({

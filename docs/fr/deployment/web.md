@@ -49,4 +49,4 @@ L'application compilée contient alors un manifeste d'application web et un serv
 
 ## Réglages du backend
 
-La section **Backend** du workspace **Settings** définit un **Proxy** sortant pour le backend et le **Cookie salt** utilisé pour signer les cookies. Renouveler le salt invalide les sessions existantes.
+La section **Backend** du workspace **Settings** définit le **Cookie salt** utilisé pour signer les cookies. Renouveler le salt invalide les sessions existantes.

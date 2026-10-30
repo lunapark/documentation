@@ -34,7 +34,6 @@ Les fichiers de logique (scripts, configurations) ont un **Scope** dans l'Inspec
 | Frontend | Le navigateur | Les fichiers Frontend et Shared |
 | Backend | Le serveur | Les fichiers Backend et Shared |
 | Shared | Les deux | Les fichiers Shared |
-| Desktop | Les applications desktop natives | Les fichiers Desktop, Frontend et Shared |
 
 Les routes, crons et bases de données sont toujours backend. Les pages, composants et stores sont toujours frontend.
 

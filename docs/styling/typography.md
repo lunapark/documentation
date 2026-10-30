@@ -15,9 +15,10 @@ Typography in Luna Park controls how text is displayed in your application: size
 
 Each text element can be rendered with a different HTML tag depending on its role in the page:
 
-- `div`: generic block (default).
+- `span`: inline text (default).
 - `p`: standard paragraph.
-- `span`: inline text, used to style a specific part of a text.
+- `div`: generic block.
+- `h1`, `h2`, `h3`: headings.
 
 <DImage
   :src="screen1" :width="236" :height="160"

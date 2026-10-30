@@ -35,7 +35,6 @@ Its header shows the conversation title and status (**Running**, **Complete**, *
 | **Conversation history** | Search, rename, delete, or reopen past conversations. |
 | **New chat** | Start a new conversation. |
 | **Manage connections** | Add or edit the AIs Sidekick can use. |
-| **Export debug session** | Copy the conversation to the clipboard, to report a problem. |
 | **Close Sidekick** | Close the workspace. |
 
 ## Connect an AI

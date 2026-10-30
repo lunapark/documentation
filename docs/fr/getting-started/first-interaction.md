@@ -19,7 +19,7 @@ Vous pouvez suivre dans l'[éditeur playground](https://luna-park.app/editor), s
 
 ## 1. Créer une page
 
-Le bouton vient du [plugin Nuxt UI](../integrations/plugins#nuxt-ui). Il est préinstallé dans le modèle **Nuxt project**. Sinon, ouvrez **Libraries** dans la barre supérieure, puis **Install plugins**, sélectionnez **Nuxt UI** et cliquez sur **Install plugin**.
+Le bouton vient du [plugin Nuxt UI](../integrations/plugins#nuxt-ui). Il est préinstallé dans le modèle **Nuxt project**. Sinon, ouvrez le workspace **Libraries** (au-dessus de l'Explorer), puis **Install plugins**, sélectionnez **Nuxt UI** et cliquez sur **Install plugin**.
 
 Dans l'**explorateur** (en haut à gauche), faites un clic droit sur le dossier **Root**, puis **New** > **Page**. Nommez-la `Home`.
 

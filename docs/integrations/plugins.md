@@ -41,7 +41,7 @@ Each installed plugin adds a button to the top bar. It opens the plugin's **Conf
 ### Ferris Wheel
 `@ferris-wheel/plugin`
 
-Luna Park's design system. Provides the base component library and design tokens, and generates color variants from its configuration (primary and content colors, border and radius, light/dark/auto theme). Preinstalled in the Ferris Wheel and Frontend project templates.
+Luna Park's design system. Provides the base component library and design tokens, and generates color variants from its configuration (primary and content colors, border and radius, light/dark/auto theme).
 
 ### Nuxt UI
 `@luna-park/plugin-nuxt-ui`

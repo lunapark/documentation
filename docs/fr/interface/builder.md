@@ -50,7 +50,7 @@ Sous les enfants de chaque élément, l'arborescence affiche deux boutons :
 
 Faites un clic droit sur un élément de l'arborescence pour créer un élément avant (**Create before**), après (**Create after**) ou dedans (**Create inside**). Le nouvel élément est un **Block** : changez son type depuis le panneau **Element** de l'inspecteur.
 
-Le même menu permet d'envelopper la sélection dans un nouveau fichier composant (**Wrap in component**), de supprimer un élément en gardant ses enfants (**Unwrap and delete**), et de copier ou coller un style.
+Le même menu permet d'envelopper la sélection dans un nouveau **Block** (**Wrap in component**), de supprimer un élément en gardant ses enfants (**Unwrap and delete**), et de copier ou coller un style.
 
 <DImage
 :src="ContextMenu" :width="1280" :height="720"
@@ -97,7 +97,7 @@ alt="Liste des éléments de l'arborescence ouverte sur Nuxt UI, Element, Button
 
 Préférez un composant de plugin pour un widget stylisé et accessible (boutons, modales, listes déroulantes, tableaux...). Préférez les éléments natifs pour garder le contrôle total du balisage et du style.
 
-Les plugins peuvent aussi fournir des **templates** : des blocs prêts à l'emploi listés dans l'onglet **Templates** du panneau du bas. Glissez-en un dans la mise en page pour l'utiliser.
+Les plugins peuvent aussi fournir des **templates** : des composants prêts à l'emploi listés dans l'onglet **Templates** du panneau du bas. Glissez-en un dans l'**Explorer** pour l'ajouter à votre projet comme nouveau fichier.
 
 ## Sélectionner un élément
 

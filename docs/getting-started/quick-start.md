@@ -35,8 +35,7 @@ Click **Create a new project**, pick an emoji, a title, and a template:
 | Template | Content |
 |---|---|
 | Empty project | No files and no plugins. |
-| Ferris Wheel project | The Ferris Wheel plugin installed and themed, ready to use its components. |
-| Frontend project | Ferris Wheel with a basic layout and a component showing props and reactivity. |
+| Landing page | A single-page landing site built with the Gradient and Motion plugins, with a waitlist form backed by a route and a database table. |
 | Nuxt project | The Nuxt UI plugin installed and configured. |
 | Testing project | A minimal project using reactivity, the backend, the database, and cookies. |
 

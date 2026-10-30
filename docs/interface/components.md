@@ -4,7 +4,7 @@ description: "Create reusable visual components for Luna Park application interf
 
 <script setup>
 import {faSquare} from "@fortawesome/pro-regular-svg-icons";
-import { faBolt, faBox, faGear, faPuzzlePiece, faQuoteLeft, faSprayCan, faCode } from "@fortawesome/pro-solid-svg-icons";
+import { faBolt, faBox, faGear, faPuzzlePiece, faQuoteLeft, faCode } from "@fortawesome/pro-solid-svg-icons";
 
 import Screen1 from '/assets/images/layout/components/screen1.png';
 </script>
@@ -36,7 +36,6 @@ The layout tree accessible in the options panel allows you to build the architec
 Here are a few options at your disposal for each layout element, here are the most common ones:
 
 - <LIcon :icon="faSquare" /> **Block** - Most basic element type, it's just a box that can have children.
-- <LIcon :icon="faSprayCan" /> **UI Library** - Pre-made UI elements to speed up the building of your app.
 - <LIcon :icon="faBox" /> **Component** - Use one of the custom components you created.
 - <LIcon :icon="faPuzzlePiece" /> **Slot** - Indicate where the children of this component should go.
 - <LIcon :icon="faGear" /> **Template** - This allows you to do conditional or loop rendering.

@@ -49,4 +49,4 @@ The compiled app then includes a web app manifest and a service worker. The serv
 
 ## Backend settings
 
-The **Backend** section of the **Settings** workspace sets an outgoing **Proxy** for the backend and the **Cookie salt** used to sign cookies. Refreshing the salt invalidates existing sessions.
+The **Backend** section of the **Settings** workspace sets the **Cookie salt** used to sign cookies. Refreshing the salt invalidates existing sessions.

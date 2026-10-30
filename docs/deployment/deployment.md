@@ -32,7 +32,6 @@ The `.env` file at the root of the project holds the configuration:
 | `PREFIX` | `/api` | Path prefix of the routes. |
 | `STATIC` | `frontend/dist` | Folder of the built frontend, served by the backend. Leave it empty to host the frontend elsewhere. |
 | `COOKIE_SECRET` | generated | Secret used to sign cookies. Keep it private. |
-| `PROXY` | | Optional proxy for outgoing requests. |
 | `UPLOAD_MAX_SIZE` | `10` | Maximum size of an uploaded file, in MB. |
 | `UPLOAD_MAX_FILES` | `10` | Maximum number of files in one request. |
 

@@ -25,10 +25,10 @@ Right-click the graph to search for a node by name.
 | Standard | Flow control, errors, objects, booleans, HTTP requests. | Yes |
 | Array | Create and transform arrays. | Yes |
 | Date | Dates and the [Temporal API](./temporal-api). | Yes |
-| Dom | Browser dialogs (`Alert`, `Confirm`, `Prompt`), HTML/XML parsing, DOM methods. | Yes |
+| Dom | Browser dialogs (`Alert`, `Confirm`, `Prompt`), HTML/XML parsing, DOM methods. | No |
 | Json | Parse and serialize JSON. | Yes |
 | Math | Arithmetic, comparisons, rounding, numbers. | Yes |
-| Misc | Cookies and HTTP errors for the backend. | Yes |
+| Misc | Cookies and HTTP errors for the backend, files (`Pick Files`, `File Info`, `Read File Text`), database query helpers. | Yes |
 | Regex | Regular expressions. | Yes |
 | String | Text operations. | Yes |
 | Url | Build and read URLs. | Yes |

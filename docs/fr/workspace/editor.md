@@ -11,7 +11,7 @@ import Screen5 from '/assets/images/layout/editor/screen5.png';
 import Screen6 from '/assets/images/layout/editor/screen6.png';
 import ImmersiveMode from '/assets/images/layout/editor/immersive-mode.png';
 import Workspace from '/assets/images/layout/editor/workspace.png';
-import {faSwatchbook, faShelves, faCog, faTowerCell} from "@fortawesome/pro-solid-svg-icons";
+import {faDiagramProject, faSwatchbook, faShelves, faCog, faTowerCell} from "@fortawesome/pro-solid-svg-icons";
 </script>
 
 # Éditeur
@@ -34,9 +34,10 @@ alt="Boutons du Workspace au-dessus de l'explorateur, avec le workspace Tokens o
 
 | Workspace | Contenu |
 |---|---|
+| <LIcon :icon="faDiagramProject" /> **App map** | Une carte des fichiers du projet et de leurs liens : quels composants en affichent d'autres, naviguent vers des pages, appellent des routes et des fonctions, ou lisent et écrivent des stores et des tables. |
 | <LIcon :icon="faSwatchbook" /> **Tokens** | Les design [tokens](../styling/tokens) (couleurs, polices, longueurs) et la stratégie responsive. |
 | <LIcon :icon="faShelves" /> **Libraries** | Les [bibliothèques de nœuds](../visual-scripting/libraries) intégrées, les [plugins](../integrations/plugins) et les [packages npm](../integrations/npm). |
-| <LIcon :icon="faCog" /> **Settings** | **General** (nom de l'application, mode d'historique), **Progressive Web App** (voir [Application web](../deployment/web)), **Backend** (proxy, cookie salt), les **Cookies** définis dans l'éditeur et les **Stores** (les réinitialiser, ou effacer leurs [valeurs persistées](../logic/store#reinitialiser-les-stores)). |
+| <LIcon :icon="faCog" /> **Settings** | **General** (nom de l'application, mode d'historique), **SEO** (voir [SEO](../deployment/seo)), **Progressive Web App** (voir [Application web](../deployment/web)), **Backend** (cookie salt), les **Cookies** définis dans l'éditeur et les **Stores** (les réinitialiser, ou effacer leurs [valeurs persistées](../logic/store#reinitialiser-les-stores)). |
 | <LIcon :icon="faTowerCell" /> **Injection** | Le code injecté dans l'application : **Head**, **Body**, **Script** et **Style** (voir [Style avancé](../styling/advanced-style)). |
 
 Chaque workspace est divisé en sections : la barre d'outils en haut permet d'aller à une section.
@@ -81,7 +82,7 @@ alt="Inspecteur affichant les propriétés d'un élément de mise en page"
 
 La console est située en bas de l'éditeur. Elle vous permet d'afficher des valeurs pour déboguer votre application. Pour afficher une valeur, utilisez le nœud `Log` dans l'éditeur de logique. La valeur est aussi envoyée à la console de votre navigateur.
 
-Le panneau du bas a un second onglet, **Templates**, qui liste les blocs prêts à l'emploi fournis par vos plugins. Glissez-en un dans votre mise en page pour l'utiliser.
+Le panneau du bas a un second onglet, **Templates**, qui liste les composants prêts à l'emploi fournis par vos plugins. Glissez-en un dans l'**Explorer** pour l'ajouter à votre projet comme nouveau fichier.
 
 Pointez votre curseur sur la bordure du panneau et faites-la glisser pour le redimensionner, ou utilisez le bouton de bascule pour le masquer.
 

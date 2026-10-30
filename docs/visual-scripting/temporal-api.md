@@ -1,5 +1,5 @@
 ---
-description: "Schedule and coordinate delayed or asynchronous operations with the Temporal API."
+description: "Create, compare, and format dates, times, and durations with the Temporal API nodes."
 ---
 
 <script setup lang="ts">

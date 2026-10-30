@@ -61,17 +61,16 @@ Loops have an **async** mode: when enabled, each iteration waits for the previou
 
 ### For Loop
 
-The **For** node runs its loop output once for each index from `0` to `count - 1`, then runs its end output.
+The **For** node runs its loop output once for each index from `0` to `count - 1`, then runs its `exit` output.
 
 ### For Each Loop
 
 The **For Each** node runs its loop output for each element of an array. A For Each node has:
 - An execution input (<DSchemaType :schema="LogicType.exec()" />)
 - An array input (<DSchemaType :schema="LogicType.array(LogicType.unknown())" />)
-- An execution output (<DSchemaType :schema="LogicType.exec()" />)
-- An element output (of the array element type)
-- An index output (<DSchemaType :schema="LogicType.number()" />)
-- An end output (<DSchemaType :schema="LogicType.exec()" />)
+- A `loop` execution output (<DSchemaType :schema="LogicType.exec()" />)
+- An `item` output (of the array element type)
+- An `exit` execution output (<DSchemaType :schema="LogicType.exec()" />)
 
 <DExampleEditor target="https://luna-park.app/editor/script?animation&clean&console=80px#pZJBboMwEEXP0lkTBUNUVax7hO6RY0zk1ngQmAaCuHvHJm0oJs2iG2ObP28-fxhBcPPJW8hG0Ci4VWjcvocsjmCgdYrgglhBxmhnsJBeG7ul4Ja7p-hai9XbUM_vlMnx-C6FdQfDKwkZXC-miSDKWNkYrmdt3dl1FbyikU8kjtaeXrwn50TjSQmSFvLYnfZ0Arpk_3C12Wl3uNcqWbbKW3Uhni9kc26HDeaOXalJQK01Hxw2na3eCUhgZ8h_usV-DtGlxvO-xMYneVbNYnRl40Y6woekIsDO5kyZQvYwz5juUmfH4k10C_BHwzzZpx4CY41Y_82TvRRrmg82pP2WJg9h1O47zhCWyF4tPuOxtdj9I9MX"/>
 
@@ -80,8 +79,8 @@ The **For Each** node runs its loop output for each element of an array. A For E
 A While loop node has:
 - An execution input (<DSchemaType :schema="LogicType.exec()" />)
 - A condition input (<DSchemaType :schema="LogicType.boolean()" />)
-- An execution output (<DSchemaType :schema="LogicType.exec()" />)
-- An end output (<DSchemaType :schema="LogicType.exec()" />)
+- A `loop` execution output (<DSchemaType :schema="LogicType.exec()" />)
+- An `exit` execution output (<DSchemaType :schema="LogicType.exec()" />)
 
 ## Sequence and Parallel
 

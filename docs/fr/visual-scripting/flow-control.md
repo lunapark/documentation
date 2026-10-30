@@ -61,17 +61,16 @@ Les boucles ont un mode **async** : quand il est activé, chaque itération atte
 
 ### Boucle For
 
-Le nœud **For** exécute sa sortie de boucle une fois pour chaque index de `0` à `count - 1`, puis exécute sa sortie de fin.
+Le nœud **For** exécute sa sortie de boucle une fois pour chaque index de `0` à `count - 1`, puis exécute sa sortie `exit`.
 
 ### Boucle For Each
 
 Le nœud **For Each** exécute sa sortie de boucle pour chaque élément d'un tableau. Un nœud For Each possède :
 - Une entrée d'exécution (<DSchemaType :schema="LogicType.exec()" />)
 - Une entrée de tableau (<DSchemaType :schema="LogicType.array(LogicType.unknown())" />)
-- Une sortie d'exécution (<DSchemaType :schema="LogicType.exec()" />)
-- Une sortie d'élément (du type d'élément du tableau)
-- Une sortie d'index (<DSchemaType :schema="LogicType.number()" />)
-- Une sortie de fin (<DSchemaType :schema="LogicType.exec()" />)
+- Une sortie d'exécution `loop` (<DSchemaType :schema="LogicType.exec()" />)
+- Une sortie `item` (du type d'élément du tableau)
+- Une sortie d'exécution `exit` (<DSchemaType :schema="LogicType.exec()" />)
 
 <DExampleEditor target="https://luna-park.app/editor/script?animation&clean&console=80px#pZJBboMwEEXP0lkTBUNUVax7hO6RY0zk1ngQmAaCuHvHJm0oJs2iG2ObP28-fxhBcPPJW8hG0Ci4VWjcvocsjmCgdYrgglhBxmhnsJBeG7ul4Ja7p-hai9XbUM_vlMnx-C6FdQfDKwkZXC-miSDKWNkYrmdt3dl1FbyikU8kjtaeXrwn50TjSQmSFvLYnfZ0Arpk_3C12Wl3uNcqWbbKW3Uhni9kc26HDeaOXalJQK01Hxw2na3eCUhgZ8h_usV-DtGlxvO-xMYneVbNYnRl40Y6woekIsDO5kyZQvYwz5juUmfH4k10C_BHwzzZpx4CY41Y_82TvRRrmg82pP2WJg9h1O47zhCWyF4tPuOxtdj9I9MX"/>
 
@@ -80,8 +79,8 @@ Le nœud **For Each** exécute sa sortie de boucle pour chaque élément d'un ta
 Un nœud de boucle While possède :
 - Une entrée d'exécution (<DSchemaType :schema="LogicType.exec()" />)
 - Une entrée de condition (<DSchemaType :schema="LogicType.boolean()" />)
-- Une sortie d'exécution (<DSchemaType :schema="LogicType.exec()" />)
-- Une sortie de fin (<DSchemaType :schema="LogicType.exec()" />)
+- Une sortie d'exécution `loop` (<DSchemaType :schema="LogicType.exec()" />)
+- Une sortie d'exécution `exit` (<DSchemaType :schema="LogicType.exec()" />)
 
 ## Séquence et parallèle
 

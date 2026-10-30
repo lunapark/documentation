@@ -1,5 +1,5 @@
 ---
-description: "Planifiez et coordonnez des opérations différées ou asynchrones avec la Temporal API."
+description: "Créez, comparez et formatez des dates, des heures et des durées avec les nœuds de la Temporal API."
 ---
 
 <script setup lang="ts">

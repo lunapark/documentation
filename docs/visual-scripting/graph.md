@@ -26,9 +26,9 @@ The graph is the foundation of visual logic in Luna Park. This is where you will
 
 | Icon                       | Action                    | Description                          |
 |----------------------------|---------------------------|--------------------------------------|
-| <LMouseIcon left />        | Left click on the graph   | Select the graph (needed for zooming) |
-| <LMouseIcon move right />  | Hold right click and move | Move the graph along X and Y axis    |
-| <LMouseIcon scroll />      | Scroll on the graph       | Zoom in and out                      |
+| <LMouseIcon left />        | Left click on the graph   | Focus the graph (needed for keyboard shortcuts) |
+| <LMouseIcon move right />  | Hold right or middle click and move | Move the graph along X and Y axis    |
+| <LMouseIcon scroll />      | Scroll on the graph       | Zoom in and out with a mouse wheel. On a trackpad, scroll moves the graph and `Ctrl` + scroll zooms |
 | <LMouseIcon left move />   | Hold left click and drag  | Draw a selection box                 |
 
 

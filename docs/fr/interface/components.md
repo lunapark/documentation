@@ -4,7 +4,7 @@ description: "Créez des composants visuels réutilisables pour les interfaces L
 
 <script setup>
 import {faSquare} from "@fortawesome/pro-regular-svg-icons";
-import { faBolt, faBox, faGear, faPuzzlePiece, faQuoteLeft, faSprayCan, faCode } from "@fortawesome/pro-solid-svg-icons";
+import { faBolt, faBox, faGear, faPuzzlePiece, faQuoteLeft, faCode } from "@fortawesome/pro-solid-svg-icons";
 
 import Screen1 from '/assets/images/layout/components/screen1.png';
 </script>
@@ -36,7 +36,6 @@ L'arborescence de la mise en page accessible dans le panneau des options vous pe
 Voici quelques options à votre disposition pour chaque élément de mise en page, voici les plus courantes :
 
 - <LIcon :icon="faSquare" /> **Bloc** - Type d'élément le plus basique, c'est juste une boîte qui peut avoir des enfants.
-- <LIcon :icon="faSprayCan" /> **Bibliothèque UI** - Éléments UI préfabriqués pour accélérer la construction de votre application.
 - <LIcon :icon="faBox" /> **Composant** - Utilisez l'un des composants personnalisés que vous avez créés.
 - <LIcon :icon="faPuzzlePiece" /> **Slot** - Indique où les enfants de ce composant doivent aller.
 - <LIcon :icon="faGear" /> **Modèle** - Cela vous permet de faire des rendus conditionnels ou en boucle.

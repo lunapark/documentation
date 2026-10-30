@@ -15,9 +15,10 @@ La typographie dans Luna Park contrôle la manière dont le texte est affiché d
 
 Chaque élément de texte peut être rendu avec une balise HTML différente selon son rôle dans la page :
 
-- `div` : bloc générique (par défaut).
+- `span` : texte en ligne (par défaut).
 - `p` : paragraphe standard.
-- `span` : texte en ligne, utilisé pour styliser une partie spécifique d'un texte.
+- `div` : bloc générique.
+- `h1`, `h2`, `h3` : titres.
 
 <DImage
 :src="Screen1" :width="236" :height="160"

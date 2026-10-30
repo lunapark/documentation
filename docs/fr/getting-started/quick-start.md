@@ -35,8 +35,7 @@ Cliquez sur **Create a new project**, choisissez un emoji, un titre et un modèl
 | Modèle | Contenu |
 |---|---|
 | Empty project | Aucun fichier et aucun plugin. |
-| Ferris Wheel project | Le plugin Ferris Wheel installé et thémé, prêt à utiliser ses composants. |
-| Frontend project | Ferris Wheel avec une mise en page de base et un composant illustrant les props et la réactivité. |
+| Landing page | Un site vitrine d'une page construit avec les plugins Gradient et Motion, avec un formulaire de liste d'attente relié à une route et une table de base de données. |
 | Nuxt project | Le plugin Nuxt UI installé et configuré. |
 | Testing project | Un projet minimal utilisant la réactivité, le backend, la base de données et les cookies. |
 

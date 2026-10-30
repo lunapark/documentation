@@ -21,8 +21,8 @@ Sélectionnez une fonction pour la modifier dans l'**Inspector** :
 | Réglage | Description |
 |---|---|
 | **Name** | Le nom de la fonction et de son nœud. |
-| **Type** | **Pure** : un graphe de script visuel (par défaut). **Code** : écrivez la fonction en TypeScript. |
-| **Export** | Rend la fonction appelable depuis d'autres fichiers. |
+| **Type** | **Pure** : un graphe de script visuel (par défaut). **Macro** : un graphe intégré là où il est appelé, qui peut avoir plusieurs entrées et sorties d'exécution ; une macro ne peut pas s'appeler elle-même. **Code** : écrivez la fonction en TypeScript. |
+| **Export** | Rend la fonction appelable depuis d'autres fichiers. Disponible uniquement pour les fonctions des scripts et des stores. |
 | **Async** | Autorise les nœuds asynchrones (fetch, base de données, sleep...) dans la fonction. |
 
 ::: tip

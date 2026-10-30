@@ -20,7 +20,7 @@ Une **route** est un endpoint HTTP défini dans Luna Park. Elle encapsule de la 
 
 Dans l'**Explorer**, faites un clic droit puis **New → Route**. Ses réglages sont dans l'**Inspector** :
 
-- **Method** : `GET`, `POST`, `PUT` ou `DELETE`.
+- **Method** : `GET`, `POST`, `PUT`, `PATCH` ou `DELETE`.
 - **Path** : le chemin de l'endpoint. Par défaut, il reprend le nom de la route (une route `get-articles` est exposée sur `/api/get-articles`). Ajoutez des paramètres avec `:`, par exemple `/articles/:id`.
 - **Route Input** et **Route Output** : les types des données reçues et renvoyées.
 - **Guards** : des règles d'accès vérifiées avant l'exécution de la route (voir [plus bas](#guards)).
@@ -34,9 +34,10 @@ Le graphe d'une route va d'un node d'**input** à un node d'**output**. Entre le
 Le node d'input expose les données reçues par la route, sur des ancrages optionnels :
 
 - `headers` : entêtes HTTP (auth, content-type...).
-- `body` : corps de la requête (typique pour `POST` et `PUT`).
+- `body` : corps de la requête (typique pour `POST`, `PUT` et `PATCH`).
 - `query` : paramètres de query string (`?id=5&limit=10`).
 - `params` : paramètres de chemin (`/articles/:id`).
+- `cookies` : les cookies de la requête, à lire avec les nodes de cookies.
 
 Définissez la forme de `headers`, `body` et `query` dans **Route Input**. `params` suit le chemin.
 

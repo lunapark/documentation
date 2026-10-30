@@ -25,10 +25,10 @@ Faites un clic droit sur le graphe pour chercher un nœud par son nom.
 | Standard | Contrôle de flux, erreurs, objets, booléens, requêtes HTTP. | Oui |
 | Array | Créer et transformer des tableaux. | Oui |
 | Date | Les dates et la [Temporal API](./temporal-api). | Oui |
-| Dom | Boîtes de dialogue (`Alert`, `Confirm`, `Prompt`), parsing HTML/XML, méthodes du DOM. | Oui |
+| Dom | Boîtes de dialogue (`Alert`, `Confirm`, `Prompt`), parsing HTML/XML, méthodes du DOM. | Non |
 | Json | Lire et écrire du JSON. | Oui |
 | Math | Arithmétique, comparaisons, arrondis, nombres. | Oui |
-| Misc | Cookies et erreurs HTTP pour le backend. | Oui |
+| Misc | Cookies et erreurs HTTP pour le backend, fichiers (`Pick Files`, `File Info`, `Read File Text`), aides aux requêtes de base de données. | Oui |
 | Regex | Expressions régulières. | Oui |
 | String | Opérations sur le texte. | Oui |
 | Url | Construire et lire des URL. | Oui |

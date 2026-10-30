@@ -35,7 +35,6 @@ Son en-tête affiche le titre et l'état de la conversation (**Running**, **Comp
 | **Conversation history** | Rechercher, renommer, supprimer ou rouvrir une conversation passée. |
 | **New chat** | Démarrer une nouvelle conversation. |
 | **Manage connections** | Ajouter ou modifier les IA que Sidekick peut utiliser. |
-| **Export debug session** | Copier la conversation dans le presse-papiers, pour signaler un problème. |
 | **Close Sidekick** | Fermer l'espace. |
 
 ## Connecter une IA

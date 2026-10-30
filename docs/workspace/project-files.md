@@ -34,7 +34,6 @@ Logic files (scripts, configurations) have a **Scope** in the Inspector. It deci
 | Frontend | The browser | Frontend and Shared files |
 | Backend | The server | Backend and Shared files |
 | Shared | Both | Shared files |
-| Desktop | Native desktop apps | Desktop, Frontend, and Shared files |
 
 Routes, crons, and databases are always backend. Pages, components, and stores are always frontend.
 

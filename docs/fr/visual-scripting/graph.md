@@ -26,9 +26,9 @@ Le graphe est la base de la logique visuelle dans Luna Park. C'est ici que vous 
 
 | Icône                      | Action                    | Description                       |
 |----------------------------|---------------------------|-----------------------------------|
-| <LMouseIcon left />        | Clic gauche sur le graphe  | Sélectionner le graphe (nécessaire pour zoomer) |
-| <LMouseIcon move right />  | Maintenir le clic droit et déplacer | Déplacer le graphe le long des axes X et Y |
-| <LMouseIcon scroll />      | Faire défiler sur le graphe | Zoomer avant et arrière          |
+| <LMouseIcon left />        | Clic gauche sur le graphe  | Donner le focus au graphe (nécessaire pour les raccourcis clavier) |
+| <LMouseIcon move right />  | Maintenir le clic droit ou central et déplacer | Déplacer le graphe le long des axes X et Y |
+| <LMouseIcon scroll />      | Faire défiler sur le graphe | Zoomer avec une molette de souris. Sur un pavé tactile, le défilement déplace le graphe et `Ctrl` + défilement zoome |
 | <LMouseIcon left move />   | Maintenir le clic gauche et déplacer | Dessiner une boîte de sélection |
 
 ## Nœuds

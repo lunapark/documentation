@@ -195,7 +195,7 @@ A window is reachable at `https://luna-park.app/plugin?plugin=<package>&window=<
 
 ## Templates
 
-A plugin can provide ready-made layout blocks. They appear in the **Templates** tab of the editor's bottom panel, and users drag them into their layouts.
+A plugin can provide ready-made components. They appear in the **Templates** tab of the editor's bottom panel, and users drag them into the Explorer to add them to their project as new files.
 
 ```ts
 makePlugin({

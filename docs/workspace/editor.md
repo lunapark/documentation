@@ -11,7 +11,7 @@ import Screen5 from '/assets/images/layout/editor/screen5.png';
 import Screen6 from '/assets/images/layout/editor/screen6.png';
 import ImmersiveMode from '/assets/images/layout/editor/immersive-mode.png';
 import Workspace from '/assets/images/layout/editor/workspace.png';
-import {faSwatchbook, faShelves, faCog, faTowerCell} from "@fortawesome/pro-solid-svg-icons";
+import {faDiagramProject, faSwatchbook, faShelves, faCog, faTowerCell} from "@fortawesome/pro-solid-svg-icons";
 </script>
 
 # Editor
@@ -34,9 +34,10 @@ alt="Workspace buttons above the explorer, with the Tokens workspace open in the
 
 | Workspace | Content |
 |---|---|
+| <LIcon :icon="faDiagramProject" /> **App map** | A map of the project's files and how they connect: which components render others, navigate to pages, call routes and functions, or read and write stores and tables. |
 | <LIcon :icon="faSwatchbook" /> **Tokens** | Design [tokens](../styling/tokens) (colors, fonts, lengths) and the responsive strategy. |
 | <LIcon :icon="faShelves" /> **Libraries** | Built-in [node libraries](../visual-scripting/libraries), [plugins](../integrations/plugins), and [npm packages](../integrations/npm). |
-| <LIcon :icon="faCog" /> **Settings** | **General** (app name, history mode), **Progressive Web App** (see [Web App](../deployment/web)), **Backend** (proxy, cookie salt), the **Cookies** set in the editor, and the **Stores** (reset them, or clear their [persisted values](../logic/store#reset-stores)). |
+| <LIcon :icon="faCog" /> **Settings** | **General** (app name, history mode), **SEO** (see [SEO](../deployment/seo)), **Progressive Web App** (see [Web App](../deployment/web)), **Backend** (cookie salt), the **Cookies** set in the editor, and the **Stores** (reset them, or clear their [persisted values](../logic/store#reset-stores)). |
 | <LIcon :icon="faTowerCell" /> **Injection** | Code injected in the app: **Head**, **Body**, **Script**, and **Style** (see [Advanced Style](../styling/advanced-style)). |
 
 Each workspace is split into sections: the toolbar at its top jumps to a section.
@@ -81,7 +82,7 @@ alt="Inspector displaying the properties of a layout element"
 
 The console is located at the bottom of the editor. It lets you log values to debug your application. To display a value in it, use the `Log` node in the logic editor. The value is also sent to your browser's console.
 
-The bottom panel has a second tab, **Templates**, listing ready-made blocks provided by your plugins. Drag one into your layout to use it.
+The bottom panel has a second tab, **Templates**, listing ready-made components provided by your plugins. Drag one into the **Explorer** to add it to your project as a new file.
 
 Point your cursor at the panel's border and drag it to resize it, or use the toggle button to hide it.
 
