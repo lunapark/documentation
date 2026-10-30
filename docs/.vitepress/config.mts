@@ -85,7 +85,9 @@ export default defineConfig({
                         collapsed: true,
                         items: [
                             { link: "/fr/interface/builder", text: "Builder" },
+                            { link: "/fr/interface/preview", text: "Aperçu" },
                             { link: "/fr/interface/components", text: "Composants" },
+                            { link: "/fr/interface/bindings", text: "Liaisons" },
                             { link: "/fr/interface/events", text: "Événements" },
                             { link: "/fr/interface/navigation", text: "Pages et navigation" },
                             { link: "/fr/interface/templates", text: "Conditions et boucles" }
@@ -100,6 +102,7 @@ export default defineConfig({
                             { link: "/fr/styling/typography", text: "Typographie" },
                             { link: "/fr/styling/alignment", text: "Disposition et alignement" },
                             { link: "/fr/styling/visual-effects", text: "Effets visuels" },
+                            { link: "/fr/styling/classes", text: "Classes" },
                             { link: "/fr/styling/advanced-style", text: "Style avancé (Classes CSS & Tailwind)" }
                         ],
                         text: "Style"
@@ -120,6 +123,7 @@ export default defineConfig({
                         collapsed: true,
                         items: [
                             { link: "/fr/logic/variables", text: "Variables" },
+                            { link: "/fr/logic/types", text: "Types de données" },
                             { link: "/fr/logic/store", text: "Store" },
                             { link: "/fr/logic/scripts", text: "Scripts et fonctions" }
                         ],
@@ -224,7 +228,9 @@ export default defineConfig({
                         collapsed: true,
                         items: [
                             { link: "/interface/builder", text: "Builder" },
+                            { link: "/interface/preview", text: "Preview" },
                             { link: "/interface/components", text: "Components" },
+                            { link: "/interface/bindings", text: "Bindings" },
                             { link: "/interface/events", text: "Events" },
                             { link: "/interface/navigation", text: "Pages and Navigation" },
                             { link: "/interface/templates", text: "Conditions and Loops" }
@@ -239,6 +245,7 @@ export default defineConfig({
                             { link: "/styling/typography", text: "Typography" },
                             { link: "/styling/alignment", text: "Alignment" },
                             { link: "/styling/visual-effects", text: "Visual Effects" },
+                            { link: "/styling/classes", text: "Classes" },
                             { link: "/styling/advanced-style", text: "Advanced Styling" }
                         ],
                         text: "Styling"
@@ -259,6 +266,7 @@ export default defineConfig({
                         collapsed: true,
                         items: [
                             { link: "/logic/variables", text: "Variables" },
+                            { link: "/logic/types", text: "Data Types" },
                             { link: "/logic/store", text: "Store" },
                             { link: "/logic/scripts", text: "Scripts and Functions" }
                         ],

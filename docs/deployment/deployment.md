@@ -9,7 +9,7 @@ The exported code of a Luna Park application (see [Compilation](./compilation)) 
 ## What you need
 
 - **Node.js** 24 or newer, and **pnpm**.
-- A **PostgreSQL** database. Tables are created automatically on first launch, with the rows you entered in the editor.
+- A **PostgreSQL** database. Tables are created and kept in sync automatically at each start (see [Database schema](#database-schema)), with the rows you entered in the editor as initial data.
 
 ## Project structure
 
@@ -34,6 +34,7 @@ The `.env` file at the root of the project holds the configuration:
 | `COOKIE_SECRET` | generated | Secret used to sign cookies. Keep it private. |
 | `UPLOAD_MAX_SIZE` | `10` | Maximum size of an uploaded file, in MB. |
 | `UPLOAD_MAX_FILES` | `10` | Maximum number of files in one request. |
+| `DATABASE_BACKUP` | `true` | Set to `false` to turn off the [automatic backups](#backups). |
 
 Plugins can add their own variables (OAuth or SMTP secrets, for example).
 
@@ -79,4 +80,34 @@ docker run -p 80:80 --env-file .env my-app
 
 ## Updating
 
-Download or generate the new code, replace the files (keep your `.env`), then build and restart the server.
+Download or generate the new code, replace the files (keep your `.env` and the `.backup` folder), then build and restart the server.
+
+## Database schema
+
+At each start, the server compares the database with the tables of the project and updates it:
+
+- new tables and columns are created, renamed tables and columns are renamed (their data is kept);
+- **tables and columns removed from the project are deleted, with their data**;
+- columns whose type changed are converted: values that can't be converted are emptied;
+- constraints and indexes are added or removed. When **Required** is turned on, empty values get the default value of the type. A constraint that can't be applied is logged, and the server keeps running.
+
+The rows entered in the editor are only inserted when a table is created. Existing tables keep their data.
+
+::: warning
+Removing a Database file or a column from the project deletes its data on the next start. A backup is taken just before (see below).
+:::
+
+## Backups
+
+The server backs up the database to the `.backup` folder, next to `.env`:
+
+- at each start, before updating the schema;
+- every day, as long as the server runs.
+
+Each backup is a SQL file named after its date and time (UTC). The server keeps the backups of the last 7 days that have some, and at most 5 per day.
+
+Set `DATABASE_BACKUP=false` to turn backups off, for example when your host already backs up the database. If a backup fails at startup, the server doesn't start.
+
+With Docker, the `.backup` folder is inside the container: mount a volume on `/app/.backup` to keep the backups when the container is replaced.
+
+To restore a backup, run it on an empty database, for example with `psql "$DATABASE_URL" -f .backup/<file>.sql`.

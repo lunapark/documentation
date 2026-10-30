@@ -11,7 +11,7 @@ import InsertMode from '/assets/images/layout/builder/insert-mode.png';
 
 # Builder
 
-Le mode **Builder** permet de construire l'interface d'une page ou d'un composant. Ouvrez un fichier page ou composant, et choisissez **Builder** dans le sélecteur de mode sous la vue principale.
+Le mode **Builder** permet de construire l'interface d'une page ou d'un composant. Ouvrez un fichier page ou composant, et choisissez **Builder** dans le sélecteur de mode sous la vue principale. Voir [Aperçu](./preview) pour le canevas lui-même : tailles d'appareils, breakpoints et autres modes.
 
 En mode Builder :
 
@@ -105,8 +105,8 @@ Les panneaux de l'inspecteur pour l'élément sélectionné :
 
 | Panneau | Contenu |
 |---|---|
-| **Element** | Nom, type, balise HTML et classes CSS. |
-| **Properties** | Les attributs de l'élément (ou du composant de plugin), fixes ou liés à une variable. |
+| **Element** | Nom, type, balise HTML, [classes](../styling/classes) et [model](./components#model). |
+| **Properties** | Les attributs de l'élément (ou du composant de plugin), fixes ou [liés à une variable](./bindings). |
 | **Rendering** | Afficher l'élément sous une condition (**Condition**), ou le répéter avec une boucle (**Loop**) sur une liste. **Simulation** choisit son affichage dans l'éditeur. |
 | **Events** | Ce qui se passe quand l'utilisateur interagit avec l'élément. Voir [Événements](./events). |
 | **Style** | Quick style, media queries, survol et toutes les propriétés CSS. Voir [Style](../styling/overview). |

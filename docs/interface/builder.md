@@ -11,7 +11,7 @@ import InsertMode from '/assets/images/layout/builder/insert-mode.png';
 
 # Builder
 
-**Builder** mode is where you build the interface of a page or component. Open a page or component file, and pick **Builder** in the mode selector under the main view.
+**Builder** mode is where you build the interface of a page or component. Open a page or component file, and pick **Builder** in the mode selector under the main view. See [Preview](./preview) for the canvas itself: device sizes, breakpoints, and the other modes.
 
 In Builder mode:
 
@@ -105,8 +105,8 @@ The inspector panels of the selected element:
 
 | Panel | Content |
 |---|---|
-| **Element** | Name, type, HTML tag, and CSS classes. |
-| **Properties** | Attributes of the element (or of the plugin component), static or bound to a variable. |
+| **Element** | Name, type, HTML tag, [classes](../styling/classes), and [model](./components#model). |
+| **Properties** | Attributes of the element (or of the plugin component), static or [bound to a variable](./bindings). |
 | **Rendering** | Show the element under a **Condition**, or repeat it with a **Loop** over a list. **Simulation** picks how it is shown in the editor. |
 | **Events** | What happens when the user interacts with the element. See [Events](./events). |
 | **Style** | Quick style, media queries, hover, and every CSS property. See [Styling](../styling/overview). |

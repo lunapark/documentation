@@ -36,6 +36,8 @@ Voici les types de données que vous pouvez utiliser :
 - **Objet** (<DSchemaType :schema="LogicType.object({name: LogicType.string(), age: LogicType.number()})" />), un ensemble de propriétés et de valeurs<br>
   exemple : <DSchemaValue :value="{ name: 'John', age: 30 }" />
 
+Ce sont les types les plus courants. Voir [Types de données](./types) pour tous les types (records, unions, types nommés...).
+
 Une variable peut aussi être **calculée** : sa valeur est recalculée automatiquement (voir [plus bas](#variables-calculees)).
 
 ## Définir, afficher et mettre à jour une variable

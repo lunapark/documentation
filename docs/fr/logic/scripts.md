@@ -65,4 +65,4 @@ Son **Scope** fonctionne comme celui d'un script. Une configuration **Backend** 
 
 Un fichier de **type** définit des types de données réutilisables (une `Address`, une `Order`...). Créez-en un avec **New > Type**.
 
-Les types s'utilisent partout où un type est attendu : variables, entrées de fonctions, schémas de stores, entrées et sorties de routes. Vous pouvez aussi référencer une ligne de base de données ou le body et la réponse d'une route comme type. Définir une forme une seule fois garde le frontend et le backend synchronisés.
+Voir [Types de données](./types#fichiers-de-types) pour l'éditeur de types. Les types s'utilisent partout où un type est attendu : variables, entrées de fonctions, schémas de stores, entrées et sorties de routes. Vous pouvez aussi référencer une ligne de base de données ou le body et la réponse d'une route comme type. Définir une forme une seule fois garde le frontend et le backend synchronisés.

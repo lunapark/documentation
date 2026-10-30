@@ -65,4 +65,4 @@ Its **Scope** works like a script's. A **Backend** configuration is only include
 
 A **type** file defines reusable data types (an `Address`, an `Order`...). Create one with **New > Type**.
 
-Types can be used anywhere a type is expected: variables, function inputs, store schemas, route inputs and outputs. You can also reference a database row or a route's body and response as a type. Defining a shape once keeps the frontend and backend in sync.
+See [Data Types](./types#type-files) for the type editor. Types can be used anywhere a type is expected: variables, function inputs, store schemas, route inputs and outputs. You can also reference a database row or a route's body and response as a type. Defining a shape once keeps the frontend and backend in sync.
