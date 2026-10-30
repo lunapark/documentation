@@ -8,7 +8,7 @@ import Connections from "/assets/images/getting-started/sidekick/connections.png
 import ProviderForm from "/assets/images/getting-started/sidekick/provider-form.png";
 import Modes from "/assets/images/getting-started/sidekick/modes.png";
 import ModelSelector from "/assets/images/getting-started/sidekick/model-selector.png";
-import Mention from "/assets/images/getting-started/sidekick/mention.png";
+import MentionVideo from '/assets/images/getting-started/sidekick/mention.webm';
 </script>
 
 # Sidekick
@@ -129,7 +129,7 @@ alt="Sélecteur de modèle ouvert sous le prompt de Sidekick, avec les listes AI
 - Sidekick connaît aussi le panneau courant et l'élément ou les nœuds sélectionnés : vous pouvez lui parler de « ce bouton ».
 
 <DImage
-:src="Mention" :width="1280" :height="720"
+:src="MentionVideo" :width="1280" :height="720"
 alt="Liste de fichiers ouverte en tapant @ dans le prompt de Sidekick"
 />
 

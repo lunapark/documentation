@@ -3,12 +3,13 @@ description: "Créez des composants visuels réutilisables pour les interfaces L
 ---
 
 <script setup>
+import TypeToPageVideo from '/assets/images/layout/components/type-to-page.webm';
 import Model from '/assets/images/layout/components/model.png';
 import ModelBinding from '/assets/images/layout/components/model-binding.png';
 import {faSquare} from "@fortawesome/pro-regular-svg-icons";
 import { faBolt, faBox, faGear, faPuzzlePiece, faQuoteLeft, faCode } from "@fortawesome/pro-solid-svg-icons";
 
-import Screen1 from '/assets/images/layout/components/screen1.png';
+import Screen1 from '/assets/images/layout/components/editor.png';
 </script>
 
 # Composants
@@ -87,4 +88,7 @@ Le model n'a pas de valeur par défaut dans l'application exportée : liez-le to
 
 Pour définir un composant comme une **page**, changez simplement son type dans l'inspecteur. Vous pouvez ensuite définir un chemin pour accéder à la page. La page principale de votre application sera toujours `/` (sans rien après). Voir [Pages et navigation](./navigation) pour les chemins, les segments dynamiques et les liens entre pages.
 
-![Changement du type d'un composant en Page dans l'inspecteur](/assets/images/layout/components/gif1.gif){width=391 height=504}
+<DImage
+  :src="TypeToPageVideo" :width="1280" :height="720"
+  alt="Changement du type d'un composant en Page dans l'inspecteur"
+/>

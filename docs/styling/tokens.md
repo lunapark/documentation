@@ -6,8 +6,8 @@ description: "Use reusable style tokens to keep colors, sizes, spacing, and typo
 import TokensWorkspace from '/assets/images/layout/styling/tokens-workspace.png';
 import FontPicker from '/assets/images/layout/styling/font-picker.png';
 import {faLink, faBolt, faSwatchbook} from "@fortawesome/pro-solid-svg-icons";
-import gif1 from '/assets/images/layout/styling/gif1.gif';
-import gif2 from '/assets/images/layout/styling/gif2.gif';
+import TokenLinkVideo from '/assets/images/layout/styling/token-link.webm';
+import VariableBindVideo from '/assets/images/layout/styling/variable-bind.webm';
 </script>
 
 # Tokens and Style Variables
@@ -63,7 +63,7 @@ For a breakpoint set at `1024px`:
 3. Select the design token you want to use.
 
 <DImage
-  :src="gif1" :width="990" :height="369"
+  :src="TokenLinkVideo" :width="1280" :height="720"
   alt="Example of token usage"
 />
 
@@ -82,7 +82,7 @@ Unlike tokens, which are static and global, variables are **contextual and react
 3. Select the variable you want to use.
 
 <DImage
-  :src="gif2" :width="990" :height="504"
+  :src="VariableBindVideo" :width="1280" :height="720"
   alt="Example of variable usage"
 />
 

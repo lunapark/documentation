@@ -3,8 +3,10 @@ description: "Configurez l'apparence visuelle des applications Luna Park avec le
 ---
 
 <script setup lang="ts">
+import TokenLinkVideo from '/assets/images/layout/styling/token-link.webm';
+import VariableBindVideo from '/assets/images/layout/styling/variable-bind.webm';
 import TokensWorkspace from '/assets/images/layout/styling/tokens-workspace.png';
-import Screen2 from '/assets/images/layout/styling/screen2.png';
+import Screen2 from '/assets/images/layout/styling/style-section.png';
 import QuickStylePanels from '/assets/images/layout/styling/quick-style-panels.png';
 </script>
 
@@ -35,7 +37,7 @@ _Note : Toutes les règles de stylisation disponibles dans Luna Park corresponde
 
 Pour les modifications courantes, certaines catégories de style sont accessibles directement depuis le **layout builder**, sans passer par l'onglet style de l'inspecteur. Sélectionnez un élément pour faire apparaître les `quick style panels` (bordure, arrière-plan, taille, espacement, texte, ombre, etc.).
 
-<DImage :src="QuickStylePanels" :width="236" :height="178" alt="Quick style panels affichés à côté d'un élément sélectionné dans le layout builder" />
+<DImage :src="QuickStylePanels" :width="1280" :height="720" alt="Quick style panels affichés à côté d'un élément sélectionné dans le layout builder" />
 
 ## Tokens de design
 
@@ -53,7 +55,10 @@ Pour utiliser un token de design :
 2. Cliquez sur l'icône de lien pour passer en mode de sélection de token de design.
 3. Sélectionnez le token de design que vous souhaitez utiliser.
 
-![Liaison d'une propriété de style à un design token depuis l'inspecteur](/assets/images/layout/styling/gif1.gif){width=990 height=369}
+<DImage
+  :src="TokenLinkVideo" :width="1280" :height="720"
+  alt="Liaison d'une propriété de style à un design token depuis l'inspecteur"
+/>
 
 ## Variables de style
 
@@ -65,6 +70,9 @@ Pour utiliser une variable dans une propriété de votre composant :
 2. Cliquez sur l'icône d'éclair pour passer en mode de sélection de variable.
 3. Sélectionnez la variable que vous souhaitez utiliser.
 
-![Liaison d'une propriété de style à une variable avec l'icône éclair](/assets/images/layout/styling/gif2.gif){width=990 height=504}
+<DImage
+  :src="VariableBindVideo" :width="1280" :height="720"
+  alt="Liaison d'une propriété de style à une variable avec l'icône éclair"
+/>
 
 _Note : Seules les variables correspondant au type attendu pour cette propriété seront disponibles dans la liste. Par exemple, une variable numérique n'apparaîtra que pour une propriété attendue comme étant un nombre._

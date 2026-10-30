@@ -3,6 +3,12 @@ description: "Découvrez le canevas du graphe et connectez des nœuds pour const
 ---
 
 <script setup lang="ts">
+import NodeKindsImage from '/assets/images/visual-scripting/graph/node-kinds.png';
+import ScoreGraphImage from '/assets/images/visual-scripting/graph/score-graph.png';
+import TypeHintsImage from '/assets/images/visual-scripting/graph/type-hints.png';
+import ValueHintsImage from '/assets/images/visual-scripting/graph/value-hints.png';
+import HintsVideo from '/assets/images/visual-scripting/graph/hints.webm';
+import ConnectVideo from '/assets/images/visual-scripting/graph/connect.webm';
 import {LogicType} from "@luna-park/logicnodes";
 </script>
 
@@ -38,7 +44,10 @@ Les nœuds sont les blocs de construction logique de base qui peuvent être plac
 - **Nœuds de fonction** : Ces nœuds ont un fond bleu. Ils possèdent des ancrages d'exécution d'entrée et/ou de sortie. Ils s'exécutent lorsque leur ancrage d'exécution d'entrée est déclenché.
 - **Nœuds d'opération** : Ces nœuds ont un fond gris foncé. Ils ne possèdent pas d'ancrages d'exécution d'entrée et/ou de sortie. Ils s'exécutent lorsque leur ancrage de résultat est appelé par un nœud de fonction.
 
-![Nœud de fonction Fetch à côté d'un nœud d'opération Split](/assets/images/visual-scripting/graph/screen2.png){width=674 height=239}
+<DImage
+  :src="NodeKindsImage" :width="1280" :height="720"
+  alt="Nœud de fonction Fetch à côté d'un nœud d'opération Split"
+/>
 
 | Icône                                                                                         | Action                    | Description               |
 |-----------------------------------------------------------------------------------------------|---------------------------|---------------------------|
@@ -90,11 +99,19 @@ Généralement, vous connecterez des ancrages d'entrée et de sortie du même ty
 
 Cependant, vous pouvez également connecter un ancrage de sortie à un ancrage d'entrée moins défini. Par exemple, il est possible de connecter un ancrage de sortie d'un tableau de nombres à un ancrage d'entrée d'un tableau de type inconnu.
 
+<DImage
+  :src="ConnectVideo" :width="1280" :height="720"
+  alt="Glisser un fil de la sortie d'exécution de Set score vers le nœud Log"
+/>
+
 ## Exemple de logique dans le graphe
 
 Dans cet exemple, nous avons une logique simple construite avec des nœuds et des fils dans le graphe.
 
-![Graphe où On Click définit score à score + 1, puis l'affiche dans la console](/assets/images/visual-scripting/graph/screen3.png){width=1129 height=431}
+<DImage
+  :src="ScoreGraphImage" :width="1280" :height="720"
+  alt="Graphe où On Click définit score à score + 1, puis l'affiche dans la console"
+/>
 
 ### Étape par étape
 
@@ -147,11 +164,22 @@ L'inspection permet de vérifier les **valeurs** et les **types** contenus par l
 
 **Inspection des types** : Pour visualiser les types de données. `Ctrl + Alt`
 
-![Le même graphe avec l'inspection des types affichant le type de chaque ancre](/assets/images/visual-scripting/graph/screen4.png){width=1124 height=402}
+<DImage
+  :src="TypeHintsImage" :width="1280" :height="720"
+  alt="Le même graphe avec l'inspection des types affichant le type de chaque ancre"
+/>
 
 **Inspection des valeurs** : Pour afficher les valeurs réelles des ancrages. `Ctrl + Espace` ou `Ctrl + Q`
 
-![Le même graphe avec l'inspection des valeurs affichant la valeur de chaque ancre](/assets/images/visual-scripting/graph/screen5.png){width=1124 height=407}
+<DImage
+  :src="ValueHintsImage" :width="1280" :height="720"
+  alt="Le même graphe avec l'inspection des valeurs affichant la valeur de chaque ancre"
+/>
+
+<DImage
+  :src="HintsVideo" :width="1280" :height="720"
+  alt="Maintenir Ctrl + Alt affiche les types des ancrages, Ctrl + Espace leurs valeurs"
+/>
 
 Lors de l'utilisation de l'inspection des valeurs, les valeurs sont :
 

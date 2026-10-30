@@ -3,13 +3,13 @@ description: "Découvrez les panneaux, la barre supérieure, les modes et les ra
 ---
 
 <script setup lang="ts">
-import Screen1 from '/assets/images/layout/editor/screen1.png';
-import Screen2 from '/assets/images/layout/editor/screen2.png';
-import Screen3 from '/assets/images/layout/editor/screen3.png';
-import Screen4 from '/assets/images/layout/editor/screen4.png';
-import Screen5 from '/assets/images/layout/editor/screen5.png';
-import Screen6 from '/assets/images/layout/editor/screen6.png';
-import ImmersiveMode from '/assets/images/layout/editor/immersive-mode.png';
+import Screen1 from '/assets/images/layout/editor/overview.png';
+import Screen2 from '/assets/images/layout/editor/explorer.png';
+import Screen3 from '/assets/images/layout/editor/options.png';
+import Screen4 from '/assets/images/layout/editor/inspector.png';
+import Screen5 from '/assets/images/layout/editor/console.png';
+import Screen6 from '/assets/images/layout/editor/main-view.png';
+import ImmersiveVideo from '/assets/images/layout/editor/immersive.webm';
 import Workspace from '/assets/images/layout/editor/workspace.png';
 import {faDiagramProject, faSwatchbook, faShelves, faCog, faTowerCell} from "@fortawesome/pro-solid-svg-icons";
 </script>
@@ -162,4 +162,4 @@ Une fois fermés, les panneaux apparaissent comme une fine barre avec leur nom s
 
 Le mode immersif est idéal lorsque vous travaillez sur des mises en page complexes ou que vous souhaitez une vue dégagée du canevas.
 
-<DImage :src="ImmersiveMode" :width="2560" :height="1440" alt="Éditeur en mode immersif avec panneaux cachés" />
+<DImage :src="ImmersiveVideo" :width="1280" :height="720" alt="Éditeur en mode immersif avec panneaux cachés" />

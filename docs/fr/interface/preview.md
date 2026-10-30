@@ -3,6 +3,8 @@ description: "Prévisualisez pages et composants dans l'éditeur : modes Builder
 ---
 
 <script setup lang="ts">
+import ResizeVideo from '/assets/images/layout/preview/resize.webm';
+import DeviceSwitchVideo from '/assets/images/layout/preview/device-switch.webm';
 import Frame from '/assets/images/layout/preview/frame.png';
 import DeviceMenu from '/assets/images/layout/preview/device-menu.png';
 import {faBan, faCode, faEye, faLock, faText, faWrench, faBolt} from "@fortawesome/pro-solid-svg-icons";
@@ -76,6 +78,16 @@ Le bouton d'appareil en haut du cadre (**Preview device**) choisit la taille du 
 <DImage
   :src="DeviceMenu" :width="1280" :height="720"
   alt="Menu Preview device avec Fit, Phone, Tablet, Laptop, Desktop et les breakpoints xs à xxl"
+/>
+
+<DImage
+  :src="DeviceSwitchVideo" :width="1280" :height="720"
+  alt="Passage de l'aperçu de Fit à Phone et retour avec le menu des appareils"
+/>
+
+<DImage
+  :src="ResizeVideo" :width="1280" :height="720"
+  alt="Glisser la poignée du cadre pour le redimensionner, avec l'indication de largeur et de breakpoint"
 />
 
 - **Rotate** passe un téléphone ou une tablette en paysage.

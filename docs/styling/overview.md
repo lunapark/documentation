@@ -3,8 +3,10 @@ description: "Configure the visual appearance of Luna Park applications with glo
 ---
 
 <script setup lang="ts">
+import TokenLinkVideo from '/assets/images/layout/styling/token-link.webm';
+import VariableBindVideo from '/assets/images/layout/styling/variable-bind.webm';
 import TokensWorkspace from '/assets/images/layout/styling/tokens-workspace.png';
-import Screen2 from '/assets/images/layout/styling/screen2.png';
+import Screen2 from '/assets/images/layout/styling/style-section.png';
 import QuickStylePanels from '/assets/images/layout/styling/quick-style-panels.png';
 </script>
 
@@ -35,7 +37,7 @@ _Note: All styling rules available in Luna Park correspond to the CSS rules foun
 
 For common edits, some style categories are accessible directly from the **layout builder**, without going through the inspector's style tab. Select an element to bring up the `quick style panels` (border, background, size, spacing, text, shadow, etc.).
 
-<DImage :src="QuickStylePanels" :width="236" :height="178" alt="Quick style panels displayed next to a selected element in the layout builder" />
+<DImage :src="QuickStylePanels" :width="1280" :height="720" alt="Quick style panels displayed next to a selected element in the layout builder" />
 
 ## Design Tokens
 
@@ -53,7 +55,10 @@ To use a design token:
 2. Click the link icon to switch to design token selection mode.
 3. Select the design token you want to use.
 
-![Linking a style property to a design token from the inspector](/assets/images/layout/styling/gif1.gif){width=990 height=369}
+<DImage
+  :src="TokenLinkVideo" :width="1280" :height="720"
+  alt="Linking a style property to a design token from the inspector"
+/>
 
 ## Style Variables
 
@@ -65,6 +70,9 @@ To use a variable in a property of your component:
 2. Click the lightning icon to switch to variable selection mode.
 3. Select the variable you want to use.
 
-![Binding a style property to a variable with the lightning icon](/assets/images/layout/styling/gif2.gif){width=990 height=504}
+<DImage
+  :src="VariableBindVideo" :width="1280" :height="720"
+  alt="Binding a style property to a variable with the lightning icon"
+/>
 
 _Note: Only variables matching the expected type for this property will be available in the list. For example, a numeric variable will only appear for a property expected to be a number._

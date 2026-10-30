@@ -3,6 +3,7 @@ description: "Déboguez vos scripts visuels dans Luna Park avec les points d'arr
 ---
 
 <script setup lang="ts">
+import SteppingVideo from '/assets/images/visual-scripting/debugging/stepping.webm';
 import ToggleBreakpoint from '/assets/images/visual-scripting/debugging/toggle-breakpoint.png';
 import Breakpoint from '/assets/images/visual-scripting/debugging/breakpoint.png';
 import Paused from '/assets/images/visual-scripting/debugging/paused.png';
@@ -55,6 +56,11 @@ alt="Exécution en pause sur un nœud de fonction, avec la barre de débogage en
 <DImage
 :src="StepInto" :width="1280" :height="720"
 alt="Exécution en pause sur le premier nœud de la fonction appelée"
+/>
+
+<DImage
+  :src="SteppingVideo" :width="1280" :height="720"
+  alt="Le clic sur le bouton s'arrête sur le point d'arrêt, puis Step into function et Continue"
 />
 
 Quand plusieurs flux atteignent un point d'arrêt en même temps, ils se mettent en pause l'un après l'autre.

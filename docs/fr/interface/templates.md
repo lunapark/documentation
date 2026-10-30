@@ -3,10 +3,14 @@ description: "Utilisez des éléments de template conditionnels, répétés et d
 ---
 
 <script setup lang="ts">
+import ValuesImage from '/assets/images/layout/templates/values.png';
+import WinVideo from '/assets/images/layout/templates/win.webm';
+import ArticlesVariableImage from '/assets/images/layout/templates/articles-variable.png';
+import ForTemplateImage from '/assets/images/layout/templates/for-template.png';
 
-import Screen2 from '/assets/images/layout/templates/screen2.png';
-import Screen3 from '/assets/images/layout/templates/screen3.png';
-import Screen6 from '/assets/images/layout/templates/screen6.png';
+import Screen2 from '/assets/images/layout/templates/if-template.png';
+import Screen3 from '/assets/images/layout/templates/computed-graph.png';
+import Screen6 from '/assets/images/layout/templates/for-result.png';
 </script>
 
 # Modèles (ou `Templates`)
@@ -28,7 +32,10 @@ Dans cet exemple, nous allons afficher un message "Vous avez gagné" lorsque le 
 2. Dans le panneau **Inspecteur**, ajoutez une variable `Computed` appelée `afficherVictoire`.
 3. Définissez-la comme un **booléen** (vrai ou faux).
 
-![Inspecteur avec une variable score de type Number et une variable calculée displayWin de type Boolean](/assets/images/layout/templates/screen1.png){width=405 height=469}
+<DImage
+  :src="ValuesImage" :width="1280" :height="720"
+  alt="Inspecteur avec une variable score de type Number et une variable calculée displayWin de type Boolean"
+/>
 
 ### 2. Utiliser la Variable `Computed` dans l'Interface
 
@@ -39,7 +46,7 @@ Dans cet exemple, nous allons afficher un message "Vous avez gagné" lorsque le 
     - Si `afficherVictoire` est faux, le message ne sera pas affiché.
 
 <DImage
-:src="Screen2" :width="1216" :height="684"
+:src="Screen2" :width="1280" :height="720"
 alt="Élément Template avec une logique If liée à displayWin, contenant le texte You win"
 />
 
@@ -50,7 +57,7 @@ alt="Élément Template avec une logique If liée à displayWin, contenant le te
 3. Connectez le résultat de cette condition à la **variable `Computed` afficherVictoire**.
 
 <DImage
-:src="Screen3" :width="693" :height="351"
+:src="Screen3" :width="1280" :height="720"
 alt="Graphe de la variable calculée displayWin comparant le score à 10 avec un nœud A ≥ B"
 />
 
@@ -59,7 +66,10 @@ alt="Graphe de la variable calculée displayWin comparant le score à 10 avec un
 - Modifiez le score en utilisant les boutons de l'interface.
 - Lorsque le score atteint ou dépasse `10`, le message "Vous avez gagné" devrait apparaître automatiquement.
 
-![Mode aperçu : le score augmente jusqu'à l'apparition du message You win](/assets/images/layout/templates/gif1.gif){width=1265 height=607}
+<DImage
+  :src="WinVideo" :width="1280" :height="720"
+  alt="Mode aperçu : le score augmente jusqu'à l'apparition du message You win"
+/>
 
 ## Template For
 
@@ -73,7 +83,10 @@ Exemple : Afficher une liste d'articles
 2. Dans le panneau **Inspecteur**, ajoutez une variable de type **Tableau** (array) appelée `articles`.
 3. Remplissez cette variable avec des valeurs, par exemple : <br/> <DSchemaValue :value='["sushi", "onigiri", "takoyaki", "tsukune"]'/>.
 
-![Variable articles de type Array contenant sushi, onigiri, takoyaki et tsukune](/assets/images/layout/templates/screen4.png){width=417 height=505}
+<DImage
+  :src="ArticlesVariableImage" :width="1280" :height="720"
+  alt="Variable articles de type Array contenant sushi, onigiri, takoyaki et tsukune"
+/>
 
 ### 2. Configurer la Logique de Boucle
 
@@ -82,7 +95,10 @@ Exemple : Afficher une liste d'articles
 3. La logique For permet d'itérer sur chaque élément du tableau `articles`.
 4. Le `Template` exécutera son contenu une fois pour chaque article.
 
-![Inspecteur d'un élément Template avec une logique For itérant sur articles](/assets/images/layout/templates/screen5.png){width=401 height=264}
+<DImage
+  :src="ForTemplateImage" :width="1280" :height="720"
+  alt="Inspecteur d'un élément Template avec une logique For itérant sur articles"
+/>
 
 ### 3. Afficher les Éléments dans l'Interface
 
@@ -92,6 +108,6 @@ Exemple : Afficher une liste d'articles
 4. Maintenant, lorsque vous visualisez la page **Articles** dans l'interface, vous verrez chaque élément du tableau `articles` affiché dans un nouveau bloc.
 
 <DImage
-:src="Screen6" :width="1216" :height="684"
+:src="Screen6" :width="1280" :height="720"
 alt="Élément Variable lié à Template[].value, affichant chaque article dans l'aperçu"
 />

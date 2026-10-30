@@ -3,9 +3,10 @@ description: "Use CSS classes and Tailwind to extend Luna Park styling beyond na
 ---
 
 <script setup lang="ts">
+import CssInjection from '/assets/images/fundamentals/styling/css-injection.png';
 import {faTowerCell} from "@fortawesome/pro-solid-svg-icons";
-import screen9 from '/assets/images/fundamentals/styling/screen9.png';
-import screen10 from '/assets/images/fundamentals/styling/screen10.png';
+import screen9 from '/assets/images/fundamentals/styling/css-class.png';
+import screen10 from '/assets/images/fundamentals/styling/tailwind.png';
 </script>
 
 # Advanced Styles
@@ -46,6 +47,11 @@ Check that layout.css.at-scope.enabled is set to `true` in about:config
 }
 ```
 You can now use your class in any component!
+
+<DImage
+  :src="CssInjection" :width="1280" :height="720"
+  alt="Style section of the Injection workspace with the btn-primary class"
+/>
 
 <DImage
   :src="screen9" :width="1280" :height="720"

@@ -5,8 +5,8 @@ description: "Utilisez des tokens de style réutilisables pour garder une appare
 <script setup lang="ts">
 import TokensWorkspace from '/assets/images/layout/styling/tokens-workspace.png';
 import FontPicker from '/assets/images/layout/styling/font-picker.png';
-import Gif1 from '/assets/images/layout/styling/gif1.gif';
-import Gif2 from '/assets/images/layout/styling/gif2.gif';
+import TokenLinkVideo from '/assets/images/layout/styling/token-link.webm';
+import VariableBindVideo from '/assets/images/layout/styling/variable-bind.webm';
 import {faLink, faBolt, faSwatchbook} from "@fortawesome/pro-solid-svg-icons";
 </script>
 
@@ -63,7 +63,7 @@ Pour un breakpoint fixé à `1024px` :
 3. Sélectionnez le token de design que vous souhaitez utiliser.
 
 <DImage
-:src="Gif1" :width="990" :height="369"
+:src="TokenLinkVideo" :width="1280" :height="720"
 alt="Exemple d'utilisation de token"
 />
 
@@ -82,7 +82,7 @@ Contrairement aux tokens, qui sont statiques et globaux, les variables sont **co
 3. Sélectionnez la variable que vous souhaitez utiliser.
 
 <DImage
-:src="Gif2" :width="990" :height="504"
+:src="VariableBindVideo" :width="1280" :height="720"
 alt="Exemple d'utilisation de variable"
 />
 

@@ -3,12 +3,13 @@ description: "Create and use variables to store and manipulate data in visual sc
 ---
 
 <script setup lang="ts">
+import PreviewCounterVideo from '/assets/images/visual-scripting/variables/preview-counter.webm';
 import {LogicType} from "@luna-park/logicnodes";
 
-import Screen1 from '/assets/images/visual-scripting/variables/screen1.png';
-import Screen2 from '/assets/images/visual-scripting/variables/screen2.png';
-import Screen3 from '/assets/images/visual-scripting/variables/screen3.png';
-import Gif1 from '/assets/images/visual-scripting/variables/gif1.gif';
+import Screen1 from '/assets/images/visual-scripting/variables/score-variable.png';
+import Screen2 from '/assets/images/visual-scripting/variables/score-text.png';
+import Screen3 from '/assets/images/visual-scripting/variables/update-graph.png';
+import AddButtonVideo from '/assets/images/visual-scripting/variables/add-button.webm';
 </script>
 
 # Variables
@@ -50,7 +51,7 @@ A variable can also be **computed**: its value is recalculated automatically (se
 4. Give it an initial value in the **Default** section (e.g., `0`).
 
 <DImage 
-  :src="Screen1" :width="1216" :height="684"
+  :src="Screen1" :width="1280" :height="720"
   alt="Inspector with a score variable of type Number and a default value of 0"
 />
 
@@ -60,7 +61,7 @@ A variable can also be **computed**: its value is recalculated automatically (se
 2. Select this element and link it to a variable in the inspection panel.
 
 <DImage
-  :src="Screen2" :width="1216" :height="684"
+  :src="Screen2" :width="1280" :height="720"
   alt="Variable element bound to the score variable in the inspector"
 />
 
@@ -70,7 +71,7 @@ A variable can also be **computed**: its value is recalculated automatically (se
 2. Configure the buttons to trigger an **On Click** event.
 
 <DImage 
-  :src="Gif1" :width="995" :height="537"
+  :src="AddButtonVideo" :width="1280" :height="720"
   alt="Adding plus and minus buttons around the score and setting their On Click event"
 />
 
@@ -84,7 +85,7 @@ A variable can also be **computed**: its value is recalculated automatically (se
 3. Repeat the process for the `-` button, but use the `Subtract (-)` node instead of `Add (+)`.
 
 <DImage
-:src="Screen3" :width="765" :height="380"
+:src="Screen3" :width="1280" :height="720"
 alt="On Click on the plus button sets score to score + 1"
 />
 
@@ -94,7 +95,10 @@ alt="On Click on the plus button sets score to score + 1"
 - Click the `+` and `-` buttons in the interface.
 - You should see the variable's value update in real-time.
 
-![Preview mode: clicking the plus and minus buttons updates the score](/assets/images/visual-scripting/variables/gif2.gif){width=1265 height=607}
+<DImage
+  :src="PreviewCounterVideo" :width="1280" :height="720"
+  alt="Preview mode: clicking the plus and minus buttons updates the score"
+/>
 
 ## Variable Reactivity
 

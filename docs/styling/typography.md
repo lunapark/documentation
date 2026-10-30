@@ -4,7 +4,7 @@ description: "Configure text tags, fonts, sizes, weights, spacing, and alignment
 
 <script setup lang="ts">
 import {faLink} from "@fortawesome/pro-solid-svg-icons";
-import screen1 from '/assets/images/fundamentals/styling/screen1.png';
+import screen1 from '/assets/images/fundamentals/styling/semantic-tags.png';
 </script>
 
 # Typography
@@ -21,7 +21,7 @@ Each text element can be rendered with a different HTML tag depending on its rol
 - `h1`, `h2`, `h3`: headings.
 
 <DImage
-  :src="screen1" :width="236" :height="160"
+  :src="screen1" :width="1280" :height="720"
   alt="Example of semantic usage"
 />
 

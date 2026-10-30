@@ -3,6 +3,12 @@ description: "Understand the graph canvas and connect nodes to build visual logi
 ---
 
 <script setup lang="ts">
+import NodeKindsImage from '/assets/images/visual-scripting/graph/node-kinds.png';
+import ScoreGraphImage from '/assets/images/visual-scripting/graph/score-graph.png';
+import TypeHintsImage from '/assets/images/visual-scripting/graph/type-hints.png';
+import ValueHintsImage from '/assets/images/visual-scripting/graph/value-hints.png';
+import HintsVideo from '/assets/images/visual-scripting/graph/hints.webm';
+import ConnectVideo from '/assets/images/visual-scripting/graph/connect.webm';
 import {LogicType} from "@luna-park/logicnodes";
 </script>
 
@@ -39,7 +45,10 @@ Nodes are the basic logical building blocks that can be placed on the graph. The
 - **Function Nodes**: These nodes have a blue background. They have input and/or output execution anchors. They execute when their input execution anchor is triggered.
 - **Operation Nodes**: These nodes have a dark gray background. They do not have input and/or output execution anchors. They execute when their result anchor is called by a function node.
 
-![Fetch function node next to a Split operation node](/assets/images/visual-scripting/graph/screen2.png){width=674 height=239}
+<DImage
+  :src="NodeKindsImage" :width="1280" :height="720"
+  alt="Fetch function node next to a Split operation node"
+/>
 
 | Icon                                                                                          | Action                   | Description                   |
 |-----------------------------------------------------------------------------------------------|-------------------------|------------------------------|
@@ -90,11 +99,19 @@ Generally, you will connect input and output anchors of the same type.
 
 However, you can also connect an output anchor to a less defined input anchor. For example, it is possible to connect an output anchor of an array of numbers to an input anchor of an array of unknown type.
 
+<DImage
+  :src="ConnectVideo" :width="1280" :height="720"
+  alt="Dragging a wire from the execution output of Set score to the Log node"
+/>
+
 ## Example of Logic in the Graph
 
 In this example, we have a simple logic built with nodes and links in the graph.
 
-![Graph where On Click sets score to score + 1, then logs it](/assets/images/visual-scripting/graph/screen3.png){width=1129 height=431}
+<DImage
+  :src="ScoreGraphImage" :width="1280" :height="720"
+  alt="Graph where On Click sets score to score + 1, then logs it"
+/>
 
 ### Step-by-Step
 
@@ -147,11 +164,22 @@ Inspection allows you to check the **values** and **types** held by the anchors 
 
 **Type Inspection**: To visualize data types. `Ctrl + Alt`
 
-![The same graph with type inspection showing each anchor's type](/assets/images/visual-scripting/graph/screen4.png){width=1124 height=402}
+<DImage
+  :src="TypeHintsImage" :width="1280" :height="720"
+  alt="The same graph with type inspection showing each anchor's type"
+/>
 
 **Value Inspection**: To display the actual values of the anchors. `Ctrl + Space` or `Ctrl + Q`
 
-![The same graph with value inspection showing each anchor's value](/assets/images/visual-scripting/graph/screen5.png){width=1124 height=407}
+<DImage
+  :src="ValueHintsImage" :width="1280" :height="720"
+  alt="The same graph with value inspection showing each anchor's value"
+/>
+
+<DImage
+  :src="HintsVideo" :width="1280" :height="720"
+  alt="Holding Ctrl + Alt shows the types of the anchors, Ctrl + Space their values"
+/>
 
 When using value inspection, the values are:
 - Calculated in real-time for operation nodes.

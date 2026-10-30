@@ -6,7 +6,7 @@ description: "Ajoutez, imbriquez et réorganisez les éléments de mise en page 
 import LayoutTree from '/assets/images/layout/builder/layout-tree.png';
 import ContextMenu from '/assets/images/layout/builder/context-menu.png';
 import AddNuxtButton from '/assets/images/layout/builder/add-nuxt-button.png';
-import InsertMode from '/assets/images/layout/builder/insert-mode.png';
+import InsertVideo from '/assets/images/layout/builder/insert.webm';
 </script>
 
 # Builder
@@ -62,7 +62,7 @@ alt="Menu contextuel d'un élément avec Create before, Create after, Create ins
 Activez **Show insert mode** dans la barre d'outils sous la vue principale. Des points d'insertion apparaissent autour et à l'intérieur des éléments du canevas. Cliquez sur l'un d'eux pour ouvrir la liste des éléments et insérer l'élément à cet endroit.
 
 <DImage
-:src="InsertMode" :width="1280" :height="720"
+:src="InsertVideo" :width="1280" :height="720"
 alt="Mode insertion : des points d'insertion bleus dans le canevas et la liste des éléments ouverte après un bouton"
 />
 

@@ -3,12 +3,13 @@ description: "Créez et utilisez des variables pour stocker et manipuler des don
 ---
 
 <script setup lang="ts">
+import PreviewCounterVideo from '/assets/images/visual-scripting/variables/preview-counter.webm';
 import {LogicType} from "@luna-park/logicnodes";
 
-import Screen1 from '/assets/images/visual-scripting/variables/screen1.png';
-import Screen2 from '/assets/images/visual-scripting/variables/screen2.png';
-import Screen3 from '/assets/images/visual-scripting/variables/screen3.png';
-import Gif1 from '/assets/images/visual-scripting/variables/gif1.gif';
+import Screen1 from '/assets/images/visual-scripting/variables/score-variable.png';
+import Screen2 from '/assets/images/visual-scripting/variables/score-text.png';
+import Screen3 from '/assets/images/visual-scripting/variables/update-graph.png';
+import AddButtonVideo from '/assets/images/visual-scripting/variables/add-button.webm';
 </script>
 
 # Variables
@@ -50,7 +51,7 @@ Une variable peut aussi être **calculée** : sa valeur est recalculée automati
 4. Donnez-lui une valeur initiale dans la section **Défaut** (par exemple, `0`).
 
 <DImage
-:src="Screen1" :width="1216" :height="684"
+:src="Screen1" :width="1280" :height="720"
 alt="Inspecteur avec une variable score de type Number et une valeur par défaut de 0"
 />
 
@@ -60,7 +61,7 @@ alt="Inspecteur avec une variable score de type Number et une valeur par défaut
 2. Sélectionnez cet élément et liez-le à une variable dans le panneau d'inspection.
 
 <DImage
-:src="Screen2" :width="1216" :height="684"
+:src="Screen2" :width="1280" :height="720"
 alt="Élément Variable lié à la variable score dans l'inspecteur"
 />
 
@@ -70,7 +71,7 @@ alt="Élément Variable lié à la variable score dans l'inspecteur"
 2. Configurez les boutons pour déclencher un événement **On Click**.
 
 <DImage
-:src="Gif1" :width="995" :height="537"
+:src="AddButtonVideo" :width="1280" :height="720"
 alt="Ajout des boutons plus et moins autour du score et configuration de leur événement On Click"
 />
 
@@ -84,7 +85,7 @@ alt="Ajout des boutons plus et moins autour du score et configuration de leur é
 3. Répétez le processus pour le bouton `-`, mais utilisez le nœud `Subtract (-)` au lieu de `Add (+)`.
 
 <DImage
-:src="Screen3" :width="765" :height="380"
+:src="Screen3" :width="1280" :height="720"
 alt="On Click sur le bouton plus définit score à score + 1"
 />
 
@@ -94,7 +95,10 @@ alt="On Click sur le bouton plus définit score à score + 1"
 - Cliquez sur les boutons `+` et `-` dans l'interface.
 - Vous devriez voir la valeur de la variable se mettre à jour en temps réel.
 
-![Mode aperçu : les boutons plus et moins mettent à jour le score](/assets/images/visual-scripting/variables/gif2.gif){width=1265 height=607}
+<DImage
+  :src="PreviewCounterVideo" :width="1280" :height="720"
+  alt="Mode aperçu : les boutons plus et moins mettent à jour le score"
+/>
 
 ## Réactivité des variables
 

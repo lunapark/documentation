@@ -6,7 +6,7 @@ description: "Construisez votre première interaction dans Luna Park en 5 étape
 import AddNuxtButton from '/assets/images/layout/builder/add-nuxt-button.png';
 import AddEvent from '/assets/images/layout/events/add-event.png';
 import ClickLogGraph from '/assets/images/layout/events/click-log-graph.png';
-import PreviewConsole from '/assets/images/layout/events/preview-console.png';
+import PreviewLogVideo from '/assets/images/layout/events/preview-log.webm';
 </script>
 
 # Votre première interaction
@@ -67,7 +67,7 @@ alt="On Click (Hello button) connecté à un nœud Log avec la valeur Hello!"
 Passez en mode **Preview** et cliquez sur **Say hello**. `"Hello!"` apparaît dans la **console** en bas de l'éditeur, ainsi que dans la console de votre navigateur.
 
 <DImage
-:src="PreviewConsole" :width="1280" :height="720"
+:src="PreviewLogVideo" :width="1280" :height="720"
 alt="Mode Preview : la console affiche Hello! après un clic sur le bouton"
 />
 

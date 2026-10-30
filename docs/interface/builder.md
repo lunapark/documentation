@@ -6,7 +6,7 @@ description: "Add, nest, and reorder layout elements in Builder mode: the layout
 import LayoutTree from '/assets/images/layout/builder/layout-tree.png';
 import ContextMenu from '/assets/images/layout/builder/context-menu.png';
 import AddNuxtButton from '/assets/images/layout/builder/add-nuxt-button.png';
-import InsertMode from '/assets/images/layout/builder/insert-mode.png';
+import InsertVideo from '/assets/images/layout/builder/insert.webm';
 </script>
 
 # Builder
@@ -62,7 +62,7 @@ alt="Context menu of a layout element with Create before, Create after, Create i
 Toggle **Show insert mode** in the toolbar under the main view. Insertion points appear around and inside the elements of the canvas. Click one to open the element list and insert the element right there.
 
 <DImage
-:src="InsertMode" :width="1280" :height="720"
+:src="InsertVideo" :width="1280" :height="720"
 alt="Insert mode: blue insertion points on the canvas and the element list opened after a button"
 />
 

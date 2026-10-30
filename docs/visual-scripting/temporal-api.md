@@ -38,4 +38,4 @@ The **Time**, **DateTime**, and **Duration** types follow the same naming conven
 
 The `Create Duration` node is different: its inputs are optional. You check the units you want (`years`, `months`, `weeks`, `days`, `hours`, `minutes`, `seconds`, `milliseconds`, `microseconds`, `nanoseconds`) and each check adds a numeric input on the node. The output is an ISO `Duration`.
 
-<DImage :src="CreateDuration" :width="593" :height="418" alt="Create Duration node with some units checked and their inputs" />
+<DImage :src="CreateDuration" :width="1280" :height="720" alt="Create Duration node with some units checked and their inputs" />

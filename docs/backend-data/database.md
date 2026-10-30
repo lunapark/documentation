@@ -3,9 +3,9 @@ description: "Use Luna Park's built-in PostgreSQL database to create tables, sto
 ---
 
 <script setup lang="ts">
+import EditRowVideo from '/assets/images/data/edit-row.webm';
 import Constraints from '/assets/images/data/constraints.png';
 import Rows from '/assets/images/data/rows.png';
-import Panel from "/assets/images/data/panel.png";
 import FindNode from "/assets/images/data/find-node.png";
 import QueryBuilderGraph from "/assets/images/data/query-builder-graph.png";
 import ArticlesTable from "/assets/images/data/articles-table.png";
@@ -27,7 +27,6 @@ The `id`, `created_at`, and `updated_at` columns are added automatically to ever
 
 In the editor, the rows are saved in the Database file, with the project. Rows written by logic you run in the editor (a route test, a cron run) are saved too.
 
-<DImage :src="Panel" :width="2560" :height="1440" alt="Database editor showing a table with its columns" />
 
 ### Column types
 
@@ -89,6 +88,11 @@ Open a Database file to see its rows, the most recently updated first.
   alt="Rows of a products table with Add row, the search field, and the pagination"
 />
 
+<DImage
+  :src="EditRowVideo" :width="1280" :height="720"
+  alt="Double-clicking a row of the articles table, editing its title, and saving with Enter"
+/>
+
 ## Querying the database
 
 Database nodes are used **inside backend logic**: [routes](./routes), [crons](./cron), and backend [scripts](../logic/scripts). The interface calls a route, which runs the query and returns the result.
@@ -106,7 +110,7 @@ Luna Park provides one node per common operation. Configuration is visual (table
 
 Parameters plug into the input anchors: an id coming from a variable, a filter value coming from an input, etc.
 
-<DImage :src="FindNode" :width="2560" :height="1440" alt="DB Find node configured on a table, with its parameters and output anchor" />
+<DImage :src="FindNode" :width="1280" :height="720" alt="DB Find node configured on a table, with its parameters and output anchor" />
 
 `DB Transaction` runs the operations wired to its **Run** output all at once: if one fails, none is saved. **Then** runs after the changes are saved.
 
@@ -152,7 +156,7 @@ Execution nodes:
 
 For example, to fetch users under 30: a `DB From` points to the table, a `DB Where Condition` defines `age < 30`, a `DB Where` receives the query and the condition, and a `DB Query Select` runs the whole thing.
 
-<DImage :src="QueryBuilderGraph" :width="2560" :height="1440" alt="Graph with DB From, DB Where Condition, DB Where, and DB Query Select chained together" />
+<DImage :src="QueryBuilderGraph" :width="1280" :height="720" alt="Graph with DB From, DB Where Condition, DB Where, and DB Query Select chained together" />
 
 ::: info Query preview
 To see the SQL that actually runs, select the `DB Query Select` node and turn on **Preview SQL** in its config. The SQL is shown under the node.
@@ -194,6 +198,6 @@ To follow the guided example on the [Routes](./routes) page, create an `articles
 2. Add a `title` column (String).
 3. Insert a few test rows.
 
-<DImage :src="ArticlesTable" :width="2560" :height="1440" alt="articles table with its columns and a few example rows" />
+<DImage :src="ArticlesTable" :width="1280" :height="720" alt="articles table with its columns and a few example rows" />
 
 The rest (exposing these articles through a route and rendering them in the interface) is covered on the [Routes](./routes) page.

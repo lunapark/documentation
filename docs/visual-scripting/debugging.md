@@ -3,6 +3,7 @@ description: "Debug visual scripts in Luna Park with breakpoints, step-by-step e
 ---
 
 <script setup lang="ts">
+import SteppingVideo from '/assets/images/visual-scripting/debugging/stepping.webm';
 import ToggleBreakpoint from '/assets/images/visual-scripting/debugging/toggle-breakpoint.png';
 import Breakpoint from '/assets/images/visual-scripting/debugging/breakpoint.png';
 import Paused from '/assets/images/visual-scripting/debugging/paused.png';
@@ -55,6 +56,11 @@ alt="Execution paused on a function node, with the debugger bar at the bottom of
 <DImage
 :src="StepInto" :width="1280" :height="720"
 alt="Execution paused on the first node inside the called function"
+/>
+
+<DImage
+  :src="SteppingVideo" :width="1280" :height="720"
+  alt="Clicking the button pauses on the breakpoint, then Step into function and Continue"
 />
 
 When several flows reach a breakpoint at the same time, they pause one after the other.

@@ -3,11 +3,11 @@ description: "Add depth and visual polish with radius, shadows, borders, and oth
 ---
 
 <script setup lang="ts">
-import Screen6 from "/assets/images/fundamentals/styling/screen6.png";
-import Screen7 from "/assets/images/fundamentals/styling/screen7.png";
-import Screen8 from "/assets/images/fundamentals/styling/screen8.png";
-import Gif1 from "/assets/images/fundamentals/styling/gif1.gif";
-import Gif2 from "/assets/images/fundamentals/styling/gif2.gif";
+import Screen6 from "/assets/images/fundamentals/styling/radius.png";
+import Screen7 from "/assets/images/fundamentals/styling/borders.png";
+import Screen8 from "/assets/images/fundamentals/styling/opacity.png";
+import TransitionVideo from '/assets/images/fundamentals/styling/transition.webm';
+import HoverVideo from '/assets/images/fundamentals/styling/hover.webm';
 import ShadowPanel from "/assets/images/layout/styling/shadow-panel.png";
 </script>
 
@@ -54,7 +54,7 @@ alt="Examples of border styles"
 | **Offset X/Y** | Horizontal and vertical offset. |
 | **Color** | Shadow color. |
 
-<DImage :src="ShadowPanel" :width="227" :height="56" alt="Shadow properties configuration panel in the Luna Park editor" />
+<DImage :src="ShadowPanel" :width="1280" :height="720" alt="Shadow properties configuration panel in the Luna Park editor" />
 
 ---
 
@@ -91,7 +91,7 @@ To activate *hover* mode, click the **hand** icon in the properties bar.
 A new style state then appears, letting you freely modify properties (color, shadow, opacity, etc.) applied only on hover.
 
 <DImage
-:src="Gif2" :width="1090" :height="558"
+:src="HoverVideo" :width="1280" :height="720"
 alt="Activating hover style in the Luna Park editor"
 />
 
@@ -107,7 +107,7 @@ alt="Activating hover style in the Luna Park editor"
 | **Delay** | Defines the delay before the effect starts. |
 
 <DImage
-:src="Gif1" :width="1090" :height="558"
+:src="TransitionVideo" :width="1280" :height="720"
 alt="Example of transition applied to a button"
 />
 

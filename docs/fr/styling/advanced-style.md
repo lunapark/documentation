@@ -3,9 +3,10 @@ description: "Utilisez les classes CSS et Tailwind pour aller au-delà du style 
 ---
 
 <script setup lang="ts">
+import CssInjection from '/assets/images/fundamentals/styling/css-injection.png';
 import {faTowerCell} from "@fortawesome/pro-solid-svg-icons";
-import Screen9 from "/assets/images/fundamentals/styling/screen9.png";
-import Screen10 from "/assets/images/fundamentals/styling/screen10.png";
+import Screen9 from "/assets/images/fundamentals/styling/css-class.png";
+import Screen10 from "/assets/images/fundamentals/styling/tailwind.png";
 </script>
 
 # Styles avancés
@@ -46,6 +47,11 @@ Vérifiez que layout.css.at-scope.enabled est à `true` dans about:config
 }
 ```
 Vous pouvez désormais utiliser votre classe dans n'importe quel composant!
+
+<DImage
+  :src="CssInjection" :width="1280" :height="720"
+  alt="Section Style du workspace Injection avec la classe btn-primary"
+/>
 
 <DImage
 :src="Screen9" :width="1280" :height="720"

@@ -3,6 +3,8 @@ description: "Preview pages and components in the editor: Builder and Preview mo
 ---
 
 <script setup lang="ts">
+import ResizeVideo from '/assets/images/layout/preview/resize.webm';
+import DeviceSwitchVideo from '/assets/images/layout/preview/device-switch.webm';
 import Frame from '/assets/images/layout/preview/frame.png';
 import DeviceMenu from '/assets/images/layout/preview/device-menu.png';
 import {faBan, faCode, faEye, faLock, faText, faWrench, faBolt} from "@fortawesome/pro-solid-svg-icons";
@@ -76,6 +78,16 @@ The device button at the top of the frame (**Preview device**) picks the size of
 <DImage
   :src="DeviceMenu" :width="1280" :height="720"
   alt="Preview device menu with Fit, Phone, Tablet, Laptop, Desktop, and the xs to xxl breakpoints"
+/>
+
+<DImage
+  :src="DeviceSwitchVideo" :width="1280" :height="720"
+  alt="Switching the preview from Fit to Phone and back with the device menu"
+/>
+
+<DImage
+  :src="ResizeVideo" :width="1280" :height="720"
+  alt="Dragging the handle of the frame to resize it, with the width and breakpoint hint"
 />
 
 - **Rotate** switches a phone or a tablet to landscape.

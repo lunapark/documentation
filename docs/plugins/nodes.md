@@ -48,7 +48,7 @@ Note that every input key must start with `in_`, and every output key must start
 
 This node will be displayed like this:
 <DImage
-  :src="functionNode" :width="293" :height="159"
+  :src="functionNode" :width="1280" :height="720"
   alt="Function node"
 />
 
@@ -82,7 +82,7 @@ export const myOperationNode = makeLogicNode({
 
 This node will be displayed like this:
 <DImage
-  :src="operationNode" :width="295" :height="138"
+  :src="operationNode" :width="1280" :height="720"
   alt="Operation node"
 />
 

@@ -3,13 +3,13 @@ description: "Learn how to use the Luna Park editor's panels, top bar, modes, an
 ---
 
 <script setup lang="ts">
-import Screen1 from '/assets/images/layout/editor/screen1.png';
-import Screen2 from '/assets/images/layout/editor/screen2.png';
-import Screen3 from '/assets/images/layout/editor/screen3.png';
-import Screen4 from '/assets/images/layout/editor/screen4.png';
-import Screen5 from '/assets/images/layout/editor/screen5.png';
-import Screen6 from '/assets/images/layout/editor/screen6.png';
-import ImmersiveMode from '/assets/images/layout/editor/immersive-mode.png';
+import Screen1 from '/assets/images/layout/editor/overview.png';
+import Screen2 from '/assets/images/layout/editor/explorer.png';
+import Screen3 from '/assets/images/layout/editor/options.png';
+import Screen4 from '/assets/images/layout/editor/inspector.png';
+import Screen5 from '/assets/images/layout/editor/console.png';
+import Screen6 from '/assets/images/layout/editor/main-view.png';
+import ImmersiveVideo from '/assets/images/layout/editor/immersive.webm';
 import Workspace from '/assets/images/layout/editor/workspace.png';
 import {faDiagramProject, faSwatchbook, faShelves, faCog, faTowerCell} from "@fortawesome/pro-solid-svg-icons";
 </script>
@@ -162,4 +162,4 @@ Once closed, the panels appear as a thin bar with their name on the edges of the
 
 Immersive mode is ideal when working on complex layouts or when you want an unobstructed view of the canvas.
 
-<DImage :src="ImmersiveMode" :width="2560" :height="1440" alt="Editor in immersive mode with panels hidden" />
+<DImage :src="ImmersiveVideo" :width="1280" :height="720" alt="Editor in immersive mode with panels hidden" />

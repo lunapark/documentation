@@ -3,11 +3,11 @@ description: "Ajoutez profondeur et finition visuelle avec les rayons, ombres, b
 ---
 
 <script setup lang="ts">
-import Screen6 from "/assets/images/fundamentals/styling/screen6.png";
-import Screen7 from "/assets/images/fundamentals/styling/screen7.png";
-import Screen8 from "/assets/images/fundamentals/styling/screen8.png";
-import Gif1 from "/assets/images/fundamentals/styling/gif1.gif";
-import Gif2 from "/assets/images/fundamentals/styling/gif2.gif";
+import Screen6 from "/assets/images/fundamentals/styling/radius.png";
+import Screen7 from "/assets/images/fundamentals/styling/borders.png";
+import Screen8 from "/assets/images/fundamentals/styling/opacity.png";
+import TransitionVideo from '/assets/images/fundamentals/styling/transition.webm';
+import HoverVideo from '/assets/images/fundamentals/styling/hover.webm';
 import ShadowPanel from "/assets/images/layout/styling/shadow-panel.png";
 </script>
 
@@ -54,7 +54,7 @@ alt="Exemples de styles de bordures"
 | **Offset X/Y** | Décalage horizontal et vertical. |
 | **Color** | Couleur de l'ombre. |
 
-<DImage :src="ShadowPanel" :width="227" :height="56" alt="Panneau de configuration des propriétés d'ombre dans l'éditeur Luna Park" />
+<DImage :src="ShadowPanel" :width="1280" :height="720" alt="Panneau de configuration des propriétés d'ombre dans l'éditeur Luna Park" />
 
 ---
 
@@ -91,7 +91,7 @@ Pour activer le mode *hover*, cliquez sur l'icône en forme de **main** dans la 
 Un nouvel état de style apparaît alors, vous permettant de modifier librement les propriétés (couleur, ombre, opacité, etc.) appliquées uniquement au survol.
 
 <DImage
-:src="Gif2" :width="1090" :height="558"
+:src="HoverVideo" :width="1280" :height="720"
 alt="Activation du style hover dans l'éditeur Luna Park"
 />
 
@@ -107,7 +107,7 @@ alt="Activation du style hover dans l'éditeur Luna Park"
 | **Delay** | Définit le délai avant le démarrage de l'effet. |
 
 <DImage
-:src="Gif1" :width="1090" :height="558"
+:src="TransitionVideo" :width="1280" :height="720"
 alt="Exemple de transition appliquée sur un bouton"
 />
 

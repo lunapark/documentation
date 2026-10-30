@@ -3,6 +3,7 @@ description: "Give each page a URL path, use dynamic segments like /product/:id,
 ---
 
 <script setup lang="ts">
+import PreviewLinkVideo from '/assets/images/layout/navigation/preview-link.webm';
 import PagePath from '/assets/images/layout/navigation/page-path.png';
 import NavigateNode from '/assets/images/layout/navigation/navigate-node.png';
 </script>
@@ -44,6 +45,11 @@ To navigate when the user clicks some content, insert a **Link** element (see [B
 - A full URL starting with `http://` or `https://` opens an external site, in a new tab by default.
 
 Put any content inside the link: text, an image, a whole card.
+
+<DImage
+  :src="PreviewLinkVideo" :width="1280" :height="720"
+  alt="Preview mode: clicking the About us link opens the About page"
+/>
 
 ## Navigating from the graph
 

@@ -3,9 +3,9 @@ description: "Utilisez la base PostgreSQL intégrée à Luna Park pour créer de
 ---
 
 <script setup lang="ts">
+import EditRowVideo from '/assets/images/data/edit-row.webm';
 import Constraints from '/assets/images/data/constraints.png';
 import Rows from '/assets/images/data/rows.png';
-import Panel from "/assets/images/data/panel.png";
 import FindNode from "/assets/images/data/find-node.png";
 import QueryBuilderGraph from "/assets/images/data/query-builder-graph.png";
 import ArticlesTable from "/assets/images/data/articles-table.png";
@@ -27,7 +27,6 @@ Les colonnes `id`, `created_at` et `updated_at` sont ajoutées automatiquement �
 
 Dans l'éditeur, les lignes sont enregistrées dans le fichier Database, avec le projet. Les lignes écrites par la logique exécutée dans l'éditeur (un test de route, une exécution de cron) sont enregistrées aussi.
 
-<DImage :src="Panel" :width="2560" :height="1440" alt="Éditeur de base de données avec une table et ses colonnes" />
 
 ### Types de colonnes
 
@@ -89,6 +88,11 @@ Ouvrez un fichier Database pour voir ses lignes, les plus récemment modifiées 
   alt="Lignes d'une table de produits avec Add row, le champ de recherche et la pagination"
 />
 
+<DImage
+  :src="EditRowVideo" :width="1280" :height="720"
+  alt="Double-clic sur une ligne de la table articles, modification du titre et enregistrement avec Entrée"
+/>
+
 ## Interroger la base
 
 Les nodes de base de données s'utilisent **dans la logique backend** : [routes](./routes), [crons](./cron) et [scripts](../logic/scripts) backend. L'interface appelle une route, qui exécute la requête et renvoie le résultat.
@@ -106,7 +110,7 @@ Luna Park fournit un node par opération courante. La configuration est visuelle
 
 Les paramètres se branchent sur les ancrages d'entrée : un id venant d'une variable, une valeur de filtre venant d'un input, etc.
 
-<DImage :src="FindNode" :width="2560" :height="1440" alt="Node DB Find configuré sur une table, avec ses paramètres et son ancrage de sortie" />
+<DImage :src="FindNode" :width="1280" :height="720" alt="Node DB Find configuré sur une table, avec ses paramètres et son ancrage de sortie" />
 
 `DB Transaction` exécute d'un coup les opérations branchées sur sa sortie **Run** : si l'une échoue, aucune n'est enregistrée. **Then** s'exécute une fois les modifications enregistrées.
 
@@ -152,7 +156,7 @@ Nodes d'exécution :
 
 Par exemple, pour récupérer les utilisateurs de moins de 30 ans : un `DB From` pointe sur la table, un `DB Where Condition` définit `age < 30`, un `DB Where` reçoit la query et la condition, et un `DB Query Select` exécute l'ensemble.
 
-<DImage :src="QueryBuilderGraph" :width="2560" :height="1440" alt="Graphe avec DB From, DB Where Condition, DB Where et DB Query Select chainés" />
+<DImage :src="QueryBuilderGraph" :width="1280" :height="720" alt="Graphe avec DB From, DB Where Condition, DB Where et DB Query Select chainés" />
 
 ::: info Aperçu de la requête
 Pour voir le SQL réellement exécuté, sélectionnez le node `DB Query Select` et activez **Preview SQL** dans sa config. Le SQL s'affiche sous le node.
@@ -194,6 +198,6 @@ Pour suivre l'exemple guidé de la page [Routes](./routes), créez une table `ar
 2. Ajoutez une colonne `title` (String).
 3. Insérez quelques lignes de test.
 
-<DImage :src="ArticlesTable" :width="2560" :height="1440" alt="Table articles avec ses colonnes et quelques lignes d'exemple" />
+<DImage :src="ArticlesTable" :width="1280" :height="720" alt="Table articles avec ses colonnes et quelques lignes d'exemple" />
 
 La suite (exposer ces articles via une route et les afficher dans l'interface) est détaillée sur la page [Routes](./routes).

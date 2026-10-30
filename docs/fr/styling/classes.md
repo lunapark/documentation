@@ -3,6 +3,7 @@ description: "Partagez un style entre plusieurs éléments d'un composant avec l
 ---
 
 <script setup lang="ts">
+import ExtractVideo from '/assets/images/styling/classes/extract.webm';
 import ClassesPanel from '/assets/images/styling/classes/classes-panel.png';
 import Target from '/assets/images/styling/classes/target.png';
 </script>
@@ -53,6 +54,11 @@ Quand l'élément sélectionné a une classe, le panneau **Style** affiche une l
 ## Extraire un style dans une classe
 
 Quand un élément a déjà le bon style, transformez-le en classe : dans son panneau **Style**, avec **Target** sur **This element**, cliquez sur **Extract style to a new class**. Tout le style de l'élément (media queries et survol compris) passe dans une nouvelle classe nommée d'après l'élément, la classe est appliquée à l'élément, et **Target** passe sur elle. Appliquez ensuite la classe aux autres éléments.
+
+<DImage
+  :src="ExtractVideo" :width="1280" :height="720"
+  alt="Extract style to a new class : le style de Featured card passe dans une classe featured-card"
+/>
 
 ## Style de classe et style d'élément
 

@@ -3,6 +3,8 @@ import { searchForWorkspaceRoot } from "vite";
 import { defineConfig, type HeadConfig } from "vitepress";
 import llmstxt from "vitepress-plugin-llms";
 
+import { webpImages } from "./webp";
+
 const hostname = "https://luna-park.app/docs";
 const ogLocales = { en: "en_US", fr: "fr_FR" };
 
@@ -438,7 +440,7 @@ export default defineConfig({
     vite: {
         plugins: [llmstxt({
             ignoreFiles: ["fr/**"]
-        })],
+        }), webpImages()],
         resolve: {
             alias: {
                 "@": path.resolve(__dirname, "src")

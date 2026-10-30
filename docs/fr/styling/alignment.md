@@ -3,10 +3,10 @@ description: "Organisez les éléments d'interface avec les contrôles de dispos
 ---
 
 <script setup lang="ts">
-import Screen2 from "/assets/images/fundamentals/styling/screen2.png";
-import Screen3 from "/assets/images/fundamentals/styling/screen3.png";
-import Screen4 from "/assets/images/fundamentals/styling/screen4.png";
-import Screen5 from "/assets/images/fundamentals/styling/screen5.png";
+import Screen2 from "/assets/images/fundamentals/styling/container.png";
+import Screen3 from "/assets/images/fundamentals/styling/display-panel.png";
+import FlexVideo from '/assets/images/fundamentals/styling/flex.webm';
+import Screen5 from "/assets/images/fundamentals/styling/absolute.png";
 </script>
 
 # Disposition et Alignement
@@ -61,7 +61,7 @@ Une fois un conteneur en mode Flex ou Grid, plusieurs propriétés contrôlent l
 | **Wrap** | Indique si les éléments doivent revenir à la ligne quand l’espace est insuffisant. |
 
 <DImage
-:src="Screen4" :width="1280" :height="720"
+:src="FlexVideo" :width="1280" :height="720"
 alt="Conteneur en flex avec direction, justify et align"
 />
 

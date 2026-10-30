@@ -3,10 +3,10 @@ description: "Arrange interface elements with Luna Park's CSS-based layout and a
 ---
 
 <script setup>
-import screen2 from '/assets/images/fundamentals/styling/screen2.png';
-import screen3 from '/assets/images/fundamentals/styling/screen3.png';
-import screen4 from '/assets/images/fundamentals/styling/screen4.png';
-import screen5 from '/assets/images/fundamentals/styling/screen5.png';
+import screen2 from '/assets/images/fundamentals/styling/container.png';
+import screen3 from '/assets/images/fundamentals/styling/display-panel.png';
+import FlexVideo from '/assets/images/fundamentals/styling/flex.webm';
+import screen5 from '/assets/images/fundamentals/styling/absolute.png';
 </script>
 
 # Layout and Alignment
@@ -61,7 +61,7 @@ Once a container is in Flex or Grid mode, several properties control the positio
 | **Wrap** | Indicates if elements should wrap to the next line when space is insufficient. |
 
 <DImage
-  :src="screen4" :width="1280" :height="720"
+  :src="FlexVideo" :width="1280" :height="720"
   alt="Flex container with direction, justify and align"
 />
 

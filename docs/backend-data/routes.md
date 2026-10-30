@@ -45,7 +45,7 @@ You pull what you need and pass it to the downstream nodes. For example, an `id`
 
 Plugins can add inputs: the [Users plugin](./auth) adds the connected `user`, for example.
 
-<DImage :src="InputNode" :width="241" :height="314" alt="Route input node with its headers/body/query/params anchors" />
+<DImage :src="InputNode" :width="1280" :height="720" alt="Route input node with its headers/body/query/params anchors" />
 
 ### Output
 
@@ -53,7 +53,7 @@ The output node receives what the route sends back to the caller. Whatever you p
 
 A route can have several output nodes, one per branch (found / not found, for example).
 
-<DImage :src="OutputNode" :width="238" :height="146" alt="Route output node wired to the result of a DB Find" />
+<DImage :src="OutputNode" :width="1280" :height="720" alt="Route output node wired to the result of a DB Find" />
 
 ### Errors
 
@@ -97,22 +97,22 @@ This example starts from an `articles` table (see [Database](./database#preparin
 4. Wire the **DB Find** output to the route output.
 5. Set the output `Response` to an `Array` of `Object`.
 
-<DImage :src="GetArticlesGraph" :width="2560" :height="1440" alt="get-articles route graph with the DB Find wired to the output" />
+<DImage :src="GetArticlesGraph" :width="1280" :height="720" alt="get-articles route graph with the DB Find wired to the output" />
 
 ### 2. Call the route from the interface
 
 1. In the page, create an `articles` variable typed as `Array` of `Object` with a `title` field (string). This way only the titles show up in the interface, without `id`, `created_at`, or `updated_at`.
 
-   <DImage :src="ArticlesVariable" :width="240" :height="145" alt="Variables panel with the articles variable defined as Array of Object with the title field" />
+   <DImage :src="ArticlesVariable" :width="1280" :height="720" alt="Variables panel with the articles variable defined as Array of Object with the title field" />
 
 2. In the graph, add an `On Mounted` node to trigger the call on page load, then add the `get-articles` node and wire its output to `Set articles`.
 
-   <DImage :src="OnMountedGraph" :width="793" :height="275" alt="Graph with On Mounted wired to get-articles, whose output is wired to Set articles" />
+   <DImage :src="OnMountedGraph" :width="1280" :height="720" alt="Graph with On Mounted wired to get-articles, whose output is wired to Set articles" />
 
 3. Add a `Template` component (`For` loop) in the interface and bind it to the `articles` variable.
 
-   <DImage :src="TemplateComponent" :width="231" :height="150" alt="Template component in the interface, bound to the articles variable" />
+   <DImage :src="TemplateComponent" :width="1280" :height="720" alt="Template component in the interface, bound to the articles variable" />
 
 4. Inside the template, create a `Block`, then add a variable bound to `Template[].value.title` to display each article's title.
 
-   <DImage :src="TemplateTitle" :width="2560" :height="1440" alt="Text inside the template bound to Template[].value.title, with the list of titles rendered" />
+   <DImage :src="TemplateTitle" :width="1280" :height="720" alt="Text inside the template bound to Template[].value.title, with the list of titles rendered" />

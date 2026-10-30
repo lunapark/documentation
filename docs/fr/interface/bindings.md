@@ -3,6 +3,8 @@ description: "Liez les propriétés, styles, classes, conditions et boucles des 
 ---
 
 <script setup lang="ts">
+import UppercaseVideo from '/assets/images/layout/bindings/uppercase.webm';
+import SwitchTypeVideo from '/assets/images/layout/bindings/switch-type.webm';
 import Picker from '/assets/images/layout/bindings/picker.png';
 import AddOperation from '/assets/images/layout/bindings/add-operation.png';
 import Operations from '/assets/images/layout/bindings/operations.png';
@@ -30,6 +32,11 @@ Survolez un champ : un petit onglet apparaît dans son coin inférieur droit. Su
 | <LIcon :icon="faEquals" /> **Constant** | Une valeur fixe, saisie dans le champ. |
 | <LIcon :icon="faLink" /> **Token** | Un [design token](../styling/tokens) (couleurs, longueurs, polices...) ou une [classe de composant](../styling/classes). Uniquement pour les champs qui acceptent des tokens. |
 | <LIcon :icon="faBolt" /> **Variable** | Une valeur du composant, choisie dans une liste. Elle met à jour le champ quand elle change. |
+
+<DImage
+  :src="SwitchTypeVideo" :width="1280" :height="720"
+  alt="Survol du champ label, passage en Variable et choix de productName"
+/>
 
 ::: warning
 Changer le type d'un champ supprime ses [opérations](#operations).
@@ -99,6 +106,11 @@ Les opérations s'exécutent dans l'ordre : chacune reçoit le résultat de la p
 <DImage
   :src="Operations" :width="1280" :height="720"
   alt="Label lié à price avec une opération Equals 0 et un If / else entre Free et Buy now, qui donne un String"
+/>
+
+<DImage
+  :src="UppercaseVideo" :width="1280" :height="720"
+  alt="Ajout d'une opération Uppercase au label : le texte du bouton passe en majuscules"
 />
 
 Chaque opération a :

@@ -3,6 +3,8 @@ description: "Bind element properties, styles, classes, conditions, and loops to
 ---
 
 <script setup lang="ts">
+import UppercaseVideo from '/assets/images/layout/bindings/uppercase.webm';
+import SwitchTypeVideo from '/assets/images/layout/bindings/switch-type.webm';
 import Picker from '/assets/images/layout/bindings/picker.png';
 import AddOperation from '/assets/images/layout/bindings/add-operation.png';
 import Operations from '/assets/images/layout/bindings/operations.png';
@@ -30,6 +32,11 @@ Hover a field: a small tab appears at its bottom-right corner. Hover the tab to 
 | <LIcon :icon="faEquals" /> **Constant** | A fixed value, typed in the field. |
 | <LIcon :icon="faLink" /> **Token** | A [design token](../styling/tokens) (colors, lengths, fonts...) or a [component class](../styling/classes). Only shown for fields that accept tokens. |
 | <LIcon :icon="faBolt" /> **Variable** | A value of the component, picked in a list. It updates the field when it changes. |
+
+<DImage
+  :src="SwitchTypeVideo" :width="1280" :height="720"
+  alt="Hovering the label field, switching it to Variable, and picking productName"
+/>
 
 ::: warning
 Switching the type of a field removes its [operations](#operations).
@@ -99,6 +106,11 @@ Operations run in order: each one receives the result of the previous one. For e
 <DImage
   :src="Operations" :width="1280" :height="720"
   alt="Label bound to price with an Equals 0 operation and an If / else between Free and Buy now, resulting in a String"
+/>
+
+<DImage
+  :src="UppercaseVideo" :width="1280" :height="720"
+  alt="Adding an Uppercase operation to the label: the button text becomes uppercase"
 />
 
 Each operation has:

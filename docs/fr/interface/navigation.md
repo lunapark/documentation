@@ -3,6 +3,7 @@ description: "Donner un chemin d'URL à chaque page, utiliser des segments dynam
 ---
 
 <script setup lang="ts">
+import PreviewLinkVideo from '/assets/images/layout/navigation/preview-link.webm';
 import PagePath from '/assets/images/layout/navigation/page-path.png';
 import NavigateNode from '/assets/images/layout/navigation/navigate-node.png';
 </script>
@@ -44,6 +45,11 @@ Pour naviguer quand l'utilisateur clique sur un contenu, insérez un élément *
 - Une URL complète commençant par `http://` ou `https://` ouvre un site externe, dans un nouvel onglet par défaut.
 
 Placez n'importe quel contenu dans le lien : du texte, une image, une carte entière.
+
+<DImage
+  :src="PreviewLinkVideo" :width="1280" :height="720"
+  alt="Mode Preview : cliquer sur le lien About us ouvre la page About"
+/>
 
 ## Naviguer depuis le graphe
 

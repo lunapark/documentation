@@ -8,7 +8,7 @@ import Connections from "/assets/images/getting-started/sidekick/connections.png
 import ProviderForm from "/assets/images/getting-started/sidekick/provider-form.png";
 import Modes from "/assets/images/getting-started/sidekick/modes.png";
 import ModelSelector from "/assets/images/getting-started/sidekick/model-selector.png";
-import Mention from "/assets/images/getting-started/sidekick/mention.png";
+import MentionVideo from '/assets/images/getting-started/sidekick/mention.webm';
 </script>
 
 # Sidekick
@@ -129,7 +129,7 @@ alt="Model selector open under the Sidekick prompt, with the AI and Model dropdo
 - Sidekick also knows the current panel and the selected element or nodes, so you can ask about "this button".
 
 <DImage
-:src="Mention" :width="1280" :height="720"
+:src="MentionVideo" :width="1280" :height="720"
 alt="File list opened by typing @ in the Sidekick prompt"
 />
 

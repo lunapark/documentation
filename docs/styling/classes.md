@@ -3,6 +3,7 @@ description: "Share a style between several elements of a component with compone
 ---
 
 <script setup lang="ts">
+import ExtractVideo from '/assets/images/styling/classes/extract.webm';
 import ClassesPanel from '/assets/images/styling/classes/classes-panel.png';
 import Target from '/assets/images/styling/classes/target.png';
 </script>
@@ -53,6 +54,11 @@ When the selected element has a class, the **Style** panel shows a **Target** dr
 ## Extract a style to a class
 
 When an element already has the right style, turn it into a class: in its **Style** panel, with the **Target** on **This element**, click **Extract style to a new class**. The whole style of the element (media queries and hover included) moves to a new class named after the element, the class is applied to the element, and the **Target** switches to it. Then apply the class to the other elements.
+
+<DImage
+  :src="ExtractVideo" :width="1280" :height="720"
+  alt="Extract style to a new class: the style of Featured card moves to a featured-card class"
+/>
 
 ## Class and element styles
 

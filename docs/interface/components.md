@@ -3,12 +3,13 @@ description: "Create reusable visual components for Luna Park application interf
 ---
 
 <script setup>
+import TypeToPageVideo from '/assets/images/layout/components/type-to-page.webm';
 import Model from '/assets/images/layout/components/model.png';
 import ModelBinding from '/assets/images/layout/components/model-binding.png';
 import {faSquare} from "@fortawesome/pro-regular-svg-icons";
 import { faBolt, faBox, faGear, faPuzzlePiece, faQuoteLeft, faCode } from "@fortawesome/pro-solid-svg-icons";
 
-import Screen1 from '/assets/images/layout/components/screen1.png';
+import Screen1 from '/assets/images/layout/components/editor.png';
 </script>
 
 # Components
@@ -87,4 +88,7 @@ The model has no default value in the exported app: always bind it in the parent
 
 To define a component as a **page**, simply change its type in the inspector. You can then define a path to access the page. The main page of your application will always be `/` (with nothing following). See [Pages and Navigation](./navigation) for paths, dynamic segments, and links between pages.
 
-![Changing a component's type to Page in the inspector](/assets/images/layout/components/gif1.gif){width=391 height=504}
+<DImage
+  :src="TypeToPageVideo" :width="1280" :height="720"
+  alt="Changing a component's type to Page in the inspector"
+/>
