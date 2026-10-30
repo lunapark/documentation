@@ -42,7 +42,7 @@ Here are a few options at your disposal for each layout element, here are the mo
 - <LIcon :icon="faBox" /> **Component** - Use one of the custom components you created.
 - <LIcon :icon="faPuzzlePiece" /> **Slot** - Indicate where the children of this component should go.
 - <LIcon :icon="faGear" /> **Template** - This allows you to do conditional or loop rendering.
-- <LIcon :icon="faQuoteLeft" /> **Custom text** - Write markdown text.
+- <LIcon :icon="faQuoteLeft" /> **Custom text** - Write formatted text, with variables (see [Text](./text)).
 - <LIcon :icon="faCode" /> **Custom HTML** - Write custom HTML code.
 - <LIcon :icon="faBolt" /> **Variable** - Use this kind of element to display a variable.
 

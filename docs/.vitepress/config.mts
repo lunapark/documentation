@@ -90,6 +90,7 @@ export default defineConfig({
                             { link: "/fr/interface/preview", text: "Aperçu" },
                             { link: "/fr/interface/components", text: "Composants" },
                             { link: "/fr/interface/bindings", text: "Liaisons" },
+                            { link: "/fr/interface/text", text: "Texte" },
                             { link: "/fr/interface/events", text: "Événements" },
                             { link: "/fr/interface/navigation", text: "Pages et navigation" },
                             { link: "/fr/interface/templates", text: "Conditions et boucles" }
@@ -233,6 +234,7 @@ export default defineConfig({
                             { link: "/interface/preview", text: "Preview" },
                             { link: "/interface/components", text: "Components" },
                             { link: "/interface/bindings", text: "Bindings" },
+                            { link: "/interface/text", text: "Text" },
                             { link: "/interface/events", text: "Events" },
                             { link: "/interface/navigation", text: "Pages and Navigation" },
                             { link: "/interface/templates", text: "Conditions and Loops" }

@@ -74,8 +74,8 @@ alt="Mode insertion : des points d'insertion bleus dans le canevas et la liste d
 | **Package** | Un composant fourni par un [package npm](../integrations/npm) installé. |
 | **Slot** | L'endroit où s'affichent les enfants donnés à ce composant. Voir [Composants](./components). |
 | **Template** | Afficher un contenu sous condition, ou le répéter pour chaque élément d'une liste. Voir [Conditions et boucles](./templates). |
-| **Custom text** | Du texte écrit directement dans le canevas, avec des variables. Choisissez sa balise : `span`, `p`, `h1`, `h2`, `h3`... |
-| **Custom HTML** | Du code HTML brut. |
+| **Custom text** | Du texte écrit directement dans le canevas, avec mise en forme et variables. Choisissez sa balise : `span`, `p`, `h1`, `h2`, `h3`... Voir [Texte](./text). |
+| **Custom HTML** | Du code HTML brut. Voir [Texte](./text#custom-html). |
 | **Variable** | Afficher la valeur d'une variable. |
 | **Link** | Un lien vers une page de votre application ou vers une URL. |
 | **Input** | Un champ de texte (`input` ou `textarea`), avec un type, un placeholder et une valeur. |

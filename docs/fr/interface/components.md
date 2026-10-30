@@ -42,7 +42,7 @@ Voici quelques options à votre disposition pour chaque élément de mise en pag
 - <LIcon :icon="faBox" /> **Composant** - Utilisez l'un des composants personnalisés que vous avez créés.
 - <LIcon :icon="faPuzzlePiece" /> **Slot** - Indique où les enfants de ce composant doivent aller.
 - <LIcon :icon="faGear" /> **Modèle** - Cela vous permet de faire des rendus conditionnels ou en boucle.
-- <LIcon :icon="faQuoteLeft" /> **Texte personnalisé** - Écrivez du texte en Markdown.
+- <LIcon :icon="faQuoteLeft" /> **Texte personnalisé** - Écrivez du texte mis en forme, avec des variables (voir [Texte](./text)).
 - <LIcon :icon="faCode" /> **HTML personnalisé** - Écrivez du code HTML personnalisé.
 - <LIcon :icon="faBolt" /> **Variable** - Utilisez ce type d'élément pour afficher une variable.
 

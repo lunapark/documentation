@@ -74,8 +74,8 @@ alt="Insert mode: blue insertion points on the canvas and the element list opene
 | **Package** | A component provided by an installed [npm package](../integrations/npm). |
 | **Slot** | Where the children given to this component are displayed. See [Components](./components). |
 | **Template** | Show content under a condition, or repeat it for each item of a list. See [Conditions and Loops](./templates). |
-| **Custom text** | Text written directly on the canvas, with variables. Pick its **Tag**: `span`, `p`, `h1`, `h2`, `h3`... |
-| **Custom HTML** | Raw HTML code. |
+| **Custom text** | Text written directly on the canvas, with formatting and variables. Pick its **Tag**: `span`, `p`, `h1`, `h2`, `h3`... See [Text](./text). |
+| **Custom HTML** | Raw HTML code. See [Text](./text#custom-html). |
 | **Variable** | Display the value of a variable. |
 | **Link** | A link to a page of your app or to a URL. |
 | **Input** | A text field (`input` or `textarea`), with a type, a placeholder, and a value. |
